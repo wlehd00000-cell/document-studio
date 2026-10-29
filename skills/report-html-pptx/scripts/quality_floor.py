@@ -21,6 +21,7 @@ from importlib.metadata import version
 from pathlib import Path, PurePosixPath
 from xml.etree import ElementTree as ET
 from zipfile import ZipFile, BadZipFile
+from font_policy import evaluate_font_policy as evaluate_company_font_policy
 
 P = '{http://schemas.openxmlformats.org/presentationml/2006/main}'
 A = '{http://schemas.openxmlformats.org/drawingml/2006/main}'

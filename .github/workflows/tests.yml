@@ -1,0 +1,25 @@
+name: Document Studio validation
+
+on:
+  push:
+    branches: [main, feat/company-pack-foundation]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install test dependencies
+        run: python -m pip install -r requirements-dev.txt
+      - name: Run regression tests
+        run: python -m pytest tests -q
+      - name: Verify source safety and integrity
+        run: |
+          python scripts/verify_public_release.py
+          python scripts/install_local.py --verify-only
+          python scripts/build_package_manifest.py --check
+          python skills/report-html-pptx/scripts/build_design_css.py --check

@@ -1,0 +1,154 @@
+{
+  "schema_version": "public-company-fidelity/1.0",
+  "source": {
+    "company": "Suntory Group",
+    "official_url": "https://www.suntory.com/about-us/pdf/corporate_overview_fact_sheet_2025.pdf",
+    "sha256": "0a112b83349d67bd148989f54e5e2b67ad869eaa62ff9ec513377d90d92a664b",
+    "pages": 4,
+    "document_family": "corporate_profile",
+    "language": "en-US",
+    "page_orientation": "portrait",
+    "page_sizes_pt": [
+      [
+        595.28,
+        841.89
+      ]
+    ],
+    "pages_with_vectors": 4,
+    "pages_with_raster_images": 2,
+    "text_block_count": 155
+  },
+  "design": {
+    "source_top_graphic_colors": [
+      [
+        "#50C6DB",
+        107.23
+      ],
+      [
+        "#231F20",
+        42.0
+      ],
+      [
+        "#FFFFFF",
+        32.19
+      ],
+      [
+        "#BEE5EF",
+        22.53
+      ],
+      [
+        "#D1D3D4",
+        10.2
+      ],
+      [
+        "#C5E8F1",
+        2.2
+      ],
+      [
+        "#95D7E6",
+        1.0
+      ],
+      [
+        "#D5EEF5",
+        1.0
+      ]
+    ],
+    "source_top_text_colors": [
+      [
+        "#231F20",
+        155
+      ]
+    ],
+    "frequent_font_names_unverified": [
+      [
+        "SUNTORYSyntax-Regular",
+        83
+      ],
+      [
+        "SUNTORYSyntax-Bold",
+        46
+      ],
+      [
+        "SuntoryGothicRegular",
+        32
+      ],
+      [
+        "SuntoryGothicBold",
+        18
+      ]
+    ],
+    "frequent_font_sizes_pt": [
+      [
+        7.0,
+        82
+      ],
+      [
+        7.5,
+        23
+      ],
+      [
+        11.0,
+        21
+      ],
+      [
+        8.5,
+        21
+      ],
+      [
+        8.0,
+        11
+      ],
+      [
+        9.0,
+        7
+      ],
+      [
+        6.0,
+        7
+      ],
+      [
+        5.0,
+        6
+      ]
+    ],
+    "proposed_brand_colors": {
+      "blue": "#50C6DB",
+      "deep_blue": "#BEE5EF",
+      "green": "#C5E8F1",
+      "orange": "#1A707F"
+    },
+    "palette_status": "draft_only_not_official_brand_guidelines",
+    "vector_color_scope": "PDF fill/stroke only; raster artwork colors not measured"
+  },
+  "color_holdout": {
+    "train_pages": 2,
+    "holdout_pages": 2,
+    "holdout_top_chromatic_vector_colors": [
+      "#50C6DB",
+      "#95D7E6",
+      "#B6E3ED",
+      "#8CD5E4"
+    ],
+    "shared_train_holdout_colors": 1,
+    "exact_color_recall_at_4": 0.25,
+    "interpretation": "exact CSS color recurrence only, NOT page reconstruction similarity"
+  },
+  "writing": {
+    "paragraph_count": 155,
+    "sentence_count": 238,
+    "mean_sentence_chars": 29.9,
+    "script_detection": {
+      "en": 132,
+      "und": 23
+    },
+    "status": "draft_not_company_wide_rule",
+    "source_excerpts_included": false
+  },
+  "release_gate": {
+    "company_pack_status": "draft_only",
+    "full_visual_reproduction": "NOT_EVALUATED",
+    "actual_font_rendering": "NOT_VERIFIED",
+    "html_to_pptx_pixel_fidelity": "NOT_VERIFIED",
+    "source_redistribution_allowed": false
+  }
+}

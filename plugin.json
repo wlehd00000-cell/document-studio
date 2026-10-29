@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "document-studio",
-  "version": "1.0.0",
-  "description": "Bilingual Korean/Japanese document production with nine coordinated skills, independent synthetic examples and editable HTML/PPTX tooling.",
+  "version": "0.1.0-alpha.1",
+  "description": "Experimental company-adaptable document toolkit with eight core skills, optional Korean/Japanese modules, PDF/PPTX draft analysis and public plugin exporter.",
   "extensions": {
     "com.openai": {
       "interface": {
