@@ -10,7 +10,10 @@ from intake import resolve_intake
 from design_expression import resolve_expression
 from authoring_routes import select_route
 from project_state import ProjectState
-from design_registry import CANVASES, TOKENS, select_profile, font_for
+from design_registry import CANVASES, TOKENS, select_profile, font_for, tokens_for
+from company_pack import load_company_pack
+from build_design_css import generate as generate_design_css
+from font_policy import evaluate_font_policy
 
 def scaffold(destination, title, subtitle, language=None, report_date=None,
              document_type=None, status='DRAFT',
@@ -20,7 +23,7 @@ def scaffold(destination, title, subtitle, language=None, report_date=None,
              type_profile=None, density_mode=None, output_profile=None,
              authoring_route=None, use=None, design_profile=None, template_path=None,
              native_capability_verified=False, native_authoring_requested=False,
-             native_creative_evidence=None, design_preferences=None):
+             native_creative_evidence=None, design_preferences=None, company_pack=None):
     expression = resolve_expression(design_preferences)
     supplied = {
         'final_language': language, 'document_type': genre or document_type,
@@ -68,7 +71,17 @@ def scaffold(destination, title, subtitle, language=None, report_date=None,
         startup['assumptions'].pop('final_language', None)
     report_date = date.fromisoformat(report_date).isoformat() if report_date else date.today().isoformat()
     root = Path(__file__).resolve().parents[1]
-    tokens = json.loads((root/'system/design-tokens.json').read_text(encoding='utf-8'))
+    pack = load_company_pack(company_pack) if company_pack else None
+    if pack:
+        if pack.metadata['status'] != 'approved':
+            raise ValueError('Company Pack must be approved for production')
+        if any(lang not in pack.metadata['enabled_languages'] for lang in deliverable_languages):
+            raise ValueError('Requested document language is not enabled in Company Pack')
+    family={'report':'executive_report','submission':'executive_report',
+            'proposal':'business_proposal','plan':'implementation_plan',
+            'presentation':'presentation','guide':'operational_guide',
+            'manual':'operational_guide'}.get(genre,'executive_report')
+    tokens = tokens_for(company_pack,family)
     if output_profile is None:
         print_request = re.search(r'인쇄용|(?:문서용|사무용)\s*프린터|A4\s*인쇄|印刷用|事務用.*プリンタ|A4\s*(?:印刷|出力)|office[\s-]+print(?:er)?|A4[\s-]+print', output_format, re.I)
         output_profile = 'office-print' if print_request else 'branded'
@@ -88,14 +101,14 @@ def scaffold(destination, title, subtitle, language=None, report_date=None,
     if authoring_route is not None and authoring_route != 'html_report':
         raise ValueError('HTML authoring is fixed; only explicit export requests can change the output adapter')
     authoring_route = 'html_report'
-    design_profile = select_profile(genre,use,design_profile)
+    design_profile = select_profile(genre,use,design_profile,tokens=tokens)
     if design_profile not in tokens['profiles']:
         raise ValueError('Unknown design profile')
     if output_profile == 'office-print' and design_profile != 'office_print':
         raise ValueError('Office print requires office_print design profile')
     if canvas is None:
         raise ValueError('Unanswered canvas decision; profile defaults are recommendations only')
-    canvases = {key:list(value) for key,value in CANVASES.items()}
+    canvases = {key:list(row['css_px']) for key,row in tokens['canvases'].items()}
     if canvas not in canvases:
         raise ValueError('Unknown canvas')
     if output_profile == 'office-print':
@@ -136,6 +149,10 @@ def scaffold(destination, title, subtitle, language=None, report_date=None,
     config['authoring_route']=authoring_route
     config['use']=use
     config['design_tokens_version']=tokens['version']
+    if pack:
+        config['company_pack']={'pack_id':pack.pack_id,'version':pack.version,
+                                'schema_version':pack.metadata['schema_version'],
+                                'document_family':family,'lineage':list(pack.lineage)}
     config['density_mode']=density_mode
     config['typography_profile']=type_profile
     config['canvas_name']=canvas
@@ -194,6 +211,11 @@ def scaffold(destination, title, subtitle, language=None, report_date=None,
     html_values={**config,**{'label_'+key:value for key,value in body_labels.items()}}
     source = (root/'assets/starter/html/index.html').read_text(encoding='utf-8')
     source = re.sub(r'\{\{(\w+)\}\}', lambda m: escape(str(html_values[m[1]]), quote=True), source)
+    if pack:
+        original_logo='<img class="cover-logo" src="./assets/demo-mark.svg" alt="Document Studio">'
+        neutral_name='<span class="cover-logo company-name">'+escape(pack.metadata['company_name'])+'</span>'
+        source=source.replace(original_logo,neutral_name)
+        source=source.replace('</style>', '.cover-logo.company-name{display:inline-block;width:auto;max-width:52%;font:600 16px/1.3 sans-serif;letter-spacing:.015em}</style>')
     source = source.replace('</head>', f'<meta name="pptx-width" content="{dimensions[0]}">\n<meta name="pptx-height" content="{dimensions[1]}">\n</head>')
     type_tokens = dict(tokens['profiles'][canonical_type]['typography'])
     type_tokens.update(tokens.get('legacy_typography_overrides', {}).get(type_profile, {}))
@@ -208,8 +230,8 @@ def scaffold(destination, title, subtitle, language=None, report_date=None,
         print_size = '@page{size:A4 %s;margin:0}' % config['print']['orientation']
         source = re.sub(r'<div class="top-rule" aria-hidden="true"><i></i><i></i><i></i></div>', '', source)
         source = source.replace('</head>', '<link rel="stylesheet" href="./assets/office-print-report.css">\n</head>')
-    shared = (root/'assets/demo-esg-design/demo-design-tokens.css').read_text(encoding='utf-8')
-    faces=''.join('@font-face{font-family:"%s";src:url("./assets/%s") format("woff2");font-weight:100 900;font-display:swap}' % (face['primary'],Path(face['file']).name) for face in TOKENS['font']['by_language'].values() if (root/'assets/brand'/Path(face['file']).name).is_file())
+    shared = generate_design_css(tokens) if pack else (root/'assets/demo-esg-design/demo-design-tokens.css').read_text(encoding='utf-8')
+    faces=''.join('@font-face{font-family:"%s";src:url("./assets/%s") format("woff2");font-weight:100 900;font-display:swap}' % (face['primary'],Path(face['file']).name) for face in TOKENS['font']['by_language'].values() if (root/'assets/brand'/Path(face['file']).name).is_file()) if not pack else ''
     shared=faces+shared
     profile_grid = tokens['profiles'][design_profile]['grid']
     alignment = '.page-inner{padding-left:%spx;padding-right:%spx}' % (profile_grid['margin_x_px'], profile_grid['margin_x_px'])
@@ -223,20 +245,32 @@ def scaffold(destination, title, subtitle, language=None, report_date=None,
     shutil.copytree(root/'assets/starter', destination, dirs_exist_ok=True)
     for folder in ['html/assets', 'content', 'qa', 'final']:
         (destination/folder).mkdir(parents=True, exist_ok=True)
-    for name in ['demo-mark.svg', '_external_PretendardJPVariable.woff2', '_external_PretendardVariable.woff2', 'LICENSE-Pretendard.txt']:
+    for name in (['demo-mark.svg', '_external_PretendardJPVariable.woff2', '_external_PretendardVariable.woff2', 'LICENSE-Pretendard.txt'] if not pack else []):
         if (root/'assets/brand'/name).is_file():
             shutil.copy2(root/'assets/brand'/name, destination/'html/assets'/name)
     if output_profile == 'office-print':
         shutil.copy2(root/'assets/demo-esg-design/office-print-report.css', destination/'html/assets/office-print-report.css')
     (destination/'html/index.html').write_text(source, encoding='utf-8')
     # [quality-floor-p0] Resolve bundled fonts before persisting the project.
-    if language.lower().split('-')[0] in {'ko','ja'} and all((root/'assets/brand'/Path(font_for(lang)['file']).name).is_file() for lang in ['ko','ja']):
+    if not pack and language.lower().split('-')[0] in {'ko','ja'} and all((root/'assets/brand'/Path(font_for(lang)['file']).name).is_file() for lang in ['ko','ja']):
         from quality_floor import resolve_contract, write_contract
         supported=[x for x in deliverable_languages if x.lower().split('-')[0] in {'ko','ja'}]
         contract=resolve_contract(destination, root/'assets/brand',
             root/'system/design-tokens.json', language=language,
             profile=design_profile, additional_languages=supported)
         write_contract(contract,destination/'content/quality-contract.json')
+    if pack:
+        import hashlib
+        snapshot={'pack':{key:pack.metadata[key] for key in ('schema_version','pack_id','company_name','version','status','default_language','enabled_languages','parent_pack')},
+                  'lineage':list(pack.lineage),'design':pack.design,
+                  'design_cases':list(pack.design_cases),
+                  'writing_references':list(pack.writing_references),'font_policy':pack.font_policy}
+        raw=json.dumps(snapshot,ensure_ascii=False,sort_keys=True,separators=(',',':')).encode('utf-8')
+        digest=hashlib.sha256(raw).hexdigest()
+        config['company_pack']['snapshot_sha256']=digest
+        (destination/'content/company-pack-snapshot.json').write_text(json.dumps({'snapshot':snapshot,'sha256':digest},ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+        font_review=evaluate_font_policy(pack,language,html_path=destination/'html/index.html')
+        (destination/'content/font-policy-review.json').write_text(json.dumps(font_review,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     checkpoint_status = 'delegated' if interaction_mode == 'one_shot' else 'pending'
     brief = {'genre':genre,'audience':audience,'reader_action':reader_action,
              'requested_outputs':[output_format],
@@ -286,11 +320,20 @@ def scaffold(destination, title, subtitle, language=None, report_date=None,
     project_state = ProjectState(destination)
     project_state.init(['1','2','3','4'], 'html')
     source_nodes = [('brief','content/brief.json','brief'),('config','report-config.json','config'),
-                    ('copy','content/final.md','copy'),('logo','html/assets/demo-mark.svg','asset')]
-    if (destination/'html/assets'/Path(font_for(language)['file']).name).is_file():
-        source_nodes.append(('font','html/assets/'+Path(font_for(language)['file']).name,'font'))
-    if len(deliverable_languages)>1 and (destination/'html/assets'/Path(font_for('ja' if language=='ko' else 'ko')['file']).name).is_file():
-        source_nodes.append(('font_secondary','html/assets/'+Path(font_for('ja' if language=='ko' else 'ko')['file']).name,'font'))
+                    ('copy','content/final.md','copy')]
+    if (destination/'html/assets/demo-mark.svg').is_file():
+        source_nodes.append(('logo','html/assets/demo-mark.svg','asset'))
+    current_font=font_for(language,tokens)
+    if current_font.get('file') and (destination/'html/assets'/Path(current_font['file']).name).is_file():
+        source_nodes.append(('font','html/assets/'+Path(current_font['file']).name,'font'))
+    if len(deliverable_languages)>1:
+        other=next((x for x in deliverable_languages if x!=language),None)
+        other_font=font_for(other,tokens) if other else {}
+        if other_font.get('file') and (destination/'html/assets'/Path(other_font['file']).name).is_file():
+            source_nodes.append(('font_secondary','html/assets/'+Path(other_font['file']).name,'font'))
+    if pack:
+        source_nodes.append(('company_pack','content/company-pack-snapshot.json','policy'))
+        source_nodes.append(('font_review','content/font-policy-review.json','policy'))
     if output_profile == 'office-print':
         source_nodes.append(('print_style','html/assets/office-print-report.css','style'))
     # [quality-floor-p0] ProjectState remains the single state/receipt authority.
@@ -332,6 +375,7 @@ if __name__ == '__main__':
     p.add_argument('--audience', help='Resolved primary reader; omission remains pending')
     p.add_argument('--reader-action', help='Purpose or decision/action expected from the reader')
     p.add_argument('--output-format', help='Resolved output format; PPTX does not determine canvas')
+    p.add_argument('--company-pack',type=Path,help='Approved organization profile directory')
     p.add_argument('--delegated-field', action='append', default=[], dest='delegated_fields',
                    choices=['document_type','audience','purpose','final_language','output_format'],
                    help='Record a required value the user explicitly delegated for recommendation')

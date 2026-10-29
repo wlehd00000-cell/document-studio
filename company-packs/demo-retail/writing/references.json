@@ -1,0 +1,6 @@
+{
+  "references": [
+    {"id": "retail-risk-ja", "language": "ja-JP", "document_family": "executive_report", "writing_function": "risk_explanation", "text": "想定される影響を整理し、対応の優先順位を確認します。", "source_ids": ["DEMO-RETAIL-002"], "status": "suggested", "confidence": "medium"},
+    {"id": "retail-proposal-en", "language": "en-US", "document_family": "business_proposal", "writing_function": "recommendation", "text": "Make the next visit easier, more welcoming, and worth repeating.", "source_ids": ["DEMO-RETAIL-003"], "status": "suggested", "confidence": "medium"}
+  ]
+}

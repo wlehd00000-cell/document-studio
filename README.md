@@ -1,29 +1,58 @@
 # Document Studio
 
-**Open-source bilingual document-production toolkit** · 한국어 / 日本語
+**Company-adaptable document-production toolkit** · English / 한국어 / 日本語
 
-A reusable nine-skill workflow for turning a brief into researched, structured, visually explained HTML documents and editable PowerPoint deliverables. The code and working contracts are adapted from a personal implementation; the public examples, fictional organizations and artwork are independent, newly authored materials.
+A reusable document workflow for researched HTML reports and editable PowerPoint deliverables. This development branch contains the **Document Studio 2.0 Phase A preview**: existing document production plus Company Pack loading, design/writing isolation, versioned project snapshots and optional language skills. Company-source extraction and plugin exporting (Phases B/C) are **not yet implemented**. The public examples, fictional organizations and artwork are independent materials.
 
-## Skills (9)
+## Skills (8 core + 2 optional)
 
 | Skill | Role |
 |---|---|
+| `company-profile-analyzer` | Company Pack validation and application (automated analysis pending) |
 | `report-html-pptx` | Intake, one-shot/collaborative routing, orchestration, QA |
 | `document-research` | Evidence gathering and source notes |
 | `document-architecture` | Argument, document structure and page plan |
 | `document-writing` | Korean/Japanese business prose and synthetic style library |
 | `document-design` | Editorial design and text/visual contracts |
 | `visual-assets` | Diagram/image asset selection and provenance |
-| `business-korean-translation` | Professional Korean adaptation |
-| `business-japanese-translation` | Professional Japanese adaptation |
+| `business-korean-translation` | Optional professional Korean adaptation |
+| `business-japanese-translation` | Optional professional Japanese adaptation |
 | `html-to-pptx` | Editable HTML → PowerPoint conversion and checks |
 
 ## Start
 
 ```bash
 python scripts/install_local.py --verify-only
-python scripts/install_local.py
+python scripts/install_local.py --language-skills none
+# Or: --language-skills ko | ja | ko,ja
 ```
+
+To preserve legacy behavior, omitting `--language-skills` installs both modules. `--language` chooses the installation guide language, not the installed modules.
+
+## Curated Company Packs (Phase A)
+
+Two fictional packs demonstrate color and writing isolation:
+
+- `company-packs/demo-retail` — bright consumer-focused identity.
+- `company-packs/demo-manufacturing` — restrained technical identity.
+
+Validate a pack and produce an HTML scaffold with its design and writing settings:
+
+```bash
+python skills/report-html-pptx/scripts/validate_company_pack.py company-packs/demo-retail --require-approved
+python skills/report-html-pptx/scripts/scaffold_report.py ./output/retail-pilot \
+  --company-pack company-packs/demo-retail --language en-US \
+  --genre proposal --interaction-mode one_shot \
+  --audience 'Team leadership' --reader-action 'Decide on the pilot' \
+  --output-format HTML --canvas widescreen --use reading
+python skills/document-writing/scripts/find_writing_reference.py \
+  --company-pack company-packs/demo-retail --language en-US \
+  --document-family business_proposal --writing-function recommendation
+```
+
+An approved pack can still have unverified font rendering or usage rights. The scaffold writes `content/font-policy-review.json` and a content-addressed Company Pack snapshot, but does not certify a rendered result. Do not redistribute a font solely because a profile names it.
+
+Run tests with `python -m pytest tests/ -q` (install pytest in a development environment); refresh the manifest after editing files using `python scripts/build_package_manifest.py` and verify with `python scripts/build_package_manifest.py --check`.
 
 See [START_HERE.md](START_HERE.md). To inspect independently authored examples, open `skills/report-html-pptx/assets/accepted-staff-guide/index.html` in a browser.
 

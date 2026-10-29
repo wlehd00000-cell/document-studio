@@ -1,0 +1,11 @@
+{
+  "schema_version": "company-pack/1.0",
+  "pack_id": "demo-manufacturing",
+  "company_name": "Demo Manufacturing Ltd.",
+  "version": "1.0.0",
+  "status": "approved",
+  "default_language": "en-US",
+  "enabled_languages": ["en-US", "ko-KR"],
+  "parent_pack": null,
+  "synthetic": true
+}

@@ -11,14 +11,26 @@ import shutil
 import sys
 import tempfile
 
-CORE_NAMES = ("report-html-pptx", "html-to-pptx", "business-korean-translation", "business-japanese-translation", "document-research", "document-architecture", "document-writing", "document-design")
+CORE_SKILLS = ("company-profile-analyzer", "report-html-pptx", "document-architecture",
+               "document-research", "document-writing", "document-design",
+               "visual-assets", "html-to-pptx")
+OPTIONAL_LANGUAGE_SKILLS = {"ko": "business-korean-translation", "ja": "business-japanese-translation"}
 PACKAGE_ROOT = Path(__file__).resolve().parents[1]
-EXTRA_NAMES = tuple(sorted(path.parent.name for path in (PACKAGE_ROOT / "skills").glob("*/SKILL.md") if path.parent.name not in CORE_NAMES))
-NAMES = CORE_NAMES + EXTRA_NAMES
+NAMES = CORE_SKILLS + tuple(OPTIONAL_LANGUAGE_SKILLS.values())
+
+
+def selected_skills(language_skills: str = "ko,ja") -> tuple[str, ...]:
+    """Keep legacy full-install behavior unless modules are explicitly selected."""
+    if language_skills == "none":
+        return CORE_SKILLS
+    selected = language_skills.split(",")
+    if not selected or any(value not in OPTIONAL_LANGUAGE_SKILLS for value in selected) or len(set(selected)) != len(selected):
+        raise ValueError("--language-skills must be none, ko, ja, or ko,ja")
+    return CORE_SKILLS + tuple(OPTIONAL_LANGUAGE_SKILLS[key] for key in selected)
 
 
 def generated_cache(relative: Path) -> bool:
-    return ".git" in relative.parts or "__pycache__" in relative.parts or relative.suffix in {".pyc", ".pyo"}
+    return bool({".git", "__pycache__", ".pytest_cache", ".ruff_cache", ".venv", "dist", "build"}.intersection(relative.parts)) or relative.suffix in {".pyc", ".pyo"}
 
 
 def contained(path: Path, root: Path) -> Path:
@@ -70,19 +82,21 @@ def directory_hashes(directory: Path) -> dict:
     return result
 
 
-def install(root: Path, destination: Path, replace: bool = False, language: str = "ko") -> dict:
+def install(root: Path, destination: Path, replace: bool = False, language: str = "ko",
+            language_skills: str = "ko,ja") -> dict:
     root = root.resolve()
     manifest = verify_package(root)
+    names = selected_skills(language_skills)
     destination = destination.expanduser().resolve()
     if destination == root or destination.is_relative_to(root) or root.is_relative_to(destination):
         raise ValueError("Install destination must be separate from the distribution package")
-    for name in NAMES:
+    for name in names:
         target = destination / name
         if target.is_symlink() or (target.exists() and not target.is_dir()):
             raise ValueError("Existing target is not an ordinary skill folder: " + name)
-    expected = {name: directory_hashes(root / "skills" / name) for name in NAMES}
-    existing = {name: directory_hashes(destination / name) if (destination / name).exists() else None for name in NAMES}
-    changed = [name for name in NAMES if existing[name] != expected[name]]
+    expected = {name: directory_hashes(root / "skills" / name) for name in names}
+    existing = {name: directory_hashes(destination / name) if (destination / name).exists() else None for name in names}
+    changed = [name for name in names if existing[name] != expected[name]]
     conflicts = [name for name in changed if existing[name] is not None]
     if conflicts and not replace:
         raise ValueError("Existing skills differ; review them and use --replace to update with a backup")
@@ -111,7 +125,7 @@ def install(root: Path, destination: Path, replace: bool = False, language: str 
                         moved_old.append(name)
                     staged.replace(target)
                     moved_new.append(name)
-                for name in NAMES:
+                for name in names:
                     if directory_hashes(destination / name) != expected[name]:
                         raise ValueError("Installed copy verification failed: " + name)
             except Exception:
@@ -125,12 +139,13 @@ def install(root: Path, destination: Path, replace: bool = False, language: str 
             # TemporaryDirectory removes only this verified, newly created staging directory.
             contained(stage, destination.parent)
     guide_name = "staff-quickstart-ja.md" if language == "ja" else "staff-quickstart-ko.md"
-    guide = (destination / NAMES[0] / "references" / guide_name).read_text(encoding="utf-8")
+    guide = (destination / "report-html-pptx" / "references" / guide_name).read_text(encoding="utf-8")
     return {
         "status": "installed" if changed else "already_installed",
         "version": manifest["version"],
         "skills_directory": str(destination),
-        "skills": list(NAMES),
+        "skills": list(names),
+        "language_skills": language_skills,
         "backup_directory": str(backup_root) if backup_root and backup_root.exists() else None,
         "verification": "Installed skill files match the package manifest",
         "tool_readiness": "Not certified by installation; check the requested output tools at first use",
@@ -144,6 +159,8 @@ def main() -> int:
     parser.add_argument("--skills-dir", type=Path)
     parser.add_argument("--replace", action="store_true")
     parser.add_argument("--language", choices=("ko", "ja"), default="ko")
+    parser.add_argument("--language-skills", choices=("none", "ko", "ja", "ko,ja"), default="ko,ja",
+                        help="Optional translation modules; default keeps the legacy full installation")
     parser.add_argument("--verify-only", action="store_true")
     args = parser.parse_args()
     root = Path(__file__).resolve().parents[1]
@@ -152,7 +169,8 @@ def main() -> int:
             manifest = verify_package(root)
             result = {"status": "package_verified", "version": manifest["version"], "installed": False}
         else:
-            result = install(root, args.skills_dir or default_destination(), args.replace, args.language)
+            result = install(root, args.skills_dir or default_destination(), args.replace, args.language,
+                             args.language_skills)
         print(json.dumps(result, ensure_ascii=False, indent=2))
         return 0
     except Exception as exc:

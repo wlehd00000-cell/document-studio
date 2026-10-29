@@ -1,0 +1,5 @@
+{
+  "cases": [
+    {"case_id": "manufacturing-process", "title": "Measured process diagram", "source_id": "DEMO-MFG-001", "source_ids": ["DEMO-MFG-001"], "status": "suggested", "confidence": "medium", "jobs": ["process", "engineering", "diagram"], "observed": "Original fictional technical layout", "page_families": ["process"], "purpose_profiles": ["reading_report"], "creativity": "restrained", "visual_intensity": "balanced", "kind": "creative", "body_only": true}
+  ]
+}

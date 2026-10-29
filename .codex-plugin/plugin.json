@@ -2,7 +2,7 @@
   "interface": {
     "displayName": "Document Studio · 문서 제작 · 資料作成",
     "shortDescription": "한국어·일본어 문서·프레젠테이션 제작",
-    "longDescription": "9개 스킬로 구성한 범용 문서 제작 워크플로우. 공개 예시와 수치는 모두 독립 제작한 가상 자료입니다.",
+    "longDescription": "기업별 Company Pack을 선택해 제작하는 8개 핵심 스킬과 2개 선택형 언어 모듈. 자동 자료 분석은 다음 단계에서 개발하며 예시는 모두 가상 자료입니다.",
     "category": "Productivity",
     "capabilities": [
       "Write"
@@ -15,8 +15,8 @@
     "developerName": "Document Studio open source"
   },
   "name": "document-studio",
-  "version": "1.0.0",
-  "description": "Bilingual Korean/Japanese document production with nine coordinated skills, independent synthetic examples and editable HTML/PPTX tooling.",
+  "version": "2.0.0-alpha.1",
+  "description": "Company Pack foundation with eight core skills, optional Korean/Japanese modules, synthetic examples and editable HTML/PPTX tooling.",
   "author": {
     "name": "Kim Jidong"
   },

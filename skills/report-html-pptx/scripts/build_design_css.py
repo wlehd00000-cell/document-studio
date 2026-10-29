@@ -1,6 +1,7 @@
 """Generate design CSS token blocks from the canonical JSON; independent of layout authoring."""
 import argparse,json,sys
 from pathlib import Path
+from company_pack import load_company_pack, resolve_design_tokens
 BEGIN='/* BEGIN GENERATED DESIGN TOKENS - edit system/design-tokens.json */'
 END='/* END GENERATED DESIGN TOKENS */'
 
@@ -48,8 +49,29 @@ def validate(tokens):
         if target not in tokens['profiles']:raise ValueError(f'Unknown alias target {alias}: {target}')
 
 if __name__=='__main__':
-    parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--check',action='store_true');args=parser.parse_args()
+    parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--check',action='store_true')
+    parser.add_argument('--company-pack',type=Path)
+    parser.add_argument('--document-family',default='executive_report')
+    parser.add_argument('--output',type=Path,help='Required output CSS for a company-specific build')
+    args=parser.parse_args()
     root=Path(__file__).resolve().parents[1];tokens=json.loads((root/'system/design-tokens.json').read_text(encoding='utf-8-sig'));validate(tokens)
+    if args.company_pack:
+        if not args.output:
+            parser.error('--company-pack requires --output; base DEMO assets must not be overwritten')
+        pack=load_company_pack(args.company_pack)
+        if pack.metadata['status']!='approved':
+            parser.error('Company Pack must be approved for production')
+        tokens=resolve_design_tokens(tokens,pack,args.document_family)
+        validate(tokens)
+        block=generate(tokens)
+        if args.check:
+            ok=args.output.is_file() and args.output.read_text(encoding='utf-8')==block
+            print(json.dumps({'pack_id':pack.pack_id,'generated_css_current':ok}))
+            sys.exit(0 if ok else 1)
+        args.output.parent.mkdir(parents=True,exist_ok=True)
+        args.output.write_text(block,encoding='utf-8')
+        print(json.dumps({'pack_id':pack.pack_id,'generated_css_current':True}))
+        sys.exit(0)
     block=generate(tokens);cssfile=root/'assets/demo-esg-design/demo-esg-report.css';src=cssfile.read_text(encoding='utf-8-sig')
     if BEGIN not in src or END not in src:raise SystemExit('Missing generated token markers; refuse to overwrite layout CSS')
     before,tail=src.split(BEGIN,1);_,after=tail.split(END,1);target=before+block+after.lstrip('\n')

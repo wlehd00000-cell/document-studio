@@ -14,6 +14,7 @@ SKILLS = {
     "report-html-pptx", "document-research", "document-architecture",
     "document-writing", "document-design", "visual-assets",
     "business-korean-translation", "business-japanese-translation", "html-to-pptx",
+    "company-profile-analyzer",
 }
 DENY = (
     re.compile(r"GS Japan", re.I),
@@ -29,6 +30,8 @@ def check() -> None:
     from install_local import verify_package
     verify_package(ROOT)
     for f in ROOT.rglob("*"):
+        if any(p in {'.git','__pycache__','.pytest_cache','.ruff_cache','.venv','dist','build'} for p in f.relative_to(ROOT).parts):
+            continue
         if not f.is_file() or f.suffix in {".woff2", ".png", ".zip"}:
             continue
         if f.suffix == ".py":
@@ -45,6 +48,17 @@ def check() -> None:
         raise AssertionError("synthetic references are too small")
     if not all(case.get("synthetic") for case in casebook["cases"]):
         raise AssertionError("casebook must only contain synthetic cases")
+    for pack_directory in (ROOT/'company-packs').iterdir():
+        if not pack_directory.is_dir():
+            continue
+        from sys import path as import_path
+        scripts = str(ROOT/'skills/report-html-pptx/scripts')
+        if scripts not in import_path:
+            import_path.insert(0,scripts)
+        from company_pack import load_company_pack
+        pack=load_company_pack(pack_directory)
+        if pack.metadata.get('synthetic') is not True:
+            raise AssertionError(f'Public demo pack must be fictional: {pack.pack_id}')
     commands = [
         [sys.executable, "skills/document-writing/scripts/find_writing_reference.py", "--company", "retail", "--limit", "1"],
         [sys.executable, "skills/report-html-pptx/scripts/select_esg_reference.py", "process", "--summary", "--limit", "1"],

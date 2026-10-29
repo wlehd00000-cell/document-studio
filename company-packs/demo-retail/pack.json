@@ -1,0 +1,11 @@
+{
+  "schema_version": "company-pack/1.0",
+  "pack_id": "demo-retail",
+  "company_name": "Demo Retail Co.",
+  "version": "1.0.0",
+  "status": "approved",
+  "default_language": "en-US",
+  "enabled_languages": ["en-US", "ja-JP"],
+  "parent_pack": null,
+  "synthetic": true
+}
