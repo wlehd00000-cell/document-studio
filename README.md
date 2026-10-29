@@ -2,7 +2,7 @@
 
 **Company-adaptable document-production toolkit** · English / 한국어 / 日本語
 
-A reusable document workflow for researched HTML reports and editable PowerPoint deliverables. This development branch contains an **experimental Document Studio 2.0 preview**: Company Pack loading, PDF/PPTX extraction, draft design/writing analysis, explicit profile approval, and privacy-audited plugin ZIP exports. Actual visual interpretation, official font licensing and full PowerPoint rendering still require human/environment verification. The public examples, fictional organizations and artwork are independent materials.
+A new, independent open-source document plugin, currently at **v0.1.0-alpha.1**. Document Studio builds on techniques learned during earlier personal document-automation work, but is **not a new version of or an official successor to any company-specific plugin**. The experimental release supports Company Pack loading, PDF/PPTX extraction, draft design/writing analysis, explicit profile approval, and privacy-audited plugin ZIP exports. Actual visual interpretation, official font licensing and full PowerPoint rendering still require human/environment verification. The public examples, fictional organizations and artwork are independent materials.
 
 ## Skills (8 core + 2 optional)
 
@@ -51,6 +51,10 @@ python skills/document-writing/scripts/find_writing_reference.py \
 ```
 
 An approved pack can still have unverified font rendering or usage rights. The scaffold writes `content/font-policy-review.json` and a content-addressed Company Pack snapshot, but does not certify a rendered result. Do not redistribute a font solely because a profile names it.
+
+## Independent public-source evaluation (2026-10-29)
+
+We tested official **Suntory** and **Seven & i Holdings** corporate PDF publications using first-two-page style inference and remaining-page color holdouts. The pipeline now captures PDF vector fill/stroke colors, builds reviewable draft packs, and produces source-text-free independent-content HTML style hypotheses. Exact color recurrence on holdouts was 25% and 75%, respectively; **these are not overall reconstruction-quality scores**. Original layouts, fonts, writing voice and editable PPTX output have **not** been faithfully reproduced or certified. See the [full method, official sources, per-company results and screenshots-based visual assessment](evaluation/public-company-fidelity-2026-10-29.md).
 
 ## Analyze and distribute an organization profile (experimental)
 

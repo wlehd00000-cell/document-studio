@@ -2,7 +2,9 @@
 from __future__ import annotations
 
 import argparse
+from collections import Counter
 import json
+import math
 from pathlib import Path
 import re
 from xml.etree import ElementTree as ET
@@ -15,6 +17,30 @@ import tempfile
 A='{http://schemas.openxmlformats.org/drawingml/2006/main}'
 P='{http://schemas.openxmlformats.org/presentationml/2006/main}'
 EMU=914400  # EMU per inch
+
+
+def _pdf_rgb_hex(value):
+    """Convert a PDF device-RGB drawing color to a stable CSS hex value."""
+    if (not isinstance(value,(tuple,list)) or len(value)!=3 or
+            any(not isinstance(v,(int,float)) or not math.isfinite(v) or not 0<=v<=1 for v in value)):
+        return None
+    return '#'+''.join(f'{round(v*255):02X}' for v in value)
+
+
+def _pdf_graphic_colors(page):
+    """Summarize visible vector fills/strokes without retaining vector artwork."""
+    weights=Counter()
+    area=max(1.0,page.rect.get_area())
+    for drawing in page.get_drawings():
+        bounds=drawing.get('rect')
+        coverage=min(8.0,max(1.0,bounds.get_area()/area*70.0)) if bounds else 1.0
+        fill=_pdf_rgb_hex(drawing.get('fill'))
+        if fill and drawing.get('fill_opacity',1)>0:
+            weights[fill]+=coverage
+        stroke=_pdf_rgb_hex(drawing.get('color'))
+        if stroke and drawing.get('stroke_opacity',1)>0:
+            weights[stroke]+=min(3.0,coverage)
+    return [[color,round(weight,2)] for color,weight in weights.most_common(60)]
 
 
 def _pptx_text(sp):
@@ -81,7 +107,8 @@ def extract_pdf(path: Path) -> dict:
                                'fonts':sorted({span.get('font','') for span in spans if span.get('font')}),
                                'font_sizes_pt':sorted({round(span.get('size',0),2) for span in spans if span.get('size')}),
                                'colors':colors,'measurement':'observed_pdf_extract_font_names_may_be_subsetted'})
-            pages.append({'number':idx,'size_pt':[round(page.rect.width,2),round(page.rect.height,2)],'shapes':shapes})
+            pages.append({'number':idx,'size_pt':[round(page.rect.width,2),round(page.rect.height,2)],
+                          'graphic_color_weights':_pdf_graphic_colors(page),'shapes':shapes})
     return {'format':'pdf','pages':pages,'measurement':'observed_pdf_extract','rendered_visual_review':'not_performed'}
 
 

@@ -1,6 +1,6 @@
 # Document Studio — public source edition
 
-A company-adaptable document-production plugin. The 2.0 development preview combines eight core skills with optional Korean/Japanese translation modules, draft PDF/PPTX analysis, explicit profile approval and public-only plugin ZIP exporting. Native visual/font QA remains environment-dependent.
+An independent company-adaptable document-production plugin (experimental v0.1.0-alpha.1), not a 2.0 release of another plugin. It combines eight core skills with optional Korean/Japanese translation modules, draft PDF/PPTX analysis, explicit profile approval and public-only plugin ZIP exporting. Native visual/font QA remains environment-dependent.
 
 ## Try it
 

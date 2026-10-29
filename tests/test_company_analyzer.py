@@ -118,6 +118,39 @@ def test_pdf_extraction_when_renderer_available(tmp_path):
     assert len(preview)==1 and Path(preview[0]).is_file()
 
 
+def test_pdf_vector_brand_colors_survive_extraction(tmp_path):
+    fitz=pytest.importorskip('fitz')
+    pdf=tmp_path/'colored-graphics.pdf'
+    doc=fitz.open()
+    page=doc.new_page(width=600,height=400)
+    page.draw_rect(fitz.Rect(15,15,300,85),color=None,fill=(0,0.66,0.31))
+    page.draw_line(fitz.Point(15,100),fitz.Point(580,100),color=(0.98,0.42,0.18),width=10)
+    page.insert_text((40,150),'Company overview',fontsize=20,color=(0.14,0.12,0.13))
+    doc.save(pdf)
+    doc.close()
+    extracted=extract_document(pdf)
+    graphics=dict(extracted['pages'][0]['graphic_color_weights'])
+    assert graphics['#00A84F']>0
+    assert graphics['#FA6B2E']>0
+    analysis=analyze_design(extracted,source_id='SRC-TEST',document_family='corporate_profile')
+    tokens,_,_=draft_design_profile([analysis])
+    assert '#00A84F' in tokens['palette']['brand'].values()
+    assert '#FA6B2E' in tokens['palette']['brand'].values()
+    assert '#241F21' not in tokens['palette']['brand'].values()
+
+
+def test_pastel_brand_source_does_not_receive_unrelated_fallback_colors():
+    measured={'source_ids':['SRC-A'],'document_family':'corporate_profile','page_count':1,
+              'canvas_sizes_pt':[[595,842]],'dominant_colors':[('#231F20',50)],
+              'dominant_graphic_colors':[['#50C6DB',60],['#BEE5EF',20]]}
+    tokens,_,_=draft_design_profile([measured])
+    proposal=set(tokens['palette']['brand'].values())
+    assert '#50C6DB' in proposal
+    assert '#BEE5EF' in proposal
+    assert '#5D7E82' not in proposal
+    assert '#A5BBC1' not in proposal
+
+
 def test_authorized_source_to_installable_plugin_end_to_end(tmp_path):
     item,registry,_,_,_=run_analysis(tmp_path,'public',True)
     target=tmp_path/'new-company'

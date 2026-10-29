@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 from collections import Counter
+import colorsys
 import json
 from pathlib import Path
 
@@ -11,11 +12,17 @@ def analyze_design(extracted: dict, *, source_id: str, document_family: str) -> 
     if not pages:
         raise ValueError('No extracted pages for design analysis')
     colors=Counter()
+    graphic_colors=Counter()
     fonts=Counter()
     sizes=Counter()
     margins=[]
     for page in pages:
         width,height=page.get('size_pt') or (0,0)
+        for item in page.get('graphic_color_weights',[]):
+            if (isinstance(item,(list,tuple)) and len(item)==2 and
+                    isinstance(item[0],str) and len(item[0])==7 and item[0].startswith('#') and
+                    isinstance(item[1],(int,float)) and item[1]>0):
+                graphic_colors[item[0].upper()]+=item[1]
         for shape in page.get('shapes',[]):
             for color in shape.get('colors',[]):
                 if isinstance(color,str) and len(color)==7 and color.startswith('#'):
@@ -33,7 +40,10 @@ def analyze_design(extracted: dict, *, source_id: str, document_family: str) -> 
                     margins.append([round(x/width,3),round(y/height,3)])
     result={'source_ids':[source_id],'document_family':document_family,
             'page_count':len(pages),'canvas_sizes_pt':[p.get('size_pt') for p in pages],
-            'dominant_colors':colors.most_common(8),'frequent_fonts':fonts.most_common(8),
+            'dominant_colors':colors.most_common(8),
+            'dominant_graphic_colors':[[name,round(value,2)] for name,value in graphic_colors.most_common(16)],
+            'graphic_measurement':'pdf_visible_vector_fill_and_stroke_only',
+            'frequent_fonts':fonts.most_common(8),
             'frequent_font_sizes_pt':sizes.most_common(12),
             'min_observed_margins_normalized':[
                 min((x[0] for x in margins),default=None),
@@ -50,11 +60,13 @@ def analyze_design(extracted: dict, *, source_id: str, document_family: str) -> 
 def draft_design_profile(analyses: list[dict]) -> tuple[dict,dict,dict]:
     """Create safe proposed overlays; never claim official design approval."""
     colors=Counter()
+    graphic_colors=Counter()
     fonts=Counter()
     cases=[]
     layouts=[]
     for i,analysis in enumerate(analyses,1):
         colors.update(dict(analysis.get('dominant_colors',[])))
+        graphic_colors.update(dict(analysis.get('dominant_graphic_colors',[])))
         fonts.update(dict(analysis.get('frequent_fonts',[])))
         cases.append({'case_id':f'analyzed-layout-{i}',
                       'title':'Measured page composition candidate',
@@ -65,9 +77,28 @@ def draft_design_profile(analyses: list[dict]) -> tuple[dict,dict,dict]:
         layouts.append({'source_ids':analysis['source_ids'],'document_family':analysis['document_family'],
                         'page_count':analysis['page_count'],'canvas_sizes_pt':analysis['canvas_sizes_pt'],
                         'status':'measured_layout_not_render_verified'})
-    distinct=[name for name,_ in colors.most_common() if name not in {'#000000','#FFFFFF'}]
-    while len(distinct)<4:
-        distinct += ['#28506A','#17384F','#5D7E82','#A5BBC1'][len(distinct):len(distinct)+1]
+    def chromatic(name):
+        try:
+            r,g,b=(int(name[i:i+2],16)/255 for i in (1,3,5))
+            return colorsys.rgb_to_hsv(r,g,b)[1]>=0.17
+        except (ValueError,IndexError,TypeError):
+            return False
+    observed=[name for name,_ in graphic_colors.most_common() if chromatic(name)]
+    observed += [name for name,_ in colors.most_common() if chromatic(name)]
+    distinct=list(dict.fromkeys(observed))[:4]
+    if distinct and len(distinct)<4:
+        seed=distinct[0]
+        r,g,b=(int(seed[i:i+2],16)/255 for i in (1,3,5))
+        hue,_,saturation=colorsys.rgb_to_hls(r,g,b)
+        for lightness in (0.3,0.8,0.48,0.62):
+            rgb=colorsys.hls_to_rgb(hue,lightness,saturation)
+            candidate='#'+''.join(f'{round(channel*255):02X}' for channel in rgb)
+            if candidate not in distinct:
+                distinct.append(candidate)
+            if len(distinct)==4:
+                break
+    if not distinct:
+        distinct=['#28506A','#17384F','#5D7E82','#A5BBC1']
     brand=dict(zip(('blue','deep_blue','green','orange'),distinct[:4]))
     tokens={'palette':{'brand':brand}}
     if fonts:

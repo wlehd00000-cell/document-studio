@@ -15,7 +15,7 @@
     "developerName": "Document Studio open source"
   },
   "name": "document-studio",
-  "version": "2.0.0-alpha.2",
+  "version": "0.1.0-alpha.1",
   "description": "Experimental company-adaptable document toolkit with eight core skills, optional Korean/Japanese modules, PDF/PPTX draft analysis and public plugin exporter.",
   "author": {
     "name": "Kim Jidong"

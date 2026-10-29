@@ -1,6 +1,6 @@
 {
   "name": "document-studio",
-  "version": "2.0.0-alpha.2",
+  "version": "0.1.0-alpha.1",
   "date": "2026-10-29",
   "components": {
     "visual-assets": "1.2.0",
@@ -24,13 +24,13 @@
     "editorial-consulting": "1.0.0"
   },
   "files": {
-    ".codex-plugin/plugin.json": "0cae25dba344f96fb62d01f0fdeca3afcf5857168e8e4c8da9dd936f02c4b3ac",
+    ".codex-plugin/plugin.json": "1b58cc2f436fcd10ccca3406f2bf9404c5c19fcf63b0b07bff80f0d610c92965",
     ".github/workflows/tests.yml": "a3d4e8d2f2ab00ccb6df87291976f3ccce8c6e6cf04fd0443b865c0d66ced930",
     ".gitignore": "7890847d47bdfdbf7bf027676b2b6d49bafecf0bdc14df773946d9dfbc77f06b",
     ".mcp.json": "0469ab315fda4a9e1ece41c23617381433fe62ad5508fc304178e106f0ea7955",
-    "INSTALL_INSTRUCTIONS.md": "173f4acd886c7d908b1657a21a3324351782f47e8b61c4ed9822e1cfbb8091b8",
+    "INSTALL_INSTRUCTIONS.md": "067a56748ca2feae7066eca168e29d599f235633b3c49c85859f84cfed4b9d4a",
     "LICENSE": "a9de7a31f8607a264bcaca627a47248f23bf0453d3547421ed8e6ba4c98e366f",
-    "README.md": "8acc934f13456f8f6b3297e7740387836936e7dff77927c542b19d582e81121a",
+    "README.md": "7d876894e97efbbd75810f5ad8f23e8e332819b72caf1d2859822c01d72e68c8",
     "START_HERE.md": "46bd104272ba63e64a2c6a30ecaaeeb77e2cc5249f462ca0e70d6c5bab6a7c61",
     "THIRD_PARTY_NOTICES.md": "f0729ffc8b89351665f8c80845d876c5a86a668cd07c493f8a08e5a8710490b0",
     "company-packs/demo-manufacturing/design/design-casebook.json": "12110059f483b014f3b1c09e96ec66ab3633af093fbf848daea37a636368ef75",
@@ -43,10 +43,16 @@
     "company-packs/demo-retail/fonts/policy.json": "512b7b0af82fd6312ec5a08cb9c39ccb7c19b37e28ee175d44740b97429707eb",
     "company-packs/demo-retail/pack.json": "3e22019c281d2dd2f7958e65a19313dfb222c266816a357ae3b8b785b2292e42",
     "company-packs/demo-retail/writing/references.json": "5f826b7d33411011afe686c507aaf8a03412e5d9d7b250fd21f02bd2d90ed117",
+    "evaluation/public-company-fidelity-2026-10-29.md": "a6645c2ff098d7596ffba658109b16db1412bbb53e37013a5c3bbd42cc718bbd",
+    "evaluation/seven-i-metrics.json": "fc53c56b5829a57663d63f8f3c6e28a9f0bf36f234cb5fb1626fd60bceb9161b",
+    "evaluation/seven-i-style-hypothesis.html": "c0a7c0baff9b4780ff4adafcea59893bf92829f951e10c59e164e0301e06b9b9",
+    "evaluation/suntory-metrics.json": "abd8f5de0c9c2b3a58a518b747ba2d00aff96b19b946af606afddc2e382e2f7b",
+    "evaluation/suntory-style-hypothesis.html": "79b3d4f4a82a1ed0911f7846f4e445272f38d7b30be35d434b0739462c2d0663",
     "mcp.json": "8cef547c8da7d15d49c0e31abc5c59ee542e2793f3a204ab76719de1477fe20c",
-    "plugin.json": "89ebb03f5de992e3a1b336bb49f7e2c74206221d5482eb33b55d14ec2d6a961d",
+    "plugin.json": "067ef891c96ca29d0e5b38665406c3fbbd74b5541068d12bc1457bc86656418a",
     "requirements-dev.txt": "5bee247ec7552074d4b5a46a900800e202abe16a0d2fbaca5356cb7f02a960f5",
     "scripts/build_package_manifest.py": "20642a850861cb6a92c7f05ac9896de72f08978283b878a64176662c059c73c0",
+    "scripts/evaluate_public_company.py": "1d2e7734fef8b69fbc07ca5538365c85ff1888d2d47e62b84629503b9be23758",
     "scripts/export_company_plugin.py": "adabf264584e9ae0fd2a3271346d4e9760d935eafdf43998849d394fcedc4174",
     "scripts/install_local.py": "9a99c3e1c805c405ff7ceee5940b92e6e2d10e3e59a95b6cdd7b35c20a37ba1e",
     "scripts/verify_public_release.py": "a7ea682e6e85381bcf2446587eccac3eec35a20b022b5df74460a6622307ceb5",
@@ -65,8 +71,8 @@
     "skills/company-profile-analyzer/references/source-policy.md": "e0755fb5817eaa2d8ca5f6d12f977b263f9d813ab4c441e9061ce7817c9de2a2",
     "skills/company-profile-analyzer/references/writing-analysis.md": "486a373f8e383517ffbe826ecf3a6929a7ee0cc2039ae87919008df9c54f6899",
     "skills/company-profile-analyzer/scripts/build_company_pack.py": "3bf123ca18b09074ace9480d94e8b78b5dc18b4b13765ac0d86f6603f29e8421",
-    "skills/company-profile-analyzer/scripts/design_analyzer.py": "8c89c32924af5b22e8afb1869180a1639cdafac07fbb8592e740a26dbf4a2e11",
-    "skills/company-profile-analyzer/scripts/document_extract.py": "d2aac0cc47f464e337c5d3dc9952c63ef4b8cfbbedc0ba67d6abfbb66f36240d",
+    "skills/company-profile-analyzer/scripts/design_analyzer.py": "2ee6d0da40190381482aafebaf4907d2e3f32cea6855639c967a90bc38a6070d",
+    "skills/company-profile-analyzer/scripts/document_extract.py": "8366f0dccdfbe2c1ac1c93fbcfccfc8e0c51ef346672aadef0815a032af3e788",
     "skills/company-profile-analyzer/scripts/source_registry.py": "40e901ce3b12c4515e94d12595b52e1ce140ff77e8ae9214a6d9e124c35a5fb1",
     "skills/company-profile-analyzer/scripts/writing_analyzer.py": "ca424528b89c808a699a8858e4e23b9e442d55d6a6b77ca207e79ee49444e61e",
     "skills/document-architecture/SKILL.md": "2573d62543d75284c6b9d62b0ad743ca3c05d14261f32daa0eeeeafd2e279f2e",
@@ -395,9 +401,10 @@
     "skills/visual-assets/references/request-examples.json": "817d1a5f82d0a84672ca691d87f20ff89b06fa736e65ce05351bdf24faabd934",
     "skills/visual-assets/references/style-families.md": "5aa7105b144c015492c0c0e8d869cf3396f7c246f89767dee7d291026caaa6b2",
     "skills/visual-assets/scripts/asset_board.py": "3170f054532d9be1754f719da3eee549dd918a49abbdb268d79be1d0ddf1ff9b",
-    "tests/test_company_analyzer.py": "365f28270dc6fe6adb94b67bb363d690a0d58f2ad810a945af9c3cedabc81577",
+    "tests/test_company_analyzer.py": "cceb6c3492095e524353cd7dede7178137ba80cfb43027fa1d70e798779dae4e",
     "tests/test_company_integration.py": "0b9cb47b3e927c5584fc2cef177bdd57a1d61ed8304d778cb3f2211f28e17751",
     "tests/test_company_pack.py": "bd6c3dcfb9af9b24cda731954b8b95f53b00f9749a4d56430c9df02edf9c6263",
-    "tests/test_plugin_export.py": "557db10ed0e7ca98c7dab71f8f27b9280c7032275ffff5bc10613ab03a56abc7"
+    "tests/test_plugin_export.py": "557db10ed0e7ca98c7dab71f8f27b9280c7032275ffff5bc10613ab03a56abc7",
+    "tests/test_public_company_fidelity.py": "7c6e30cb1a3070d482856e7924589e231b50e067f2d6f6dd41096dec815ea629"
   }
 }
