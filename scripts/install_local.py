@@ -18,7 +18,7 @@ NAMES = CORE_NAMES + EXTRA_NAMES
 
 
 def generated_cache(relative: Path) -> bool:
-    return "__pycache__" in relative.parts or relative.suffix in {".pyc", ".pyo"}
+    return ".git" in relative.parts or "__pycache__" in relative.parts or relative.suffix in {".pyc", ".pyo"}
 
 
 def contained(path: Path, root: Path) -> Path:

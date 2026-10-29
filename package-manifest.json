@@ -33,7 +33,7 @@
     "THIRD_PARTY_NOTICES.md": "f0729ffc8b89351665f8c80845d876c5a86a668cd07c493f8a08e5a8710490b0",
     "mcp.json": "8cef547c8da7d15d49c0e31abc5c59ee542e2793f3a204ab76719de1477fe20c",
     "plugin.json": "97bd7fe94d84f97ef4dc98ddb917a6fb871cd123360beceabbd040bbf7983a68",
-    "scripts/install_local.py": "83e87b9e67440a0ba6530b1ef7ac3873051f66e8cd860376f27382c06c3559f3",
+    "scripts/install_local.py": "953faaa2aa3b73c9b3cc38dbf3ec8ae6eb90a4025825e4f4b5d4a342edda6998",
     "scripts/verify_public_release.py": "7d76253985cb4e24f336d87436c235ae5d3a3e36680dc2af65bf80cc6a689d3c",
     "skills/business-japanese-translation/SKILL.md": "399919d5a4fbd985f4ef54ae3069b2f893b96682a8badfee3a66200621a3a19a",
     "skills/business-japanese-translation/agents/openai.yaml": "e8b63e8cc7d05a51341b75e9d3a905ac2f7392ba3e4b460964fbd2d1cb36fa40",
