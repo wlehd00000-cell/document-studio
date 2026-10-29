@@ -17,6 +17,8 @@ from design_analyzer import analyze_design, draft_design_profile  # noqa: E402
 from writing_analyzer import analyze_writing  # noqa: E402
 from build_company_pack import build_company_pack, change_review_status  # noqa: E402
 from company_pack import load_company_pack  # noqa: E402
+sys.path.insert(0,str(ROOT/'scripts'))
+from export_company_plugin import export_company_plugin  # noqa: E402
 
 
 def make_pptx(path):
@@ -114,3 +116,24 @@ def test_pdf_extraction_when_renderer_available(tmp_path):
     assert any('Quarterly' in s['text'] for s in extracted['pages'][0]['shapes'])
     preview=render_preview(pdf,tmp_path/'preview')
     assert len(preview)==1 and Path(preview[0]).is_file()
+
+
+def test_authorized_source_to_installable_plugin_end_to_end(tmp_path):
+    item,registry,_,_,_=run_analysis(tmp_path,'public',True)
+    target=tmp_path/'new-company'
+    build_company_pack(registry_file=registry,design_analyses=[tmp_path/'design.json'],
+                       writing_analyses=[tmp_path/'writing.json'],output=target,
+                       pack_id='new-company',company_name='New Company',version='1.0.0',
+                       default_language='en-US',enabled_languages=['en-US'])
+    change_review_status(target,reviewer='Analyst',note='Measured source checked',action='review')
+    change_review_status(target,reviewer='Owner',note='Rights and profile approved',action='approve')
+    zip_path=tmp_path/'new-company.zip'
+    result=export_company_plugin(target,zip_path,language_skills='none')
+    assert len(result['skills'])==8
+    import zipfile
+    with zipfile.ZipFile(zip_path) as archive:
+        combined=''.join(archive.read(name).decode('utf8') for name in archive.namelist()
+                         if name.endswith(('.json','.md','.py','.yaml')))
+        assert str(tmp_path) not in combined
+        assert 'sample.pptx' not in combined
+        assert item['source_id'] in combined

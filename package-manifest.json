@@ -395,7 +395,7 @@
     "skills/visual-assets/references/request-examples.json": "817d1a5f82d0a84672ca691d87f20ff89b06fa736e65ce05351bdf24faabd934",
     "skills/visual-assets/references/style-families.md": "5aa7105b144c015492c0c0e8d869cf3396f7c246f89767dee7d291026caaa6b2",
     "skills/visual-assets/scripts/asset_board.py": "3170f054532d9be1754f719da3eee549dd918a49abbdb268d79be1d0ddf1ff9b",
-    "tests/test_company_analyzer.py": "2c7f650a630e37a72fe44bb3ea85c1433d62b58d0886acc65714f3ddb4f7efc8",
+    "tests/test_company_analyzer.py": "365f28270dc6fe6adb94b67bb363d690a0d58f2ad810a945af9c3cedabc81577",
     "tests/test_company_integration.py": "0b9cb47b3e927c5584fc2cef177bdd57a1d61ed8304d778cb3f2211f28e17751",
     "tests/test_company_pack.py": "bd6c3dcfb9af9b24cda731954b8b95f53b00f9749a4d56430c9df02edf9c6263",
     "tests/test_plugin_export.py": "557db10ed0e7ca98c7dab71f8f27b9280c7032275ffff5bc10613ab03a56abc7"
