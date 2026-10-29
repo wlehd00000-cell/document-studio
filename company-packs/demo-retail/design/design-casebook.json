@@ -1,0 +1,5 @@
+{
+  "cases": [
+    {"case_id": "retail-cover", "title": "Bright product-led cover", "source_id": "DEMO-RETAIL-001", "source_ids": ["DEMO-RETAIL-001"], "status": "suggested", "confidence": "medium", "jobs": ["cover", "product", "brand"], "observed": "Original fictional retail layout", "page_families": ["cover"], "purpose_profiles": ["proposal"], "creativity": "expressive", "visual_intensity": "rich", "kind": "creative", "body_only": false}
+  ]
+}

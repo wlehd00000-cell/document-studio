@@ -1,0 +1,190 @@
+{
+  "schema_version": "public-company-fidelity/1.0",
+  "source": {
+    "company": "Seven & i Holdings",
+    "official_url": "https://www.7andi.com/en/ir/file/library/co/pdf/2026_all_b_en.pdf",
+    "sha256": "9da00576d63716235be408b40a68b1f4fd30a56c8e20866ec309f86c3d6eedc7",
+    "pages": 31,
+    "document_family": "corporate_profile",
+    "language": "en-US",
+    "page_orientation": "landscape",
+    "page_sizes_pt": [
+      [
+        841.88,
+        595.28
+      ]
+    ],
+    "pages_with_vectors": 31,
+    "pages_with_raster_images": 31,
+    "text_block_count": 1585
+  },
+  "design": {
+    "source_top_graphic_colors": [
+      [
+        "#ADC2CC",
+        4961.0
+      ],
+      [
+        "#231F20",
+        4153.63
+      ],
+      [
+        "#FFFFFF",
+        1743.36
+      ],
+      [
+        "#000000",
+        682.0
+      ],
+      [
+        "#00A650",
+        605.28
+      ],
+      [
+        "#F5821F",
+        388.0
+      ],
+      [
+        "#ED1C24",
+        320.63
+      ],
+      [
+        "#E2E8EB",
+        159.08
+      ]
+    ],
+    "source_top_text_colors": [
+      [
+        "#231F20",
+        1390
+      ],
+      [
+        "#FFFFFF",
+        106
+      ],
+      [
+        "#7B8D97",
+        52
+      ],
+      [
+        "#008C44",
+        30
+      ],
+      [
+        "#F5821F",
+        20
+      ],
+      [
+        "#8DC63F",
+        18
+      ],
+      [
+        "#00A650",
+        12
+      ],
+      [
+        "#939598",
+        5
+      ]
+    ],
+    "frequent_font_names_unverified": [
+      [
+        "Gotham-Light",
+        1072
+      ],
+      [
+        "Gotham-Medium",
+        693
+      ],
+      [
+        "Gotham-Book",
+        131
+      ],
+      [
+        "EuropeanPiStd-1",
+        7
+      ],
+      [
+        "HiraginoUDSansFStd-W6",
+        5
+      ]
+    ],
+    "frequent_font_sizes_pt": [
+      [
+        6.4,
+        337
+      ],
+      [
+        5.0,
+        281
+      ],
+      [
+        6.0,
+        250
+      ],
+      [
+        8.5,
+        119
+      ],
+      [
+        7.1,
+        105
+      ],
+      [
+        5.5,
+        99
+      ],
+      [
+        5.7,
+        77
+      ],
+      [
+        5.8,
+        70
+      ]
+    ],
+    "proposed_brand_colors": {
+      "blue": "#00A650",
+      "deep_blue": "#F5821F",
+      "green": "#ED1C24",
+      "orange": "#00994A"
+    },
+    "palette_status": "draft_only_not_official_brand_guidelines",
+    "vector_color_scope": "PDF fill/stroke only; raster artwork colors not measured"
+  },
+  "color_holdout": {
+    "train_pages": 2,
+    "holdout_pages": 29,
+    "holdout_top_chromatic_vector_colors": [
+      "#00A650",
+      "#F5821F",
+      "#ED1C24",
+      "#43B97C",
+      "#FCBC86",
+      "#008C44",
+      "#F4847A",
+      "#82CA9C"
+    ],
+    "shared_train_holdout_colors": 3,
+    "exact_color_recall_at_4": 0.75,
+    "interpretation": "exact CSS color recurrence only, NOT page reconstruction similarity"
+  },
+  "writing": {
+    "paragraph_count": 1585,
+    "sentence_count": 2594,
+    "mean_sentence_chars": 30.1,
+    "script_detection": {
+      "en": 1134,
+      "und": 451
+    },
+    "status": "draft_not_company_wide_rule",
+    "source_excerpts_included": false
+  },
+  "release_gate": {
+    "company_pack_status": "draft_only",
+    "full_visual_reproduction": "NOT_EVALUATED",
+    "actual_font_rendering": "NOT_VERIFIED",
+    "html_to_pptx_pixel_fidelity": "NOT_VERIFIED",
+    "source_redistribution_allowed": false
+  }
+}

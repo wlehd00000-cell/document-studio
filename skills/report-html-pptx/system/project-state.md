@@ -38,6 +38,29 @@ PPTX is reported stale even though both files exist. Timestamps and completion
 flags are not freshness evidence. A hash confirms sameness, not claim accuracy
 or whether old external facts are still current; Research owns that review.
 
+### Approved Layout Grammar dependency
+
+An approved company scaffold registers its immutable policy snapshot, including
+reviewed Layout Grammar and human rule decisions, but **does not** register an
+invented page-specific grammar plan from placeholder starter content. After the
+final manuscript, `plan_layout_grammar.py --project PROJECT --page-brief
+content/page-brief.json --company-pack PACK` registers `page_brief` as source,
+`layout_plan` as an artifact depending on `page_brief`, canonical `copy` and
+company-pack snapshot, and adds `layout_plan` to the canonical `html` artifact's
+dependencies. Page IDs follow the approved brief; HTML must be recomposed and
+freshly snapshotted after this graph change. The plan retains `pending_render_review`.
+
+Run `audit_layout_grammar.py --project PROJECT` after authoring actual HTML.
+Its separate `qa/layout-grammar-application.json` records source/checker hashes,
+semantic anchors, browser-measured relationships, page screenshots and
+`PASS|FAIL|UNVERIFIED`. On an approved-grammar page, missing, stale, failed or
+unverified records block `production_contract.py` delivery even when a
+different design measurement passed. A changed pack, manuscript, page plan,
+HTML, canvas, font or project asset invalidates the bound receipt. Geometry
+PASS is *not* a human/vision review; the independent `visual` layer still needs
+actual rendered evidence. No matching accepted grammar gives an explicit neutral
+fallback and does not claim an official corporate layout.
+
 ## Scoped reuse
 
 Use `--pages all` for fonts, global CSS, global settings and topology. Register

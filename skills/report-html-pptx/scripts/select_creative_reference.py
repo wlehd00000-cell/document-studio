@@ -4,31 +4,37 @@ import json
 from pathlib import Path
 import sys
 from design_expression import EXPRESSION
+from company_pack import load_company_pack
 
 ROOT = Path(__file__).resolve().parents[1]
 
 
 def _summary(case):
-    return {key:case[key] for key in ('case_id','kind','title_ko','title_ja','page_families','purpose_profiles','study_file','gallery','body_only','creativity','visual_intensity') if key in case}
+    return {key:case[key] for key in ('case_id','kind','title','title_ko','title_ja','source_ids','status','confidence','page_families','purpose_profiles','study_file','gallery','body_only','creativity','visual_intensity') if key in case}
 
 
-def select(preset=None, creativity=None, intensity=None, family=None, limit=3, body_only=False, summary=False):
+def select(preset=None, creativity=None, intensity=None, family=None, limit=3, body_only=False, summary=False, company_pack=None):
     if not isinstance(limit,int) or not 1<=limit<=(3 if summary else 6):
         raise ValueError('Summary limit must be 1 to 3; full limit must be 1 to 6')
     if preset:
         p = EXPRESSION['presets'][preset]
         creativity = creativity or p['creativity']
         intensity = intensity or p['visual_intensity']
-    cases = json.loads((ROOT / 'references/creative-reference-casebook.json').read_text(encoding='utf-8'))['cases']
+    if company_pack:
+        pack=load_company_pack(company_pack)
+        cases=[c for c in pack.design_cases if c.get('kind')=='creative']
+    else:
+        cases = json.loads((ROOT / 'references/creative-reference-casebook.json').read_text(encoding='utf-8'))['cases']
     if body_only:
         cases = [c for c in cases if c.get('body_only') is True]
     if family:
-        cases = [c for c in cases if family in c['page_families']]
+        cases = [c for c in cases if family in c.get('page_families',[])]
     ranked = sorted(cases, key=lambda c: (
-        -int(c['creativity'] == creativity) - int(c['visual_intensity'] == intensity),
+        -int(c.get('creativity') == creativity) - int(c.get('visual_intensity') == intensity),
         -int(c['case_id'] in EXPRESSION.get('default_reference_ids', [])
-             and c['creativity'] == creativity and c['visual_intensity'] == intensity), c['case_id']))
+             and c.get('creativity') == creativity and c.get('visual_intensity') == intensity), c['case_id']))
     return {'cases': [_summary(c) if summary else c for c in ranked[:limit]], 'query': {'preset': preset, 'creativity': creativity, 'visual_intensity': intensity, 'family': family, 'body_only': body_only},
+            'pack_id':pack.pack_id if company_pack else None,
             'note': 'Closest expression candidates, not exact guarantees. Open the linked actual composition; adapt the relationship to current content. Independent studies and user-accepted compositions are not observed official DEMO report pages. Use study_page_ids when a body reference shares a full document.'}
 
 
@@ -41,6 +47,7 @@ if __name__ == '__main__':
     p.add_argument('--body-only', action='store_true', help='Return dedicated body compositions; cover studies cannot satisfy this query.')
     p.add_argument('--limit', type=int, default=3)
     p.add_argument('--summary',action='store_true',help='Return only 1–3 compact case identities and reference paths')
+    p.add_argument('--company-pack',type=Path,help='Restrict references to the selected Company Pack')
     args = vars(p.parse_args())
     if not 1 <= args['limit'] <= (3 if args['summary'] else 6):
         p.error('--limit must be 1 to 3 for summary, otherwise 1 to 6')

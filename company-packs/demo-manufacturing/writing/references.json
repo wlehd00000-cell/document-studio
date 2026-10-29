@@ -1,0 +1,6 @@
+{
+  "references": [
+    {"id": "manufacturing-risk-ko", "language": "ko-KR", "document_family": "executive_report", "writing_function": "risk_explanation", "text": "설비 가동 조건과 관측 범위를 구분하여 잠재 위험을 평가합니다.", "source_ids": ["DEMO-MFG-002"], "status": "suggested", "confidence": "medium"},
+    {"id": "manufacturing-proposal-en", "language": "en-US", "document_family": "business_proposal", "writing_function": "recommendation", "text": "Verify tolerances before committing to the production schedule.", "source_ids": ["DEMO-MFG-003"], "status": "suggested", "confidence": "medium"}
+  ]
+}

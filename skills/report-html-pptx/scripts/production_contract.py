@@ -196,6 +196,80 @@ def audit_findings(project, brief, html=None):
     except (ValueError,KeyError,OSError,TypeError) as error:
         return [{'reason':'stale_or_invalid_design_measurement','detail':str(error)}]
 
+
+def grammar_audit_findings(project: Path, html: Path) -> list[dict]:
+    """Require fresh, measured approved-grammar evidence; never upgrade DOM to human review."""
+    project=Path(project).resolve()
+    config_file=project/'report-config.json'
+    if not config_file.is_file():return []
+    try:
+        config=read(config_file)
+        if not config.get('company_pack'):return []
+        from audit_layout_grammar import _source_files, SCRIPT, CHECKER, PLANNER, LOADER
+        from layout_plan import _digest
+        from project_state import ProjectState
+        state=ProjectState(project)
+        plan_file=state.path('content/layout-plan.json',must_exist=False)
+        if not plan_file.is_file():return [{'reason':'missing_approved_grammar_plan'}]
+        plan=read(plan_file)
+        if (plan.get('schema_version')!='layout-plan/1.0' or
+                _digest({k:v for k,v in plan.items() if k!='plan_sha256'})!=plan.get('plan_sha256')):
+            return [{'reason':'invalid_layout_grammar_plan'}]
+        if plan.get('pack_id')!=config['company_pack'].get('pack_id'):
+            return [{'reason':'mismatched_approved_grammar_pack'}]
+        if any(page['mode']=='needs_revision' for page in plan['pages']):
+            return [{'reason':'unresolved_layout_grammar_conflicts'}]
+        approved={page['page_id'] for page in plan['pages'] if page['mode']=='approved_grammar'}
+        if not approved:return []  # Explicitly neutral, not company grammar.
+        receipt_file=state.path('qa/layout-grammar-application.json',must_exist=False)
+        if not receipt_file.is_file():return [{'reason':'missing_layout_grammar_measurement'}]
+        receipt=read(receipt_file)
+        hashes=_source_files(state)
+        if (receipt.get('schema_version')!='layout-grammar-audit/1.0'
+                or receipt.get('input_hashes')!=hashes
+                or receipt.get('plan_sha256')!=plan['plan_sha256']
+                or receipt.get('html_sha256')!=digest(html)):
+            return [{'reason':'stale_layout_grammar_measurement'}]
+        expected_tools={'checker':Path(__file__).with_name('audit_layout_grammar.py'),
+                        'renderer_script':SCRIPT,'html_contract':CHECKER,
+                        'planner':PLANNER,'browser_loader':LOADER}
+        for name,path in expected_tools.items():
+            if receipt.get('tool_receipt',{}).get(name)!=digest(path):
+                return [{'reason':'stale_layout_grammar_checker','tool':name}]
+        if receipt.get('status')!='PASS':
+            return [{'reason':'layout_grammar_'+str(receipt.get('status','UNVERIFIED')).lower(),
+                     'findings':receipt.get('findings',[])}]
+        from html_grammar_contract import inspect_html_grammar
+        static=inspect_html_grammar(Path(html).read_text(encoding='utf-8'),plan)
+        if static['status']!='PASS':return [{'reason':'layout_grammar_static_trace_failed'}]
+        inspected=receipt.get('inspected_pages',[])
+        if not isinstance(inspected,list) or len(inspected)!=len(approved) or set(inspected)!=approved:
+            return [{'reason':'incomplete_layout_grammar_page_coverage'}]
+        screenshots=receipt.get('screenshots',[])
+        if (not isinstance(screenshots,list) or len(screenshots)!=len(approved)
+                or {row.get('page_id') for row in screenshots}!=approved):
+            return [{'reason':'incomplete_layout_grammar_screenshots'}]
+        for row in screenshots:
+            path=state.path(row['path'])
+            if not row['path'].startswith('qa/layout-grammar-pages/') or digest(path)!=row.get('sha256'):
+                return [{'reason':'stale_layout_grammar_screenshot'}]
+        expected_relations=sorted((page['page_id'],rule['rule_id'],relation['operator'],
+                    relation['leader_element_id'],relation['follower_element_id'])
+            for page in plan['pages'] if page['mode']=='approved_grammar'
+            for rule in page['rules'] for relation in rule['relationships'])
+        measured=receipt.get('relationships',[])
+        if not isinstance(measured,list) or sorted((item['page_id'],item['rule_id'],item['operator'],
+                    item['leader_element_id'],item['follower_element_id']) for item in measured)!=expected_relations:
+            return [{'reason':'incomplete_layout_grammar_relation_coverage'}]
+        if any(item.get('passed') is not True for item in measured):
+            return [{'reason':'layout_grammar_relation_failed'}]
+        if (receipt.get('tool_receipt',{}).get('renderer')!='Chromium'
+                or not receipt.get('tool_receipt',{}).get('browser_version')):
+            return [{'reason':'unverified_layout_grammar_renderer'}]
+        return []
+    except (KeyError,ValueError,TypeError,OSError,UnicodeError) as error:
+        return [{'reason':'invalid_layout_grammar_evidence','detail':str(error)}]
+
 def skill_findings(project, exports=False):
     path=Path(project)/'qa/skill-use.json'
     if not path.is_file(): return [{'reason':'missing_skill_application_record'}]
@@ -269,6 +343,8 @@ def contract_findings(project, html=None, exports=()):
         if brief.get('interaction',{}).get('pending_user_review'):
             return [{'reason':'awaiting_requested_user_review'}]
         findings=[] if bounded else audit_findings(project,brief,html)
+        if not bounded:
+            findings+=grammar_audit_findings(project,html or project/'html/index.html')
         findings+=skill_findings(project,bool(exports))
         for filename in exports:
             path=Path(filename)
