@@ -37,7 +37,7 @@ def check() -> None:
             json.loads(f.read_text(encoding="utf-8"))
         if f.suffix in {".py", ".md", ".html", ".css", ".js", ".mjs", ".json", ".yaml"}:
             text = f.read_text(encoding="utf-8")
-            if any(p.search(text) for p in DENY):
+            if f.name != "verify_public_release.py" and any(p.search(text) for p in DENY):
                 raise AssertionError(f"source-derived or encoded brand found: {f.relative_to(ROOT)}")
     casebook = json.loads((ROOT / "skills/report-html-pptx/references/demo-esg-casebook.json").read_text(encoding="utf-8"))
     library = json.loads((ROOT / "skills/document-writing/references/demo-report-library.json").read_text(encoding="utf-8"))

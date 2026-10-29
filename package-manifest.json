@@ -34,7 +34,7 @@
     "mcp.json": "8cef547c8da7d15d49c0e31abc5c59ee542e2793f3a204ab76719de1477fe20c",
     "plugin.json": "97bd7fe94d84f97ef4dc98ddb917a6fb871cd123360beceabbd040bbf7983a68",
     "scripts/install_local.py": "953faaa2aa3b73c9b3cc38dbf3ec8ae6eb90a4025825e4f4b5d4a342edda6998",
-    "scripts/verify_public_release.py": "7d76253985cb4e24f336d87436c235ae5d3a3e36680dc2af65bf80cc6a689d3c",
+    "scripts/verify_public_release.py": "e21c1bd18d595407f687921349f416f22d75b97c285dc43442a65ae26d6e9107",
     "skills/business-japanese-translation/SKILL.md": "399919d5a4fbd985f4ef54ae3069b2f893b96682a8badfee3a66200621a3a19a",
     "skills/business-japanese-translation/agents/openai.yaml": "e8b63e8cc7d05a51341b75e9d3a905ac2f7392ba3e4b460964fbd2d1cb36fa40",
     "skills/business-japanese-translation/references/business-register.md": "fdc7ded482ba71243ab33aabe0bfe9e2627121309a48891f19ee962f4939fa3e",
