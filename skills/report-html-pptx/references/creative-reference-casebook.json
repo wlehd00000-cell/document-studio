@@ -1,0 +1,486 @@
+{
+  "schema_version": "1.0",
+  "date": "2026-10-09",
+  "note": "Independently authored fictional composition ideas; prior inspections are not represented as verification of this public adaptation.",
+  "cases": [
+    {
+      "case_id": "DEMO-EXP-FORMAL",
+      "kind": "independent_adaptation",
+      "title_ko": "단정한 공식 문서",
+      "title_ja": "端正な公式資料",
+      "creativity": "restrained",
+      "visual_intensity": "subtle",
+      "page_families": [
+        "cover",
+        "evidence"
+      ],
+      "purpose_profiles": [
+        "proposal",
+        "reading_deck"
+      ],
+      "gallery": "../assets/creative-directions/index.html#DEMO-EXP-FORMAL",
+      "study_file": "../assets/creative-directions/formal.html",
+      "observed_relationship": "명료한 타이포와 정통적인 정보 구조",
+      "observed_spatial_relationships": {
+        "cover": "Actual independently authored editable title over an intentional image/typography composition; local quiet title zone.",
+        "body": "Dominant concept/source-kind frame adjacent to detailed explanatory paragraphs and an editable four-row responsibilities/conditions table."
+      },
+      "adaptation_rules": [
+        "Preserve supported copy, conditions and native editable table/text.",
+        "Reinterpret composition for the current subject rather than repeating this metaphor.",
+        "Use actual originals for factual evidence; disclose fictional generated scenes."
+      ],
+      "assets": [],
+      "copied_official_report_media": false,
+      "business_content": "fictional",
+      "review": {
+        "visual_inspection": "not_verified_for_public_adaptation",
+        "export_verification": "not_performed",
+        "user_acceptance": "not_requested"
+      }
+    },
+    {
+      "case_id": "DEMO-EXP-EDITORIAL",
+      "kind": "independent_adaptation",
+      "title_ko": "감각적인 편집물",
+      "title_ja": "洗練された編集資料",
+      "creativity": "editorial",
+      "visual_intensity": "balanced",
+      "page_families": [
+        "cover",
+        "evidence"
+      ],
+      "purpose_profiles": [
+        "proposal",
+        "reading_deck"
+      ],
+      "gallery": "../assets/creative-directions/index.html#DEMO-EXP-EDITORIAL",
+      "study_file": "../assets/creative-directions/editorial.html",
+      "observed_relationship": "사진 crop과 비대칭 제목의 균형",
+      "observed_spatial_relationships": {
+        "cover": "Actual independently authored editable title over an intentional image/typography composition; local quiet title zone.",
+        "body": "Dominant concept/source-kind frame adjacent to detailed explanatory paragraphs and an editable four-row responsibilities/conditions table."
+      },
+      "adaptation_rules": [
+        "Preserve supported copy, conditions and native editable table/text.",
+        "Reinterpret composition for the current subject rather than repeating this metaphor.",
+        "Use actual originals for factual evidence; disclose fictional generated scenes."
+      ],
+      "assets": [],
+      "copied_official_report_media": false,
+      "business_content": "fictional",
+      "review": {
+        "visual_inspection": "not_verified_for_public_adaptation",
+        "export_verification": "not_performed",
+        "user_acceptance": "not_requested"
+      }
+    },
+    {
+      "case_id": "DEMO-EXP-EXPRESSIVE",
+      "kind": "independent_adaptation",
+      "title_ko": "과감한 제안서",
+      "title_ja": "大胆な提案書",
+      "creativity": "expressive",
+      "visual_intensity": "rich",
+      "page_families": [
+        "cover",
+        "evidence"
+      ],
+      "purpose_profiles": [
+        "proposal",
+        "reading_deck"
+      ],
+      "gallery": "../assets/creative-directions/index.html#DEMO-EXP-EXPRESSIVE",
+      "study_file": "../assets/creative-directions/expressive.html",
+      "observed_relationship": "포장에서 도시로 이어지는 독창적 비유",
+      "observed_spatial_relationships": {
+        "cover": "Actual independently authored editable title over an intentional image/typography composition; local quiet title zone.",
+        "body": "Large reader-question heading above the concept image in a left rail; an offset white right-hand reading plane holds detailed paragraphs, a four-row table and next-step conditions."
+      },
+      "adaptation_rules": [
+        "Preserve supported copy, conditions and native editable table/text.",
+        "Reinterpret composition for the current subject rather than repeating this metaphor.",
+        "Use actual originals for factual evidence; disclose fictional generated scenes."
+      ],
+      "assets": [],
+      "copied_official_report_media": false,
+      "business_content": "fictional",
+      "review": {
+        "visual_inspection": "not_verified_for_public_adaptation",
+        "export_verification": "not_performed",
+        "user_acceptance": "not_requested"
+      }
+    },
+    {
+      "case_id": "DEMO-EXP-SHOWCASE",
+      "kind": "independent_adaptation",
+      "title_ko": "몰입감 있는 쇼케이스",
+      "title_ja": "没入感のあるショーケース",
+      "creativity": "experimental",
+      "visual_intensity": "immersive",
+      "page_families": [
+        "cover",
+        "evidence"
+      ],
+      "purpose_profiles": [
+        "proposal",
+        "reading_deck"
+      ],
+      "gallery": "../assets/creative-directions/index.html#DEMO-EXP-SHOWCASE",
+      "study_file": "../assets/creative-directions/showcase.html",
+      "observed_relationship": "순환의 조형과 빛이 만드는 개념 공간",
+      "observed_spatial_relationships": {
+        "cover": "Actual independently authored editable title over an intentional image/typography composition; local quiet title zone.",
+        "body": "An atmospheric sculptural scene fills the left edge from top to bottom; a separate pale right-hand reading plane retains an editable heading, detailed copy, four-row table, conditions and source note."
+      },
+      "adaptation_rules": [
+        "Preserve supported copy, conditions and native editable table/text.",
+        "Reinterpret composition for the current subject rather than repeating this metaphor.",
+        "Use actual originals for factual evidence; disclose fictional generated scenes."
+      ],
+      "assets": [],
+      "copied_official_report_media": false,
+      "business_content": "fictional",
+      "review": {
+        "visual_inspection": "not_verified_for_public_adaptation",
+        "export_verification": "not_performed",
+        "user_acceptance": "not_requested"
+      }
+    },
+    {
+      "case_id": "DEMO-EXP-QUIET-IMAGINATIVE",
+      "kind": "independent_adaptation",
+      "title_ko": "독창적이지만 차분하게",
+      "title_ja": "独創的で落ち着いた表現",
+      "creativity": "expressive",
+      "visual_intensity": "subtle",
+      "page_families": [
+        "cover",
+        "evidence"
+      ],
+      "purpose_profiles": [
+        "proposal",
+        "reading_deck"
+      ],
+      "gallery": "../assets/creative-directions/index.html#DEMO-EXP-QUIET-IMAGINATIVE",
+      "study_file": "../assets/creative-directions/quiet.html",
+      "observed_relationship": "같은 독창성을 종이와 낮은 대비로 표현",
+      "observed_spatial_relationships": {
+        "cover": "Actual independently authored editable title over an intentional image/typography composition; local quiet title zone.",
+        "body": "Dominant concept/source-kind frame adjacent to detailed explanatory paragraphs and an editable four-row responsibilities/conditions table."
+      },
+      "adaptation_rules": [
+        "Preserve supported copy, conditions and native editable table/text.",
+        "Reinterpret composition for the current subject rather than repeating this metaphor.",
+        "Use actual originals for factual evidence; disclose fictional generated scenes."
+      ],
+      "assets": [],
+      "copied_official_report_media": false,
+      "business_content": "fictional",
+      "review": {
+        "visual_inspection": "not_verified_for_public_adaptation",
+        "export_verification": "not_performed",
+        "user_acceptance": "not_requested"
+      }
+    },
+    {
+      "case_id": "DEMO-EXP-RICH-CLASSIC",
+      "kind": "independent_adaptation",
+      "title_ko": "익숙하지만 풍부하게",
+      "title_ja": "馴染みのある豊かな表現",
+      "creativity": "restrained",
+      "visual_intensity": "rich",
+      "page_families": [
+        "cover",
+        "evidence"
+      ],
+      "purpose_profiles": [
+        "proposal",
+        "reading_deck"
+      ],
+      "gallery": "../assets/creative-directions/index.html#DEMO-EXP-RICH-CLASSIC",
+      "study_file": "../assets/creative-directions/rich.html",
+      "observed_relationship": "정통 grid를 유지하고 사진의 존재감 확대",
+      "observed_spatial_relationships": {
+        "cover": "Actual independently authored editable title over an intentional image/typography composition; local quiet title zone.",
+        "body": "Dominant concept/source-kind frame adjacent to detailed explanatory paragraphs and an editable four-row responsibilities/conditions table."
+      },
+      "adaptation_rules": [
+        "Preserve supported copy, conditions and native editable table/text.",
+        "Reinterpret composition for the current subject rather than repeating this metaphor.",
+        "Use actual originals for factual evidence; disclose fictional generated scenes."
+      ],
+      "assets": [],
+      "copied_official_report_media": false,
+      "business_content": "fictional",
+      "review": {
+        "visual_inspection": "not_verified_for_public_adaptation",
+        "export_verification": "not_performed",
+        "user_acceptance": "not_requested"
+      }
+    },
+    {
+      "case_id": "DEMO-BODY-CONNECTED",
+      "kind": "independent_adaptation",
+      "title_ko": "하나의 장면과 국소 설명",
+      "title_ja": "一つの場面と局所的な説明",
+      "creativity": "expressive",
+      "visual_intensity": "balanced",
+      "body_only": true,
+      "page_families": [
+        "process",
+        "narrative"
+      ],
+      "purpose_profiles": [
+        "reading_report",
+        "proposal",
+        "execution_plan",
+        "reading_deck"
+      ],
+      "gallery": "../assets/body-compositions/index.html#DEMO-BODY-CONNECTED",
+      "study_file": "../assets/body-compositions/connected.html",
+      "observed_relationship": "Connected full-width explanatory scene; native leaders attach three local topics to the actual corresponding subjects, followed by dense explanatory notes.",
+      "observed_spatial_relationships": {
+        "body": "Connected full-width explanatory scene; native leaders attach three local topics to the actual corresponding subjects, followed by dense explanatory notes."
+      },
+      "source_relationship_anchors": [
+        "DEMO-C-007"
+      ],
+      "source_review_date": "2026-10-06",
+      "adaptation_rules": [
+        "Choose composition from the current body question; do not repeat this exact subject or asset.",
+        "Preserve dense native copy, sources, conditions and responsibilities.",
+        "Actual evidence requires verified originals; generated scenes remain concepts.",
+        "Whole/detail crops must identify the same source; do not imply independent sites or trials."
+      ],
+      "assets": [],
+      "copied_official_report_media": false,
+      "business_content": "fictional",
+      "review": {
+        "visual_inspection": "not_verified_for_public_adaptation",
+        "export_verification": "not_performed",
+        "user_acceptance": "not_requested"
+      }
+    },
+    {
+      "case_id": "DEMO-BODY-MOSAIC",
+      "kind": "independent_adaptation",
+      "title_ko": "크기가 다른 장면의 모자이크",
+      "title_ja": "大きさの異なる場面のモザイク",
+      "creativity": "editorial",
+      "visual_intensity": "rich",
+      "body_only": true,
+      "page_families": [
+        "evidence",
+        "narrative"
+      ],
+      "purpose_profiles": [
+        "reading_report",
+        "proposal",
+        "execution_plan",
+        "reading_deck"
+      ],
+      "gallery": "../assets/body-compositions/index.html#DEMO-BODY-MOSAIC",
+      "study_file": "../assets/body-compositions/mosaic.html",
+      "observed_relationship": "Prose and an independent photo mosaic; dominant work scene and two subordinate context images share a rectangular outer frame, keyed captions and baseline.",
+      "observed_spatial_relationships": {
+        "body": "Prose and an independent photo mosaic; dominant work scene and two subordinate context images share a rectangular outer frame, keyed captions and baseline."
+      },
+      "source_relationship_anchors": [
+        "DEMO-B-002",
+        "DEMO-B-002"
+      ],
+      "source_review_date": "2026-10-06",
+      "adaptation_rules": [
+        "Choose composition from the current body question; do not repeat this exact subject or asset.",
+        "Preserve dense native copy, sources, conditions and responsibilities.",
+        "Actual evidence requires verified originals; generated scenes remain concepts.",
+        "Whole/detail crops must identify the same source; do not imply independent sites or trials."
+      ],
+      "assets": [],
+      "copied_official_report_media": false,
+      "business_content": "fictional",
+      "review": {
+        "visual_inspection": "not_verified_for_public_adaptation",
+        "export_verification": "not_performed",
+        "user_acceptance": "not_requested"
+      }
+    },
+    {
+      "case_id": "DEMO-BODY-ESSAY",
+      "kind": "independent_adaptation",
+      "title_ko": "여러 단의 원고와 사진 흐름",
+      "title_ja": "複数段の原稿と写真の流れ",
+      "creativity": "editorial",
+      "visual_intensity": "balanced",
+      "body_only": true,
+      "page_families": [
+        "narrative",
+        "evidence"
+      ],
+      "purpose_profiles": [
+        "reading_report",
+        "proposal",
+        "execution_plan",
+        "reading_deck"
+      ],
+      "gallery": "../assets/body-compositions/index.html#DEMO-BODY-ESSAY",
+      "study_file": "../assets/body-compositions/essay.html",
+      "observed_relationship": "Cross-column lead establishes the argument; three dense columns carry distinct roles; associated photographs share the lower image and caption baselines.",
+      "observed_spatial_relationships": {
+        "body": "Cross-column lead establishes the argument; three dense columns carry distinct roles; associated photographs share the lower image and caption baselines."
+      },
+      "source_relationship_anchors": [
+        "DEMO-C-023",
+        "DEMO-C-041"
+      ],
+      "source_review_date": "2026-10-06",
+      "adaptation_rules": [
+        "Choose composition from the current body question; do not repeat this exact subject or asset.",
+        "Preserve dense native copy, sources, conditions and responsibilities.",
+        "Actual evidence requires verified originals; generated scenes remain concepts.",
+        "Whole/detail crops must identify the same source; do not imply independent sites or trials."
+      ],
+      "assets": [],
+      "copied_official_report_media": false,
+      "business_content": "fictional",
+      "review": {
+        "visual_inspection": "not_verified_for_public_adaptation",
+        "export_verification": "not_performed",
+        "user_acceptance": "not_requested"
+      }
+    },
+    {
+      "case_id": "DEMO-BODY-DETAIL",
+      "kind": "independent_adaptation",
+      "title_ko": "전체 장면과 확대의 연결",
+      "title_ja": "全体の場面と拡大のつながり",
+      "creativity": "expressive",
+      "visual_intensity": "subtle",
+      "body_only": true,
+      "page_families": [
+        "evidence",
+        "process"
+      ],
+      "purpose_profiles": [
+        "reading_report",
+        "proposal",
+        "execution_plan",
+        "reading_deck"
+      ],
+      "gallery": "../assets/body-compositions/index.html#DEMO-BODY-DETAIL",
+      "study_file": "../assets/body-compositions/detail.html",
+      "observed_relationship": "Whole material scene and two explicitly same-image detail crops; native source markers key local crops to the whole; adjacent editable review steps preserve interpretation limits.",
+      "observed_spatial_relationships": {
+        "body": "Whole material scene and two explicitly same-image detail crops; native source markers key local crops to the whole; adjacent editable review steps preserve interpretation limits."
+      },
+      "source_relationship_anchors": [
+        "DEMO-C-026",
+        "DEMO-B-002"
+      ],
+      "source_review_date": "2026-10-06",
+      "adaptation_rules": [
+        "Choose composition from the current body question; do not repeat this exact subject or asset.",
+        "Preserve dense native copy, sources, conditions and responsibilities.",
+        "Actual evidence requires verified originals; generated scenes remain concepts.",
+        "Whole/detail crops must identify the same source; do not imply independent sites or trials."
+      ],
+      "assets": [],
+      "copied_official_report_media": false,
+      "business_content": "fictional",
+      "review": {
+        "visual_inspection": "not_verified_for_public_adaptation",
+        "export_verification": "not_performed",
+        "user_acceptance": "not_requested"
+      }
+    },
+    {
+      "kind": "user_accepted_authored_reference",
+      "creativity": "expressive",
+      "visual_intensity": "rich",
+      "purpose_profiles": [
+        "reading_report",
+        "proposal",
+        "execution_plan",
+        "reading_deck"
+      ],
+      "study_file": "../assets/accepted-staff-guide/index.html",
+      "gallery": "../assets/accepted-staff-guide/index.html",
+      "copied_official_report_media": false,
+      "business_content": "fictional",
+      "assets": [],
+      "adaptation_rules": [
+        "Apply current question and evidence; do not copy the eight-page sequence, paper metaphor, canvas or image counts.",
+        "Current intake and production-contract rules override operational text in this earlier reference guide.",
+        "Preserve nominal report headings, substantive native copy, source/condition/status distinctions and concept disclosure."
+      ],
+      "review": {
+        "visual_inspection": "not_verified_for_public_adaptation",
+        "export_verification": "not_performed",
+        "user_acceptance": "not_requested"
+      },
+      "case_id": "DEMO-STAFF-GUIDE-SEQUENCE",
+      "title_ko": "채택된 직원 가이드 전체 구성",
+      "title_ja": "採用された社員ガイドの全体構成",
+      "page_families": [
+        "cover",
+        "editorial",
+        "narrative"
+      ],
+      "observed_relationship": "A meaningful conceptual cover followed by seven different supported explanatory jobs; coherent brand/type with varied body forms.",
+      "observed_spatial_relationships": {
+        "cover": "흩어진 자료에서 완성 문서로 이어지는 하나의 시각적 비유; native 제목과 보호된 제목 영역",
+        "body": "Request anatomy, choice/status map, connected workshop/process, visual atlas, before/after, annotated review, usable prompts."
+      }
+    },
+    {
+      "kind": "user_accepted_authored_reference",
+      "creativity": "expressive",
+      "visual_intensity": "rich",
+      "purpose_profiles": [
+        "reading_report",
+        "proposal",
+        "execution_plan",
+        "reading_deck"
+      ],
+      "study_file": "../assets/accepted-staff-guide/index.html",
+      "gallery": "../assets/accepted-staff-guide/index.html",
+      "copied_official_report_media": false,
+      "business_content": "fictional",
+      "assets": [],
+      "adaptation_rules": [
+        "Apply current question and evidence; do not copy the eight-page sequence, paper metaphor, canvas or image counts.",
+        "Current intake and production-contract rules override operational text in this earlier reference guide.",
+        "Preserve nominal report headings, substantive native copy, source/condition/status distinctions and concept disclosure."
+      ],
+      "review": {
+        "visual_inspection": "not_verified_for_public_adaptation",
+        "export_verification": "not_performed",
+        "user_acceptance": "not_requested"
+      },
+      "case_id": "DEMO-STAFF-GUIDE-BODY",
+      "title_ko": "채택된 직원 가이드 본문 전개",
+      "title_ja": "採用された社員ガイドの本文展開",
+      "body_only": true,
+      "page_families": [
+        "evidence",
+        "editorial",
+        "process",
+        "narrative"
+      ],
+      "study_page_ids": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "observed_relationship": "Distinct body questions determine different narrative moves, dominant forms and image/copy relationships.",
+      "observed_spatial_relationships": {
+        "body": "Large native request plus annotations; connected scene plus exact process line; comparison; annotated specimen and substantive follow-through."
+      }
+    }
+  ]
+}

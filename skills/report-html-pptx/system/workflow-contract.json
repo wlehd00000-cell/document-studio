@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operations": ["full", "revision", "conversion", "translation"],
+  "execution_profiles": ["focused", "standard", "showcase"],
+  "risk_signals": ["external_presentation", "spatial_concept", "live_motion", "brand_sensitive", "precision_data"],
+  "stages": {
+    "architecture": {"skill": "document-architecture", "result": "Current reader questions, supported messages, claim IDs and conditions in the existing map"},
+    "research": {"skill": "document-research", "result": "Actual claim/source records, acquired originals and unresolved limits"},
+    "writing": {"skill": "document-writing", "result": "Canonical final-language copy, changed labels and captions"},
+    "design": {"skill": "document-design", "result": "Actual HTML and integrated assets, applied relationships and inspected scope"},
+    "assets": {"skill": "visual-assets", "result": "Actual visual files, provenance and inspected placement constraints"},
+    "export": {"skill": "html-to-pptx", "result": "Editable output, conversion outcome, current export review"},
+    "japanese": {"skill": "business-japanese-translation", "result": "Source-equivalent Japanese copy and actual checked scope"},
+    "korean": {"skill": "business-korean-translation", "result": "Source-equivalent Korean copy and actual checked scope"}
+  },
+  "full_required": ["architecture", "writing", "design"],
+  "conditional_stages": ["research", "assets"],
+  "change_impacts": {
+    "argument": ["architecture", "writing", "design", "export"],
+    "fact": ["research", "writing", "design", "export"],
+    "copy": ["writing", "design", "export"],
+    "asset": ["design", "export"],
+    "generated_asset": ["assets", "design", "export"],
+    "style": ["design", "export"],
+    "font": ["design", "export"],
+    "canvas": ["design", "export"],
+    "export_fix": ["export"]
+  },
+  "global_changes": ["style", "font", "canvas", "argument"],
+  "readiness": {"created": "Actual file exists", "checked": "Current scoped evidence imported", "ready": "Project state gate passes all required layers", "accepted": "Actual user decision recorded separately"}
+}

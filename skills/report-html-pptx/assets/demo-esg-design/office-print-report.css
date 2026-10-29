@@ -1,0 +1,44 @@
+/* Conditional office-printer profile. Load after project CSS.
+   Remove decorative band markup as well; preserve original image artwork. */
+body.office-print {color:var(--ink);background:var(--paper)}
+/* Palette/physical type/margins come from generated canonical token CSS
+   or the scaffold's canonical-token-derived project variables. */
+.office-print .page,.office-print .demo-page {
+  background:var(--paper); box-shadow:none;
+  width:var(--page-width,210mm); height:var(--page-height,297mm);
+  break-after:page;
+}
+.office-print .page-inner {height:100%;padding:var(--print-safe-top) var(--print-safe-right) var(--print-content-bottom) var(--print-safe-left)}
+.office-print .demo-page {padding:var(--print-safe-top) var(--print-safe-right) var(--print-content-bottom) var(--print-safe-left)}
+.office-print .top-rule,.office-print .demo-rule {display:none;height:0;margin:0;padding:0}
+.office-print .page-header,.office-print .demo-header {border-color:var(--line);padding-bottom:8px}
+.office-print .page-footer,.office-print .demo-footer {
+  left:var(--print-safe-left);right:var(--print-safe-right);bottom:var(--print-footer-bottom);border-top:.5pt solid var(--line);
+  padding-top:5px;line-height:var(--print-caption-leading);color:var(--slate);
+}
+.office-print .lead {margin:12px 0;line-height:var(--body-leading)}
+.office-print .report-detail {gap:20px;margin:12px 0}
+.office-print .report-detail p,.office-print .evidence-item p,
+.office-print .next-action p,.office-print .outro-copy p {line-height:var(--body-leading)}
+.office-print .evidence-spread {gap:20px;margin:12px 0}
+.office-print .cover-copy {margin-top:32px}
+.office-print .cover-copy h1 {font-size:var(--title);margin:12px 0;line-height:1.25}
+.office-print .cover-copy p {font-size:var(--body);line-height:var(--body-leading)}
+.office-print .cover-purpose {margin-top:24px;padding-top:12px}
+.office-print .next-action {margin-top:12px;padding-top:8px}
+.office-print .outro-copy {margin-top:20px}
+.office-print .action-list {gap:20px;margin:16px 0}
+.office-print .data-table {margin-top:12px;border-top:.75pt solid var(--line)}
+.office-print .data-row.head {color:var(--ink);background:var(--print-table-head);font-weight:700}
+.office-print .demo-page thead th {color:var(--ink);background:var(--print-table-head);border-top:.75pt solid var(--line)}
+.office-print .demo-page .demo-group,.office-print .demo-page .demo-current {background:var(--print-table-head)}
+.office-print .demo-page h1,.office-print .demo-page h2 {margin:12px 0}
+.office-print .demo-page .demo-section {margin-top:12px}
+.office-print .demo-page p {line-height:var(--body-leading)}
+.office-print .demo-page .demo-scene .demo-pin {background:var(--ink)}
+@media print {
+  html,body.office-print {margin:0;padding:0;background:var(--paper)}
+  .office-print main {display:block;gap:0;padding:0;margin:0}
+  .office-print .page,.office-print .demo-page {margin:0;box-shadow:none}
+  .office-print .page:last-child,.office-print .demo-page:last-child {break-after:auto}
+}

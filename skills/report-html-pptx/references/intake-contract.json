@@ -1,0 +1,301 @@
+{
+  "schema_version": "1.0",
+  "fields": {
+    "mode": {
+      "label_ko": "진행 방식",
+      "label_ja": "進め方",
+      "choices": [
+        {
+          "value": "one_shot",
+          "ko": "원샷으로 완성",
+          "ja": "お任せで完成まで"
+        },
+        {
+          "value": "collaborative",
+          "ko": "함께 단계별로",
+          "ja": "相談しながら"
+        }
+      ],
+      "delegatable": true
+    },
+    "document_type": {
+      "label_ko": "문서 종류",
+      "label_ja": "文書の種類",
+      "choices": [
+        {
+          "value": "report",
+          "ko": "상세 보고서",
+          "ja": "詳細報告書"
+        },
+        {
+          "value": "submission",
+          "ko": "승인·품의 자료",
+          "ja": "承認・稟議資料"
+        },
+        {
+          "value": "proposal",
+          "ko": "제안서",
+          "ja": "提案書"
+        },
+        {
+          "value": "plan",
+          "ko": "실행계획서",
+          "ja": "実行計画書"
+        },
+        {
+          "value": "presentation",
+          "ko": "발표자료",
+          "ja": "発表資料"
+        },
+        {
+          "value": "guide",
+          "ko": "안내자료",
+          "ja": "案内資料"
+        },
+        {
+          "value": "manual",
+          "ko": "매뉴얼",
+          "ja": "マニュアル"
+        }
+      ],
+      "delegatable": true
+    },
+    "audience": {
+      "label_ko": "주요 독자",
+      "label_ja": "主な読者",
+      "choices": [
+        {
+          "value": "Client leadership",
+          "ko": "의뢰 조직 법인장·임원",
+          "ja": "依頼組織 法人長・役員"
+        },
+        {
+          "value": "Client staff",
+          "ko": "의뢰 조직 담당 직원",
+          "ja": "依頼組織 担当社員"
+        },
+        {
+          "value": "Japanese business partner",
+          "ko": "일본 거래처",
+          "ja": "日本の取引先"
+        }
+      ],
+      "custom": true,
+      "delegatable": true
+    },
+    "purpose": {
+      "label_ko": "읽은 뒤 할 판단·행동",
+      "label_ja": "読後の判断・対応",
+      "choices": [
+        {
+          "value": "approval",
+          "ko": "승인·의사결정",
+          "ja": "承認・意思決定"
+        },
+        {
+          "value": "information sharing",
+          "ko": "정보 공유·이해",
+          "ja": "情報共有・理解"
+        },
+        {
+          "value": "proposal consideration",
+          "ko": "제안 검토",
+          "ja": "提案の検討"
+        },
+        {
+          "value": "execution alignment",
+          "ko": "실행·담당 조율",
+          "ja": "実行・担当の調整"
+        }
+      ],
+      "custom": true,
+      "delegatable": true
+    },
+    "final_language": {
+      "label_ko": "완성 언어",
+      "label_ja": "完成言語",
+      "choices": [
+        {
+          "value": "ja",
+          "ko": "일본어",
+          "ja": "日本語"
+        },
+        {
+          "value": "ko",
+          "ko": "한국어",
+          "ja": "韓国語"
+        },
+        {
+          "value": "ja+ko",
+          "ko": "한일 병기",
+          "ja": "日韓併記"
+        }
+      ],
+      "custom": true,
+      "delegatable": true
+    },
+    "output_format": {
+      "label_ko": "파일 형식",
+      "label_ja": "ファイル形式",
+      "choices": [
+        {
+          "value": "PPTX",
+          "ko": "수정 가능한 PowerPoint",
+          "ja": "編集可能なPowerPoint"
+        },
+        {
+          "value": "PDF",
+          "ko": "공유·인쇄용 PDF",
+          "ja": "共有・印刷用PDF"
+        },
+        {
+          "value": "PPTX + PDF",
+          "ko": "PowerPoint와 PDF",
+          "ja": "PowerPointとPDF"
+        },
+        {
+          "value": "HTML",
+          "ko": "브라우저에서 읽을 자료",
+          "ja": "ブラウザーで読む資料"
+        },
+        {
+          "value": "DOCX",
+          "ko": "수정 가능한 Word",
+          "ja": "編集可能なWord"
+        }
+      ],
+      "delegatable": true
+    }
+  },
+  "use_choices": [
+    {
+      "value": "reading",
+      "ko": "상세하게 읽기·공유",
+      "ja": "詳しく読む・共有"
+    },
+    {
+      "value": "live",
+      "ko": "화면으로 실제 발표",
+      "ja": "画面で発表"
+    },
+    {
+      "value": "office_print",
+      "ko": "사무용 프린터 A4 인쇄",
+      "ja": "事務用プリンターでA4印刷"
+    },
+    {
+      "value": "template_edit",
+      "ko": "기존 양식 수정",
+      "ja": "既存の書式を修正"
+    }
+  ],
+  "resolved_statuses": [
+    "explicit",
+    "reused",
+    "source_explicit",
+    "delegated"
+  ],
+  "unresolved_statuses": [
+    "unknown",
+    "candidate",
+    "conflict",
+    "assumed"
+  ],
+  "submission_keys": [
+    "schema_version",
+    "fields",
+    "use",
+    "notes",
+    "source_paths",
+    "conversation_language",
+    "delegated_fields",
+    "design_preferences",
+    "canvas",
+    "choice_origins",
+    "review_checkpoint"
+  ],
+  "note": "Schema 1.0 core fields remain compatible. New production also requires resolved use and canvas decisions. Six core answers or PPTX alone cannot select a page ratio. Legacy assumptions remain pending; accepted template observations require current located evidence.",
+  "optional_design_preferences": {
+    "contract": "../system/design-expression.json",
+    "keys": [
+      "preset",
+      "creativity",
+      "visual_intensity"
+    ],
+    "required": false,
+    "note": "Expression remains optional. Use and canvas are separate required layout decisions; schema 1.0 core field map remains compatible."
+  },
+  "startup_policy": {
+    "defaults": {
+      "mode": "one_shot",
+      "document_type": "report",
+      "audience": "Document Studio staff",
+      "purpose": "information sharing",
+      "final_language": "$conversation_language",
+      "output_format": "PPTX"
+    },
+    "default_use": "reading",
+    "reason": "These are suggestions for unanswered questions. Present them as recommendations; never convert omission, a preselected option or a partial reply into an answer.",
+    "questions": "Ask only missing required choices in a concise bundle. Preserve pending fields across replies and turns until answered or specifically delegated. Do not repeat already resolved choices. Generic 대충/알아서/그냥 진행/適当に/お任せ does not silently delegate unspecified fields.",
+    "default_canvas": "a4-portrait",
+    "question_waiting": {
+      "reference": "question-waiting.md",
+      "scope": "open_interactive_question_control",
+      "display_acknowledgment_is_answer": false,
+      "final_while_control_awaits_input": false,
+      "wait_until": "submitted_reply_or_explicit_cancel_or_actual_host_limitation",
+      "per_blocking_wait_max_seconds": 60,
+      "minimum_review_wait_seconds": {
+        "simple_choice": 60,
+        "bundled_or_free_text": 180
+      },
+      "elapsed_time_resolves_choice": false,
+      "fallback": "ordinary_chat_preserve_resolved_and_pending_fields",
+      "note": "Instruction guidance, not a host UI timeout setting. Review intervals are not answer deadlines."
+    }
+  },
+  "required_fields": [
+    "mode",
+    "document_type",
+    "audience",
+    "purpose",
+    "final_language",
+    "output_format"
+  ],
+  "required_layout_fields": [
+    "use",
+    "canvas"
+  ],
+  "layout_labels": {
+    "use": {
+      "ko": "사용처",
+      "ja": "用途"
+    },
+    "canvas": {
+      "ko": "판형·방향",
+      "ja": "判型・向き"
+    }
+  },
+  "canvas_choices": [
+    {
+      "value": "a4-portrait",
+      "ko": "A4 세로",
+      "ja": "A4縦"
+    },
+    {
+      "value": "a4-landscape",
+      "ko": "A4 가로",
+      "ja": "A4横"
+    },
+    {
+      "value": "widescreen",
+      "ko": "16:9 화면",
+      "ja": "16:9画面"
+    },
+    {
+      "value": "esg-landscape",
+      "ko": "채택한 보고서 가로 양식",
+      "ja": "採用済み横長書式"
+    }
+  ]
+}

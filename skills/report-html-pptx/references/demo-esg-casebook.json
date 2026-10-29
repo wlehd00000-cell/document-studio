@@ -1,0 +1,348 @@
+{
+  "schema_version": "1.0",
+  "checked_at": "2026-10-29",
+  "version": "public-demo-1",
+  "page_numbering": "synthetic",
+  "priority": "independently_authored_fictional_patterns",
+  "cases": [
+    {
+      "case_id": "DEMO-A-001",
+      "source_id": "demo-a",
+      "pdf_page": 2,
+      "title_ko": "점포 경험 개선을 설명하는 3단 정보 구조",
+      "jobs": [
+        "narrative",
+        "evidence",
+        "image"
+      ],
+      "review_level": "synthetic_unverified",
+      "observed": "가상의 문서 설계 시나리오이며 실제 기업 보고서를 관찰한 결과가 아니다.",
+      "implement": "상단에 목적, 중앙에 점포 경험 개선의 핵심 원리, 하단에 근거를 배치.",
+      "adaptation": "논리적 관계와 가독성을 재사용하되 실제 수치·사진·브랜드를 사용자가 제공한 근거로 교체해야 한다.",
+      "page_families": [
+        "narrative",
+        "editorial"
+      ],
+      "purpose_profiles": [
+        "reading_report",
+        "executive_approval",
+        "proposal",
+        "execution",
+        "reading_deck",
+        "office_print"
+      ],
+      "synthetic": true
+    },
+    {
+      "case_id": "DEMO-A-002",
+      "source_id": "demo-a",
+      "pdf_page": 3,
+      "title_ko": "점포 경험 개선의 단계별 인계",
+      "jobs": [
+        "process",
+        "structure",
+        "responsibility"
+      ],
+      "review_level": "synthetic_unverified",
+      "observed": "가상의 문서 설계 시나리오이며 실제 기업 보고서를 관찰한 결과가 아니다.",
+      "implement": "입력·담당·결과물의 관계를 화살표로 연결.",
+      "adaptation": "논리적 관계와 가독성을 재사용하되 실제 수치·사진·브랜드를 사용자가 제공한 근거로 교체해야 한다.",
+      "page_families": [
+        "process",
+        "execution"
+      ],
+      "purpose_profiles": [
+        "reading_report",
+        "executive_approval",
+        "proposal",
+        "execution",
+        "reading_deck",
+        "office_print"
+      ],
+      "synthetic": true
+    },
+    {
+      "case_id": "DEMO-A-003",
+      "source_id": "demo-a",
+      "pdf_page": 4,
+      "title_ko": "방문자 체류시간 비교",
+      "jobs": [
+        "comparison",
+        "chart",
+        "table"
+      ],
+      "review_level": "synthetic_unverified",
+      "observed": "가상의 문서 설계 시나리오이며 실제 기업 보고서를 관찰한 결과가 아니다.",
+      "implement": "예시 지표 18분와 24분의 정의와 단위를 병기.",
+      "adaptation": "논리적 관계와 가독성을 재사용하되 실제 수치·사진·브랜드를 사용자가 제공한 근거로 교체해야 한다.",
+      "page_families": [
+        "evidence",
+        "comparison"
+      ],
+      "purpose_profiles": [
+        "reading_report",
+        "executive_approval",
+        "proposal",
+        "execution",
+        "reading_deck",
+        "office_print"
+      ],
+      "synthetic": true
+    },
+    {
+      "case_id": "DEMO-A-004",
+      "source_id": "demo-a",
+      "pdf_page": 5,
+      "title_ko": "점포 경험 개선 실행 로드맵",
+      "jobs": [
+        "action",
+        "roadmap",
+        "risk"
+      ],
+      "review_level": "synthetic_unverified",
+      "observed": "가상의 문서 설계 시나리오이며 실제 기업 보고서를 관찰한 결과가 아니다.",
+      "implement": "가상 예산·일정·승인 조건을 분리해 표현.",
+      "adaptation": "논리적 관계와 가독성을 재사용하되 실제 수치·사진·브랜드를 사용자가 제공한 근거로 교체해야 한다.",
+      "page_families": [
+        "execution",
+        "appendix"
+      ],
+      "purpose_profiles": [
+        "reading_report",
+        "executive_approval",
+        "proposal",
+        "execution",
+        "reading_deck",
+        "office_print"
+      ],
+      "synthetic": true
+    },
+    {
+      "case_id": "DEMO-B-001",
+      "source_id": "demo-b",
+      "pdf_page": 2,
+      "title_ko": "배송 인계 개선을 설명하는 3단 정보 구조",
+      "jobs": [
+        "narrative",
+        "evidence",
+        "image"
+      ],
+      "review_level": "synthetic_unverified",
+      "observed": "가상의 문서 설계 시나리오이며 실제 기업 보고서를 관찰한 결과가 아니다.",
+      "implement": "상단에 목적, 중앙에 배송 인계 개선의 핵심 원리, 하단에 근거를 배치.",
+      "adaptation": "논리적 관계와 가독성을 재사용하되 실제 수치·사진·브랜드를 사용자가 제공한 근거로 교체해야 한다.",
+      "page_families": [
+        "narrative",
+        "editorial"
+      ],
+      "purpose_profiles": [
+        "reading_report",
+        "executive_approval",
+        "proposal",
+        "execution",
+        "reading_deck",
+        "office_print"
+      ],
+      "synthetic": true
+    },
+    {
+      "case_id": "DEMO-B-002",
+      "source_id": "demo-b",
+      "pdf_page": 3,
+      "title_ko": "배송 인계 개선의 단계별 인계",
+      "jobs": [
+        "process",
+        "structure",
+        "responsibility"
+      ],
+      "review_level": "synthetic_unverified",
+      "observed": "가상의 문서 설계 시나리오이며 실제 기업 보고서를 관찰한 결과가 아니다.",
+      "implement": "입력·담당·결과물의 관계를 화살표로 연결.",
+      "adaptation": "논리적 관계와 가독성을 재사용하되 실제 수치·사진·브랜드를 사용자가 제공한 근거로 교체해야 한다.",
+      "page_families": [
+        "process",
+        "execution"
+      ],
+      "purpose_profiles": [
+        "reading_report",
+        "executive_approval",
+        "proposal",
+        "execution",
+        "reading_deck",
+        "office_print"
+      ],
+      "synthetic": true
+    },
+    {
+      "case_id": "DEMO-B-003",
+      "source_id": "demo-b",
+      "pdf_page": 4,
+      "title_ko": "정시 인계율 비교",
+      "jobs": [
+        "comparison",
+        "chart",
+        "table"
+      ],
+      "review_level": "synthetic_unverified",
+      "observed": "가상의 문서 설계 시나리오이며 실제 기업 보고서를 관찰한 결과가 아니다.",
+      "implement": "예시 지표 87%와 93%의 정의와 단위를 병기.",
+      "adaptation": "논리적 관계와 가독성을 재사용하되 실제 수치·사진·브랜드를 사용자가 제공한 근거로 교체해야 한다.",
+      "page_families": [
+        "evidence",
+        "comparison"
+      ],
+      "purpose_profiles": [
+        "reading_report",
+        "executive_approval",
+        "proposal",
+        "execution",
+        "reading_deck",
+        "office_print"
+      ],
+      "synthetic": true
+    },
+    {
+      "case_id": "DEMO-B-004",
+      "source_id": "demo-b",
+      "pdf_page": 5,
+      "title_ko": "배송 인계 개선 실행 로드맵",
+      "jobs": [
+        "action",
+        "roadmap",
+        "risk"
+      ],
+      "review_level": "synthetic_unverified",
+      "observed": "가상의 문서 설계 시나리오이며 실제 기업 보고서를 관찰한 결과가 아니다.",
+      "implement": "가상 예산·일정·승인 조건을 분리해 표현.",
+      "adaptation": "논리적 관계와 가독성을 재사용하되 실제 수치·사진·브랜드를 사용자가 제공한 근거로 교체해야 한다.",
+      "page_families": [
+        "execution",
+        "appendix"
+      ],
+      "purpose_profiles": [
+        "reading_report",
+        "executive_approval",
+        "proposal",
+        "execution",
+        "reading_deck",
+        "office_print"
+      ],
+      "synthetic": true
+    },
+    {
+      "case_id": "DEMO-C-001",
+      "source_id": "demo-c",
+      "pdf_page": 2,
+      "title_ko": "자재 재사용을 설명하는 3단 정보 구조",
+      "jobs": [
+        "narrative",
+        "evidence",
+        "image"
+      ],
+      "review_level": "synthetic_unverified",
+      "observed": "가상의 문서 설계 시나리오이며 실제 기업 보고서를 관찰한 결과가 아니다.",
+      "implement": "상단에 목적, 중앙에 자재 재사용의 핵심 원리, 하단에 근거를 배치.",
+      "adaptation": "논리적 관계와 가독성을 재사용하되 실제 수치·사진·브랜드를 사용자가 제공한 근거로 교체해야 한다.",
+      "page_families": [
+        "narrative",
+        "editorial"
+      ],
+      "purpose_profiles": [
+        "reading_report",
+        "executive_approval",
+        "proposal",
+        "execution",
+        "reading_deck",
+        "office_print"
+      ],
+      "synthetic": true
+    },
+    {
+      "case_id": "DEMO-C-002",
+      "source_id": "demo-c",
+      "pdf_page": 3,
+      "title_ko": "자재 재사용의 단계별 인계",
+      "jobs": [
+        "process",
+        "structure",
+        "responsibility"
+      ],
+      "review_level": "synthetic_unverified",
+      "observed": "가상의 문서 설계 시나리오이며 실제 기업 보고서를 관찰한 결과가 아니다.",
+      "implement": "입력·담당·결과물의 관계를 화살표로 연결.",
+      "adaptation": "논리적 관계와 가독성을 재사용하되 실제 수치·사진·브랜드를 사용자가 제공한 근거로 교체해야 한다.",
+      "page_families": [
+        "process",
+        "execution"
+      ],
+      "purpose_profiles": [
+        "reading_report",
+        "executive_approval",
+        "proposal",
+        "execution",
+        "reading_deck",
+        "office_print"
+      ],
+      "synthetic": true
+    },
+    {
+      "case_id": "DEMO-C-003",
+      "source_id": "demo-c",
+      "pdf_page": 4,
+      "title_ko": "재사용 회수율 비교",
+      "jobs": [
+        "comparison",
+        "chart",
+        "table"
+      ],
+      "review_level": "synthetic_unverified",
+      "observed": "가상의 문서 설계 시나리오이며 실제 기업 보고서를 관찰한 결과가 아니다.",
+      "implement": "예시 지표 42%와 56%의 정의와 단위를 병기.",
+      "adaptation": "논리적 관계와 가독성을 재사용하되 실제 수치·사진·브랜드를 사용자가 제공한 근거로 교체해야 한다.",
+      "page_families": [
+        "evidence",
+        "comparison"
+      ],
+      "purpose_profiles": [
+        "reading_report",
+        "executive_approval",
+        "proposal",
+        "execution",
+        "reading_deck",
+        "office_print"
+      ],
+      "synthetic": true
+    },
+    {
+      "case_id": "DEMO-C-004",
+      "source_id": "demo-c",
+      "pdf_page": 5,
+      "title_ko": "자재 재사용 실행 로드맵",
+      "jobs": [
+        "action",
+        "roadmap",
+        "risk"
+      ],
+      "review_level": "synthetic_unverified",
+      "observed": "가상의 문서 설계 시나리오이며 실제 기업 보고서를 관찰한 결과가 아니다.",
+      "implement": "가상 예산·일정·승인 조건을 분리해 표현.",
+      "adaptation": "논리적 관계와 가독성을 재사용하되 실제 수치·사진·브랜드를 사용자가 제공한 근거로 교체해야 한다.",
+      "page_families": [
+        "execution",
+        "appendix"
+      ],
+      "purpose_profiles": [
+        "reading_report",
+        "executive_approval",
+        "proposal",
+        "execution",
+        "reading_deck",
+        "office_print"
+      ],
+      "synthetic": true
+    }
+  ],
+  "reusable_without_originals": true,
+  "note": "실존 보고서·사내 자료를 사용하지 않은 합성 레이아웃 시나리오. 실제 검수 또는 성능을 보증하지 않음.",
+  "review_scope": "not_measured"
+}

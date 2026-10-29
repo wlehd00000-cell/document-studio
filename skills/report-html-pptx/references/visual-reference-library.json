@@ -1,0 +1,2074 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-09-30",
+  "families": {
+    "compare": {
+      "ko": "크기·대안 비교",
+      "ja": "量・選択肢の比較"
+    },
+    "change": {
+      "ko": "변화·추세",
+      "ja": "変化・傾向"
+    },
+    "composition": {
+      "ko": "구성·비중",
+      "ja": "構成・割合"
+    },
+    "distribution": {
+      "ko": "분포·범위",
+      "ja": "分布・範囲"
+    },
+    "relationship": {
+      "ko": "관계·연결",
+      "ja": "関係・つながり"
+    },
+    "process": {
+      "ko": "절차·경험·인계",
+      "ja": "手順・体験・引き継ぎ"
+    },
+    "planning": {
+      "ko": "일정·담당·자원",
+      "ja": "日程・担当・資源"
+    },
+    "decision": {
+      "ko": "선택·우선순위",
+      "ja": "選択・優先順位"
+    },
+    "concept": {
+      "ko": "개념·구조·작동",
+      "ja": "概念・構造・仕組み"
+    },
+    "image": {
+      "ko": "이미지·공간·증거",
+      "ja": "画像・空間・根拠"
+    },
+    "storytelling": {
+      "ko": "장면·이야기·설명",
+      "ja": "場面・ストーリー・説明"
+    }
+  },
+  "sources": {
+    "ft": {
+      "title": "Financial Times Visual Vocabulary",
+      "publisher": "Financial Times",
+      "url": "https://github.com/Financial-Times/chart-doctor/blob/main/visual-vocabulary/README.md",
+      "checked_at": "2026-09-30"
+    },
+    "unhcr": {
+      "title": "UNHCR Chart Types",
+      "publisher": "UNHCR",
+      "url": "https://dataviz.unhcr.org/chart-types/",
+      "checked_at": "2026-09-30"
+    },
+    "dataviz": {
+      "title": "From Data to Viz",
+      "publisher": "Yan Holtz / Conor Healy",
+      "url": "https://www.data-to-viz.com/",
+      "checked_at": "2026-09-30"
+    },
+    "plot": {
+      "title": "Observable Plot",
+      "publisher": "Observable",
+      "url": "https://observablehq.github.io/plot/",
+      "checked_at": "2026-09-30"
+    },
+    "flourish": {
+      "title": "Flourish visualization examples",
+      "publisher": "Flourish",
+      "url": "https://flourish.studio/product/data-visualization/",
+      "checked_at": "2026-09-30"
+    },
+    "tables": {
+      "title": "Datawrapper Tables",
+      "publisher": "Datawrapper",
+      "url": "https://www.datawrapper.de/tables",
+      "checked_at": "2026-09-30"
+    },
+    "heatmap": {
+      "title": "Datawrapper Heatmaps",
+      "publisher": "Datawrapper",
+      "url": "https://www.datawrapper.de/academy/how-to-create-a-heatmap",
+      "checked_at": "2026-09-30"
+    },
+    "multiples": {
+      "title": "Small Multiple Line Charts",
+      "publisher": "Datawrapper",
+      "url": "https://www.datawrapper.de/blog/what-to-consider-when-creating-small-multiple-line-charts",
+      "checked_at": "2026-09-30"
+    },
+    "story": {
+      "title": "Storyboards Help Visualize UX Ideas",
+      "publisher": "Nielsen Norman Group",
+      "url": "https://www.nngroup.com/articles/storyboards-visualize-ideas/",
+      "checked_at": "2026-09-30"
+    },
+    "journey": {
+      "title": "Journey Mapping 101",
+      "publisher": "Nielsen Norman Group",
+      "url": "https://www.nngroup.com/articles/journey-mapping-101/",
+      "checked_at": "2026-09-30"
+    },
+    "blueprint": {
+      "title": "Service Blueprints: Definition",
+      "publisher": "Nielsen Norman Group",
+      "url": "https://www.nngroup.com/articles/service-blueprints-definition/",
+      "checked_at": "2026-09-30"
+    },
+    "flow": {
+      "title": "Mermaid Flowcharts",
+      "publisher": "Mermaid",
+      "url": "https://mermaid.js.org/syntax/flowchart.html",
+      "checked_at": "2026-09-30"
+    },
+    "gantt": {
+      "title": "Mermaid Gantt",
+      "publisher": "Mermaid",
+      "url": "https://mermaid.js.org/syntax/gantt.html",
+      "checked_at": "2026-09-30"
+    },
+    "timeline": {
+      "title": "Mermaid Timeline",
+      "publisher": "Mermaid",
+      "url": "https://mermaid.js.org/syntax/timeline.html",
+      "checked_at": "2026-09-30"
+    },
+    "quadrant": {
+      "title": "Mermaid Quadrant Chart",
+      "publisher": "Mermaid",
+      "url": "https://mermaid.js.org/syntax/quadrantChart.html",
+      "checked_at": "2026-09-30"
+    },
+    "mindmap": {
+      "title": "Mermaid Mindmap",
+      "publisher": "Mermaid",
+      "url": "https://mermaid.js.org/syntax/mindmap.html",
+      "checked_at": "2026-09-30"
+    },
+    "infographic": {
+      "title": "draw.io Infographic Composition",
+      "publisher": "draw.io",
+      "url": "https://www.drawio.com/docs/tutorials/draw-infographics/",
+      "checked_at": "2026-09-30"
+    },
+    "roadmap": {
+      "title": "draw.io Timelines and Roadmaps",
+      "publisher": "draw.io",
+      "url": "https://www.drawio.com/docs/diagram-types/timeline-diagrams/",
+      "checked_at": "2026-09-30"
+    },
+    "consistency": {
+      "title": "draw.io Diagram Consistency",
+      "publisher": "draw.io",
+      "url": "https://www.drawio.com/docs/best-practice/consistent-diagrams/",
+      "checked_at": "2026-09-30"
+    }
+  },
+  "patterns": [
+    {
+      "id": "bar",
+      "family": "compare",
+      "kind": "chart",
+      "name": {
+        "ko": "가로 막대",
+        "ja": "横棒グラフ"
+      },
+      "requires": [
+        "metrics"
+      ],
+      "why": {
+        "ko": "항목 크기와 긴 이름을 함께 비교",
+        "ja": "項目の大きさと長い名称を比べる"
+      },
+      "caveat": {
+        "ko": "단위·0 기준 확인",
+        "ja": "単位とゼロ基準を確認"
+      },
+      "source_ids": [
+        "unhcr"
+      ],
+      "priority": 95,
+      "thumbnail": "assets/visual-references/bar.svg",
+      "schematic_only": true
+    },
+    {
+      "id": "ordered-bar",
+      "family": "compare",
+      "kind": "chart",
+      "name": {
+        "ko": "정렬 막대",
+        "ja": "順位付き棒グラフ"
+      },
+      "requires": [
+        "metrics"
+      ],
+      "why": {
+        "ko": "순위와 격차를 한눈에",
+        "ja": "順位と差をひと目で示す"
+      },
+      "caveat": {
+        "ko": "정렬이 논점에 맞아야 함",
+        "ja": "論点に合う順序を使う"
+      },
+      "source_ids": [
+        "ft"
+      ],
+      "priority": 92,
+      "thumbnail": "assets/visual-references/ordered-bar.svg",
+      "schematic_only": true
+    },
+    {
+      "id": "dot",
+      "family": "compare",
+      "kind": "chart",
+      "name": {
+        "ko": "점 비교",
+        "ja": "ドットプロット"
+      },
+      "requires": [
+        "metrics"
+      ],
+      "why": {
+        "ko": "간결한 축 위에서 값 비교",
+        "ja": "簡潔な軸で値を比べる"
+      },
+      "caveat": {
+        "ko": "점의 의미와 축 설명",
+        "ja": "点と軸の意味を示す"
+      },
+      "source_ids": [
+        "unhcr"
+      ],
+      "priority": 84,
+      "thumbnail": "assets/visual-references/dot.svg",
+      "schematic_only": true
+    },
+    {
+      "id": "lollipop",
+      "family": "compare",
+      "kind": "chart",
+      "name": {
+        "ko": "롤리팝",
+        "ja": "ロリポップチャート"
+      },
+      "requires": [
+        "metrics"
+      ],
+      "why": {
+        "ko": "항목별 값의 끝점 강조",
+        "ja": "項目ごとの値の位置を強調"
+      },
+      "caveat": {
+        "ko": "막대보다 나을 이유 확인",
+        "ja": "棒より適する理由を確認"
+      },
+      "source_ids": [
+        "ft"
+      ],
+      "priority": 70,
+      "thumbnail": "assets/visual-references/lollipop.svg",
+      "schematic_only": true
+    },
+    {
+      "id": "dumbbell",
+      "family": "compare",
+      "kind": "chart",
+      "name": {
+        "ko": "두 값 연결",
+        "ja": "ダンベルチャート"
+      },
+      "requires": [
+        "paired_metrics"
+      ],
+      "why": {
+        "ko": "항목별 두 상태 차이",
+        "ja": "項目ごとの二つの状態の差"
+      },
+      "caveat": {
+        "ko": "같은 항목의 짝과 단위",
+        "ja": "同じ項目の組と単位が必要"
+      },
+      "source_ids": [
+        "plot"
+      ],
+      "priority": 90,
+      "thumbnail": "assets/visual-references/dumbbell.svg",
+      "schematic_only": true
+    },
+    {
+      "id": "bullet",
+      "family": "compare",
+      "kind": "chart",
+      "name": {
+        "ko": "목표 대비 막대",
+        "ja": "目標比較のバレットチャート"
+      },
+      "requires": [
+        "metrics",
+        "targets"
+      ],
+      "why": {
+        "ko": "실적과 목표의 거리",
+        "ja": "実績と目標の差を示す"
+      },
+      "caveat": {
+        "ko": "목표를 승인 실적으로 오인 금지",
+        "ja": "目標と実績を区別する"
+      },
+      "source_ids": [
+        "tables"
+      ],
+      "priority": 85,
+      "thumbnail": "assets/visual-references/bullet.svg",
+      "schematic_only": true
+    },
+    {
+      "id": "grouped-bar",
+      "family": "compare",
+      "kind": "chart",
+      "name": {
+        "ko": "묶음 막대",
+        "ja": "グループ化棒グラフ"
+      },
+      "requires": [
+        "group_metrics"
+      ],
+      "why": {
+        "ko": "소수 그룹의 항목별 차이",
+        "ja": "少数の群を項目別に比べる"
+      },
+      "caveat": {
+        "ko": "범례·그룹 수 관리",
+        "ja": "凡例と群の数に注意"
+      },
+      "source_ids": [
+        "unhcr"
+      ],
+      "priority": 86,
+      "thumbnail": "assets/visual-references/grouped-bar.svg",
+      "schematic_only": true
+    },
+    {
+      "id": "comparison-table",
+      "family": "compare",
+      "kind": "table",
+      "name": {
+        "ko": "공통 기준 비교표",
+        "ja": "共通基準の比較表"
+      },
+      "requires": [
+        "criteria"
+      ],
+      "why": {
+        "ko": "정확한 조건과 값 비교",
+        "ja": "条件と数値を正確に比べる"
+      },
+      "caveat": {
+        "ko": "모든 대안에 같은 기준",
+        "ja": "全案を同じ基準で比べる"
+      },
+      "source_ids": [
+        "tables"
+      ],
+      "priority": 94,
+      "thumbnail": "assets/visual-references/comparison-table.svg",
+      "schematic_only": true
+    },
+    {
+      "id": "line",
+      "family": "change",
+      "kind": "chart",
+      "name": {
+        "ko": "선 그래프",
+        "ja": "折れ線グラフ"
+      },
+      "requires": [
+        "time_series"
+      ],
+      "why": {
+        "ko": "시간에 따른 방향",
+        "ja": "時間による方向性を示す"
+      },
+      "caveat": {
+        "ko": "누락 기간을 임의 연결 금지",
+        "ja": "欠測期間を勝手につながない"
+      },
+      "source_ids": [
+        "unhcr"
+      ],
+      "priority": 94,
+      "thumbnail": "assets/visual-references/line.svg",
+      "schematic_only": true
+    },
+    {
+      "id": "annotated-line",
+      "family": "change",
+      "kind": "chart",
+      "name": {
+        "ko": "주석 선 그래프",
+        "ja": "注釈付き折れ線グラフ"
+      },
+      "requires": [
+        "time_series",
+        "events"
+      ],
+      "why": {
+        "ko": "변화와 관련 사건의 위치",
+        "ja": "変化と関連する出来事の位置"
+      },
+      "caveat": {
+        "ko": "사건만으로 인과 단정 금지",
+        "ja": "出来事だけで因果を断定しない"
+      },
+      "source_ids": [
+        "plot"
+      ],
+      "priority": 98,
+      "thumbnail": "assets/visual-references/annotated-line.svg",
+      "schematic_only": true
+    },
+    {
+      "id": "slope",
+      "family": "change",
+      "kind": "chart",
+      "name": {
+        "ko": "기울기 연결",
+        "ja": "スロープチャート"
+      },
+      "requires": [
+        "paired_metrics"
+      ],
+      "why": {
+        "ko": "두 시점의 이동",
+        "ja": "二時点の変化を示す"
+      },
+      "caveat": {
+        "ko": "중간 추세는 알 수 없음",
+        "ja": "途中の推移は表さない"
+      },
+      "source_ids": [
+        "unhcr"
+      ],
+      "priority": 88,
+      "thumbnail": "assets/visual-references/slope.svg",
+      "schematic_only": true
+    },
+    {
+      "id": "sparkline-table",
+      "family": "change",
+      "kind": "table",
+      "name": {
+        "ko": "추세가 있는 표",
+        "ja": "推移付きの表"
+      },
+      "requires": [
+        "time_series",
+        "criteria"
+      ],
+      "why": {
+        "ko": "정확한 값과 작은 추세",
+        "ja": "正確な値と小さな推移"
+      },
+      "caveat": {
+        "ko": "축 차이를 숨기지 않음",
+        "ja": "尺度の違いを隠さない"
+      },
+      "source_ids": [
+        "tables"
+      ],
+      "priority": 87,
+      "thumbnail": "assets/visual-references/sparkline-table.svg",
+      "schematic_only": true
+    },
+    {
+      "id": "bump",
+      "family": "change",
+      "kind": "chart",
+      "name": {
+        "ko": "순위 이동",
+        "ja": "順位変動チャート"
+      },
+      "requires": [
+        "rank_series"
+      ],
+      "why": {
+        "ko": "시간별 순위 교체",
+        "ja": "時点ごとの順位変動"
+      },
+      "caveat": {
+        "ko": "값 크기와 순위 구분",
+        "ja": "値の大きさと順位を区別"
+      },
+      "source_ids": [
+        "ft"
+      ],
+      "priority": 75,
+      "thumbnail": "assets/visual-references/bump.svg",
+      "schematic_only": true
+    },
+    {
+      "id": "area",
+      "family": "change",
+      "kind": "chart",
+      "name": {
+        "ko": "영역 그래프",
+        "ja": "面グラフ"
+      },
+      "requires": [
+        "time_series"
+      ],
+      "why": {
+        "ko": "누적 규모의 흐름",
+        "ja": "規模の推移を示す"
+      },
+      "caveat": {
+        "ko": "면적과 0 기준 점검",
+        "ja": "面積とゼロ基準を確認"
+      },
+      "source_ids": [
+        "unhcr"
+      ],
+      "priority": 72,
+      "thumbnail": "assets/visual-references/area.svg",
+      "schematic_only": true
+    },
+    {
+      "id": "indexed-line",
+      "family": "change",
+      "kind": "chart",
+      "name": {
+        "ko": "기준시점 지수",
+        "ja": "基準時点の指数グラフ"
+      },
+      "requires": [
+        "time_series",
+        "common_base"
+      ],
+      "why": {
+        "ko": "시작 규모가 다른 추세",
+        "ja": "開始規模が異なる推移を比べる"
+      },
+      "caveat": {
+        "ko": "기준 시점과 계산식 표시",
+        "ja": "基準時点と計算を示す"
+      },
+      "source_ids": [
+        "ft"
+      ],
+      "priority": 80,
+      "thumbnail": "assets/visual-references/indexed-line.svg",
+      "schematic_only": true
+    },
+    {
+      "id": "calendar-heatmap",
+      "family": "change",
+      "kind": "chart",
+      "name": {
+        "ko": "달력 히트맵",
+        "ja": "カレンダーヒートマップ"
+      },
+      "requires": [
+        "dated_values"
+      ],
+      "why": {
+        "ko": "요일·기간 패턴",
+        "ja": "曜日や期間のパターン"
+      },
+      "caveat": {
+        "ko": "색 범례와 결측 표시",
+        "ja": "色の凡例と欠測を示す"
+      },
+      "source_ids": [
+        "plot"
+      ],
+      "priority": 73,
+      "thumbnail": "assets/visual-references/calendar-heatmap.svg",
+      "schematic_only": true
+    },
+    {
+      "id": "stacked-bar",
+      "family": "composition",
+      "kind": "chart",
+      "name": {
+        "ko": "누적 막대",
+        "ja": "積み上げ棒グラフ"
+      },
+      "requires": [
+        "parts"
+      ],
+      "why": {
+        "ko": "전체와 구성 규모",
+        "ja": "全体と内訳の規模"
+      },
+      "caveat": {
+        "ko": "공통 합계와 항목 정의",
+        "ja": "合計と項目定義をそろえる"
+      },
+      "source_ids": [
+        "unhcr"
+      ],
+      "priority": 93,
+      "thumbnail": "assets/visual-references/stacked-bar.svg",
+      "schematic_only": true
+    },
+    {
+      "id": "percent-stack",
+      "family": "composition",
+      "kind": "chart",
+      "name": {
+        "ko": "100% 누적 막대",
+        "ja": "100％積み上げ棒グラフ"
+      },
+      "requires": [
+        "parts",
+        "denominator"
+      ],
+      "why": {
+        "ko": "집단별 구성비",
+        "ja": "集団ごとの構成比"
+      },
+      "caveat": {
+        "ko": "절대 규모는 별도 표시",
+        "ja": "絶対規模は別に示す"
+      },
+      "source_ids": [
+        "unhcr"
+      ],
+      "priority": 95,
+      "thumbnail": "assets/visual-references/percent-stack.svg",
+      "schematic_only": true
+    },
+    {
+      "id": "waffle",
+      "family": "composition",
+      "kind": "chart",
+      "name": {
+        "ko": "단위 격자",
+        "ja": "ワッフルチャート"
+      },
+      "requires": [
+        "parts",
+        "denominator"
+      ],
+      "why": {
+        "ko": "부분과 전체를 작은 단위로",
+        "ja": "部分と全体を小単位で示す"
+      },
+      "caveat": {
+        "ko": "반올림과 분모 설명",
+        "ja": "丸めと分母を説明"
+      },
+      "source_ids": [
+        "unhcr"
+      ],
+      "priority": 70,
+      "thumbnail": "assets/visual-references/waffle.svg",
+      "schematic_only": true
+    },
+    {
+      "id": "treemap",
+      "family": "composition",
+      "kind": "chart",
+      "name": {
+        "ko": "면적 구성도",
+        "ja": "ツリーマップ"
+      },
+      "requires": [
+        "hierarchical_parts"
+      ],
+      "why": {
+        "ko": "큰 계층의 구성",
+        "ja": "大きな階層の内訳"
+      },
+      "caveat": {
+        "ko": "면적의 정밀 비교는 어려움",
+        "ja": "面積の精密比較は難しい"
+      },
+      "source_ids": [
+        "dataviz"
+      ],
+      "priority": 74,
+      "thumbnail": "assets/visual-references/treemap.svg",
+      "schematic_only": true
+    },
+    {
+      "id": "donut",
+      "family": "composition",
+      "kind": "chart",
+      "name": {
+        "ko": "도넛",
+        "ja": "ドーナツグラフ"
+      },
+      "requires": [
+        "parts",
+        "denominator"
+      ],
+      "why": {
+        "ko": "소수 구성의 한 비중",
+        "ja": "少数の内訳で一つの割合を示す"
+      },
+      "caveat": {
+        "ko": "작은 차이는 막대로 대체",
+        "ja": "小差の比較は棒を検討"
+      },
+      "source_ids": [
+        "unhcr"
+      ],
+      "priority": 58,
+      "thumbnail": "assets/visual-references/donut.svg",
+      "schematic_only": true
+    },
+    {
+      "id": "histogram",
+      "family": "distribution",
+      "kind": "chart",
+      "name": {
+        "ko": "히스토그램",
+        "ja": "ヒストグラム"
+      },
+      "requires": [
+        "observations"
+      ],
+      "why": {
+        "ko": "측정값이 몰린 범위",
+        "ja": "測定値が集中する範囲"
+      },
+      "caveat": {
+        "ko": "구간 폭에 따라 모양 변화",
+        "ja": "区間幅で見え方が変わる"
+      },
+      "source_ids": [
+        "dataviz"
+      ],
+      "priority": 92,
+      "thumbnail": "assets/visual-references/histogram.svg",
+      "schematic_only": true
+    },
+    {
+      "id": "boxplot",
+      "family": "distribution",
+      "kind": "chart",
+      "name": {
+        "ko": "상자 수염",
+        "ja": "箱ひげ図"
+      },
+      "requires": [
+        "group_observations"
+      ],
+      "why": {
+        "ko": "그룹별 중앙·산포",
+        "ja": "群ごとの中央と散らばり"
+      },
+      "caveat": {
+        "ko": "표본 수와 요약 정의",
+        "ja": "標本数と要約の定義を示す"
+      },
+      "source_ids": [
+        "unhcr"
+      ],
+      "priority": 88,
+      "thumbnail": "assets/visual-references/boxplot.svg",
+      "schematic_only": true
+    },
+    {
+      "id": "strip",
+      "family": "distribution",
+      "kind": "chart",
+      "name": {
+        "ko": "개별 점 분포",
+        "ja": "個別点の分布図"
+      },
+      "requires": [
+        "observations"
+      ],
+      "why": {
+        "ko": "작은 표본의 실제 관측",
+        "ja": "小標本の実測値を示す"
+      },
+      "caveat": {
+        "ko": "중복 점 가림 관리",
+        "ja": "重なる点を見えやすくする"
+      },
+      "source_ids": [
+        "plot"
+      ],
+      "priority": 90,
+      "thumbnail": "assets/visual-references/strip.svg",
+      "schematic_only": true
+    },
+    {
+      "id": "violin",
+      "family": "distribution",
+      "kind": "chart",
+      "name": {
+        "ko": "바이올린",
+        "ja": "バイオリンプロット"
+      },
+      "requires": [
+        "group_observations"
+      ],
+      "why": {
+        "ko": "그룹의 분포 형태",
+        "ja": "群の分布形状を示す"
+      },
+      "caveat": {
+        "ko": "자료 부족 시 밀도 오해",
+        "ja": "少数データの密度表示に注意"
+      },
+      "source_ids": [
+        "dataviz"
+      ],
+      "priority": 64,
+      "thumbnail": "assets/visual-references/violin.svg",
+      "schematic_only": true
+    },
+    {
+      "id": "range-band",
+      "family": "distribution",
+      "kind": "chart",
+      "name": {
+        "ko": "범위·구간",
+        "ja": "範囲・区間の図"
+      },
+      "requires": [
+        "ranges"
+      ],
+      "why": {
+        "ko": "추정 범위와 중심",
+        "ja": "推定範囲と中心を示す"
+      },
+      "caveat": {
+        "ko": "범위가 무엇인지 명시",
+        "ja": "範囲の意味を明示する"
+      },
+      "source_ids": [
+        "plot"
+      ],
+      "priority": 84,
+      "thumbnail": "assets/visual-references/range-band.svg",
+      "schematic_only": true
+    },
+    {
+      "id": "scatter",
+      "family": "relationship",
+      "kind": "chart",
+      "name": {
+        "ko": "산점도",
+        "ja": "散布図"
+      },
+      "requires": [
+        "paired_observations"
+      ],
+      "why": {
+        "ko": "두 측정 변수의 관계",
+        "ja": "二つの測定変数の関係"
+      },
+      "caveat": {
+        "ko": "상관과 인과 구분",
+        "ja": "相関と因果を区別"
+      },
+      "source_ids": [
+        "unhcr"
+      ],
+      "priority": 93,
+      "thumbnail": "assets/visual-references/scatter.svg",
+      "schematic_only": true
+    },
+    {
+      "id": "bubble",
+      "family": "relationship",
+      "kind": "chart",
+      "name": {
+        "ko": "버블",
+        "ja": "バブルチャート"
+      },
+      "requires": [
+        "paired_observations",
+        "third_metric"
+      ],
+      "why": {
+        "ko": "관계에 추가 규모",
+        "ja": "関係に規模の情報を加える"
+      },
+      "caveat": {
+        "ko": "반지름 대신 면적과 범례",
+        "ja": "面積と凡例で大きさを示す"
+      },
+      "source_ids": [
+        "unhcr"
+      ],
+      "priority": 73,
+      "thumbnail": "assets/visual-references/bubble.svg",
+      "schematic_only": true
+    },
+    {
+      "id": "matrix-heatmap",
+      "family": "relationship",
+      "kind": "chart",
+      "name": {
+        "ko": "행렬 히트맵",
+        "ja": "行列ヒートマップ"
+      },
+      "requires": [
+        "matrix_values"
+      ],
+      "why": {
+        "ko": "많은 조합의 패턴",
+        "ja": "多くの組み合わせの傾向"
+      },
+      "caveat": {
+        "ko": "색만으로 정확한 값 대체 금지",
+        "ja": "色だけで正確な値を代替しない"
+      },
+      "source_ids": [
+        "heatmap"
+      ],
+      "priority": 85,
+      "thumbnail": "assets/visual-references/matrix-heatmap.svg",
+      "schematic_only": true
+    },
+    {
+      "id": "network",
+      "family": "relationship",
+      "kind": "diagram",
+      "name": {
+        "ko": "연결망",
+        "ja": "ネットワーク図"
+      },
+      "requires": [
+        "relationships"
+      ],
+      "why": {
+        "ko": "실제 연결과 중심",
+        "ja": "実際のつながりと中心"
+      },
+      "caveat": {
+        "ko": "연결 없는 노드 연결 금지",
+        "ja": "存在しない関係を描かない"
+      },
+      "source_ids": [
+        "dataviz"
+      ],
+      "priority": 69,
+      "thumbnail": "assets/visual-references/network.svg",
+      "schematic_only": true
+    },
+    {
+      "id": "causal-map",
+      "family": "relationship",
+      "kind": "diagram",
+      "name": {
+        "ko": "원인 구조도",
+        "ja": "原因構造図"
+      },
+      "requires": [
+        "relationships",
+        "causal_evidence"
+      ],
+      "why": {
+        "ko": "검증된 작동 관계",
+        "ja": "確認済みの作用関係"
+      },
+      "caveat": {
+        "ko": "가설은 가설로 표시",
+        "ja": "仮説は仮説として示す"
+      },
+      "source_ids": [
+        "flow"
+      ],
+      "priority": 89,
+      "thumbnail": "assets/visual-references/causal-map.svg",
+      "schematic_only": true
+    },
+    {
+      "id": "linear-flow",
+      "family": "process",
+      "kind": "diagram",
+      "name": {
+        "ko": "단계 흐름",
+        "ja": "ステップフロー"
+      },
+      "requires": [
+        "steps"
+      ],
+      "why": {
+        "ko": "순서와 완료 지점",
+        "ja": "順序と完了点を示す"
+      },
+      "caveat": {
+        "ko": "실제 순서 확인",
+        "ja": "実際の順序を確認"
+      },
+      "source_ids": [
+        "flow"
+      ],
+      "priority": 94,
+      "thumbnail": "assets/visual-references/linear-flow.svg",
+      "schematic_only": true
+    },
+    {
+      "id": "decision-tree",
+      "family": "process",
+      "kind": "diagram",
+      "name": {
+        "ko": "조건 분기",
+        "ja": "条件分岐図"
+      },
+      "requires": [
+        "steps",
+        "conditions"
+      ],
+      "why": {
+        "ko": "상황별 다음 행동",
+        "ja": "条件別の次の行動"
+      },
+      "caveat": {
+        "ko": "분기 조건과 종료점",
+        "ja": "分岐条件と終点を明確に"
+      },
+      "source_ids": [
+        "flow"
+      ],
+      "priority": 91,
+      "thumbnail": "assets/visual-references/decision-tree.svg",
+      "schematic_only": true
+    },
+    {
+      "id": "swimlane",
+      "family": "process",
+      "kind": "diagram",
+      "name": {
+        "ko": "역할별 흐름",
+        "ja": "スイムレーン"
+      },
+      "requires": [
+        "steps",
+        "roles"
+      ],
+      "why": {
+        "ko": "담당과 인계",
+        "ja": "担当と引き継ぎを示す"
+      },
+      "caveat": {
+        "ko": "소유자와 순서를 함께 확인",
+        "ja": "担当と順序を確認"
+      },
+      "source_ids": [
+        "consistency"
+      ],
+      "priority": 97,
+      "thumbnail": "assets/visual-references/swimlane.svg",
+      "schematic_only": true
+    },
+    {
+      "id": "service-blueprint",
+      "family": "process",
+      "kind": "diagram",
+      "name": {
+        "ko": "서비스 구조도",
+        "ja": "サービスブループリント"
+      },
+      "requires": [
+        "steps",
+        "roles",
+        "touchpoints"
+      ],
+      "why": {
+        "ko": "고객 경험과 내부 지원",
+        "ja": "顧客体験と内部支援"
+      },
+      "caveat": {
+        "ko": "실제 접점과 제안 구분",
+        "ja": "実際の接点と提案を区別"
+      },
+      "source_ids": [
+        "blueprint"
+      ],
+      "priority": 88,
+      "thumbnail": "assets/visual-references/service-blueprint.svg",
+      "schematic_only": true
+    },
+    {
+      "id": "journey-map",
+      "family": "process",
+      "kind": "diagram",
+      "name": {
+        "ko": "경험 여정",
+        "ja": "ジャーニーマップ"
+      },
+      "requires": [
+        "steps",
+        "touchpoints"
+      ],
+      "why": {
+        "ko": "사용자가 겪는 과정",
+        "ja": "利用者がたどる過程"
+      },
+      "caveat": {
+        "ko": "감정·문제의 근거 표시",
+        "ja": "感情や課題の根拠を示す"
+      },
+      "source_ids": [
+        "journey"
+      ],
+      "priority": 87,
+      "thumbnail": "assets/visual-references/journey-map.svg",
+      "schematic_only": true
+    },
+    {
+      "id": "handoff-sequence",
+      "family": "process",
+      "kind": "diagram",
+      "name": {
+        "ko": "인계 순서",
+        "ja": "引き継ぎシーケンス"
+      },
+      "requires": [
+        "steps",
+        "roles",
+        "messages"
+      ],
+      "why": {
+        "ko": "역할 사이의 전달 시점",
+        "ja": "役割間の受け渡し時点"
+      },
+      "caveat": {
+        "ko": "화살표의 주체와 대상",
+        "ja": "矢印の送り手と受け手を示す"
+      },
+      "source_ids": [
+        "flow"
+      ],
+      "priority": 82,
+      "thumbnail": "assets/visual-references/handoff-sequence.svg",
+      "schematic_only": true
+    },
+    {
+      "id": "milestones",
+      "family": "planning",
+      "kind": "diagram",
+      "name": {
+        "ko": "주요 시점",
+        "ja": "マイルストーン"
+      },
+      "requires": [
+        "dates",
+        "events"
+      ],
+      "why": {
+        "ko": "중요 일정과 결정",
+        "ja": "重要な日程と判断を示す"
+      },
+      "caveat": {
+        "ko": "확정과 예정 구분",
+        "ja": "確定と予定を区別"
+      },
+      "source_ids": [
+        "timeline"
+      ],
+      "priority": 94,
+      "thumbnail": "assets/visual-references/milestones.svg",
+      "schematic_only": true
+    },
+    {
+      "id": "gantt",
+      "family": "planning",
+      "kind": "diagram",
+      "name": {
+        "ko": "기간 일정표",
+        "ja": "ガントチャート"
+      },
+      "requires": [
+        "dates",
+        "durations"
+      ],
+      "why": {
+        "ko": "작업 기간과 중첩",
+        "ja": "作業期間と重なり"
+      },
+      "caveat": {
+        "ko": "달력 간격·의존 조건",
+        "ja": "時間間隔と依存条件を確認"
+      },
+      "source_ids": [
+        "gantt"
+      ],
+      "priority": 95,
+      "thumbnail": "assets/visual-references/gantt.svg",
+      "schematic_only": true
+    },
+    {
+      "id": "roadmap",
+      "family": "planning",
+      "kind": "diagram",
+      "name": {
+        "ko": "단계별 로드맵",
+        "ja": "段階別ロードマップ"
+      },
+      "requires": [
+        "phases"
+      ],
+      "why": {
+        "ko": "방향과 단계별 성과",
+        "ja": "方向性と段階別の成果"
+      },
+      "caveat": {
+        "ko": "기간 없는 단계에 날짜 창작 금지",
+        "ja": "日付がない段階に創作しない"
+      },
+      "source_ids": [
+        "roadmap"
+      ],
+      "priority": 87,
+      "thumbnail": "assets/visual-references/roadmap.svg",
+      "schematic_only": true
+    },
+    {
+      "id": "dependency-map",
+      "family": "planning",
+      "kind": "diagram",
+      "name": {
+        "ko": "선행 조건도",
+        "ja": "依存関係図"
+      },
+      "requires": [
+        "relationships"
+      ],
+      "why": {
+        "ko": "먼저 완료해야 할 일",
+        "ja": "先に完了すべき作業"
+      },
+      "caveat": {
+        "ko": "화살표를 시간 비례로 오인 금지",
+        "ja": "矢印を時間の長さと誤解させない"
+      },
+      "source_ids": [
+        "flow"
+      ],
+      "priority": 86,
+      "thumbnail": "assets/visual-references/dependency-map.svg",
+      "schematic_only": true
+    },
+    {
+      "id": "raci",
+      "family": "planning",
+      "kind": "table",
+      "name": {
+        "ko": "책임 배분표",
+        "ja": "責任分担表"
+      },
+      "requires": [
+        "roles",
+        "activities"
+      ],
+      "why": {
+        "ko": "업무별 결정·수행 역할",
+        "ja": "業務別の決定と実行の役割"
+      },
+      "caveat": {
+        "ko": "역할 정의와 승인 상태",
+        "ja": "役割定義と承認状態を示す"
+      },
+      "source_ids": [
+        "tables"
+      ],
+      "priority": 93,
+      "thumbnail": "assets/visual-references/raci.svg",
+      "schematic_only": true
+    },
+    {
+      "id": "capacity-grid",
+      "family": "planning",
+      "kind": "table",
+      "name": {
+        "ko": "자원 배치 격자",
+        "ja": "資源配置グリッド"
+      },
+      "requires": [
+        "resource_values",
+        "dates"
+      ],
+      "why": {
+        "ko": "기간별 자원 부담",
+        "ja": "期間別の資源負荷"
+      },
+      "caveat": {
+        "ko": "수용량과 수요를 구분",
+        "ja": "容量と需要を区別"
+      },
+      "source_ids": [
+        "heatmap"
+      ],
+      "priority": 81,
+      "thumbnail": "assets/visual-references/capacity-grid.svg",
+      "schematic_only": true
+    },
+    {
+      "id": "option-matrix",
+      "family": "decision",
+      "kind": "table",
+      "name": {
+        "ko": "대안 평가표",
+        "ja": "選択肢の評価表"
+      },
+      "requires": [
+        "criteria"
+      ],
+      "why": {
+        "ko": "같은 기준으로 선택",
+        "ja": "共通基準で選択する"
+      },
+      "caveat": {
+        "ko": "근거 없는 점수 창작 금지",
+        "ja": "根拠のない点数を作らない"
+      },
+      "source_ids": [
+        "tables"
+      ],
+      "priority": 96,
+      "thumbnail": "assets/visual-references/option-matrix.svg",
+      "schematic_only": true
+    },
+    {
+      "id": "impact-effort",
+      "family": "decision",
+      "kind": "diagram",
+      "name": {
+        "ko": "효과·노력 사분면",
+        "ja": "効果・工数の四象限"
+      },
+      "requires": [
+        "criteria",
+        "ordinal_positions"
+      ],
+      "why": {
+        "ko": "정성적 우선순위",
+        "ja": "定性的な優先順位"
+      },
+      "caveat": {
+        "ko": "축 정의와 배치 근거",
+        "ja": "軸の定義と配置根拠を示す"
+      },
+      "source_ids": [
+        "quadrant"
+      ],
+      "priority": 80,
+      "thumbnail": "assets/visual-references/impact-effort.svg",
+      "schematic_only": true
+    },
+    {
+      "id": "scenario-lanes",
+      "family": "decision",
+      "kind": "diagram",
+      "name": {
+        "ko": "시나리오 나란히",
+        "ja": "シナリオ比較図"
+      },
+      "requires": [
+        "scenarios"
+      ],
+      "why": {
+        "ko": "조건별 전개 차이",
+        "ja": "条件ごとの展開の違い"
+      },
+      "caveat": {
+        "ko": "실적과 가정 구분",
+        "ja": "実績と仮定を区別"
+      },
+      "source_ids": [
+        "infographic"
+      ],
+      "priority": 88,
+      "thumbnail": "assets/visual-references/scenario-lanes.svg",
+      "schematic_only": true
+    },
+    {
+      "id": "tradeoff-table",
+      "family": "decision",
+      "kind": "table",
+      "name": {
+        "ko": "장점·조건 비교",
+        "ja": "利点・条件の比較表"
+      },
+      "requires": [
+        "criteria"
+      ],
+      "why": {
+        "ko": "얻는 것과 필요한 조건",
+        "ja": "利点と必要条件を示す"
+      },
+      "caveat": {
+        "ko": "불리한 조건을 숨기지 않음",
+        "ja": "不利な条件を隠さない"
+      },
+      "source_ids": [
+        "tables"
+      ],
+      "priority": 94,
+      "thumbnail": "assets/visual-references/tradeoff-table.svg",
+      "schematic_only": true
+    },
+    {
+      "id": "risk-matrix",
+      "family": "decision",
+      "kind": "diagram",
+      "name": {
+        "ko": "위험 행렬",
+        "ja": "リスクマトリクス"
+      },
+      "requires": [
+        "risk_definitions",
+        "ordinal_positions"
+      ],
+      "why": {
+        "ko": "위험 분류와 대응",
+        "ja": "リスク分類と対応"
+      },
+      "caveat": {
+        "ko": "색이나 위치를 확률로 오인 금지",
+        "ja": "色や位置を確率と誤解させない"
+      },
+      "source_ids": [
+        "quadrant"
+      ],
+      "priority": 76,
+      "thumbnail": "assets/visual-references/risk-matrix.svg",
+      "schematic_only": true
+    },
+    {
+      "id": "layered-system",
+      "family": "concept",
+      "kind": "diagram",
+      "name": {
+        "ko": "층별 구성",
+        "ja": "階層構成図"
+      },
+      "requires": [
+        "concept"
+      ],
+      "why": {
+        "ko": "역할이 다른 층의 작동",
+        "ja": "役割の異なる層の働き"
+      },
+      "caveat": {
+        "ko": "층과 연결의 의미",
+        "ja": "層と接続の意味を示す"
+      },
+      "source_ids": [
+        "infographic"
+      ],
+      "priority": 92,
+      "thumbnail": "assets/visual-references/layered-system.svg",
+      "schematic_only": true
+    },
+    {
+      "id": "concept-map",
+      "family": "concept",
+      "kind": "diagram",
+      "name": {
+        "ko": "개념 지도",
+        "ja": "コンセプトマップ"
+      },
+      "requires": [
+        "concept"
+      ],
+      "why": {
+        "ko": "핵심 개념과 묶음",
+        "ja": "中心概念とまとまり"
+      },
+      "caveat": {
+        "ko": "관계 종류를 구분",
+        "ja": "関係の種類を区別"
+      },
+      "source_ids": [
+        "mindmap"
+      ],
+      "priority": 94,
+      "thumbnail": "assets/visual-references/concept-map.svg",
+      "schematic_only": true
+    },
+    {
+      "id": "exploded-parts",
+      "family": "concept",
+      "kind": "diagram",
+      "name": {
+        "ko": "분해 구조",
+        "ja": "分解構造図"
+      },
+      "requires": [
+        "concept",
+        "parts_geometry"
+      ],
+      "why": {
+        "ko": "부분의 결합과 역할",
+        "ja": "部品の結合と役割"
+      },
+      "caveat": {
+        "ko": "실물과 개념도의 범위",
+        "ja": "実物と概念図の範囲を示す"
+      },
+      "source_ids": [
+        "infographic"
+      ],
+      "priority": 80,
+      "thumbnail": "assets/visual-references/exploded-parts.svg",
+      "schematic_only": true
+    },
+    {
+      "id": "mechanism",
+      "family": "concept",
+      "kind": "diagram",
+      "name": {
+        "ko": "작동 원리",
+        "ja": "仕組みの図"
+      },
+      "requires": [
+        "relationships"
+      ],
+      "why": {
+        "ko": "입력·작동·결과",
+        "ja": "入力・作用・結果"
+      },
+      "caveat": {
+        "ko": "검증 관계와 제안 구분",
+        "ja": "確認済みの関係と提案を区別"
+      },
+      "source_ids": [
+        "flow"
+      ],
+      "priority": 92,
+      "thumbnail": "assets/visual-references/mechanism.svg",
+      "schematic_only": true
+    },
+    {
+      "id": "hierarchy",
+      "family": "concept",
+      "kind": "diagram",
+      "name": {
+        "ko": "계층 구조",
+        "ja": "階層構造図"
+      },
+      "requires": [
+        "hierarchy"
+      ],
+      "why": {
+        "ko": "포함·보고 체계",
+        "ja": "包含・報告関係"
+      },
+      "caveat": {
+        "ko": "규모를 면적으로 암시 금지",
+        "ja": "面積で規模を暗示しない"
+      },
+      "source_ids": [
+        "mindmap"
+      ],
+      "priority": 86,
+      "thumbnail": "assets/visual-references/hierarchy.svg",
+      "schematic_only": true
+    },
+    {
+      "id": "annotated-image",
+      "family": "image",
+      "kind": "image",
+      "name": {
+        "ko": "주석 이미지",
+        "ja": "注釈付き画像"
+      },
+      "requires": [
+        "images"
+      ],
+      "why": {
+        "ko": "사진에서 볼 지점",
+        "ja": "写真の注目点を示す"
+      },
+      "caveat": {
+        "ko": "자산과 주장의 일치",
+        "ja": "画像と主張の一致を確認"
+      },
+      "source_ids": [
+        "infographic"
+      ],
+      "priority": 96,
+      "thumbnail": "assets/visual-references/annotated-image.svg",
+      "schematic_only": true
+    },
+    {
+      "id": "before-after",
+      "family": "image",
+      "kind": "image",
+      "name": {
+        "ko": "전후 비교",
+        "ja": "ビフォー・アフター"
+      },
+      "requires": [
+        "paired_images"
+      ],
+      "why": {
+        "ko": "같은 대상의 변화",
+        "ja": "同じ対象の変化を示す"
+      },
+      "caveat": {
+        "ko": "촬영 조건과 실제 변화",
+        "ja": "撮影条件と実際の変化を確認"
+      },
+      "source_ids": [
+        "infographic"
+      ],
+      "priority": 93,
+      "thumbnail": "assets/visual-references/before-after.svg",
+      "schematic_only": true
+    },
+    {
+      "id": "detail-inset",
+      "family": "image",
+      "kind": "image",
+      "name": {
+        "ko": "부분 확대",
+        "ja": "部分拡大図"
+      },
+      "requires": [
+        "images"
+      ],
+      "why": {
+        "ko": "작은 핵심 디테일",
+        "ja": "小さな重要部分を示す"
+      },
+      "caveat": {
+        "ko": "잘라낸 위치와 배율",
+        "ja": "切り抜き位置と倍率を示す"
+      },
+      "source_ids": [
+        "infographic"
+      ],
+      "priority": 91,
+      "thumbnail": "assets/visual-references/detail-inset.svg",
+      "schematic_only": true
+    },
+    {
+      "id": "source-image-grid",
+      "family": "image",
+      "kind": "image",
+      "name": {
+        "ko": "증거 이미지 묶음",
+        "ja": "根拠画像の一覧"
+      },
+      "requires": [
+        "image_set"
+      ],
+      "why": {
+        "ko": "복수 실물·현장 비교",
+        "ja": "複数の実物や現場を比べる"
+      },
+      "caveat": {
+        "ko": "동일 크기와 출처",
+        "ja": "同じ尺度と出典を確認"
+      },
+      "source_ids": [
+        "infographic"
+      ],
+      "priority": 81,
+      "thumbnail": "assets/visual-references/source-image-grid.svg",
+      "schematic_only": true
+    },
+    {
+      "id": "packshot-labels",
+      "family": "image",
+      "kind": "image",
+      "name": {
+        "ko": "제품 주석",
+        "ja": "商品画像への注釈"
+      },
+      "requires": [
+        "official_assets"
+      ],
+      "why": {
+        "ko": "공식 제품의 특징",
+        "ja": "公式商品の特徴を示す"
+      },
+      "caveat": {
+        "ko": "포장·로고 재작성 금지",
+        "ja": "包装やロゴを書き換えない"
+      },
+      "source_ids": [
+        "infographic"
+      ],
+      "priority": 94,
+      "thumbnail": "assets/visual-references/packshot-labels.svg",
+      "schematic_only": true
+    },
+    {
+      "id": "concept-overlay",
+      "family": "image",
+      "kind": "image",
+      "name": {
+        "ko": "제안 오버레이",
+        "ja": "提案のオーバーレイ"
+      },
+      "requires": [
+        "images",
+        "proposal"
+      ],
+      "why": {
+        "ko": "기존 공간에 바뀔 부분",
+        "ja": "既存空間の変更案を示す"
+      },
+      "caveat": {
+        "ko": "기존과 제안 표기 구분",
+        "ja": "現状と提案を区別"
+      },
+      "source_ids": [
+        "infographic"
+      ],
+      "priority": 90,
+      "thumbnail": "assets/visual-references/concept-overlay.svg",
+      "schematic_only": true
+    },
+    {
+      "id": "annotated-plan",
+      "family": "image",
+      "kind": "image",
+      "name": {
+        "ko": "평면·동선 주석",
+        "ja": "平面・動線への注釈"
+      },
+      "requires": [
+        "geometry"
+      ],
+      "why": {
+        "ko": "위치와 이동 조건",
+        "ja": "位置と移動条件を示す"
+      },
+      "caveat": {
+        "ko": "원도면과 실제 치수",
+        "ja": "原図と実寸を確認"
+      },
+      "source_ids": [
+        "infographic"
+      ],
+      "priority": 95,
+      "thumbnail": "assets/visual-references/annotated-plan.svg",
+      "schematic_only": true
+    },
+    {
+      "id": "storyboard",
+      "family": "storytelling",
+      "kind": "storyboard",
+      "name": {
+        "ko": "장면 스토리보드",
+        "ja": "場面のストーリーボード"
+      },
+      "requires": [
+        "scenarios"
+      ],
+      "why": {
+        "ko": "제안 경험의 전개",
+        "ja": "提案する体験の展開"
+      },
+      "caveat": {
+        "ko": "개념 장면임을 표시",
+        "ja": "構想段階の場面と明示"
+      },
+      "source_ids": [
+        "story"
+      ],
+      "priority": 93,
+      "thumbnail": "assets/visual-references/storyboard.svg",
+      "schematic_only": true
+    },
+    {
+      "id": "photo-sequence",
+      "family": "storytelling",
+      "kind": "storyboard",
+      "name": {
+        "ko": "사진 순서 설명",
+        "ja": "写真による手順説明"
+      },
+      "requires": [
+        "image_set",
+        "steps"
+      ],
+      "why": {
+        "ko": "실제 장면과 행동 순서",
+        "ja": "実際の場面と行動順序"
+      },
+      "caveat": {
+        "ko": "연출과 실제 기록 구분",
+        "ja": "演出と実際の記録を区別"
+      },
+      "source_ids": [
+        "story"
+      ],
+      "priority": 90,
+      "thumbnail": "assets/visual-references/photo-sequence.svg",
+      "schematic_only": true
+    },
+    {
+      "id": "photo-journey",
+      "family": "storytelling",
+      "kind": "storyboard",
+      "name": {
+        "ko": "사진 여정",
+        "ja": "写真付きジャーニー"
+      },
+      "requires": [
+        "images",
+        "steps",
+        "touchpoints"
+      ],
+      "why": {
+        "ko": "경험과 현장 맥락",
+        "ja": "体験と現場の文脈"
+      },
+      "caveat": {
+        "ko": "사진의 해당 단계 근거",
+        "ja": "写真と段階の対応を確認"
+      },
+      "source_ids": [
+        "journey"
+      ],
+      "priority": 83,
+      "thumbnail": "assets/visual-references/photo-journey.svg",
+      "schematic_only": true
+    },
+    {
+      "id": "evidence-pair",
+      "family": "storytelling",
+      "kind": "image",
+      "name": {
+        "ko": "근거와 해석 나란히",
+        "ja": "根拠と解釈の対比"
+      },
+      "requires": [
+        "images",
+        "claims"
+      ],
+      "why": {
+        "ko": "이미지 근거와 설명",
+        "ja": "画像の根拠と説明を並べる"
+      },
+      "caveat": {
+        "ko": "사진 이상의 주장 제한",
+        "ja": "写真を超える主張を避ける"
+      },
+      "source_ids": [
+        "story"
+      ],
+      "priority": 91,
+      "thumbnail": "assets/visual-references/evidence-pair.svg",
+      "schematic_only": true
+    },
+    {
+      "id": "diverging-bar",
+      "family": "compare",
+      "kind": "chart",
+      "name": {
+        "ko": "양방향 막대",
+        "ja": "発散型棒グラフ"
+      },
+      "requires": [
+        "signed_metrics"
+      ],
+      "why": {
+        "ko": "기준 대비 증가와 감소",
+        "ja": "基準に対する増減"
+      },
+      "caveat": {
+        "ko": "기준과 부호를 명시",
+        "ja": "基準と符号を明示"
+      },
+      "source_ids": [
+        "ft"
+      ],
+      "priority": 88,
+      "thumbnail": "assets/visual-references/diverging-bar.svg",
+      "schematic_only": true
+    },
+    {
+      "id": "waterfall",
+      "family": "change",
+      "kind": "chart",
+      "name": {
+        "ko": "증감 연결",
+        "ja": "ウォーターフォール"
+      },
+      "requires": [
+        "reconciled_changes"
+      ],
+      "why": {
+        "ko": "시작과 끝 사이의 증감",
+        "ja": "開始値から終了値への増減"
+      },
+      "caveat": {
+        "ko": "중간 합계와 산식 일치",
+        "ja": "途中の合計と計算を一致させる"
+      },
+      "source_ids": [
+        "unhcr"
+      ],
+      "priority": 91,
+      "thumbnail": "assets/visual-references/waterfall.svg",
+      "schematic_only": true
+    },
+    {
+      "id": "small-multiple-lines",
+      "family": "change",
+      "kind": "chart",
+      "name": {
+        "ko": "그룹별 추세 패널",
+        "ja": "群別の推移パネル"
+      },
+      "requires": [
+        "group_time_series"
+      ],
+      "why": {
+        "ko": "겹친 선을 나눠 비교",
+        "ja": "重なる線を分けて比べる"
+      },
+      "caveat": {
+        "ko": "공통 축과 예외 표시",
+        "ja": "共通の軸と例外を示す"
+      },
+      "source_ids": [
+        "multiples"
+      ],
+      "priority": 90,
+      "thumbnail": "assets/visual-references/small-multiple-lines.svg",
+      "schematic_only": true
+    },
+    {
+      "id": "small-multiple-bars",
+      "family": "compare",
+      "kind": "chart",
+      "name": {
+        "ko": "그룹별 막대 패널",
+        "ja": "群別の棒グラフパネル"
+      },
+      "requires": [
+        "group_metrics"
+      ],
+      "why": {
+        "ko": "항목이 많은 그룹 비교",
+        "ja": "項目の多い群を比べる"
+      },
+      "caveat": {
+        "ko": "축 범위와 순서 통일",
+        "ja": "軸の範囲と順序をそろえる"
+      },
+      "source_ids": [
+        "plot"
+      ],
+      "priority": 80,
+      "thumbnail": "assets/visual-references/small-multiple-bars.svg",
+      "schematic_only": true
+    },
+    {
+      "id": "sankey",
+      "family": "process",
+      "kind": "chart",
+      "name": {
+        "ko": "양이 있는 흐름",
+        "ja": "サンキーダイアグラム"
+      },
+      "requires": [
+        "flow_quantities"
+      ],
+      "why": {
+        "ko": "규모가 이동하는 경로",
+        "ja": "量が移動する経路"
+      },
+      "caveat": {
+        "ko": "보존량과 누락 흐름 확인",
+        "ja": "保存量と欠落経路を確認"
+      },
+      "source_ids": [
+        "unhcr"
+      ],
+      "priority": 89,
+      "thumbnail": "assets/visual-references/sankey.svg",
+      "schematic_only": true
+    },
+    {
+      "id": "funnel",
+      "family": "process",
+      "kind": "chart",
+      "name": {
+        "ko": "단계별 전환",
+        "ja": "段階別コンバージョン"
+      },
+      "requires": [
+        "stage_counts",
+        "same_cohort"
+      ],
+      "why": {
+        "ko": "동일 집단의 단계별 감소",
+        "ja": "同じ集団の段階別減少"
+      },
+      "caveat": {
+        "ko": "서로 다른 모집단 혼합 금지",
+        "ja": "異なる母集団を混ぜない"
+      },
+      "source_ids": [
+        "flourish"
+      ],
+      "priority": 86,
+      "thumbnail": "assets/visual-references/funnel.svg",
+      "schematic_only": true
+    },
+    {
+      "id": "choropleth",
+      "family": "image",
+      "kind": "chart",
+      "name": {
+        "ko": "지역별 색 지도",
+        "ja": "地域別色分け地図"
+      },
+      "requires": [
+        "geographic_values",
+        "geometry",
+        "normalized_rates"
+      ],
+      "why": {
+        "ko": "지역별 비율 분포",
+        "ja": "地域ごとの割合分布"
+      },
+      "caveat": {
+        "ko": "면적과 인구 규모 효과",
+        "ja": "面積と人口規模の影響に注意"
+      },
+      "source_ids": [
+        "unhcr"
+      ],
+      "priority": 82,
+      "thumbnail": "assets/visual-references/choropleth.svg",
+      "schematic_only": true
+    },
+    {
+      "id": "symbol-map",
+      "family": "image",
+      "kind": "chart",
+      "name": {
+        "ko": "위치별 크기 지도",
+        "ja": "位置別シンボルマップ"
+      },
+      "requires": [
+        "coordinates",
+        "metrics"
+      ],
+      "why": {
+        "ko": "지역의 실제 위치와 규모",
+        "ja": "実際の位置と規模"
+      },
+      "caveat": {
+        "ko": "기호 면적과 겹침",
+        "ja": "記号の面積と重なりを確認"
+      },
+      "source_ids": [
+        "unhcr"
+      ],
+      "priority": 83,
+      "thumbnail": "assets/visual-references/symbol-map.svg",
+      "schematic_only": true
+    }
+  ],
+  "provenance": "Original Document Studio adaptations and schematics; no copied code, photos or screenshots",
+  "usage": "Read only selected candidates. Replace schematic values and labels with verified content; protect official assets."
+}

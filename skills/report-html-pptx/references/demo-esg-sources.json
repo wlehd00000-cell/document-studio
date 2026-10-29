@@ -1,0 +1,55 @@
+{
+  "checked_at": "2026-10-29",
+  "primary_design_references": [
+    {
+      "id": "demo-a",
+      "title": "가상기업 A — 모래빛 생활연구소 가상 사례집",
+      "provided_filename": "FICTIONAL_DEMO_A.md",
+      "pdf_pages": 10,
+      "page_sizes_pt": [],
+      "measured_pdf_pages": [],
+      "case_ids": [
+        "DEMO-A-001",
+        "DEMO-A-002",
+        "DEMO-A-003",
+        "DEMO-A-004"
+      ],
+      "measurement_method": "No PDF measurements; all data independently synthesized."
+    },
+    {
+      "id": "demo-b",
+      "title": "가상기업 B — 파도길 물류 가상 사례집",
+      "provided_filename": "FICTIONAL_DEMO_B.md",
+      "pdf_pages": 10,
+      "page_sizes_pt": [],
+      "measured_pdf_pages": [],
+      "case_ids": [
+        "DEMO-B-001",
+        "DEMO-B-002",
+        "DEMO-B-003",
+        "DEMO-B-004"
+      ],
+      "measurement_method": "No PDF measurements; all data independently synthesized."
+    },
+    {
+      "id": "demo-c",
+      "title": "가상기업 C — 새싹 순환소재 가상 사례집",
+      "provided_filename": "FICTIONAL_DEMO_C.md",
+      "pdf_pages": 10,
+      "page_sizes_pt": [],
+      "measured_pdf_pages": [],
+      "case_ids": [
+        "DEMO-C-001",
+        "DEMO-C-002",
+        "DEMO-C-003",
+        "DEMO-C-004"
+      ],
+      "measurement_method": "No PDF measurements; all data independently synthesized."
+    }
+  ],
+  "review_scope": "fictional_only",
+  "interpretation": "Only layout logic may be adapted; no observed real-world corporate facts.",
+  "assets_policy": "Use user-licensed or independently generated assets.",
+  "runtime_policy": "Do not mistake synthetic source IDs for real PDFs.",
+  "production_policy": "Verify real inputs before publishing deliverables."
+}

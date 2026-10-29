@@ -1,0 +1,6 @@
+[fonts]
+auto_install = "no"
+[audit]
+mode = "triage"
+[cleanup]
+default = "keep"

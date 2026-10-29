@@ -1,0 +1,177 @@
+{
+  "schema_version": "1.0",
+  "default_preset": "expressive",
+  "axes": {
+    "creativity": {
+      "label_ko": "창의성",
+      "label_ja": "発想の大胆さ",
+      "choices": [
+        {
+          "value": "restrained",
+          "ko": "정통 · 익숙한 구성",
+          "ja": "正統 · 馴染みのある構成",
+          "traits": [
+            "literal imagery",
+            "familiar structure",
+            "precise alignment"
+          ]
+        },
+        {
+          "value": "editorial",
+          "ko": "감각적 · 편집 디자인",
+          "ja": "洗練 · エディトリアル",
+          "traits": [
+            "intentional crop",
+            "asymmetric hierarchy",
+            "subject-specific motif"
+          ]
+        },
+        {
+          "value": "expressive",
+          "ko": "과감한 · 시각적 비유",
+          "ja": "大胆 · 視覚的な比喩",
+          "traits": [
+            "original visual metaphor",
+            "mixed media",
+            "surprising scale"
+          ]
+        },
+        {
+          "value": "experimental",
+          "ko": "실험적 · 새로운 표현",
+          "ja": "実験的 · 新しい表現",
+          "traits": [
+            "conceptual world",
+            "sculptural typography relationship",
+            "unexpected visual sequence"
+          ]
+        }
+      ]
+    },
+    "visual_intensity": {
+      "label_ko": "시각적 화려함",
+      "label_ja": "視覚的な華やかさ",
+      "choices": [
+        {
+          "value": "subtle",
+          "ko": "차분하게",
+          "ja": "落ち着いた表現",
+          "traits": [
+            "quiet palette",
+            "sparse accent",
+            "low visual competition"
+          ]
+        },
+        {
+          "value": "balanced",
+          "ko": "적당히 강조",
+          "ja": "程よく強調",
+          "traits": [
+            "clear focal contrast",
+            "moderate image presence",
+            "selective color"
+          ]
+        },
+        {
+          "value": "rich",
+          "ko": "풍부하고 선명하게",
+          "ja": "豊かで鮮明に",
+          "traits": [
+            "strong contrast",
+            "prominent images",
+            "tactile layers"
+          ]
+        },
+        {
+          "value": "immersive",
+          "ko": "몰입감 있게",
+          "ja": "没入感のある表現",
+          "traits": [
+            "full-frame atmosphere where useful",
+            "dramatic focal lighting",
+            "cinematic transitions"
+          ]
+        }
+      ]
+    }
+  },
+  "presets": {
+    "formal": {
+      "ko": "단정한 공식 문서",
+      "ja": "端正な公式資料",
+      "description_ko": "정통 구성과 차분한 색감",
+      "description_ja": "正統な構成と落ち着いた色",
+      "creativity": "restrained",
+      "visual_intensity": "subtle",
+      "reference_ids": [
+        "DEMO-EXP-FORMAL"
+      ]
+    },
+    "editorial": {
+      "ko": "감각적인 편집물",
+      "ja": "洗練された編集資料",
+      "description_ko": "사진·타이포·여백으로 세련되게",
+      "description_ja": "写真・文字・余白で洗練",
+      "creativity": "editorial",
+      "visual_intensity": "balanced",
+      "reference_ids": [
+        "DEMO-EXP-EDITORIAL"
+      ]
+    },
+    "expressive": {
+      "ko": "과감한 제안서",
+      "ja": "大胆な提案書",
+      "description_ko": "독창적인 비유와 풍부한 이미지",
+      "description_ja": "独創的な比喩と豊かな画像",
+      "creativity": "expressive",
+      "visual_intensity": "rich",
+      "reference_ids": [
+        "DEMO-STAFF-GUIDE-SEQUENCE",
+        "DEMO-EXP-EXPRESSIVE"
+      ]
+    },
+    "showcase": {
+      "ko": "몰입감 있는 쇼케이스",
+      "ja": "没入感のあるショーケース",
+      "description_ko": "실험적인 장면과 강한 시각적 인상",
+      "description_ja": "実験的なシーンと強い印象",
+      "creativity": "experimental",
+      "visual_intensity": "immersive",
+      "reference_ids": [
+        "DEMO-EXP-SHOWCASE"
+      ]
+    }
+  },
+  "cross_axis_references": [
+    {
+      "reference_id": "DEMO-EXP-QUIET-IMAGINATIVE",
+      "creativity": "expressive",
+      "visual_intensity": "subtle"
+    },
+    {
+      "reference_id": "DEMO-EXP-RICH-CLASSIC",
+      "creativity": "restrained",
+      "visual_intensity": "rich"
+    }
+  ],
+  "invariants": [
+    "evidence accuracy",
+    "editable business text and quantities",
+    "actual/concept provenance",
+    "official identity preservation",
+    "purpose-appropriate readability",
+    "no invented claims"
+  ],
+  "note": "Expression is independent of document purpose, page family and authoring route. Traits are suggestions, not DEMO official CI or required quotas. Rich or immersive does not require dark pages, gradients, 3D or full-bleed on every page.",
+  "default_reference_ids": [
+    "DEMO-STAFF-GUIDE-SEQUENCE",
+    "DEMO-STAFF-GUIDE-BODY"
+  ],
+  "default_composition_reference": "../references/accepted-composition-default.md",
+  "default_basis": {
+    "type": "explicit_user_plugin_default",
+    "accepted_at": "2026-10-09",
+    "reference_record": "../references/accepted-composition.json",
+    "scope": "New documents without explicit expression or an accepted composition; preserve existing project choices and current intake."
+  }
+}

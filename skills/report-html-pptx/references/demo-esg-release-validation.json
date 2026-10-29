@@ -1,0 +1,17 @@
+{
+  "version": "public-1.0.0",
+  "checked_at": "2026-10-29",
+  "source_analysis": {
+    "fictional_cases": 12,
+    "real_corporate_reports": 0
+  },
+  "browser_validation": {
+    "status": "not_run_for_public_port"
+  },
+  "functional_validation": [],
+  "visual_review": {
+    "status": "not_run_for_public_port"
+  },
+  "pptx_final_conversion_and_visual_render": "not_run_for_public_port",
+  "note": "The prior private plug-in's validation records were not copied. Only new public verification results may be added."
+}

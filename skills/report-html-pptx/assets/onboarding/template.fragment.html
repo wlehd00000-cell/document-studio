@@ -1,0 +1,15 @@
+<div id="document-studio-intake-v3" class="demo-intake">
+  <style>%%STYLE%%</style>
+  <header class="demo-head"><img src="data:image/svg+xml;base64,%%LOGO%%" alt="Document Studio"><div><p class="demo-eyebrow">DOCUMENT STUDIO</p><h1>Document Studio 문서 제작 · 資料作成</h1><p id="demo-intake-intro"></p></div></header>
+  <div class="demo-quick-start"><button id="demo-start-recommended" type="button" class="demo-primary"></button><p id="demo-quick-help"></p></div>
+  <div class="demo-workspace">
+    <main><p id="demo-step" class="demo-step"></p><h2 id="demo-field-title"></h2><p id="demo-field-help"></p><div id="demo-choices" class="demo-choices"></div><div id="demo-custom-wrap" hidden><label id="demo-custom-label" for="demo-custom"></label><input id="demo-custom" type="text" maxlength="1500"><button id="demo-custom-apply" type="button"></button></div><div id="demo-use-wrap" hidden><label id="demo-use-label" for="demo-use"></label><select id="demo-use"></select><label id="demo-canvas-label" for="demo-canvas"></label><select id="demo-canvas"></select></div>
+    <section id="demo-expression-wrap" hidden aria-labelledby="demo-expression-title"><h3 id="demo-expression-title"></h3><p id="demo-expression-help"></p><div id="demo-expression-presets" class="demo-expression-presets"></div><button id="demo-expression-auto" type="button"></button><details><summary id="demo-expression-detail-label"></summary><label id="demo-creativity-label" for="demo-creativity"></label><select id="demo-creativity"></select><label id="demo-intensity-label" for="demo-intensity"></label><select id="demo-intensity"></select></details></section>
+    <p id="demo-error" role="alert"></p><nav><button id="demo-back" type="button"></button><button id="demo-next" type="button" class="demo-primary"></button></nav></main>
+    <aside><h2 id="demo-summary-title"></h2><dl id="demo-summary" aria-live="polite"></dl><label id="demo-notes-label" for="demo-notes"></label><textarea id="demo-notes" rows="3" maxlength="6000"></textarea></aside>
+  </div>
+  <section id="demo-final" hidden><h2 id="demo-final-title"></h2><p id="demo-transfer-note"></p><div class="demo-actions"><button id="demo-submit" type="button" class="demo-primary" hidden></button><button id="demo-download" type="button"></button></div><label id="demo-payload-label" for="demo-payload"></label><textarea id="demo-payload" rows="10" readonly></textarea><p id="demo-submit-status" aria-live="polite"></p></section>
+  <footer id="demo-intake-footer"></footer>
+  <script id="demo-intake-config" type="application/json">%%CONFIG%%</script>
+  <script>%%SCRIPT%%</script>
+</div>

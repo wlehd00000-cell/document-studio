@@ -1,0 +1,6 @@
+interface:
+  display_name: "Document Studio PPTX 제작 · PowerPoint"
+  short_description: "검수한 HTML을 편집 가능한 PPTX로 / HTMLから編集可能PPTXへ"
+  default_prompt: "$html-to-pptx 검수한 HTML을 실제 판면과 편집성을 유지해 PowerPoint로 변환하고 출력 결과를 확인해 주세요."
+policy:
+  allow_implicit_invocation: true

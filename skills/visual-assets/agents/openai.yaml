@@ -1,0 +1,6 @@
+interface:
+  display_name: "Document Studio 시각자산 · ビジュアル素材"
+  short_description: "보고서의 메인 장면·삽화·픽토그램을 같은 스타일로 제작합니다"
+  default_prompt: "$visual-assets 문서의 실제 디자인 요청과 창의성·화려함에 맞춰 필요한 이미지와 시각자산을 제작하고, 실제 파일·출처·구도를 확인해 주세요."
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0",
+  "checked_at": "2026-10-29",
+  "role": "synthetic independent study prompts",
+  "references": [
+    {
+      "id": "DEMO-EDITORIAL-1",
+      "title": "Fictional report opener",
+      "url": null,
+      "source_type": "independent_fictional",
+      "described_by_source": "Large headline, measured whitespace and clearly scoped visual evidence.",
+      "adaptation": "Use current subject and verified data; no external image is bundled.",
+      "suitable_families": [
+        "cover",
+        "chapter_opener"
+      ]
+    },
+    {
+      "id": "DEMO-EDITORIAL-2",
+      "title": "Fictional process narrative",
+      "url": null,
+      "source_type": "independent_fictional",
+      "described_by_source": "Editable steps with explicit inputs and outputs.",
+      "adaptation": "Use only source-backed facts and labels.",
+      "suitable_families": [
+        "process",
+        "execution"
+      ]
+    }
+  ]
+}

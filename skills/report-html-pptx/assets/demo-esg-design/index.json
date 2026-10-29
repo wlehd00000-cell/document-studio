@@ -1,0 +1,384 @@
+{
+  "checked_at": "2026-10-29",
+  "version": "3.0.0",
+  "samples": [
+    {
+      "id": "editorial-cover",
+      "name_ko": "표지",
+      "name_ja": "表紙",
+      "why_ko": "목적·시점·범위를 먼저 보여주는 편집형 표지",
+      "why_ja": "目的・時点・範囲を先に示す編集型の表紙",
+      "case_ids": [
+        "DEMO-A-001"
+      ],
+      "typography_profile": "demo-esg-dense",
+      "canvas": [
+        1123,
+        794
+      ],
+      "theme": "teal",
+      "applied": [
+        "Synthetic layout concept",
+        "No real company evidence"
+      ],
+      "adaptations": [
+        "Original design exercise; verify with actual user sources"
+      ],
+      "review": "not_verified"
+    },
+    {
+      "id": "chapter-opener",
+      "name_ko": "장 시작",
+      "name_ja": "章の扉",
+      "why_ko": "장 제목 아래 판단 흐름과 뒤쪽 근거 위치를 연결",
+      "why_ja": "章タイトルの下に判断の流れと根拠の参照先を配置",
+      "case_ids": [
+        "DEMO-A-002"
+      ],
+      "typography_profile": "demo-esg-dense",
+      "canvas": [
+        1123,
+        794
+      ],
+      "theme": "teal",
+      "applied": [
+        "Synthetic layout concept",
+        "No real company evidence"
+      ],
+      "adaptations": [
+        "Original design exercise; verify with actual user sources"
+      ],
+      "review": "not_verified"
+    },
+    {
+      "id": "open-summary",
+      "name_ko": "3단 본문·근거",
+      "name_ja": "3段の本文・根拠",
+      "why_ko": "각 단의 주장 바로 아래에 차트·표·사진을 배치",
+      "why_ja": "各段の説明の直下にグラフ・表・写真を配置",
+      "case_ids": [
+        "DEMO-A-003"
+      ],
+      "typography_profile": "demo-esg-body9",
+      "canvas": [
+        1123,
+        794
+      ],
+      "theme": "blue",
+      "applied": [
+        "Synthetic layout concept",
+        "No real company evidence"
+      ],
+      "adaptations": [
+        "Original design exercise; verify with actual user sources"
+      ],
+      "review": "not_verified"
+    },
+    {
+      "id": "narrative-evidence",
+      "name_ko": "설명과 작동 구조",
+      "name_ja": "説明と仕組み",
+      "why_ko": "목표 → 관리 영역 → 활동 → 지원 기반의 위계를 재현",
+      "why_ja": "目標→管理領域→活動→支援基盤の階層を再現",
+      "case_ids": [
+        "DEMO-A-004"
+      ],
+      "typography_profile": "demo-esg-caltex",
+      "canvas": [
+        1123,
+        794
+      ],
+      "theme": "teal",
+      "applied": [
+        "Synthetic layout concept",
+        "No real company evidence"
+      ],
+      "adaptations": [
+        "Original design exercise; verify with actual user sources"
+      ],
+      "review": "not_verified"
+    },
+    {
+      "id": "comparison",
+      "name_ko": "비교·추세·상세 기준",
+      "name_ja": "比較・推移・詳細基準",
+      "why_ko": "동일 기준선의 차트와 선택 조건을 한 판면에 배치",
+      "why_ja": "共通の基準線のグラフと選択条件を同じ紙面に配置",
+      "case_ids": [
+        "DEMO-B-001"
+      ],
+      "typography_profile": "demo-esg-dense",
+      "canvas": [
+        1123,
+        794
+      ],
+      "theme": "blue",
+      "applied": [
+        "Synthetic layout concept",
+        "No real company evidence"
+      ],
+      "adaptations": [
+        "Original design exercise; verify with actual user sources"
+      ],
+      "review": "not_verified"
+    },
+    {
+      "id": "governed-plan",
+      "name_ko": "일정·역할·검토",
+      "name_ja": "予定・役割・検討",
+      "why_ko": "시간축을 담당·선행 조건·검토 자료와 결합",
+      "why_ja": "時間軸を担当・前提条件・検討資料と結合",
+      "case_ids": [
+        "DEMO-B-002"
+      ],
+      "typography_profile": "demo-esg-dense",
+      "canvas": [
+        1123,
+        794
+      ],
+      "theme": "navy",
+      "applied": [
+        "Synthetic layout concept",
+        "No real company evidence"
+      ],
+      "adaptations": [
+        "Original design exercise; verify with actual user sources"
+      ],
+      "review": "not_verified"
+    },
+    {
+      "id": "image-evidence",
+      "name_ko": "이미지 전체·부분·해설",
+      "name_ja": "画像の全体・部分・解説",
+      "why_ko": "큰 프레임과 두 확대를 묶고 가까운 캡션으로 해석 범위를 표시",
+      "why_ja": "大きな枠と2つの拡大をまとめ、隣接する説明で解釈範囲を明示",
+      "case_ids": [
+        "DEMO-B-003"
+      ],
+      "typography_profile": "demo-esg-caltex",
+      "canvas": [
+        1123,
+        794
+      ],
+      "theme": "blue",
+      "applied": [
+        "Synthetic layout concept",
+        "No real company evidence"
+      ],
+      "adaptations": [
+        "Original design exercise; verify with actual user sources"
+      ],
+      "review": "not_verified"
+    },
+    {
+      "id": "factbook",
+      "name_ko": "다단 헤더·연도별 Factbook",
+      "name_ja": "多段見出し・年別Factbook",
+      "why_ko": "범위 헤더와 최신 연도 열을 유지한 촘촘한 표",
+      "why_ja": "範囲見出しと最新年の列を維持した密度の高い表",
+      "case_ids": [
+        "DEMO-B-004"
+      ],
+      "typography_profile": "demo-esg-factbook",
+      "canvas": [
+        1123,
+        794
+      ],
+      "theme": "navy",
+      "applied": [
+        "Synthetic layout concept",
+        "No real company evidence"
+      ],
+      "adaptations": [
+        "Original design exercise; verify with actual user sources"
+      ],
+      "review": "not_verified"
+    },
+    {
+      "id": "decision-close",
+      "name_ko": "분석 → 판단 → 후속 실행",
+      "name_ja": "分析→判断→後続実行",
+      "why_ko": "결정 요청과 근거·조건·책임을 같은 판면에 연결",
+      "why_ja": "判断依頼と根拠・条件・責任を同じ紙面で接続",
+      "case_ids": [
+        "DEMO-C-001"
+      ],
+      "typography_profile": "demo-esg-dense",
+      "canvas": [
+        1123,
+        794
+      ],
+      "theme": "navy",
+      "applied": [
+        "Synthetic layout concept",
+        "No real company evidence"
+      ],
+      "adaptations": [
+        "Original design exercise; verify with actual user sources"
+      ],
+      "review": "not_verified"
+    },
+    {
+      "id": "concept-scene",
+      "name_ko": "생성 장면·편집 가능한 라벨",
+      "name_ja": "生成場面・編集可能なラベル",
+      "why_ko": "원본의 통합 장면 원리와 큰 그림·작은 해설의 위계를 적용",
+      "why_ja": "原本の統合場面の原則と大きな図・小さな解説の階層を適用",
+      "case_ids": [
+        "DEMO-C-002"
+      ],
+      "typography_profile": "demo-esg-caltex",
+      "canvas": [
+        1123,
+        794
+      ],
+      "theme": "teal",
+      "applied": [
+        "Synthetic layout concept",
+        "No real company evidence"
+      ],
+      "adaptations": [
+        "Original design exercise; verify with actual user sources"
+      ],
+      "review": "not_verified"
+    },
+    {
+      "id": "risk-analysis",
+      "name_ko": "위험도·분석·대응 표",
+      "name_ja": "リスク・分析・対応表",
+      "why_ko": "색 범례·범위를 밝힌 위험도와 대응 책임을 연결",
+      "why_ja": "色の凡例・範囲を示したリスクと対応責任を接続",
+      "case_ids": [
+        "DEMO-C-003"
+      ],
+      "typography_profile": "demo-esg-caltex",
+      "canvas": [
+        1123,
+        794
+      ],
+      "theme": "blue",
+      "applied": [
+        "Synthetic layout concept",
+        "No real company evidence"
+      ],
+      "adaptations": [
+        "Original design exercise; verify with actual user sources"
+      ],
+      "review": "not_verified"
+    },
+    {
+      "id": "photo-mosaic",
+      "name_ko": "사진 묶음·캡션 대응",
+      "name_ja": "写真の組合せ・説明の対応",
+      "why_ko": "사진의 수와 내용에 맞춰 2×2와 주사진+보조사진을 선택",
+      "why_ja": "写真の数と内容に合わせて2×2と主写真＋補助写真を選択",
+      "case_ids": [
+        "DEMO-C-004"
+      ],
+      "typography_profile": "demo-esg-body9",
+      "canvas": [
+        1123,
+        794
+      ],
+      "theme": "blue",
+      "applied": [
+        "Synthetic layout concept",
+        "No real company evidence"
+      ],
+      "adaptations": [
+        "Original design exercise; verify with actual user sources"
+      ],
+      "review": "not_verified"
+    },
+    {
+      "id": "full-image-cover-3",
+      "name_ko": "Full-image 표지",
+      "name_ja": "全面画像の表紙",
+      "path": "family-studies.html",
+      "fixtures": [
+        "family-fixture-ko.html",
+        "family-fixture-ja.html"
+      ],
+      "profile": "reading_report",
+      "family": "cover",
+      "case_ids": [
+        "DEMO-A-001"
+      ],
+      "applied": [
+        "Synthetic layout concept",
+        "No real company evidence"
+      ],
+      "adaptations": [
+        "Original design exercise; verify with actual user sources"
+      ],
+      "review": "not_verified"
+    },
+    {
+      "id": "photo-chapter-3",
+      "name_ko": "사진 chapter opener",
+      "name_ja": "写真の章扉",
+      "path": "family-studies.html",
+      "profile": "reading_report",
+      "family": "chapter_opener",
+      "case_ids": [
+        "DEMO-A-002"
+      ],
+      "applied": [
+        "Synthetic layout concept",
+        "No real company evidence"
+      ],
+      "adaptations": [
+        "Original design exercise; verify with actual user sources"
+      ],
+      "review": "not_verified"
+    },
+    {
+      "id": "reading-body-3",
+      "name_ko": "상세 설명·표·업무 흐름",
+      "name_ja": "詳しい説明・表・作業の流れ",
+      "path": "family-studies.html",
+      "profile": "reading_report",
+      "family": "narrative",
+      "case_ids": [
+        "DEMO-A-003"
+      ],
+      "applied": [
+        "Synthetic layout concept",
+        "No real company evidence"
+      ],
+      "adaptations": [
+        "Original design exercise; verify with actual user sources"
+      ],
+      "review": "not_verified"
+    },
+    {
+      "id": "live-viewing-3",
+      "name_ko": "발표용 hierarchy",
+      "name_ja": "発表用の階層",
+      "path": "family-studies.html",
+      "fixtures": [
+        "live-fixture-ko.html",
+        "live-fixture-ja.html"
+      ],
+      "profile": "live_deck",
+      "family": "narrative",
+      "case_ids": [
+        "DEMO-A-004"
+      ],
+      "applied": [
+        "Synthetic layout concept",
+        "No real company evidence"
+      ],
+      "adaptations": [
+        "Original design exercise; verify with actual user sources"
+      ],
+      "review": "not_verified"
+    }
+  ],
+  "medium_modes": [
+    "reading_report",
+    "live_deck"
+  ],
+  "note": "All layouts and values are fictional and independently synthesized. No corporate PDF was analyzed.",
+  "refresh": "2.2.0: 12 source-level dense samples, 38 source cases, 4 typography profiles, photo mosaics, risk-response and native editable labels."
+}

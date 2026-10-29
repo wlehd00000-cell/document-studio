@@ -1,0 +1,137 @@
+{
+  "checked_at": "2026-10-01",
+  "icons": [
+    {
+      "family": "lucide",
+      "name": "leaf",
+      "file": "assets/icons/lucide/leaf.svg",
+      "source": "https://github.com/lucide-icons/lucide/blob/main/icons/leaf.svg",
+      "repository": "lucide-icons/lucide",
+      "license": "ISC; bundled upstream license includes Feather MIT attribution",
+      "sha256": "ac2b65d8d35b5038c9388cd1f161e74570fce6ef6a4c3d99a6b0c2bd68e0cb28",
+      "modified": false,
+      "license_file": "assets/icons/lucide/LICENSE.txt"
+    },
+    {
+      "family": "lucide",
+      "name": "factory",
+      "file": "assets/icons/lucide/factory.svg",
+      "source": "https://github.com/lucide-icons/lucide/blob/main/icons/factory.svg",
+      "repository": "lucide-icons/lucide",
+      "license": "ISC; bundled upstream license includes Feather MIT attribution",
+      "sha256": "5482b8d73276e072a951f4c1be530d31efa584c8d1a7affbeec22a560f0d5cc0",
+      "modified": false,
+      "license_file": "assets/icons/lucide/LICENSE.txt"
+    },
+    {
+      "family": "lucide",
+      "name": "truck",
+      "file": "assets/icons/lucide/truck.svg",
+      "source": "https://github.com/lucide-icons/lucide/blob/main/icons/truck.svg",
+      "repository": "lucide-icons/lucide",
+      "license": "ISC; bundled upstream license includes Feather MIT attribution",
+      "sha256": "1476faa56b56414ba5d5f01d15e851b8bfd79bef6c36f5855811c27590136e50",
+      "modified": false,
+      "license_file": "assets/icons/lucide/LICENSE.txt"
+    },
+    {
+      "family": "lucide",
+      "name": "store",
+      "file": "assets/icons/lucide/store.svg",
+      "source": "https://github.com/lucide-icons/lucide/blob/main/icons/store.svg",
+      "repository": "lucide-icons/lucide",
+      "license": "ISC; bundled upstream license includes Feather MIT attribution",
+      "sha256": "ab2cb92d8cff487f5a53a06f5ee3ba0c2cf522b95281adc1de9ec8410c26e99a",
+      "modified": false,
+      "license_file": "assets/icons/lucide/LICENSE.txt"
+    },
+    {
+      "family": "lucide",
+      "name": "users",
+      "file": "assets/icons/lucide/users.svg",
+      "source": "https://github.com/lucide-icons/lucide/blob/main/icons/users.svg",
+      "repository": "lucide-icons/lucide",
+      "license": "ISC; bundled upstream license includes Feather MIT attribution",
+      "sha256": "eeed488a1ec95ba730dd69996536fb65061d6ea273afb2429ae47e65eebf401c",
+      "modified": false,
+      "license_file": "assets/icons/lucide/LICENSE.txt"
+    },
+    {
+      "family": "lucide",
+      "name": "package",
+      "file": "assets/icons/lucide/package.svg",
+      "source": "https://github.com/lucide-icons/lucide/blob/main/icons/package.svg",
+      "repository": "lucide-icons/lucide",
+      "license": "ISC; bundled upstream license includes Feather MIT attribution",
+      "sha256": "69d6bc7650d26c4d24dd55eb22791607b982ce7637073944c256f1f61575509d",
+      "modified": false,
+      "license_file": "assets/icons/lucide/LICENSE.txt"
+    },
+    {
+      "family": "phosphor-duotone",
+      "name": "leaf",
+      "file": "assets/icons/phosphor-duotone/leaf.svg",
+      "source": "https://github.com/phosphor-icons/core/blob/main/assets/duotone/leaf-duotone.svg",
+      "repository": "phosphor-icons/core",
+      "license": "MIT",
+      "sha256": "a3e327a67d41f2337ed918e7a9eaaf3701354be0cdc766650d39dfe56c7951eb",
+      "modified": false,
+      "license_file": "assets/icons/phosphor-duotone/LICENSE.txt"
+    },
+    {
+      "family": "phosphor-duotone",
+      "name": "factory",
+      "file": "assets/icons/phosphor-duotone/factory.svg",
+      "source": "https://github.com/phosphor-icons/core/blob/main/assets/duotone/factory-duotone.svg",
+      "repository": "phosphor-icons/core",
+      "license": "MIT",
+      "sha256": "39141f1b2caca5afef2dc243ec0c5c97c3243a58d7f9fd7d5537d0e2e1a55139",
+      "modified": false,
+      "license_file": "assets/icons/phosphor-duotone/LICENSE.txt"
+    },
+    {
+      "family": "phosphor-duotone",
+      "name": "truck",
+      "file": "assets/icons/phosphor-duotone/truck.svg",
+      "source": "https://github.com/phosphor-icons/core/blob/main/assets/duotone/truck-duotone.svg",
+      "repository": "phosphor-icons/core",
+      "license": "MIT",
+      "sha256": "278e738442932c789d06c0f7abce9214cb1daa32059b4e36d4e9d86a6097bddc",
+      "modified": false,
+      "license_file": "assets/icons/phosphor-duotone/LICENSE.txt"
+    },
+    {
+      "family": "phosphor-duotone",
+      "name": "storefront",
+      "file": "assets/icons/phosphor-duotone/storefront.svg",
+      "source": "https://github.com/phosphor-icons/core/blob/main/assets/duotone/storefront-duotone.svg",
+      "repository": "phosphor-icons/core",
+      "license": "MIT",
+      "sha256": "9e755963f1672b9d45a199797cfb3479dd13517690b08f76bb013a08043cc2b3",
+      "modified": false,
+      "license_file": "assets/icons/phosphor-duotone/LICENSE.txt"
+    },
+    {
+      "family": "phosphor-duotone",
+      "name": "users-three",
+      "file": "assets/icons/phosphor-duotone/users-three.svg",
+      "source": "https://github.com/phosphor-icons/core/blob/main/assets/duotone/users-three-duotone.svg",
+      "repository": "phosphor-icons/core",
+      "license": "MIT",
+      "sha256": "8df43f36d7329c365afa0672e2367af16a7bfc7d8820838dfe7358cce1a76aba",
+      "modified": false,
+      "license_file": "assets/icons/phosphor-duotone/LICENSE.txt"
+    },
+    {
+      "family": "phosphor-duotone",
+      "name": "package",
+      "file": "assets/icons/phosphor-duotone/package.svg",
+      "source": "https://github.com/phosphor-icons/core/blob/main/assets/duotone/package-duotone.svg",
+      "repository": "phosphor-icons/core",
+      "license": "MIT",
+      "sha256": "9665a11c41ebab91ba1e36a7a8934dbc9ea30b45d3e4f011c8f63c5ca8e5352b",
+      "modified": false,
+      "license_file": "assets/icons/phosphor-duotone/LICENSE.txt"
+    }
+  ]
+}

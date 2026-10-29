@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "date": "2026-10-29",
+  "note": "Independent fictional design patterns, not measured pages of actual reports.",
+  "sources": [
+    {
+      "case_id": "DEMO-A-001",
+      "source_filename": "synthetic-only",
+      "review": "not_observed",
+      "observed_spatial_relationship": "상단에 목적, 중앙에 점포 경험 개선의 핵심 원리, 하단에 근거를 배치.",
+      "official_media_copied": false,
+      "scope": "Fictional composition only"
+    },
+    {
+      "case_id": "DEMO-A-002",
+      "source_filename": "synthetic-only",
+      "review": "not_observed",
+      "observed_spatial_relationship": "입력·담당·결과물의 관계를 화살표로 연결.",
+      "official_media_copied": false,
+      "scope": "Fictional composition only"
+    },
+    {
+      "case_id": "DEMO-A-003",
+      "source_filename": "synthetic-only",
+      "review": "not_observed",
+      "observed_spatial_relationship": "예시 지표 18분와 24분의 정의와 단위를 병기.",
+      "official_media_copied": false,
+      "scope": "Fictional composition only"
+    },
+    {
+      "case_id": "DEMO-A-004",
+      "source_filename": "synthetic-only",
+      "review": "not_observed",
+      "observed_spatial_relationship": "가상 예산·일정·승인 조건을 분리해 표현.",
+      "official_media_copied": false,
+      "scope": "Fictional composition only"
+    },
+    {
+      "case_id": "DEMO-B-001",
+      "source_filename": "synthetic-only",
+      "review": "not_observed",
+      "observed_spatial_relationship": "상단에 목적, 중앙에 배송 인계 개선의 핵심 원리, 하단에 근거를 배치.",
+      "official_media_copied": false,
+      "scope": "Fictional composition only"
+    },
+    {
+      "case_id": "DEMO-B-002",
+      "source_filename": "synthetic-only",
+      "review": "not_observed",
+      "observed_spatial_relationship": "입력·담당·결과물의 관계를 화살표로 연결.",
+      "official_media_copied": false,
+      "scope": "Fictional composition only"
+    },
+    {
+      "case_id": "DEMO-B-003",
+      "source_filename": "synthetic-only",
+      "review": "not_observed",
+      "observed_spatial_relationship": "예시 지표 87%와 93%의 정의와 단위를 병기.",
+      "official_media_copied": false,
+      "scope": "Fictional composition only"
+    }
+  ]
+}

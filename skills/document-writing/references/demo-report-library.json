@@ -1,0 +1,772 @@
+{
+  "schema_version": 1,
+  "purpose": "완전한 가상 기업·가상 수치로 구성한 한국어 문서 집필 연습용 색인.",
+  "extraction_note": "독립 집필한 합성 예시. 기업 PDF에서 텍스트를 추출하지 않았음.",
+  "page_numbering": "가상 예시 내 논리 페이지 번호. 실제 PDF 없음.",
+  "reference_precedence": "사용자 제공 사실과 실제 검증 출처가 우선. 합성 수치·문장을 사실로 전용 금지.",
+  "sources": [
+    {
+      "id": "demo-a",
+      "company": "가상기업 A — 모래빛 생활연구소",
+      "filename": "FICTIONAL_DEMO_A.md",
+      "pdf_pages": 10,
+      "performance_period": "fictional",
+      "extension_note": "독립적 합성 연습 데이터",
+      "profile": "demo-profile-holding.md",
+      "style_counts": {
+        "합니다": 4,
+        "계획입니다": 2
+      }
+    },
+    {
+      "id": "demo-b",
+      "company": "가상기업 B — 파도길 물류",
+      "filename": "FICTIONAL_DEMO_B.md",
+      "pdf_pages": 10,
+      "performance_period": "fictional",
+      "extension_note": "독립적 합성 연습 데이터",
+      "profile": "demo-profile-construction.md",
+      "style_counts": {
+        "합니다": 4,
+        "계획입니다": 2
+      }
+    },
+    {
+      "id": "demo-c",
+      "company": "가상기업 C — 새싹 순환소재",
+      "filename": "FICTIONAL_DEMO_C.md",
+      "pdf_pages": 10,
+      "performance_period": "fictional",
+      "extension_note": "독립적 합성 연습 데이터",
+      "profile": "demo-profile-caltex.md",
+      "style_counts": {
+        "합니다": 4,
+        "계획입니다": 2
+      }
+    }
+  ],
+  "pages": [
+    {
+      "report_id": "demo-a",
+      "pdf_page": 1,
+      "section": "cover",
+      "subject": "점포 경험 개선 · cover",
+      "content_kind": "cover",
+      "keywords": [
+        "지역 소매 서비스",
+        "점포 경험 개선",
+        "방문자 체류시간"
+      ],
+      "writing_functions": [
+        "cover"
+      ]
+    },
+    {
+      "report_id": "demo-a",
+      "pdf_page": 2,
+      "section": "context",
+      "subject": "점포 경험 개선 · context",
+      "content_kind": "context",
+      "keywords": [
+        "지역 소매 서비스",
+        "점포 경험 개선",
+        "방문자 체류시간"
+      ],
+      "writing_functions": [
+        "context"
+      ]
+    },
+    {
+      "report_id": "demo-a",
+      "pdf_page": 3,
+      "section": "governance",
+      "subject": "점포 경험 개선 · governance",
+      "content_kind": "governance",
+      "keywords": [
+        "지역 소매 서비스",
+        "점포 경험 개선",
+        "방문자 체류시간"
+      ],
+      "writing_functions": [
+        "governance"
+      ]
+    },
+    {
+      "report_id": "demo-a",
+      "pdf_page": 4,
+      "section": "process",
+      "subject": "점포 경험 개선 · process",
+      "content_kind": "process",
+      "keywords": [
+        "지역 소매 서비스",
+        "점포 경험 개선",
+        "방문자 체류시간"
+      ],
+      "writing_functions": [
+        "process"
+      ]
+    },
+    {
+      "report_id": "demo-a",
+      "pdf_page": 5,
+      "section": "evidence",
+      "subject": "점포 경험 개선 · evidence",
+      "content_kind": "evidence",
+      "keywords": [
+        "지역 소매 서비스",
+        "점포 경험 개선",
+        "방문자 체류시간"
+      ],
+      "writing_functions": [
+        "evidence"
+      ]
+    },
+    {
+      "report_id": "demo-a",
+      "pdf_page": 6,
+      "section": "comparison",
+      "subject": "점포 경험 개선 · comparison",
+      "content_kind": "comparison",
+      "keywords": [
+        "지역 소매 서비스",
+        "점포 경험 개선",
+        "방문자 체류시간"
+      ],
+      "writing_functions": [
+        "comparison"
+      ]
+    },
+    {
+      "report_id": "demo-a",
+      "pdf_page": 7,
+      "section": "action-plan",
+      "subject": "점포 경험 개선 · action-plan",
+      "content_kind": "action-plan",
+      "keywords": [
+        "지역 소매 서비스",
+        "점포 경험 개선",
+        "방문자 체류시간"
+      ],
+      "writing_functions": [
+        "action-plan"
+      ]
+    },
+    {
+      "report_id": "demo-a",
+      "pdf_page": 8,
+      "section": "risk",
+      "subject": "점포 경험 개선 · risk",
+      "content_kind": "risk",
+      "keywords": [
+        "지역 소매 서비스",
+        "점포 경험 개선",
+        "방문자 체류시간"
+      ],
+      "writing_functions": [
+        "risk"
+      ]
+    },
+    {
+      "report_id": "demo-a",
+      "pdf_page": 9,
+      "section": "measurement",
+      "subject": "점포 경험 개선 · measurement",
+      "content_kind": "measurement",
+      "keywords": [
+        "지역 소매 서비스",
+        "점포 경험 개선",
+        "방문자 체류시간"
+      ],
+      "writing_functions": [
+        "measurement"
+      ]
+    },
+    {
+      "report_id": "demo-a",
+      "pdf_page": 10,
+      "section": "closing",
+      "subject": "점포 경험 개선 · closing",
+      "content_kind": "closing",
+      "keywords": [
+        "지역 소매 서비스",
+        "점포 경험 개선",
+        "방문자 체류시간"
+      ],
+      "writing_functions": [
+        "closing"
+      ]
+    },
+    {
+      "report_id": "demo-b",
+      "pdf_page": 1,
+      "section": "cover",
+      "subject": "배송 인계 개선 · cover",
+      "content_kind": "cover",
+      "keywords": [
+        "도심 물류",
+        "배송 인계 개선",
+        "정시 인계율"
+      ],
+      "writing_functions": [
+        "cover"
+      ]
+    },
+    {
+      "report_id": "demo-b",
+      "pdf_page": 2,
+      "section": "context",
+      "subject": "배송 인계 개선 · context",
+      "content_kind": "context",
+      "keywords": [
+        "도심 물류",
+        "배송 인계 개선",
+        "정시 인계율"
+      ],
+      "writing_functions": [
+        "context"
+      ]
+    },
+    {
+      "report_id": "demo-b",
+      "pdf_page": 3,
+      "section": "governance",
+      "subject": "배송 인계 개선 · governance",
+      "content_kind": "governance",
+      "keywords": [
+        "도심 물류",
+        "배송 인계 개선",
+        "정시 인계율"
+      ],
+      "writing_functions": [
+        "governance"
+      ]
+    },
+    {
+      "report_id": "demo-b",
+      "pdf_page": 4,
+      "section": "process",
+      "subject": "배송 인계 개선 · process",
+      "content_kind": "process",
+      "keywords": [
+        "도심 물류",
+        "배송 인계 개선",
+        "정시 인계율"
+      ],
+      "writing_functions": [
+        "process"
+      ]
+    },
+    {
+      "report_id": "demo-b",
+      "pdf_page": 5,
+      "section": "evidence",
+      "subject": "배송 인계 개선 · evidence",
+      "content_kind": "evidence",
+      "keywords": [
+        "도심 물류",
+        "배송 인계 개선",
+        "정시 인계율"
+      ],
+      "writing_functions": [
+        "evidence"
+      ]
+    },
+    {
+      "report_id": "demo-b",
+      "pdf_page": 6,
+      "section": "comparison",
+      "subject": "배송 인계 개선 · comparison",
+      "content_kind": "comparison",
+      "keywords": [
+        "도심 물류",
+        "배송 인계 개선",
+        "정시 인계율"
+      ],
+      "writing_functions": [
+        "comparison"
+      ]
+    },
+    {
+      "report_id": "demo-b",
+      "pdf_page": 7,
+      "section": "action-plan",
+      "subject": "배송 인계 개선 · action-plan",
+      "content_kind": "action-plan",
+      "keywords": [
+        "도심 물류",
+        "배송 인계 개선",
+        "정시 인계율"
+      ],
+      "writing_functions": [
+        "action-plan"
+      ]
+    },
+    {
+      "report_id": "demo-b",
+      "pdf_page": 8,
+      "section": "risk",
+      "subject": "배송 인계 개선 · risk",
+      "content_kind": "risk",
+      "keywords": [
+        "도심 물류",
+        "배송 인계 개선",
+        "정시 인계율"
+      ],
+      "writing_functions": [
+        "risk"
+      ]
+    },
+    {
+      "report_id": "demo-b",
+      "pdf_page": 9,
+      "section": "measurement",
+      "subject": "배송 인계 개선 · measurement",
+      "content_kind": "measurement",
+      "keywords": [
+        "도심 물류",
+        "배송 인계 개선",
+        "정시 인계율"
+      ],
+      "writing_functions": [
+        "measurement"
+      ]
+    },
+    {
+      "report_id": "demo-b",
+      "pdf_page": 10,
+      "section": "closing",
+      "subject": "배송 인계 개선 · closing",
+      "content_kind": "closing",
+      "keywords": [
+        "도심 물류",
+        "배송 인계 개선",
+        "정시 인계율"
+      ],
+      "writing_functions": [
+        "closing"
+      ]
+    },
+    {
+      "report_id": "demo-c",
+      "pdf_page": 1,
+      "section": "cover",
+      "subject": "자재 재사용 · cover",
+      "content_kind": "cover",
+      "keywords": [
+        "순환 포장재",
+        "자재 재사용",
+        "재사용 회수율"
+      ],
+      "writing_functions": [
+        "cover"
+      ]
+    },
+    {
+      "report_id": "demo-c",
+      "pdf_page": 2,
+      "section": "context",
+      "subject": "자재 재사용 · context",
+      "content_kind": "context",
+      "keywords": [
+        "순환 포장재",
+        "자재 재사용",
+        "재사용 회수율"
+      ],
+      "writing_functions": [
+        "context"
+      ]
+    },
+    {
+      "report_id": "demo-c",
+      "pdf_page": 3,
+      "section": "governance",
+      "subject": "자재 재사용 · governance",
+      "content_kind": "governance",
+      "keywords": [
+        "순환 포장재",
+        "자재 재사용",
+        "재사용 회수율"
+      ],
+      "writing_functions": [
+        "governance"
+      ]
+    },
+    {
+      "report_id": "demo-c",
+      "pdf_page": 4,
+      "section": "process",
+      "subject": "자재 재사용 · process",
+      "content_kind": "process",
+      "keywords": [
+        "순환 포장재",
+        "자재 재사용",
+        "재사용 회수율"
+      ],
+      "writing_functions": [
+        "process"
+      ]
+    },
+    {
+      "report_id": "demo-c",
+      "pdf_page": 5,
+      "section": "evidence",
+      "subject": "자재 재사용 · evidence",
+      "content_kind": "evidence",
+      "keywords": [
+        "순환 포장재",
+        "자재 재사용",
+        "재사용 회수율"
+      ],
+      "writing_functions": [
+        "evidence"
+      ]
+    },
+    {
+      "report_id": "demo-c",
+      "pdf_page": 6,
+      "section": "comparison",
+      "subject": "자재 재사용 · comparison",
+      "content_kind": "comparison",
+      "keywords": [
+        "순환 포장재",
+        "자재 재사용",
+        "재사용 회수율"
+      ],
+      "writing_functions": [
+        "comparison"
+      ]
+    },
+    {
+      "report_id": "demo-c",
+      "pdf_page": 7,
+      "section": "action-plan",
+      "subject": "자재 재사용 · action-plan",
+      "content_kind": "action-plan",
+      "keywords": [
+        "순환 포장재",
+        "자재 재사용",
+        "재사용 회수율"
+      ],
+      "writing_functions": [
+        "action-plan"
+      ]
+    },
+    {
+      "report_id": "demo-c",
+      "pdf_page": 8,
+      "section": "risk",
+      "subject": "자재 재사용 · risk",
+      "content_kind": "risk",
+      "keywords": [
+        "순환 포장재",
+        "자재 재사용",
+        "재사용 회수율"
+      ],
+      "writing_functions": [
+        "risk"
+      ]
+    },
+    {
+      "report_id": "demo-c",
+      "pdf_page": 9,
+      "section": "measurement",
+      "subject": "자재 재사용 · measurement",
+      "content_kind": "measurement",
+      "keywords": [
+        "순환 포장재",
+        "자재 재사용",
+        "재사용 회수율"
+      ],
+      "writing_functions": [
+        "measurement"
+      ]
+    },
+    {
+      "report_id": "demo-c",
+      "pdf_page": 10,
+      "section": "closing",
+      "subject": "자재 재사용 · closing",
+      "content_kind": "closing",
+      "keywords": [
+        "순환 포장재",
+        "자재 재사용",
+        "재사용 회수율"
+      ],
+      "writing_functions": [
+        "closing"
+      ]
+    }
+  ],
+  "excerpts": [
+    {
+      "id": "A01",
+      "report_id": "demo-a",
+      "pdf_page": 1,
+      "function": "cover",
+      "quote": "가상기업 A — 모래빛 생활연구소는 지역 소매 서비스 분야의 실험을 수행하는 가상 조직입니다.",
+      "observation": "문서 목적과 독자에게 필요한 판단 정보를 먼저 둔다.",
+      "caution": "완전히 가상의 연습 문장이다. 실제 기업·성과·출처를 의미하지 않는다."
+    },
+    {
+      "id": "A02",
+      "report_id": "demo-a",
+      "pdf_page": 2,
+      "function": "context",
+      "quote": "이번 문서는 점포 경험 개선을 위한 의사결정 조건과 실행 순서를 정리합니다.",
+      "observation": "문서 목적과 독자에게 필요한 판단 정보를 먼저 둔다.",
+      "caution": "완전히 가상의 연습 문장이다. 실제 기업·성과·출처를 의미하지 않는다."
+    },
+    {
+      "id": "A03",
+      "report_id": "demo-a",
+      "pdf_page": 3,
+      "function": "governance",
+      "quote": "실무 책임자와 검토자를 분리하고, 변경사항을 매주 기록합니다.",
+      "observation": "문서 목적과 독자에게 필요한 판단 정보를 먼저 둔다.",
+      "caution": "완전히 가상의 연습 문장이다. 실제 기업·성과·출처를 의미하지 않는다."
+    },
+    {
+      "id": "A04",
+      "report_id": "demo-a",
+      "pdf_page": 4,
+      "function": "process",
+      "quote": "현재 절차의 인계 구간을 파악한 뒤 2개 팀에서 시범 운영합니다.",
+      "observation": "문서 목적과 독자에게 필요한 판단 정보를 먼저 둔다.",
+      "caution": "완전히 가상의 연습 문장이다. 실제 기업·성과·출처를 의미하지 않는다."
+    },
+    {
+      "id": "A05",
+      "report_id": "demo-a",
+      "pdf_page": 5,
+      "function": "evidence",
+      "quote": "방문자 체류시간은 예시 기준 18분이며, 목표값은 24분로 가정합니다.",
+      "observation": "문서 목적과 독자에게 필요한 판단 정보를 먼저 둔다.",
+      "caution": "완전히 가상의 연습 문장이다. 실제 기업·성과·출처를 의미하지 않는다."
+    },
+    {
+      "id": "A06",
+      "report_id": "demo-a",
+      "pdf_page": 6,
+      "function": "comparison",
+      "quote": "개입 전후 지표는 같은 표본·기간·집계법으로 비교해야 합니다.",
+      "observation": "문서 목적과 독자에게 필요한 판단 정보를 먼저 둔다.",
+      "caution": "완전히 가상의 연습 문장이다. 실제 기업·성과·출처를 의미하지 않는다."
+    },
+    {
+      "id": "A07",
+      "report_id": "demo-a",
+      "pdf_page": 7,
+      "function": "action-plan",
+      "quote": "1주차 설계, 2~3주차 실험, 4주차 검토의 순서를 가정합니다.",
+      "observation": "문서 목적과 독자에게 필요한 판단 정보를 먼저 둔다.",
+      "caution": "완전히 가상의 연습 문장이다. 실제 기업·성과·출처를 의미하지 않는다."
+    },
+    {
+      "id": "A08",
+      "report_id": "demo-a",
+      "pdf_page": 8,
+      "function": "risk",
+      "quote": "현장 인력 부족과 정보 누락은 시범 단계의 주요 위험입니다.",
+      "observation": "문서 목적과 독자에게 필요한 판단 정보를 먼저 둔다.",
+      "caution": "완전히 가상의 연습 문장이다. 실제 기업·성과·출처를 의미하지 않는다."
+    },
+    {
+      "id": "A09",
+      "report_id": "demo-a",
+      "pdf_page": 9,
+      "function": "measurement",
+      "quote": "지표와 담당자를 한 줄로 연결하고, 미확정 값은 추정치로 표시합니다.",
+      "observation": "문서 목적과 독자에게 필요한 판단 정보를 먼저 둔다.",
+      "caution": "완전히 가상의 연습 문장이다. 실제 기업·성과·출처를 의미하지 않는다."
+    },
+    {
+      "id": "A10",
+      "report_id": "demo-a",
+      "pdf_page": 10,
+      "function": "closing",
+      "quote": "다음 회의에서는 예산 범위와 실험 확대 조건을 결정합니다.",
+      "observation": "문서 목적과 독자에게 필요한 판단 정보를 먼저 둔다.",
+      "caution": "완전히 가상의 연습 문장이다. 실제 기업·성과·출처를 의미하지 않는다."
+    },
+    {
+      "id": "B01",
+      "report_id": "demo-b",
+      "pdf_page": 1,
+      "function": "cover",
+      "quote": "가상기업 B — 파도길 물류는 도심 물류 분야의 실험을 수행하는 가상 조직입니다.",
+      "observation": "문서 목적과 독자에게 필요한 판단 정보를 먼저 둔다.",
+      "caution": "완전히 가상의 연습 문장이다. 실제 기업·성과·출처를 의미하지 않는다."
+    },
+    {
+      "id": "B02",
+      "report_id": "demo-b",
+      "pdf_page": 2,
+      "function": "context",
+      "quote": "이번 문서는 배송 인계 개선을 위한 의사결정 조건과 실행 순서를 정리합니다.",
+      "observation": "문서 목적과 독자에게 필요한 판단 정보를 먼저 둔다.",
+      "caution": "완전히 가상의 연습 문장이다. 실제 기업·성과·출처를 의미하지 않는다."
+    },
+    {
+      "id": "B03",
+      "report_id": "demo-b",
+      "pdf_page": 3,
+      "function": "governance",
+      "quote": "실무 책임자와 검토자를 분리하고, 변경사항을 매주 기록합니다.",
+      "observation": "문서 목적과 독자에게 필요한 판단 정보를 먼저 둔다.",
+      "caution": "완전히 가상의 연습 문장이다. 실제 기업·성과·출처를 의미하지 않는다."
+    },
+    {
+      "id": "B04",
+      "report_id": "demo-b",
+      "pdf_page": 4,
+      "function": "process",
+      "quote": "현재 절차의 인계 구간을 파악한 뒤 2개 팀에서 시범 운영합니다.",
+      "observation": "문서 목적과 독자에게 필요한 판단 정보를 먼저 둔다.",
+      "caution": "완전히 가상의 연습 문장이다. 실제 기업·성과·출처를 의미하지 않는다."
+    },
+    {
+      "id": "B05",
+      "report_id": "demo-b",
+      "pdf_page": 5,
+      "function": "evidence",
+      "quote": "정시 인계율은 예시 기준 87%이며, 목표값은 93%로 가정합니다.",
+      "observation": "문서 목적과 독자에게 필요한 판단 정보를 먼저 둔다.",
+      "caution": "완전히 가상의 연습 문장이다. 실제 기업·성과·출처를 의미하지 않는다."
+    },
+    {
+      "id": "B06",
+      "report_id": "demo-b",
+      "pdf_page": 6,
+      "function": "comparison",
+      "quote": "개입 전후 지표는 같은 표본·기간·집계법으로 비교해야 합니다.",
+      "observation": "문서 목적과 독자에게 필요한 판단 정보를 먼저 둔다.",
+      "caution": "완전히 가상의 연습 문장이다. 실제 기업·성과·출처를 의미하지 않는다."
+    },
+    {
+      "id": "B07",
+      "report_id": "demo-b",
+      "pdf_page": 7,
+      "function": "action-plan",
+      "quote": "1주차 설계, 2~3주차 실험, 4주차 검토의 순서를 가정합니다.",
+      "observation": "문서 목적과 독자에게 필요한 판단 정보를 먼저 둔다.",
+      "caution": "완전히 가상의 연습 문장이다. 실제 기업·성과·출처를 의미하지 않는다."
+    },
+    {
+      "id": "B08",
+      "report_id": "demo-b",
+      "pdf_page": 8,
+      "function": "risk",
+      "quote": "현장 인력 부족과 정보 누락은 시범 단계의 주요 위험입니다.",
+      "observation": "문서 목적과 독자에게 필요한 판단 정보를 먼저 둔다.",
+      "caution": "완전히 가상의 연습 문장이다. 실제 기업·성과·출처를 의미하지 않는다."
+    },
+    {
+      "id": "B09",
+      "report_id": "demo-b",
+      "pdf_page": 9,
+      "function": "measurement",
+      "quote": "지표와 담당자를 한 줄로 연결하고, 미확정 값은 추정치로 표시합니다.",
+      "observation": "문서 목적과 독자에게 필요한 판단 정보를 먼저 둔다.",
+      "caution": "완전히 가상의 연습 문장이다. 실제 기업·성과·출처를 의미하지 않는다."
+    },
+    {
+      "id": "B10",
+      "report_id": "demo-b",
+      "pdf_page": 10,
+      "function": "closing",
+      "quote": "다음 회의에서는 예산 범위와 실험 확대 조건을 결정합니다.",
+      "observation": "문서 목적과 독자에게 필요한 판단 정보를 먼저 둔다.",
+      "caution": "완전히 가상의 연습 문장이다. 실제 기업·성과·출처를 의미하지 않는다."
+    },
+    {
+      "id": "C01",
+      "report_id": "demo-c",
+      "pdf_page": 1,
+      "function": "cover",
+      "quote": "가상기업 C — 새싹 순환소재는 순환 포장재 분야의 실험을 수행하는 가상 조직입니다.",
+      "observation": "문서 목적과 독자에게 필요한 판단 정보를 먼저 둔다.",
+      "caution": "완전히 가상의 연습 문장이다. 실제 기업·성과·출처를 의미하지 않는다."
+    },
+    {
+      "id": "C02",
+      "report_id": "demo-c",
+      "pdf_page": 2,
+      "function": "context",
+      "quote": "이번 문서는 자재 재사용을 위한 의사결정 조건과 실행 순서를 정리합니다.",
+      "observation": "문서 목적과 독자에게 필요한 판단 정보를 먼저 둔다.",
+      "caution": "완전히 가상의 연습 문장이다. 실제 기업·성과·출처를 의미하지 않는다."
+    },
+    {
+      "id": "C03",
+      "report_id": "demo-c",
+      "pdf_page": 3,
+      "function": "governance",
+      "quote": "실무 책임자와 검토자를 분리하고, 변경사항을 매주 기록합니다.",
+      "observation": "문서 목적과 독자에게 필요한 판단 정보를 먼저 둔다.",
+      "caution": "완전히 가상의 연습 문장이다. 실제 기업·성과·출처를 의미하지 않는다."
+    },
+    {
+      "id": "C04",
+      "report_id": "demo-c",
+      "pdf_page": 4,
+      "function": "process",
+      "quote": "현재 절차의 인계 구간을 파악한 뒤 2개 팀에서 시범 운영합니다.",
+      "observation": "문서 목적과 독자에게 필요한 판단 정보를 먼저 둔다.",
+      "caution": "완전히 가상의 연습 문장이다. 실제 기업·성과·출처를 의미하지 않는다."
+    },
+    {
+      "id": "C05",
+      "report_id": "demo-c",
+      "pdf_page": 5,
+      "function": "evidence",
+      "quote": "재사용 회수율은 예시 기준 42%이며, 목표값은 56%로 가정합니다.",
+      "observation": "문서 목적과 독자에게 필요한 판단 정보를 먼저 둔다.",
+      "caution": "완전히 가상의 연습 문장이다. 실제 기업·성과·출처를 의미하지 않는다."
+    },
+    {
+      "id": "C06",
+      "report_id": "demo-c",
+      "pdf_page": 6,
+      "function": "comparison",
+      "quote": "개입 전후 지표는 같은 표본·기간·집계법으로 비교해야 합니다.",
+      "observation": "문서 목적과 독자에게 필요한 판단 정보를 먼저 둔다.",
+      "caution": "완전히 가상의 연습 문장이다. 실제 기업·성과·출처를 의미하지 않는다."
+    },
+    {
+      "id": "C07",
+      "report_id": "demo-c",
+      "pdf_page": 7,
+      "function": "action-plan",
+      "quote": "1주차 설계, 2~3주차 실험, 4주차 검토의 순서를 가정합니다.",
+      "observation": "문서 목적과 독자에게 필요한 판단 정보를 먼저 둔다.",
+      "caution": "완전히 가상의 연습 문장이다. 실제 기업·성과·출처를 의미하지 않는다."
+    },
+    {
+      "id": "C08",
+      "report_id": "demo-c",
+      "pdf_page": 8,
+      "function": "risk",
+      "quote": "현장 인력 부족과 정보 누락은 시범 단계의 주요 위험입니다.",
+      "observation": "문서 목적과 독자에게 필요한 판단 정보를 먼저 둔다.",
+      "caution": "완전히 가상의 연습 문장이다. 실제 기업·성과·출처를 의미하지 않는다."
+    },
+    {
+      "id": "C09",
+      "report_id": "demo-c",
+      "pdf_page": 9,
+      "function": "measurement",
+      "quote": "지표와 담당자를 한 줄로 연결하고, 미확정 값은 추정치로 표시합니다.",
+      "observation": "문서 목적과 독자에게 필요한 판단 정보를 먼저 둔다.",
+      "caution": "완전히 가상의 연습 문장이다. 실제 기업·성과·출처를 의미하지 않는다."
+    },
+    {
+      "id": "C10",
+      "report_id": "demo-c",
+      "pdf_page": 10,
+      "function": "closing",
+      "quote": "다음 회의에서는 예산 범위와 실험 확대 조건을 결정합니다.",
+      "observation": "문서 목적과 독자에게 필요한 판단 정보를 먼저 둔다.",
+      "caution": "완전히 가상의 연습 문장이다. 실제 기업·성과·출처를 의미하지 않는다."
+    }
+  ]
+}

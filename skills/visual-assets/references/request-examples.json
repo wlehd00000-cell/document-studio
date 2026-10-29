@@ -1,0 +1,308 @@
+{
+  "examples_are_not_production_requests": true,
+  "assets": [
+    {
+      "contract_version": "visual-assets/1.0",
+      "example_is_fictional": true,
+      "asset_id": "concept-flow-01",
+      "section_ids": [
+        "section-system"
+      ],
+      "purpose": {
+        "reader_question": "대상과 이동 과정은 어떻게 연결되는가",
+        "message": "세 역할과 실제 두 인계를 한 장면에서 설명",
+        "visual_job": "conceptual system overview",
+        "claim_ids": [
+          "claim-handoff-01"
+        ]
+      },
+      "semantic_constraints": {
+        "status": "proposed_concept",
+        "subjects": [
+          "role-a",
+          "role-b",
+          "role-c"
+        ],
+        "relationships": [
+          {
+            "from": "role-a",
+            "to": "role-b",
+            "meaning": "인계"
+          },
+          {
+            "from": "role-b",
+            "to": "role-c",
+            "meaning": "전달"
+          }
+        ],
+        "preserve": [
+          "두 연결의 순서와 의미",
+          "공식 자산은 원본 그대로"
+        ],
+        "do_not_invent": [
+          "실제 DEMO 시설의 외관",
+          "성과 수치",
+          "확정되지 않은 사업 관계"
+        ]
+      },
+      "production": {
+        "preferred_method": "generated_scene_with_editable_overlays",
+        "style_family_id": "document-scene-family-01",
+        "style_anchor_asset_id": null,
+        "composition": {
+          "placement": "report_main_panel",
+          "aspect_ratio": "16:10",
+          "reader_flow": "left_to_right",
+          "reserve_text_regions": [
+            "upper_left",
+            "lower_margin"
+          ]
+        },
+        "text_boundary": {
+          "embedded_text": "none",
+          "editable_overlay_text_owned_by": "writing_and_design"
+        },
+        "reference_asset_ids": [],
+        "output_constraints": {
+          "transparent_background": false
+        },
+        "revision_scope": "new_asset",
+        "style_set_id": "fictional-editorial-set",
+        "style_spec": {
+          "projection": "one continuous isometric space",
+          "material": "restrained matte illustration",
+          "lighting": "one common light direction",
+          "people": "consistent simplified realistic proportions",
+          "palette_roles": "from document design"
+        }
+      },
+      "delivery": {
+        "status": "not_started",
+        "files": [],
+        "intrinsic_dimensions": null,
+        "provenance_kind": "generated_concept",
+        "request_revision": "example-1",
+        "review": {
+          "visual_inspection": "not_performed",
+          "source_equivalence": "not_performed",
+          "unresolved": [],
+          "set_consistency": "not_performed"
+        },
+        "user_acceptance": "not_requested"
+      }
+    },
+    {
+      "contract_version": "visual-assets/1.0",
+      "example_is_fictional": true,
+      "asset_id": "business-pictograms-01",
+      "section_ids": [
+        "section-business"
+      ],
+      "purpose": {
+        "reader_question": "여섯 업무 범주를 빠르게 구분할 수 있는가",
+        "message": "환경·시설·물류·매장·사람·제품의 구분",
+        "visual_job": "pictogram_set",
+        "claim_ids": []
+      },
+      "semantic_constraints": {
+        "status": "generic_business_symbols",
+        "subjects": [
+          "leaf",
+          "factory",
+          "truck",
+          "store",
+          "users",
+          "package"
+        ],
+        "relationships": [],
+        "preserve": [
+          "one coherent SVG family"
+        ],
+        "do_not_invent": [
+          "logos",
+          "performance figures"
+        ]
+      },
+      "production": {
+        "preferred_method": "native_svg",
+        "style_family_id": "lucide-outline",
+        "style_anchor_asset_id": null,
+        "reference_asset_ids": [],
+        "composition": {
+          "placement": "report_inline_symbols"
+        },
+        "text_boundary": {
+          "embedded_text": "none",
+          "editable_overlay_text_owned_by": "writing_and_design"
+        },
+        "output_constraints": {
+          "format": "svg",
+          "separate_files": true,
+          "transparent_background": true
+        },
+        "revision_scope": "new_asset"
+      },
+      "delivery": {
+        "status": "not_started",
+        "files": [],
+        "intrinsic_dimensions": null,
+        "provenance_kind": "adapted_vector",
+        "request_revision": "example-1",
+        "review": {
+          "visual_inspection": "not_performed",
+          "set_consistency": "not_performed",
+          "source_equivalence": "not_performed",
+          "unresolved": []
+        },
+        "user_acceptance": "not_requested"
+      }
+    },
+    {
+      "contract_version": "visual-assets/1.0",
+      "example_is_fictional": true,
+      "asset_id": "concept-flow-01",
+      "section_ids": [
+        "section-system"
+      ],
+      "purpose": {
+        "reader_question": "기존 장면에서 지정된 구역이 더 잘 구별되는가",
+        "message": "지정된 구역의 시각적 명암만 수정",
+        "visual_job": "targeted_revision",
+        "claim_ids": []
+      },
+      "semantic_constraints": {
+        "status": "proposed_concept",
+        "subjects": [
+          "existing fictional scene"
+        ],
+        "relationships": [],
+        "preserve": [
+          "subject identity",
+          "existing links",
+          "other regions"
+        ],
+        "do_not_invent": [
+          "new business relationships",
+          "official assets"
+        ]
+      },
+      "production": {
+        "preferred_method": "targeted_image_edit",
+        "style_family_id": "document-scene-family-01",
+        "style_anchor_asset_id": "concept-flow-01",
+        "reference_asset_ids": [
+          "concept-flow-01"
+        ],
+        "references": [
+          {
+            "asset_id": "concept-flow-01",
+            "role": "edit_target",
+            "file": "html/assets/concept-flow-01-v1.png",
+            "availability": "example_only"
+          }
+        ],
+        "text_boundary": {
+          "embedded_text": "none",
+          "editable_overlay_text_owned_by": "writing_and_design"
+        },
+        "output_constraints": {
+          "transparent_background": false
+        },
+        "revision_scope": "adjust only the requested region tone; preserve other content; sibling v2"
+      },
+      "delivery": {
+        "status": "not_started",
+        "files": [],
+        "intrinsic_dimensions": null,
+        "provenance_kind": "generated_concept",
+        "request_revision": "example-2",
+        "review": {
+          "visual_inspection": "not_performed",
+          "set_consistency": "not_performed",
+          "source_equivalence": "not_performed",
+          "unresolved": []
+        },
+        "user_acceptance": "not_requested"
+      }
+    },
+    {
+      "contract_version": "visual-assets/1.0",
+      "example_is_fictional": true,
+      "asset_id": "market-route-editorial-01",
+      "section_ids": [
+        "proposal-cover"
+      ],
+      "purpose": {
+        "reader_question": "새로운 도입 경로를 어떻게 이해할 것인가",
+        "message": "제품에서 사용 현장으로 이어지는 경로의 개념",
+        "visual_job": "original editorial metaphor",
+        "claim_ids": []
+      },
+      "semantic_constraints": {
+        "status": "proposed_concept",
+        "subjects": [
+          "unbranded packaging",
+          "fictional neighborhood",
+          "continuous route"
+        ],
+        "relationships": [
+          {
+            "from": "packaging",
+            "to": "neighborhood",
+            "meaning": "conceptual market-entry route, not a causal or performance claim"
+          }
+        ],
+        "preserve": [
+          "editable business text",
+          "official originals added as separate document layers"
+        ],
+        "do_not_invent": [
+          "real DEMO site",
+          "actual performance",
+          "official packaging identity"
+        ]
+      },
+      "production": {
+        "method": "available native image generation",
+        "style_family": "editorial-collage",
+        "expression": {
+          "preset": "expressive",
+          "creativity": "expressive",
+          "visual_intensity": "rich",
+          "reason": "User requested inventive visual metaphor and strong visual presence"
+        },
+        "design_reference": {
+          "case_ids": [
+            "DEMO-EXP-EXPRESSIVE"
+          ],
+          "applied_composition": "continuous packaging-to-place metaphor with a local quiet title region"
+        },
+        "placement_frame": {
+          "aspect_ratio": "16:9",
+          "caption": "adjacent concept disclosure"
+        },
+        "art_direction": {
+          "image_role": "concept cover",
+          "reading_sequence": "editable title then connected route and scene",
+          "quiet_regions": [
+            {
+              "region": "local left title area",
+              "precision": "planned qualitative"
+            }
+          ]
+        },
+        "editable_labels": "Title, metadata, numbers and meaningful arrows belong to document layers"
+      },
+      "delivery": {
+        "status": "not_started",
+        "files": [],
+        "provenance_kind": "generated_concept",
+        "review": {
+          "visual_inspection": "not_performed",
+          "unresolved": []
+        },
+        "user_acceptance": "not_requested"
+      }
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+interface:
+  display_name: "비즈니스 한국어 번역·윤문"
+  short_description: "보고서·기획안의 번역투를 줄이고 사실·수치·조건을 지킵니다"
+  default_prompt: "$business-korean-translation 이 원고를 의미와 조건을 유지하면서 자연스러운 비즈니스 한국어로 번역하거나 다듬어줘."
+policy:
+  allow_implicit_invocation: true

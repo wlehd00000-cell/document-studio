@@ -1,0 +1,6 @@
+interface:
+  display_name: "ビジネス日本語の翻訳・推敲"
+  short_description: "報告書・提案書の翻訳調を整え、事実・数値・条件を保ちます"
+  default_prompt: "$business-japanese-translation この原稿を、意味と条件を保って自然なビジネス日本語に翻訳・推敲してください。"
+policy:
+  allow_implicit_invocation: true

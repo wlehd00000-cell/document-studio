@@ -1,0 +1,6 @@
+interface:
+  display_name: "Document Studio 디자인 · デザイン"
+  short_description: "실제 원고로 HTML 표지·본문 디자인 / HTMLの表紙・本文を設計"
+  default_prompt: "$document-design 최종 언어의 실제 원고로 HTML 표지·본문을 디자인하고, 선택한 창의성과 화려함을 본문 구도에도 적용해 주세요."
+policy:
+  allow_implicit_invocation: true

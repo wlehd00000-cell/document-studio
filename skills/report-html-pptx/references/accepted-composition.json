@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0",
+  "reference_id": "DEMO-STAFF-GUIDE-SEQUENCE",
+  "artifact_title": "Independent fictional Document Studio design study",
+  "public_demo": true,
+  "created_at": "2026-10-29",
+  "accepted_at": null,
+  "user_instruction": null,
+  "accepted_scope": "General layout inspiration only, not a user-approved style or business source.",
+  "expression": {
+    "preset": "expressive",
+    "creativity": "expressive",
+    "visual_intensity": "rich"
+  },
+  "reference_file": "../assets/accepted-staff-guide/index.html",
+  "artifact_sha256": null,
+  "adaptation": "Adapt relationships for the supplied material; do not reuse demo facts.",
+  "pages": [
+    {
+      "page": 1,
+      "question": "What needs to be decided?",
+      "form": "editorial_hero",
+      "move": "orientation",
+      "relationship": "Main question and fictional metric with clear label."
+    },
+    {
+      "page": 2,
+      "question": "Which steps lead to a decision?",
+      "form": "process",
+      "move": "mechanism",
+      "relationship": "Four editable steps, supported by evidence."
+    }
+  ]
+}

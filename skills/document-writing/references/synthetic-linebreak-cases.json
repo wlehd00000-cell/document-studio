@@ -1,0 +1,122 @@
+{
+  "added": 12,
+  "removed": 0,
+  "counts": {
+    "sentence_boundary": 4,
+    "condition_to_action": 4,
+    "clause_or_condition_boundary": 4
+  },
+  "soft_breaks": 3,
+  "paragraph_breaks": 9,
+  "rows": [
+    {
+      "page": 1,
+      "shape_id": "1",
+      "kind": "sentence_boundary",
+      "left": "가상기업 A는 A는 새로운 안내 표식을 시범 적용합니다.",
+      "right": "실험 결과는 실제 데이터가 아니라 학습용 가정에 따라 평가합니다.",
+      "position": 12,
+      "break_kind": "soft_break"
+    },
+    {
+      "page": 2,
+      "shape_id": "2",
+      "kind": "condition_to_action",
+      "left": "가상기업 B는 B는 인계 예외를 하루 단위로 기록합니다.",
+      "right": "실험 결과는 실제 데이터가 아니라 학습용 가정에 따라 평가합니다.",
+      "position": 13,
+      "break_kind": "paragraph"
+    },
+    {
+      "page": 3,
+      "shape_id": "3",
+      "kind": "clause_or_condition_boundary",
+      "left": "가상기업 C는 C는 회수품의 상태를 분류합니다.",
+      "right": "실험 결과는 실제 데이터가 아니라 학습용 가정에 따라 평가합니다.",
+      "position": 14,
+      "break_kind": "paragraph"
+    },
+    {
+      "page": 4,
+      "shape_id": "4",
+      "kind": "sentence_boundary",
+      "left": "가상기업 A는 A는 새로운 안내 표식을 시범 적용합니다.",
+      "right": "실험 결과는 실제 데이터가 아니라 학습용 가정에 따라 평가합니다.",
+      "position": 15,
+      "break_kind": "paragraph"
+    },
+    {
+      "page": 5,
+      "shape_id": "5",
+      "kind": "condition_to_action",
+      "left": "가상기업 B는 B는 인계 예외를 하루 단위로 기록합니다.",
+      "right": "실험 결과는 실제 데이터가 아니라 학습용 가정에 따라 평가합니다.",
+      "position": 16,
+      "break_kind": "soft_break"
+    },
+    {
+      "page": 6,
+      "shape_id": "6",
+      "kind": "clause_or_condition_boundary",
+      "left": "가상기업 C는 C는 회수품의 상태를 분류합니다.",
+      "right": "실험 결과는 실제 데이터가 아니라 학습용 가정에 따라 평가합니다.",
+      "position": 17,
+      "break_kind": "paragraph"
+    },
+    {
+      "page": 7,
+      "shape_id": "7",
+      "kind": "sentence_boundary",
+      "left": "가상기업 A는 A는 새로운 안내 표식을 시범 적용합니다.",
+      "right": "실험 결과는 실제 데이터가 아니라 학습용 가정에 따라 평가합니다.",
+      "position": 18,
+      "break_kind": "paragraph"
+    },
+    {
+      "page": 8,
+      "shape_id": "8",
+      "kind": "condition_to_action",
+      "left": "가상기업 B는 B는 인계 예외를 하루 단위로 기록합니다.",
+      "right": "실험 결과는 실제 데이터가 아니라 학습용 가정에 따라 평가합니다.",
+      "position": 19,
+      "break_kind": "paragraph"
+    },
+    {
+      "page": 9,
+      "shape_id": "9",
+      "kind": "clause_or_condition_boundary",
+      "left": "가상기업 C는 C는 회수품의 상태를 분류합니다.",
+      "right": "실험 결과는 실제 데이터가 아니라 학습용 가정에 따라 평가합니다.",
+      "position": 20,
+      "break_kind": "soft_break"
+    },
+    {
+      "page": 10,
+      "shape_id": "10",
+      "kind": "sentence_boundary",
+      "left": "가상기업 A는 A는 새로운 안내 표식을 시범 적용합니다.",
+      "right": "실험 결과는 실제 데이터가 아니라 학습용 가정에 따라 평가합니다.",
+      "position": 21,
+      "break_kind": "paragraph"
+    },
+    {
+      "page": 11,
+      "shape_id": "11",
+      "kind": "condition_to_action",
+      "left": "가상기업 B는 B는 인계 예외를 하루 단위로 기록합니다.",
+      "right": "실험 결과는 실제 데이터가 아니라 학습용 가정에 따라 평가합니다.",
+      "position": 22,
+      "break_kind": "paragraph"
+    },
+    {
+      "page": 12,
+      "shape_id": "12",
+      "kind": "clause_or_condition_boundary",
+      "left": "가상기업 C는 C는 회수품의 상태를 분류합니다.",
+      "right": "실험 결과는 실제 데이터가 아니라 학습용 가정에 따라 평가합니다.",
+      "position": 23,
+      "break_kind": "paragraph"
+    }
+  ],
+  "disclaimer": "Entirely synthetic examples; no user document excerpts."
+}

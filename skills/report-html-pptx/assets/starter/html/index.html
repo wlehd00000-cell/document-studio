@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="{{language}}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{title}}</title>
+  <style>
+    :root{--blue:#0879bd;--green:#00896f;--orange:#f37032;--ink:#172c38;--slate:#4a6170;--line:#d8e1e5;--body:8.5pt;--table:7.5pt;--caption:7pt;--subhead:11pt;--title:21pt;--page-width:1123px;--page-height:794px}
+    *{box-sizing:border-box}html,body{margin:0;background:#edf1f3;color:var(--ink);font-family:"Pretendard JP",sans-serif}
+    html:lang(ko){word-break:keep-all;overflow-wrap:break-word}html:lang(ja){word-break:normal;overflow-wrap:break-word;line-break:strict}
+    h1,h2,h3,p{margin-top:0}p{text-indent:0}main{display:grid;gap:24px;justify-content:center;padding:24px 0}
+    .page{position:relative;width:var(--page-width);height:var(--page-height);background:#fff;break-after:page}
+    .top-rule{height:7px;display:grid;grid-template-columns:64fr 23fr 13fr}.top-rule i:nth-child(1){background:var(--blue)}.top-rule i:nth-child(2){background:var(--green)}.top-rule i:nth-child(3){background:var(--orange)}
+    .page-inner{height:calc(100% - 7px);padding:34px 48px 62px}.page-header{display:flex;justify-content:space-between;gap:24px;align-items:end;padding-bottom:12px;border-bottom:.6pt solid var(--blue)}
+    .kicker{color:var(--green);font-size:7.5pt;font-weight:650}.page-title{margin:8px 0 0;font-size:var(--title);line-height:1.25;letter-spacing:-.015em}
+    .meta{text-align:right;color:var(--slate);font-size:var(--caption);line-height:1.5}.meta b{display:block;margin-top:4px;color:var(--blue);font-size:var(--body);font-weight:650}
+    .report-detail{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin:20px 0}.report-detail h3{font-size:var(--subhead);line-height:1.35;margin:0 0 8px}.report-detail p{font-size:var(--body);line-height:1.58;color:var(--slate);margin:0 0 10px}
+    .visual-slot{min-height:158px;border:.5pt solid var(--line);display:flex;flex-direction:column;justify-content:center;align-items:center;color:var(--slate);font-size:var(--body);text-align:center;padding:16px}.visual-slot small{font-size:var(--caption);line-height:1.5;margin-top:9px}
+    .presentation .report-detail,.presentation .report-only{display:none}
+    .page-footer{position:absolute;left:48px;right:48px;bottom:18px;display:flex;justify-content:space-between;align-items:center;color:var(--slate);font-size:var(--caption);line-height:1.5;border-top:.5pt solid var(--line);padding-top:6px}
+    .page-footer strong{font-size:var(--body);font-weight:650;color:var(--ink)}.cover-logo{width:104px;height:auto}
+    .cover-copy{margin-top:112px;max-width:750px}.cover-copy h1{margin:14px 0 20px;font-size:32pt;line-height:1.22;letter-spacing:-.025em;overflow-wrap:break-word}.cover-copy p{color:var(--slate);font-size:11pt;line-height:1.6}
+    .cover-purpose{margin-top:48px;padding-top:16px;border-top:.5pt solid var(--line);font-size:var(--body);line-height:1.58;color:var(--slate)}
+    .lead{margin:20px 0 18px;color:var(--slate);font-size:var(--body);line-height:1.58}
+    .evidence-spread{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin:20px 0}.evidence-item h3{margin:0 0 8px;font-size:var(--subhead);line-height:1.35;color:var(--blue)}.evidence-item p{color:var(--slate);font-size:var(--body);line-height:1.58}
+    .next-action{margin-top:20px;padding-top:12px;border-top:.5pt solid var(--line)}.next-action small{color:var(--green);font-size:var(--caption);font-weight:650}.next-action h3{margin:6px 0;font-size:var(--subhead);line-height:1.35}.next-action p{font-size:var(--body);line-height:1.58;color:var(--slate)}
+    .data-area{display:grid;grid-template-columns:1.2fr 1fr;gap:28px}.data-area>.report-detail{display:block;margin:18px 0}.data-area>.report-detail figure{margin-top:12px!important}.data-area .visual-slot{min-height:120px}
+    .data-table{margin-top:18px;border-top:.75pt solid var(--blue);font-size:var(--table);line-height:1.4}.data-row{display:grid;grid-template-columns:1.2fr .9fr 50px 1.05fr;min-height:29px;align-items:center;border-bottom:.5pt solid var(--line)}
+    .data-row span{padding:6px 5px;min-width:0;white-space:normal;overflow-wrap:break-word}.data-row span:nth-child(3){text-align:right;font-variant-numeric:tabular-nums}.data-row.head{color:var(--blue);font-weight:650}
+    .note{margin:5px 0 0;color:var(--slate);font-size:var(--caption);line-height:1.45}
+    .outro-copy{margin-top:40px}.outro-copy h2{font-size:var(--title);line-height:1.25;margin:0 0 16px}.outro-copy p{font-size:var(--body);line-height:1.58;color:var(--slate)}
+    .action-list{padding:0;list-style:none;margin:24px 0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}.action-list li{padding:12px 0;border-top:.6pt solid var(--blue)}.action-list b{display:block;font-size:var(--subhead);line-height:1.35;margin-bottom:8px}.action-list span{font-size:var(--body);line-height:1.58;color:var(--slate)}
+    .portrait .evidence-spread{grid-template-columns:1.2fr 1fr}.portrait .evidence-item:first-child{grid-row:span 2}.portrait .data-area{display:block}.portrait .data-area>.report-detail{display:grid;grid-template-columns:1fr 1fr}.portrait .action-list{display:block}
+    .presentation{--body:20px;--table:18px;--caption:15px;--subhead:24px;--title:34px}.presentation .cover-copy{margin-top:94px}.presentation .cover-copy h1{font-size:46px}.presentation .lead{line-height:1.45}.presentation .outro-copy{margin-top:28px}
+    @media print{html,body{background:#fff}main{display:block;padding:0}.page{break-after:page}}@page{size:A4 landscape;margin:0}
+  </style>
+</head>
+<body><main>
+  <!-- Independent fictional business-document starter. Preserve an accepted template on edits. Replace all example body copy. -->
+  <section data-pptx-slide class="page cover" data-fixed-page="cover">
+    <div class="top-rule" aria-hidden="true"><i></i><i></i><i></i></div><div class="page-inner"><img class="cover-logo" src="./assets/demo-mark.svg" alt="Document Studio"><div class="cover-copy"><div class="kicker cover-document-type">{{document_type}}</div><h1 class="cover-title"><span>{{title}}</span></h1><p class="cover-subtitle">{{subtitle}}</p></div><div class="cover-purpose">{{label_purpose}}<br>{{reader_action}}</div></div>
+    <div class="page-footer"><span class="cover-date">DOCUMENT STUDIO / {{date}}</span><strong>01</strong></div>
+  </section>
+  <section data-pptx-slide class="page">
+    <div class="top-rule" aria-hidden="true"><i></i><i></i><i></i></div><div class="page-inner"><header class="page-header"><div><div class="kicker">{{label_summary}}</div><h2 class="page-title">{{label_summary_title}}</h2></div><div class="meta">{{label_status}}<b>{{status}}</b></div></header>
+      <p class="lead">{{label_summary_lead}}</p>
+      <div class="evidence-spread"><article class="evidence-item"><h3>{{label_finding}}</h3><p>{{label_finding_copy}}</p></article><article class="evidence-item"><h3>{{label_evidence}}</h3><p>{{label_evidence_copy}}</p></article><article class="evidence-item"><h3>{{label_conditions}}</h3><p>{{label_conditions_copy}}</p></article></div>
+      <div class="report-detail"><figure style="margin:0"><div class="visual-slot">{{label_visual}}<small>{{label_visual_note}}</small></div><figcaption class="note">{{label_caption}}</figcaption></figure><article><h3>{{label_context}}</h3><p>{{label_context_copy}}</p><h3>{{label_limits}}</h3><p>{{label_limits_copy}}</p></article></div>
+      <div class="next-action"><small>{{label_next}}</small><h3>{{label_next_title}}</h3><p>{{label_next_copy}}</p></div>
+    </div><div class="page-footer"><span>{{label_summary}}</span><strong>02</strong></div>
+  </section>
+  <section data-pptx-slide class="page data-page">
+    <div class="top-rule" aria-hidden="true"><i></i><i></i><i></i></div><div class="page-inner"><header class="page-header"><div><div class="kicker">{{label_evidence}}</div><h2 class="page-title">{{label_data_title}}</h2></div><div class="meta">{{label_status}}<b>{{status}}</b></div></header>
+      <p class="lead">{{label_data_lead}}</p>
+      <div class="data-area"><div><div class="data-table"><div class="data-row head"><span>{{label_item}}</span><span>{{label_basis}}</span><span>{{label_value}}</span><span>{{label_source_status}}</span></div><div class="data-row"><span>{{label_example}} A</span><span>—</span><span>—</span><span>{{label_pending}}</span></div><div class="data-row"><span>{{label_example}} B</span><span>—</span><span>—</span><span>{{label_pending}}</span></div><div class="data-row"><span>{{label_example}} C</span><span>—</span><span>—</span><span>{{label_pending}}</span></div><div class="data-row report-only"><span>{{label_example}} D</span><span>—</span><span>—</span><span>{{label_pending}}</span></div><div class="data-row report-only"><span>{{label_example}} E</span><span>—</span><span>—</span><span>{{label_pending}}</span></div><div class="data-row report-only"><span>{{label_example}} F</span><span>—</span><span>—</span><span>{{label_pending}}</span></div></div>
+      <p class="note">{{label_data_note}}</p></div>
+      <div class="report-detail"><article><h3>{{label_method}}</h3><p>{{label_method_copy}}</p><h3>{{label_interpretation}}</h3><p>{{label_interpretation_copy}}</p></article><figure style="margin:0"><div class="visual-slot">{{label_visual}}<small>{{label_visual_note}}</small></div><figcaption class="note">{{label_caption}}</figcaption></figure></div></div>
+    </div><div class="page-footer"><span>{{label_evidence}}</span><strong>03</strong></div>
+  </section>
+  <section data-pptx-slide class="page outro" data-fixed-page="outro">
+    <div class="top-rule" aria-hidden="true"><i></i><i></i><i></i></div><div class="page-inner"><img class="cover-logo" src="./assets/demo-mark.svg" alt="Document Studio"><div class="outro-copy"><h2 class="outro-title">{{label_close_title}}</h2><p>{{label_close_lead}}</p><ul class="action-list"><li><b>{{label_decision}}</b><span>{{label_decision_copy}}</span></li><li><b>{{label_execution}}</b><span>{{label_execution_copy}}</span></li><li><b>{{label_remaining}}</b><span>{{label_remaining_copy}}</span></li></ul><div class="report-detail"><article><h3>{{label_support}}</h3><p>{{label_support_copy}}</p></article><article><h3>{{label_followup}}</h3><p>{{label_followup_copy}}</p></article></div></div></div>
+    <div class="page-footer"><span class="outro-date">DOCUMENT STUDIO / {{date}}</span><strong>04</strong></div>
+  </section>
+</main></body></html>

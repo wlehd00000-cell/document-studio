@@ -1,0 +1,449 @@
+{
+  "schema_version": "1.0",
+  "version": "3.3.0",
+  "canvases": {
+    "a4-portrait": {"css_px": [794, 1123], "print_mm": [210, 297]},
+    "a4-landscape": {"css_px": [1123, 794], "print_mm": [297, 210]},
+    "widescreen": {"css_px": [1280, 720]},
+    "esg-landscape": {"css_px": [1398, 794]}
+  },
+  "scope": "Document Studio production defaults; not official group CI. Explicit user brief and accepted template override. Canvas defaults are recommendations, never accepted choices; new production requires an independently resolved canvas.",
+  "units": {
+    "canonical_type": "pt",
+    "css_px_per_pt": 1.3333333333333333,
+    "normalized_regions": "x,y,width,height in 0..1 of intrinsic asset or explicitly named page frame"
+  },
+  "palette": {
+    "brand": {
+      "blue": "#0879BD",
+      "deep_blue": "#07577F",
+      "green": "#00896F",
+      "orange": "#F37032"
+    },
+    "ink": "#172C38",
+    "slate": "#4A6170",
+    "line": "#D8E1E5",
+    "paper": "#FFFFFF",
+    "office_print": {
+      "ink": "#222222",
+      "slate": "#494949",
+      "line": "#AAAAAA",
+      "table_head": "#F3F3F3"
+    },
+    "meaning": "Color roles are defined per document and named with text. Brand colors do not encode approval/risk/performance automatically."
+  },
+  "font": {
+    "by_language": {
+      "ko": {"primary":"Pretendard","display_name":"Pretendard Variable","file":"assets/brand/_external_PretendardVariable.woff2","fallback":["Noto Sans KR","sans-serif"]},
+      "ja": {"primary":"Pretendard JP","display_name":"Pretendard JP Variable","file":"assets/brand/_external_PretendardJPVariable.woff2","fallback":["Noto Sans JP","sans-serif"]}
+    },
+    "primary": "Pretendard JP",
+    "display_name": "Pretendard JP Variable",
+    "file": "assets/brand/_external_PretendardJPVariable.woff2",
+    "fallback": [
+      "Noto Sans JP",
+      "Noto Sans KR",
+      "sans-serif"
+    ],
+    "weights": [
+      400,
+      500,
+      600,
+      700
+    ],
+    "fallback_is_verified_primary": false
+  },
+  "spacing": {
+    "unit_px": 4,
+    "scale_px": [
+      4,
+      8,
+      12,
+      16,
+      24,
+      32,
+      48,
+      64
+    ],
+    "caption_gap_pt": 3
+  },
+  "brand_band": {
+    "default_enabled": false,
+    "height_px": 7,
+    "ratios": [
+      64,
+      23,
+      13
+    ],
+    "reason": "Compatibility opt-in mark. Never a condition for DEMO identity, cover quality, or live-deck density. Office print excludes it."
+  },
+  "profiles": {
+    "reading_report": {
+      "label_ko": "상세 읽기용 보고서",
+      "canvas": {
+        "default": "a4-landscape",
+        "width_px": 1123,
+        "height_px": 794
+      },
+      "typography": {
+        "body_pt": 9,
+        "table_pt": 8,
+        "caption_pt": 7.5,
+        "label_pt": 8,
+        "subhead_pt": 12,
+        "title_pt": 22,
+        "body_leading": 1.58,
+        "table_leading": 1.4,
+        "title_leading": 1.2
+      },
+      "grid": {
+        "columns": 12,
+        "margin_x_px": 48,
+        "margin_top_px": 34,
+        "margin_bottom_px": 44,
+        "column_gap_px": 28
+      },
+      "density": "reading_dense",
+      "band": false
+    },
+    "office_print": {
+      "label_ko": "A4 사무용 인쇄",
+      "canvas": {
+        "default": "a4-portrait",
+        "width_px": 794,
+        "height_px": 1123
+      },
+      "typography": {
+        "body_pt": 8.5,
+        "table_pt": 7.5,
+        "caption_pt": 7,
+        "label_pt": 7.5,
+        "subhead_pt": 11,
+        "title_pt": 18,
+        "body_leading": 1.5,
+        "table_leading": 1.4,
+        "title_leading": 1.2
+      },
+      "grid": {
+        "columns": 12,
+        "margin_x_px": 32.125984251968504,
+        "margin_top_px": 30.236220472440948,
+        "margin_bottom_px": 68.03149606299213,
+        "column_gap_px": 20
+      },
+      "density": "reading_dense",
+      "band": false,
+      "print": {
+        "page_portrait_mm": [
+          210,
+          297
+        ],
+        "safe_margin_mm": {
+          "top": 8,
+          "right": 8.5,
+          "bottom": 8,
+          "left": 8.5
+        },
+        "body_bottom_reserve_mm": 18,
+        "footer_bottom_mm": 8,
+        "caption_leading": 1.45
+      }
+    },
+    "executive_approval": {
+      "label_ko": "임원 판단·승인",
+      "canvas": {
+        "default": "a4-landscape",
+        "width_px": 1123,
+        "height_px": 794
+      },
+      "typography": {
+        "body_pt": 10,
+        "table_pt": 8.5,
+        "caption_pt": 8,
+        "label_pt": 9,
+        "subhead_pt": 13,
+        "title_pt": 24,
+        "body_leading": 1.45,
+        "table_leading": 1.4,
+        "title_leading": 1.2
+      },
+      "grid": {
+        "columns": 12,
+        "margin_x_px": 48,
+        "margin_top_px": 34,
+        "margin_bottom_px": 44,
+        "column_gap_px": 28
+      },
+      "density": "decision_reading",
+      "band": false
+    },
+    "proposal": {
+      "label_ko": "제안",
+      "canvas": {
+        "default": "a4-landscape",
+        "width_px": 1123,
+        "height_px": 794
+      },
+      "typography": {
+        "body_pt": 11,
+        "table_pt": 9,
+        "caption_pt": 8.5,
+        "label_pt": 9.5,
+        "subhead_pt": 14,
+        "title_pt": 26,
+        "body_leading": 1.45,
+        "table_leading": 1.4,
+        "title_leading": 1.2
+      },
+      "grid": {
+        "columns": 12,
+        "margin_x_px": 48,
+        "margin_top_px": 34,
+        "margin_bottom_px": 44,
+        "column_gap_px": 28
+      },
+      "density": "proposal_reading",
+      "band": false
+    },
+    "execution": {
+      "label_ko": "실행·담당·조건",
+      "canvas": {
+        "default": "a4-landscape",
+        "width_px": 1123,
+        "height_px": 794
+      },
+      "typography": {
+        "body_pt": 10,
+        "table_pt": 8.5,
+        "caption_pt": 8,
+        "label_pt": 9,
+        "subhead_pt": 12.5,
+        "title_pt": 23,
+        "body_leading": 1.45,
+        "table_leading": 1.4,
+        "title_leading": 1.2
+      },
+      "grid": {
+        "columns": 12,
+        "margin_x_px": 48,
+        "margin_top_px": 34,
+        "margin_bottom_px": 44,
+        "column_gap_px": 28
+      },
+      "density": "operational_reading",
+      "band": false
+    },
+    "reading_deck": {
+      "label_ko": "읽기용 PowerPoint",
+      "canvas": {
+        "default": "a4-portrait",
+        "width_px": 794,
+        "height_px": 1123
+      },
+      "typography": {
+        "body_pt": 10.5,
+        "table_pt": 8.5,
+        "caption_pt": 8,
+        "label_pt": 9,
+        "subhead_pt": 13,
+        "title_pt": 25,
+        "body_leading": 1.58,
+        "table_leading": 1.4,
+        "title_leading": 1.2
+      },
+      "grid": {
+        "columns": 12,
+        "margin_x_px": 56,
+        "margin_top_px": 34,
+        "margin_bottom_px": 44,
+        "column_gap_px": 28
+      },
+      "density": "reading_dense",
+      "band": false
+    },
+    "live_deck": {
+      "label_ko": "실제 발표",
+      "canvas": {
+        "default": "16:9",
+        "width_px": 1280,
+        "height_px": 720
+      },
+      "typography": {
+        "body_pt": 22,
+        "table_pt": 18,
+        "caption_pt": 14,
+        "label_pt": 18,
+        "subhead_pt": 25,
+        "title_pt": 34,
+        "body_leading": 1.45,
+        "table_leading": 1.4,
+        "title_leading": 1.2
+      },
+      "grid": {
+        "columns": 12,
+        "margin_x_px": 64,
+        "margin_top_px": 34,
+        "margin_bottom_px": 44,
+        "column_gap_px": 36
+      },
+      "density": "live_viewing",
+      "band": false
+    }
+  },
+  "page_families": {
+    "cover": {
+      "role": "First impression, subject, document purpose and issue date; optional in very short approval files.",
+      "density_rule": "Exclude body minimum-fill expectations. One dominant image/object or typographic idea.",
+      "image_area_fraction": [
+        0.65,
+        1.0
+      ],
+      "image_area_is": "suggested when image-led; typography/institutional covers may use no image",
+      "title_pt_by_profile": {
+        "reading_report": 40,
+        "office_print": 26,
+        "executive_approval": 32,
+        "proposal": 42,
+        "execution": 32,
+        "reading_deck": 40,
+        "live_deck": 44
+      },
+      "metadata_pt_by_profile": {
+        "reading_report": 9,
+        "office_print": 8,
+        "executive_approval": 9,
+        "proposal": 9,
+        "execution": 9,
+        "reading_deck": 10,
+        "live_deck": 15
+      },
+      "cover_modes": [
+        "full_bleed_photo",
+        "full_bleed_concept",
+        "editorial",
+        "typography_led",
+        "product_hero",
+        "location_photo",
+        "image_quiet_zone",
+        "strong_crop",
+        "institutional"
+      ],
+      "full_bleed_allowed": true,
+      "header_footer": "Document-specific quiet metadata; recurring body header/footer optional.",
+      "protect": [
+        "subject identity",
+        "title quiet zone",
+        "source/concept disclosure",
+        "editable title"
+      ]
+    },
+    "chapter_opener": {
+      "role": "Change of subject and orientation to following evidence.",
+      "density_rule": "Stronger image/type hierarchy; chapter contents only when useful. No invented paragraph to fill whitespace.",
+      "image_area_fraction": [
+        0.55,
+        1.0
+      ],
+      "title_pt_by_profile": {
+        "reading_report": 38,
+        "office_print": 24,
+        "executive_approval": 30,
+        "proposal": 38,
+        "execution": 30,
+        "reading_deck": 36,
+        "live_deck": 42
+      },
+      "full_bleed_allowed": true,
+      "header_footer": "Minimal navigation; omit large sidebar if current document does not need it."
+    },
+    "editorial": {
+      "role": "A subject, scene or story at visual scale with an adjacent explanation rail.",
+      "density_rule": "Image-first while claims and conditions remain adjacent and readable.",
+      "image_area_fraction": [
+        0.5,
+        0.85
+      ],
+      "full_bleed_allowed": true
+    },
+    "narrative": {
+      "role": "Connected explanation and analysis with local supporting evidence.",
+      "density_rule": "Purpose profile body typography; 1/2/3 columns chosen for actual language and argument."
+    },
+    "evidence": {
+      "role": "Source image/table/measurement with precise caption and annotation.",
+      "density_rule": "Protect source identity, actual detail, period and conditions.",
+      "full_bleed_allowed": false
+    },
+    "comparison": {
+      "role": "Comparable alternatives/data on common axes or criteria.",
+      "density_rule": "Shared baseline and corresponding rows; no arbitrary large score."
+    },
+    "process": {
+      "role": "Actual flow, authority, owners, branches and handoffs.",
+      "density_rule": "Meaningful connectors and editable labels; no decorative arrows."
+    },
+    "execution": {
+      "role": "Dates, owners, dependencies, operating conditions and completion evidence.",
+      "density_rule": "Readable shared schedule or owner structure."
+    },
+    "appendix": {
+      "role": "Complete supporting details and reusable reference.",
+      "density_rule": "Compact native tables/structured prose, repeat meaningful group headers."
+    }
+  },
+  "legacy_aliases": {
+    "demo-esg-dense": "reading_report",
+    "demo-esg-body9": "reading_report",
+    "demo-esg-caltex": "reading_report",
+    "demo-esg-factbook": "reading_report",
+    "office-print-dense": "office_print",
+    "presentation": "live_deck"
+  },
+  "legacy_typography_overrides": {
+    "demo-esg-dense": {
+      "body_pt": 8.5,
+      "table_pt": 7.5,
+      "caption_pt": 7,
+      "label_pt": 7.5,
+      "subhead_pt": 11,
+      "title_pt": 21
+    },
+    "demo-esg-body9": {
+      "body_pt": 9,
+      "table_pt": 7,
+      "caption_pt": 7,
+      "label_pt": 7.5,
+      "subhead_pt": 12,
+      "title_pt": 20
+    },
+    "demo-esg-caltex": {
+      "body_pt": 9.3,
+      "table_pt": 8,
+      "caption_pt": 7.5,
+      "label_pt": 8,
+      "subhead_pt": 11.5,
+      "title_pt": 23
+    },
+    "demo-esg-factbook": {
+      "body_pt": 8.5,
+      "table_pt": 7,
+      "caption_pt": 6.8,
+      "label_pt": 7.5,
+      "subhead_pt": 10,
+      "title_pt": 20
+    }
+  },
+  "image_rules": {
+    "focal_point_units": "normalized x,y in actual intrinsic image",
+    "crop_units": "normalized x,y,width,height, or pixels explicitly declared",
+    "stretch": false,
+    "packshot_default_fit": "contain",
+    "photo_fit": "cover only after protected-subject and crop inspection",
+    "screen_start_ppi": 150,
+    "print_start_ppi": [
+      200,
+      300
+    ],
+    "important_text": "Editable document overlays. Labels/numbers/conditions never inferred from imagery."
+  }
+}
