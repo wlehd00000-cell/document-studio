@@ -2,13 +2,13 @@
 
 **Company-adaptable document-production toolkit** · English / 한국어 / 日本語
 
-A reusable document workflow for researched HTML reports and editable PowerPoint deliverables. This development branch contains the **Document Studio 2.0 Phase A preview**: existing document production plus Company Pack loading, design/writing isolation, versioned project snapshots and optional language skills. Company-source extraction and plugin exporting (Phases B/C) are **not yet implemented**. The public examples, fictional organizations and artwork are independent materials.
+A reusable document workflow for researched HTML reports and editable PowerPoint deliverables. This development branch contains an **experimental Document Studio 2.0 preview**: Company Pack loading, PDF/PPTX extraction, draft design/writing analysis, explicit profile approval, and privacy-audited plugin ZIP exports. Actual visual interpretation, official font licensing and full PowerPoint rendering still require human/environment verification. The public examples, fictional organizations and artwork are independent materials.
 
 ## Skills (8 core + 2 optional)
 
 | Skill | Role |
 |---|---|
-| `company-profile-analyzer` | Company Pack validation and application (automated analysis pending) |
+| `company-profile-analyzer` | Authorized PDF/PPTX analysis, source evidence, draft Company Pack synthesis and approval workflow |
 | `report-html-pptx` | Intake, one-shot/collaborative routing, orchestration, QA |
 | `document-research` | Evidence gathering and source notes |
 | `document-architecture` | Argument, document structure and page plan |
@@ -51,6 +51,43 @@ python skills/document-writing/scripts/find_writing_reference.py \
 ```
 
 An approved pack can still have unverified font rendering or usage rights. The scaffold writes `content/font-policy-review.json` and a content-addressed Company Pack snapshot, but does not certify a rendered result. Do not redistribute a font solely because a profile names it.
+
+## Analyze and distribute an organization profile (experimental)
+
+The analysis pipeline accepts authorized local PDF/PPTX files and maintains a separate private source registry. It extracts measurable layout and writing characteristics; it **does not automatically declare the company's official visual identity**. Use the analyzer's [source policy](skills/company-profile-analyzer/references/source-policy.md) and review workflow before a real company deployment.
+
+```bash
+# First register each source in a private working directory outside the repository.
+python skills/company-profile-analyzer/scripts/source_registry.py ../document-studio-private/registry.json sample.pptx \
+  --title 'Official presentation' --language en-US \
+  --document-family executive_report --visibility public \
+  --rights 'authorized for analysis; verify distribution separately'
+
+python skills/company-profile-analyzer/scripts/document_extract.py sample.pptx \
+  --output ../document-studio-private/extraction.json
+python skills/company-profile-analyzer/scripts/design_analyzer.py ../document-studio-private/extraction.json \
+  --source-id SRC_FROM_REGISTRY --document-family executive_report \
+  --output ../document-studio-private/design.json
+python skills/company-profile-analyzer/scripts/writing_analyzer.py ../document-studio-private/extraction.json \
+  --source-id SRC_FROM_REGISTRY --language en-US \
+  --document-family executive_report --output ../document-studio-private/writing.json
+python skills/company-profile-analyzer/scripts/build_company_pack.py build \
+  --registry ../document-studio-private/registry.json --design-analysis ../document-studio-private/design.json \
+  --writing-analysis ../document-studio-private/writing.json --output ../document-studio-private/new-company \
+  --pack-id new-company --company-name 'New Company' \
+  --default-language en-US --enabled-language en-US
+# The result is always DRAFT. Review and explicitly approve before production/export.
+```
+
+The public-only exporter uses a reviewed, approved pack. For example, a fictional pack with Japanese only:
+
+```bash
+python scripts/export_company_plugin.py \
+  --company-pack company-packs/demo-retail \
+  --language-skills ja --output ./dist/demo-retail-documents.zip
+```
+
+This ZIP includes the selected skills, a bundled Company Pack, installer and SHA-256 manifest. It excludes original company documents, disallowed fonts and unselected language modules. Public export of a real pack with private sources, no explicit per-source `distribution_authorized` confirmation, uncertain rights, or no separate review/approval record is refused. The current exporter intentionally has no private-package bypass.
 
 Run tests with `python -m pytest tests/ -q` (install pytest in a development environment); refresh the manifest after editing files using `python scripts/build_package_manifest.py` and verify with `python scripts/build_package_manifest.py --check`.
 

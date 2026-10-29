@@ -2,7 +2,7 @@
   "interface": {
     "displayName": "Document Studio · 문서 제작 · 資料作成",
     "shortDescription": "한국어·일본어 문서·프레젠테이션 제작",
-    "longDescription": "기업별 Company Pack을 선택해 제작하는 8개 핵심 스킬과 2개 선택형 언어 모듈. 자동 자료 분석은 다음 단계에서 개발하며 예시는 모두 가상 자료입니다.",
+    "longDescription": "Company Pack 생성·적용, PDF/PPTX 초안 분석, 8개 핵심 스킬과 2개 선택형 언어 모듈. 회사 승인·시각 검수·폰트 권리는 별도 확인이 필요합니다.",
     "category": "Productivity",
     "capabilities": [
       "Write"
@@ -15,8 +15,8 @@
     "developerName": "Document Studio open source"
   },
   "name": "document-studio",
-  "version": "2.0.0-alpha.1",
-  "description": "Company Pack foundation with eight core skills, optional Korean/Japanese modules, synthetic examples and editable HTML/PPTX tooling.",
+  "version": "2.0.0-alpha.2",
+  "description": "Experimental company-adaptable document toolkit with eight core skills, optional Korean/Japanese modules, PDF/PPTX draft analysis and public plugin exporter.",
   "author": {
     "name": "Kim Jidong"
   },

@@ -94,8 +94,8 @@ def _validate_metadata(metadata: Any, directory: Path) -> None:
         raise CompanyPackError("Unsupported Company Pack schema")
     if not isinstance(metadata["pack_id"], str) or not PACK_ID.fullmatch(metadata["pack_id"]):
         raise CompanyPackError("Invalid pack_id")
-    if directory.name != metadata["pack_id"]:
-        raise CompanyPackError("pack_id must match the directory name")
+    if directory.name not in {metadata["pack_id"], 'company-pack'}:
+        raise CompanyPackError("pack_id must match the directory name (or exported company-pack alias)")
     if not isinstance(metadata["company_name"], str) or not metadata["company_name"].strip():
         raise CompanyPackError("Invalid company_name")
     if not isinstance(metadata["version"], str) or not VERSION.fullmatch(metadata["version"]):

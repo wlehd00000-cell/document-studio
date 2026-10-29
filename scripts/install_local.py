@@ -55,7 +55,10 @@ def verify_package(root: Path) -> dict:
         path = contained(root / rel, root)
         if hashlib.sha256(path.read_bytes()).hexdigest() != digest:
             raise ValueError("Package integrity mismatch: " + rel)
-    for name in NAMES:
+    names=tuple(manifest.get('included_skills',NAMES))
+    if not set(CORE_SKILLS).issubset(names) or not set(names).issubset(NAMES) or len(names)!=len(set(names)):
+        raise ValueError('Invalid packaged skill selection')
+    for name in names:
         if not (root / "skills" / name / "SKILL.md").is_file():
             raise ValueError("Required skill is missing: " + name)
     return manifest
@@ -83,10 +86,14 @@ def directory_hashes(directory: Path) -> dict:
 
 
 def install(root: Path, destination: Path, replace: bool = False, language: str = "ko",
-            language_skills: str = "ko,ja") -> dict:
+            language_skills: str | None = None) -> dict:
     root = root.resolve()
     manifest = verify_package(root)
+    if language_skills is None:
+        language_skills=manifest.get('included_language_skills','ko,ja')
     names = selected_skills(language_skills)
+    if not set(names).issubset(manifest.get('included_skills',NAMES)):
+        raise ValueError('Requested language skill is not included in this package')
     destination = destination.expanduser().resolve()
     if destination == root or destination.is_relative_to(root) or root.is_relative_to(destination):
         raise ValueError("Install destination must be separate from the distribution package")
@@ -159,8 +166,8 @@ def main() -> int:
     parser.add_argument("--skills-dir", type=Path)
     parser.add_argument("--replace", action="store_true")
     parser.add_argument("--language", choices=("ko", "ja"), default="ko")
-    parser.add_argument("--language-skills", choices=("none", "ko", "ja", "ko,ja"), default="ko,ja",
-                        help="Optional translation modules; default keeps the legacy full installation")
+    parser.add_argument("--language-skills", choices=("none", "ko", "ja", "ko,ja"), default=None,
+                        help="Optional modules; defaults to the packaged selection (both in the source edition)")
     parser.add_argument("--verify-only", action="store_true")
     args = parser.parse_args()
     root = Path(__file__).resolve().parents[1]
