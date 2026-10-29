@@ -1,4 +1,4 @@
 interface:
   display_name: Company Profile Analyzer
-  short_description: Validate and apply company-specific document profiles
-  default_prompt: Apply my selected Company Pack to a document and show its provenance and font checks.
+  short_description: Analyze company documents and build reviewable style profiles
+  default_prompt: Analyze the authorized company documents I provide, show evidence-backed Design and Writing DNA, and prepare a draft Company Pack for my review.
