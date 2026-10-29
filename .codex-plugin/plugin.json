@@ -1,25 +1,33 @@
 {
   "interface": {
     "displayName": "Document Studio · 문서 제작 · 資料作成",
-    "shortDescription": "한국어·일본어 문서·프레젠테이션 제작",
-    "longDescription": "Company Pack 생성·적용, PDF/PPTX 초안 분석, 8개 핵심 스킬과 2개 선택형 언어 모듈. 회사 승인·시각 검수·폰트 권리는 별도 확인이 필요합니다.",
+    "shortDescription": "승인된 문서 규칙으로 만드는 맞춤형 제작 워크플로우",
+    "longDescription": "허가된 PDF/PPTX를 분석해 Company Pack과 Layout Grammar를 제안하고 담당자가 승인하는 문서 제작 툴킷입니다. 공개 배포 허가 팩의 ZIP 내보내기를 지원합니다. 사내 비공개 자료의 패키지 배포와 자동 설치는 아직 지원하지 않습니다.",
     "category": "Productivity",
     "capabilities": [
       "Write"
     ],
     "defaultPrompt": [
-      "처음 사용합니다. 이 채팅에서 필요한 선택만 짧게 안내해줘.",
-      "初めて使います。このチャットで必要な選択だけ簡潔に案内してください。",
-      "일본 거래처가 도입 여부를 판단할 일본어 기획안을 원샷으로 만들어줘. 편집 가능한 PowerPoint로 줘."
+      "가상 데모 Company Pack으로 어떤 문서를 만들 수 있는지 보여줘.",
+      "承認済みのデモCompany Packを使って、新しい提案資料の制作フローを案内してください。",
+      "우리 회사 문서를 참고해 맞춤형 플러그인을 만들고 싶어. 권한 확인부터 분석·검토·승인 절차와 현재 제약을 설명해줘."
     ],
     "developerName": "Document Studio open source"
   },
   "name": "document-studio",
   "version": "0.1.0-alpha.5",
-  "description": "Experimental company-adaptable document toolkit with evidence-backed layout grammar, reviewed HTML composition plans, browser QA gates, eight core skills, optional Korean/Japanese modules, and approved-pack export.",
+  "description": "Review-first document-to-plugin toolkit for teams: analyze authorized references, approve evidence-backed Company Packs and Layout Grammar, export public-authorized plugin ZIPs, and guide new document production. Experimental alpha; private-source export not yet supported.",
   "author": {
     "name": "Kim Jidong"
   },
-  "keywords": [],
+  "keywords": [
+    "document-automation",
+    "business-workspace",
+    "company-pack",
+    "layout-grammar",
+    "presentation",
+    "korean",
+    "japanese"
+  ],
   "skills": "./skills"
 }

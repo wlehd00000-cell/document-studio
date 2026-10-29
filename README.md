@@ -1,36 +1,66 @@
 # Document Studio
 
-### Turn your existing documents into a custom AI document plugin.
+**Turn your existing documents into a custom AI document plugin.**
 
-**An open-source toolkit for learning a company's document conventions and packaging them as a reusable ChatGPT plugin.** · English / 한국어 / 日本語
+Your company already has a document style. Document Studio helps you **extract the evidence, approve reusable rules, and package a company-aware document workflow** for ChatGPT. Built for workspace administrators; useful for individuals, too.
 
-Give Document Studio **authorized PDF/PPTX references**, review the proposed writing and design rules, then export a company-aware plugin for yourself or a ChatGPT workspace. The generated plugin guides new reports and presentations using **approved** rules; source documents do not need to travel with the plugin.
+[![License: MIT](https://img.shields.io/badge/license-MIT-157A72)](LICENSE) ![Release: alpha](https://img.shields.io/badge/release-v0.1.0--alpha.5-5B63CE) ![Python: 3.12](https://img.shields.io/badge/Python-3.12-3776AB)
 
-> **Release status: v0.1.0-alpha.5 · Experimental.** The analysis, rule-approval and ZIP-export tools exist, but the reference-to-installed-plugin journey still has manual review and setup steps. Visual similarity, font licensing, PowerPoint rendering, and end-to-end browser QA are not certified. The fictional examples in this repository are independent materials. This is not an official product of, or affiliated with, any employer.
+[**Try the fictional demo**](#quick-start--export-a-demo-plugin) · [**See the five-scene walkthrough**](docs/DEMO_FLOW.md) · [**Workspace admin guide**](docs/WORKSPACE_ADMIN_GUIDE.md) · [**한국어**](docs/QUICKSTART_ko.md) · [**日本語**](docs/QUICKSTART_ja.md)
 
-## From reference files to a new document — one workflow
+![Document Studio: existing references to approved rules, a custom plugin, and a new document](docs/assets/workflow-hero.svg)
 
-```mermaid
-flowchart LR
-    A["01 · Input<br/>Your PDF / PPTX files"] --> B["02 · Learn<br/>Design + writing evidence"]
-    B --> C["03 · Approve<br/>Company Pack rules"]
-    C --> D["04 · Package<br/>Custom plugin ZIP"]
-    D --> E["05 · Use<br/>Create a new document"]
+> **Experimental alpha — `v0.1.0-alpha.5`.** This is a review-gated toolkit, **not yet a one-click document-to-plugin service**. Style analysis, Company Pack approval, and *public-authorized* ZIP export are implemented; installation and final HTML/PPTX authoring still involve manual steps. **Private/restricted company-source packs cannot currently be exported.** See the [admin guide and release limitations](docs/WORKSPACE_ADMIN_GUIDE.md). The illustration above is a workflow diagram, not a product screenshot.
+
+## Why Document Studio?
+
+Most document automation starts with a blank prompt or a fixed template. In a company, the harder problem is capturing **how that organization writes and designs**—then making the result repeatable for more than one employee.
+
+| Bring your materials | Keep control | Reuse the result |
+|---|---|---|
+| Analyze **authorized PDFs and PowerPoint decks** for writing and visual characteristics. | Review source evidence, font and asset rights, and proposed layout rules **before approval**. | Export an approved **public-authorized Company Pack + plugin bundle**; private distribution is on the roadmap. |
+
+**What makes it different:** source-aware analysis, explicit human approval, a portable company profile, language-selectable skills, and testable document-production contracts. These are the project's engineering priorities—not a promise of perfect visual cloning.
+
+## Quick start — export a demo plugin
+
+Try the complete **packaging step** with an independently authored, fictional retail company. You do **not** need to upload real company documents or possess any company credentials for this example.
+
+```bash
+git clone https://github.com/wlehd00000-cell/document-studio.git
+cd document-studio
+python scripts/install_local.py --verify-only
+python scripts/export_company_plugin.py \
+  --company-pack company-packs/demo-retail \
+  --language-skills ko,ja \
+  --output ./dist/demo-retail-documents.zip
 ```
 
-| Scene | What you see | Current implementation |
+**Result:** `dist/demo-retail-documents.zip`—a tailored plugin package containing the approved fictional Company Pack and selected skills. **This command exports a ZIP; it does not install a plugin into ChatGPT.** For installation, use [Plugin Creator/account instructions](skills/company-profile-analyzer/references/account-installation.md) or the [workspace admin guide](docs/WORKSPACE_ADMIN_GUIDE.md).
+
+To make a **new company plugin from your own files**, follow the [five-scene reference-to-plugin walkthrough](docs/DEMO_FLOW.md). The source-analysis and review steps are intentionally separate from packaging.
+
+## How it works
+
+1. **Reference.** Register authorized PDF/PPTX files privately and extract measurable design and writing characteristics.
+2. **Review.** Inspect the draft Company Pack, reject or accept proposed rules, and approve permitted assets and language conventions.
+3. **Package.** Export an approved public-authorized Company Pack as a customized plugin ZIP—not the original source documents. A private-source pack is currently blocked.
+4. **Deploy.** Install it personally or have a workspace administrator publish the plugin to their organization.
+5. **Create.** Ask the installed plugin for a **new** report or presentation; inspect the output and its applicable QA status.
+
+The two included fictional profiles—[`demo-retail`](company-packs/demo-retail) and [`demo-manufacturing`](company-packs/demo-manufacturing)—demonstrate that the same workflow can use different approved settings.
+
+## Who is it for?
+
+| Role | Starting point | Outcome |
 |---|---|---|
-| **01 · Input** | A manager provides representative reports, decks, and brand guidelines. | Authorized local PDF/PPTX ingestion; original files stay outside the public repository. |
-| **02 · Learn** | Design, typography, layout relationships, and writing habits are extracted as reviewable evidence. | Extraction and evidence-based draft rule synthesis. |
-| **03 · Approve** | A human accepts or rejects the proposed rules and approves a Company Pack. | Explicit review/approval is required; nothing is declared official automatically. |
-| **04 · Package** | A tailored plugin is exported with the approved pack and selected language skills. | Privacy-audited ZIP export; installation/publishing happens separately. |
-| **05 · Use** | A team member requests a fresh report and receives a document guided by the approved rules. | Existing document workflow and HTML production contracts; visual QA and PPTX output have environment-dependent requirements. |
+| **Workspace admin / DX team** | Authorized public examples today; separately approved private materials in a future workflow | Pilot a company-specific plugin with fictional/public-authorized materials before considering wider deployment. |
+| **Employee** | An installed organization plugin and a new document brief | Work from the approved writing and layout conventions without repeating onboarding. |
+| **Individual creator** | Your own authorized portfolio, reports, or presentation files | Analyze and review your style privately; currently export a plugin only when its derived pack meets the public-distribution checks. |
 
-**See the [end-to-end demo storyboard and reproducible commands](docs/DEMO_FLOW.md).** To preview the distinct fictional design profiles without uploading company material, start with [`demo-retail`](company-packs/demo-retail) and [`demo-manufacturing`](company-packs/demo-manufacturing).
+**Privacy is part of the workflow:** keep source files and private registries outside the open-source checkout. The exporter rejects disallowed assets and lacks a bypass for unauthorized distribution. Review your organization's handling policies before uploading sensitive files to any AI service.
 
-**For workspace admins:** create and review the company profile once, then publish the exported plugin to your workspace. **For individuals:** use the same flow to build a personal document plugin. Workspace publication is controlled by the receiving account's admin settings; exporting a ZIP alone does not install or distribute a plugin.
-
-## Skills (8 core + 2 optional)
+## What's included (8 core skills + 2 optional languages)
 
 | Skill | Role |
 |---|---|
@@ -45,15 +75,20 @@ flowchart LR
 | `business-japanese-translation` | Optional professional Japanese adaptation |
 | `html-to-pptx` | Editable HTML → PowerPoint conversion and checks |
 
-## Start
+For a local skill installation rather than the demo plugin export, use `python scripts/install_local.py --language-skills none` (core only), or `--language-skills ko`, `ja`, or `ko,ja`. Omitting the flag preserves the legacy default of including both optional language modules.
 
-```bash
-python scripts/install_local.py --verify-only
-python scripts/install_local.py --language-skills none
-# Or: --language-skills ko | ja | ko,ja
-```
+## What works today — and what does not
 
-To preserve legacy behavior, omitting `--language-skills` installs both modules. `--language` chooses the installation guide language, not the installed modules.
+| Capability | Alpha.5 status |
+|---|---|
+| Extract PDF/PPTX design and writing evidence | <strong>Implemented</strong>, with human interpretation required |
+| Review and approve a Company Pack / Layout Grammar | <strong>Implemented</strong>, with explicit review steps |
+| Export a fictional or separately authorized public-distribution pack | <strong>Implemented</strong>; reproducible CLI demo above |
+| Export a pack built from private/restricted company documents for internal-only distribution | **Not supported**; blocked by the public exporter |
+| Automatically install/publish into a ChatGPT Business workspace | **Not supported**; administrator performs deployment |
+| Automatically deliver a visually verified new HTML/PPTX from uploaded references | **Not supported end-to-end**; authoring and browser QA remain separate |
+
+The goal is organization-scale consistency with accountable approvals—not to promise a finished enterprise deployment system before it exists. See the [workshop-ready demo storyboard](docs/DEMO_FLOW.md) and [current release limits](docs/WORKSPACE_ADMIN_GUIDE.md).
 
 ## Curated Company Packs (Phase A)
 
@@ -166,6 +201,17 @@ See [START_HERE.md](START_HERE.md). To inspect independently authored examples, 
 - When generating real deliverables, independently verify evidence, sources and use rights.
 - **Font binaries are not bundled** in this source-only edition. Install appropriately licensed Korean/Japanese fonts for precise visual QA; fallback typography may vary. Original strict font-embedding checks may require user-provided font assets.
 - Editable PowerPoint output requires the optional converter's dependencies; merely cloning/installing skills does not install those dependencies or certify export.
+
+## Get involved
+
+- **Try it:** run the fictional Quick Start above, then follow the [five-scene demo plan](docs/DEMO_FLOW.md). Share reproducible feedback with no confidential materials.
+- **Improve it:** [open a feature request or bug report](https://github.com/wlehd00000-cell/document-studio/issues/new/choose), or read [CONTRIBUTING.md](CONTRIBUTING.md) before a pull request.
+- **Bring it to a workspace:** follow the [administrator pilot checklist](docs/WORKSPACE_ADMIN_GUIDE.md) and pin a reviewed version.
+- **Track the honest scope:** see the [changelog](CHANGELOG.md) and [security policy](SECURITY.md). Private-source internal-only export is a priority roadmap item, not a shipped feature.
+
+For maintainers introducing the project publicly, the [launch kit](docs/LAUNCH_CHECKLIST.md) contains the repository description, social-preview asset, a truthful 60-second video plan, and English/Japanese announcement drafts.
+
+If this solves a real onboarding problem for your team, **star the repository** so others looking for reviewable document automation can find it. A short, reproducible example or an issue report is even more useful than a star.
 
 ## License
 
