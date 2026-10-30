@@ -24,7 +24,7 @@
     "editorial-consulting": "1.0.0"
   },
   "files": {
-    ".codex-plugin/plugin.json": "0c64898f7d65b9daf2bd8bfd1593c9ef29fa00b2b977d5c9e2cea58db894726b",
+    ".codex-plugin/plugin.json": "15c688f3e231e7f2dbd36eb6444628e6bf89636795cd25b67f680fc81a421d3b",
     ".github/ISSUE_TEMPLATE/bug_report.md": "a02cdb4db729cdfe702ea981c8f402157df7ad52ea6ec523b19ad5fd8e9fc206",
     ".github/ISSUE_TEMPLATE/feature_request.md": "faa6a43b027527de7a6a43eb419d0a1fdc1a9868157730eca3409c9f952de1c8",
     ".github/workflows/tests.yml": "a3d4e8d2f2ab00ccb6df87291976f3ccce8c6e6cf04fd0443b865c0d66ced930",
