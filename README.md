@@ -10,7 +10,7 @@ AI tools evolve. Models get upgraded. Teams adopt new workflows. But your organi
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-157A72)](LICENSE) ![Release: alpha](https://img.shields.io/badge/release-v0.1.0--alpha.5-5B63CE) ![Python: 3.12](https://img.shields.io/badge/Python-3.12-3776AB)
 
-**⬇️ Get started — download plugin ZIPs:** [Starter plugin](https://github.com/wlehd00000-cell/document-studio/releases/download/v0.1.0-alpha.5/document-studio-starter-v0.1.0-alpha.5.zip) · [Fictional company demo](https://github.com/wlehd00000-cell/document-studio/releases/download/v0.1.0-alpha.5/demo-retail-documents-v0.1.0-alpha.5.zip) · [3-step installation guide](docs/DOWNLOAD_AND_INSTALL.md) · [All releases](https://github.com/wlehd00000-cell/document-studio/releases)
+**⬇️ Get started — download plugin ZIPs:** [Starter plugin](https://github.com/wlehd00000-cell/document-studio/releases/download/v0.1.0-alpha.6/document-studio-starter-v0.1.0-alpha.6.zip) · [Fictional company demo](https://github.com/wlehd00000-cell/document-studio/releases/download/v0.1.0-alpha.6/demo-retail-documents-v0.1.0-alpha.6.zip) · [3-step installation guide](docs/DOWNLOAD_AND_INSTALL.md) · [All releases](https://github.com/wlehd00000-cell/document-studio/releases)
 
 > **Download ≠ install:** account installation requires an eligible Plugin Creator/administrator workflow. Both ZIPs are **experimental**; no confidential company documents or licensed fonts are bundled.
 
@@ -18,7 +18,7 @@ AI tools evolve. Models get upgraded. Teams adopt new workflows. But your organi
 
 ![Document Studio: existing references to approved rules, a custom plugin, and a new document](docs/assets/workflow-hero.svg)
 
-> **Experimental alpha — `v0.1.0-alpha.5`.** This is a review-gated toolkit, **not yet a one-click document-to-plugin service**. Style analysis, Company Pack approval, and *public-authorized* ZIP export are implemented; installation and final HTML/PPTX authoring still involve manual steps. **Private/restricted company-source packs cannot currently be exported.** See the [admin guide and release limitations](docs/WORKSPACE_ADMIN_GUIDE.md). The illustration above is a workflow diagram, not a product screenshot.
+> **Experimental alpha — `v0.1.0-alpha.6`.** This is a review-gated toolkit, **not yet a one-click document-to-plugin service**. Style analysis, Company Pack approval, and *public-authorized* ZIP export are implemented; installation and final HTML/PPTX authoring still involve manual steps. **Private/restricted company-source packs cannot currently be exported.** See the [admin guide and release limitations](docs/WORKSPACE_ADMIN_GUIDE.md). The illustration above is a workflow diagram, not a product screenshot.
 
 ## The problem isn't just generating documents. It's keeping them consistent.
 
@@ -150,7 +150,7 @@ The analysis pipeline accepts authorized local PDF/PPTX files and maintains a se
 
 Each organization undergoes **one evidence-backed visual onboarding review**: measured page geometry and private rendered-page inspection → Brand DNA / Layout Grammar / Creative Vocabulary proposals → independently authored fictional-content style studies → explicit human rule decisions and Company Pack approval. Nearby role-labeled elements on a source page can produce conservative `above` / `left_of` relationship hypotheses. Salient PDF vectors are bounded and surfaced as togglable visual evidence; defective zero-area PDF images are quarantined. Later document work can retrieve the approved grammar for that organization, adapting layouts to new content rather than copying source pages. Changes to source evidence identify affected rules for re-review. The experimental `visual_grammar_workflow.py` CLI implements this evidence/review/retrieval path. Applying the grammar to authored HTML is a separate, review-gated stage described below; neither stage automatically composes professional-looking designs or certifies similarity to an official reference. See the [design specification](docs/superpowers/specs/2026-10-29-visual-grammar-onboarding-design.md), [test-first implementation plan](docs/superpowers/plans/2026-10-29-visual-grammar-onboarding.md), [P0 source regression](evaluation/visual-grammar-alpha4-p0-2026-10-29.md) and [operating workflow](skills/company-profile-analyzer/references/visual-grammar-onboarding.md).
 
-### Approved Layout Grammar → authored HTML → browser QA (experimental alpha.5)
+### Approved Layout Grammar → authored HTML → browser QA (experimental alpha.6)
 
 The approved [composition specification](docs/superpowers/specs/2026-10-29-approved-layout-grammar-composition-design.md) now has a Native, additive experimental implementation. Once the final manuscript and page decisions are approved, write `content/page-brief.json` with schema `layout-page-brief/1.0`. For each page supply its ID, family, reader question, element IDs and semantic roles, reading order, density, use, canvas, language and rights-checked assets. The plan step selects only individually accepted rules from an approved Company Pack, resolves explicit role relationships and reports conflicts instead of inventing a layout.
 

@@ -31,12 +31,13 @@ jobs:
           python scripts/verify_public_release.py
           python scripts/install_local.py --verify-only
           python scripts/build_package_manifest.py --check
+          python scripts/audit_plugin_package.py
           python skills/report-html-pptx/scripts/build_design_css.py --check
       - name: Build two rights-safe preview archives
         run: |
           mkdir -p dist
-          python scripts/package_account_plugin.py --language-skills ko,ja --output dist/document-studio-starter-v0.1.0-alpha.5.zip
-          python scripts/export_company_plugin.py --company-pack company-packs/demo-retail --language-skills ko,ja --output dist/demo-retail-documents-v0.1.0-alpha.5.zip
+          python scripts/package_account_plugin.py --language-skills ko,ja --output dist/document-studio-starter-v0.1.0-alpha.6.zip
+          python scripts/export_company_plugin.py --company-pack company-packs/demo-retail --language-skills ko,ja --output dist/demo-retail-documents-v0.1.0-alpha.6.zip
       - name: Audit downloaded archive paths and contents
         run: |
           python - <<'PY'
@@ -71,7 +72,7 @@ jobs:
           cat SHA256SUMS.txt
       - uses: actions/upload-artifact@v4
         with:
-          name: document-studio-alpha5-plugin-downloads
+          name: document-studio-alpha6-plugin-downloads
           path: |
             dist/*.zip
             dist/SHA256SUMS.txt
@@ -80,11 +81,11 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          if gh release view v0.1.0-alpha.5 >/dev/null 2>&1; then
-            echo "::error::Release v0.1.0-alpha.5 already exists; refusing to overwrite its assets."
+          if gh release view v0.1.0-alpha.6 >/dev/null 2>&1; then
+            echo "::error::Release v0.1.0-alpha.6 already exists; refusing to overwrite its assets."
             exit 1
           fi
-          gh release create v0.1.0-alpha.5 dist/*.zip dist/SHA256SUMS.txt \
+          gh release create v0.1.0-alpha.6 dist/*.zip dist/SHA256SUMS.txt \
             --target "$GITHUB_SHA" --prerelease \
-            --title 'Document Studio v0.1.0-alpha.5 — Plugin Downloads (Preview)' \
-            --notes-file docs/RELEASE_NOTES_ALPHA5.md
+            --title 'Document Studio v0.1.0-alpha.6 — Plugin Downloads (Preview)' \
+            --notes-file docs/RELEASE_NOTES_ALPHA6.md

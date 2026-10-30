@@ -1,4 +1,4 @@
-# Download and install Document Studio (v0.1.0-alpha.5)
+# Download and install Document Studio (v0.1.0-alpha.6)
 
 > **Experimental alpha.** These archives are plugin packages, not a one-click ChatGPT installation or a guarantee of identical output across AI model versions. No private employer/customer documents or licensed font files are included.
 
@@ -6,19 +6,19 @@
 
 | Package | Intended for | Download |
 |---|---|---|
-| **Starter plugin** | Anyone who wants the 8 core document skills and optional Korean/Japanese modules | [Download Starter ZIP](https://github.com/wlehd00000-cell/document-studio/releases/download/v0.1.0-alpha.5/document-studio-starter-v0.1.0-alpha.5.zip) |
-| **Fictional retail demo** | Workspace admins and evaluators who want a ready-approved *fictional* Company Pack | [Download Demo ZIP](https://github.com/wlehd00000-cell/document-studio/releases/download/v0.1.0-alpha.5/demo-retail-documents-v0.1.0-alpha.5.zip) |
+| **Starter plugin** | Anyone who wants the 8 core document skills and optional Korean/Japanese modules | [Download Starter ZIP](https://github.com/wlehd00000-cell/document-studio/releases/download/v0.1.0-alpha.6/document-studio-starter-v0.1.0-alpha.6.zip) |
+| **Fictional retail demo** | Workspace admins and evaluators who want a ready-approved *fictional* Company Pack | [Download Demo ZIP](https://github.com/wlehd00000-cell/document-studio/releases/download/v0.1.0-alpha.6/demo-retail-documents-v0.1.0-alpha.6.zip) |
 | **Full source** | Developers who want to inspect or modify the analyzer and packaging tools | [Browse source](https://github.com/wlehd00000-cell/document-studio) |
 
 These are **different from GitHub's Code → Download ZIP**, which downloads the entire source repository.
 
 ## In three steps
 
-**1 — Download and verify.** Choose one archive from the [pre-release page](https://github.com/wlehd00000-cell/document-studio/releases/tag/v0.1.0-alpha.5), download `SHA256SUMS.txt`, and compare the archive's SHA-256. The archive contains a single plugin root with a `plugin.json` and `skills/*/SKILL.md`. Inspect the contents before installation.
+**1 — Download and verify.** Choose one archive from the [pre-release page](https://github.com/wlehd00000-cell/document-studio/releases/tag/v0.1.0-alpha.6), download `SHA256SUMS.txt`, and compare the archive's SHA-256. The archive contains a single plugin root with a `plugin.json` and `skills/*/SKILL.md`. Inspect the contents before installation.
 
-Windows PowerShell: `Get-FileHash .\document-studio-starter-v0.1.0-alpha.5.zip -Algorithm SHA256`
+Windows PowerShell: `Get-FileHash .\document-studio-starter-v0.1.0-alpha.6.zip -Algorithm SHA256`
 
-macOS/Linux: `shasum -a 256 document-studio-starter-v0.1.0-alpha.5.zip`
+macOS/Linux: `shasum -a 256 document-studio-starter-v0.1.0-alpha.6.zip`
 
 **2 — Register the plugin.** In an eligible ChatGPT account where **Plugin Creator** is available, upload the ZIP to a conversation using Plugin Creator and explicitly request creation of a **private** plugin from that ZIP. Confirm the returned plugin ID, scope and installed skill list. **Exporting/downloading a ZIP does not install anything.** If the account lacks Plugin Creator or permission to create plugins, follow the available account/workspace plugin setup process or use the source-only skill installation instead. Do not assume that every ChatGPT subscription supports ZIP installation.
 

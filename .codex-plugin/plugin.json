@@ -15,7 +15,7 @@
     "developerName": "Document Studio open source"
   },
   "name": "document-studio",
-  "version": "0.1.0-alpha.5",
+  "version": "0.1.0-alpha.6",
   "description": "Review-first document-to-plugin toolkit for teams: analyze authorized references, approve evidence-backed Company Packs and Layout Grammar, export public-authorized plugin ZIPs, and guide new document production. Experimental alpha; private-source export not yet supported.",
   "author": {
     "name": "Kim Jidong"

@@ -22,4 +22,5 @@ jobs:
           python scripts/verify_public_release.py
           python scripts/install_local.py --verify-only
           python scripts/build_package_manifest.py --check
+          python scripts/audit_plugin_package.py
           python skills/report-html-pptx/scripts/build_design_css.py --check
