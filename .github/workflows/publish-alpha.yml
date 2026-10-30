@@ -1,0 +1,90 @@
+name: Package and publish alpha plugin downloads
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/publish-alpha.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: document-studio-alpha-release
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    if: github.repository == 'wlehd00000-cell/document-studio'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install test dependencies
+        run: python -m pip install -r requirements-dev.txt
+      - name: Run tests and public-source integrity gates
+        run: |
+          python -m pytest tests -q
+          python scripts/verify_public_release.py
+          python scripts/install_local.py --verify-only
+          python scripts/build_package_manifest.py --check
+          python skills/report-html-pptx/scripts/build_design_css.py --check
+      - name: Build two rights-safe preview archives
+        run: |
+          mkdir -p dist
+          python scripts/package_account_plugin.py --language-skills ko,ja --output dist/document-studio-starter-v0.1.0-alpha.5.zip
+          python scripts/export_company_plugin.py --company-pack company-packs/demo-retail --language-skills ko,ja --output dist/demo-retail-documents-v0.1.0-alpha.5.zip
+      - name: Audit downloaded archive paths and contents
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import json, zipfile
+          forbidden={'.pdf','.pptx','.docx','.ttf','.otf','.woff','.woff2','.env'}
+          files=sorted(Path('dist').glob('*.zip'))
+          assert len(files)==2, 'Exactly two archives expected'
+          for item in files:
+              with zipfile.ZipFile(item) as z:
+                  bad=z.testzip()
+                  assert bad is None, f'Corrupted archive: {bad}'
+                  names=z.namelist()
+                  assert len(names)==len(set(names)) and names
+                  assert len({n.split('/')[0] for n in names})==1
+                  assert all(not n.startswith('/') and '..' not in Path(n).parts for n in names)
+                  assert not any(Path(n).suffix.lower() in forbidden for n in names)
+                  assert any(n.endswith('/plugin.json') for n in names)
+                  assert sum(n.endswith('/SKILL.md') for n in names)==10
+                  if 'demo-retail' in item.name:
+                      assert any(n.endswith('/company-pack/pack.json') for n in names)
+                      packname=next(n for n in names if n.endswith('/company-pack/pack.json'))
+                      pack=json.loads(z.read(packname))
+                      assert pack.get('synthetic') is True and pack.get('status')=='approved'
+                      assert any(n.endswith('/package-manifest.json') for n in names)
+                  else:
+                      assert not any('/company-pack/pack.json' in n for n in names)
+              print('Archive verified:', item.name, item.stat().st_size, 'bytes')
+          PY
+          cd dist
+          sha256sum *.zip > SHA256SUMS.txt
+          cat SHA256SUMS.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: document-studio-alpha5-plugin-downloads
+          path: |
+            dist/*.zip
+            dist/SHA256SUMS.txt
+          if-no-files-found: error
+      - name: Publish GitHub pre-release (never replace an existing tag)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh release view v0.1.0-alpha.5 >/dev/null 2>&1; then
+            echo "::error::Release v0.1.0-alpha.5 already exists; refusing to overwrite its assets."
+            exit 1
+          fi
+          gh release create v0.1.0-alpha.5 dist/*.zip dist/SHA256SUMS.txt \
+            --target "$GITHUB_SHA" --prerelease \
+            --title 'Document Studio v0.1.0-alpha.5 — Plugin Downloads (Preview)' \
+            --notes-file docs/RELEASE_NOTES_ALPHA5.md

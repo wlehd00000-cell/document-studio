@@ -10,6 +10,10 @@ AI tools evolve. Models get upgraded. Teams adopt new workflows. But your organi
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-157A72)](LICENSE) ![Release: alpha](https://img.shields.io/badge/release-v0.1.0--alpha.5-5B63CE) ![Python: 3.12](https://img.shields.io/badge/Python-3.12-3776AB)
 
+**⬇️ Get started — download plugin ZIPs:** [Starter plugin](https://github.com/wlehd00000-cell/document-studio/releases/download/v0.1.0-alpha.5/document-studio-starter-v0.1.0-alpha.5.zip) · [Fictional company demo](https://github.com/wlehd00000-cell/document-studio/releases/download/v0.1.0-alpha.5/demo-retail-documents-v0.1.0-alpha.5.zip) · [3-step installation guide](docs/DOWNLOAD_AND_INSTALL.md) · [All releases](https://github.com/wlehd00000-cell/document-studio/releases)
+
+> **Download ≠ install:** account installation requires an eligible Plugin Creator/administrator workflow. Both ZIPs are **experimental**; no confidential company documents or licensed fonts are bundled.
+
 [**Try the fictional demo**](#quick-start--export-a-demo-plugin) · [**See the five-scene walkthrough**](docs/DEMO_FLOW.md) · [**Workspace admin guide**](docs/WORKSPACE_ADMIN_GUIDE.md) · [**한국어**](docs/QUICKSTART_ko.md) · [**日本語**](docs/QUICKSTART_ja.md)
 
 ![Document Studio: existing references to approved rules, a custom plugin, and a new document](docs/assets/workflow-hero.svg)

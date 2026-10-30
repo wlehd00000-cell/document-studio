@@ -32,9 +32,9 @@
     ".mcp.json": "0469ab315fda4a9e1ece41c23617381433fe62ad5508fc304178e106f0ea7955",
     "CHANGELOG.md": "36f583963ff77f17f4e208aa34adcf6815dc5cd0d96f2ee4972ba24df59aa483",
     "CONTRIBUTING.md": "4af83fb17613a3353bf03b44677371154a3731d3b262bcbdcdc4c10ecc2187df",
-    "INSTALL_INSTRUCTIONS.md": "4c3359976edc5fa81d8bd0a8708475e748971c45052f80f122950df7777a76c2",
+    "INSTALL_INSTRUCTIONS.md": "8ec1e1a524b93e196717896ef206c83622ea04e287674c0696b57b0a913e18ad",
     "LICENSE": "a9de7a31f8607a264bcaca627a47248f23bf0453d3547421ed8e6ba4c98e366f",
-    "README.md": "42035af8b8aa3aec2e47f3620d59fcf54e4aea86a1193b11ccba1a759ff915a0",
+    "README.md": "7dfc4948b7cf1862d5443f0cd837da90814c9d92c3d79a4e350b547b8edda4ed",
     "SECURITY.md": "f93c2786d16897de1d3914486b583234c12a188183224f541166bad668cdbc82",
     "START_HERE.md": "46bd104272ba63e64a2c6a30ecaaeeb77e2cc5249f462ca0e70d6c5bab6a7c61",
     "THIRD_PARTY_NOTICES.md": "f0729ffc8b89351665f8c80845d876c5a86a668cd07c493f8a08e5a8710490b0",
@@ -455,6 +455,9 @@
     "tests/test_visual_evidence.py": "da47f19a5eb7a7ea3c2c065ca267b5a88d6382f1be49e64cd7bd7fc0b2e51b05",
     "tests/test_visual_grammar_workflow.py": "6dd50418f1d247c9b88534f74bde6c601a02678f6c4d8e0c25cae11931758f74",
     "tests/test_visual_review_approval.py": "0318b7b38bcc12f8f1f65cdd1a0ff98cc84e685ac0b6bc674f3a92dab4842302",
-    "tests/test_visual_review_board.py": "8f3b1d0c7d3c8bad989e233c0c9338816dddba7ff6f4ea39320371371a5bab0d"
+    "tests/test_visual_review_board.py": "8f3b1d0c7d3c8bad989e233c0c9338816dddba7ff6f4ea39320371371a5bab0d",
+    "docs/DOWNLOAD_AND_INSTALL.md": "2888e6404931dea36a3e029d0c7e2847ac0dc421aa6ae2f1220f4ca5488449be",
+    "docs/RELEASE_NOTES_ALPHA5.md": "76ec82cd0187221baff712b1fae18d72ed1756e1101e20b9558ef2dc2e82cdba",
+    ".github/workflows/publish-alpha.yml": "9a3274d3edc74562b2f12f835e2faa361743b844e2446a06c01f37be81e2dc69"
   }
 }
