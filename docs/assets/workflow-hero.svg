@@ -1,24 +1,148 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="410" viewBox="0 0 1200 410" role="img" aria-labelledby="title desc">
-  <title id="title">Document Studio: Your documents, your rules, your AI plugin</title>
-  <desc id="desc">An illustration showing reference documents, approved company rules, a tailored plugin, and a new document.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 560" role="img" aria-labelledby="hero-title hero-desc">
+  <title id="hero-title">Document Studio — consistent company standards across changing AI workflows</title>
+  <desc id="hero-desc">Illustrative five-step process: approved references, style analysis, human review, custom plugin packaging, and a newly authored business document. Not a software screenshot.</desc>
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0D172A"/><stop offset="0.58" stop-color="#172947"/><stop offset="1" stop-color="#0B2634"/></linearGradient>
-    <linearGradient id="teal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#66F2D6"/><stop offset="1" stop-color="#37B9D3"/></linearGradient>
-    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="11" stdDeviation="13" flood-color="#050A13" flood-opacity="0.35"/></filter>
-    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse"><path d="M30 0H0V30" fill="none" stroke="#A8D4F4" stroke-opacity="0.065"/></pattern>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#08192c"/><stop offset=".62" stop-color="#0d1d36"/><stop offset="1" stop-color="#073a45"/></linearGradient>
+    <linearGradient id="accent" x2="1" y2="1"><stop stop-color="#64ffe2"/><stop offset="1" stop-color="#35afd4"/></linearGradient>
+    <linearGradient id="page" x2="0" y2="1"><stop stop-color="#ffffff"/><stop offset="1" stop-color="#dbeef0"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="23"/></filter>
+    <filter id="shadow"><feDropShadow dx="0" dy="12" stdDeviation="10" flood-color="#010a15" flood-opacity=".45"/></filter>
+    <pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#5bdddf" fill-opacity=".13"/></pattern>
+    <style>
+     text{font-family:Inter,Arial,Helvetica,sans-serif;}
+     .title{font-size:59px;font-weight:800;fill:#f7fcff;letter-spacing:-2px}
+     .sub{font-size:27px;font-weight:500;fill:#d0e1ed;}
+     .eyebrow{font-size:15px;font-weight:600;letter-spacing:3px;fill:#83d7d7}
+     .step{font-size:17px;font-weight:700;fill:#f4fcff}
+     .desc{font-size:12px;fill:#b6d1df}
+     .small{font-size:12px;font-weight:700;fill:#f3fcff}
+     .mini{font-size:10px;fill:#bed7e3}
+     .panel{fill:#102940;stroke:#2a6071;stroke-opacity:.8}
+     .line{stroke:#81a9c3;stroke-opacity:.52;stroke-width:5;stroke-linecap:round}
+    </style>
   </defs>
-  <rect width="1200" height="410" rx="24" fill="url(#bg)"/>
-  <rect width="1200" height="410" rx="24" fill="url(#grid)"/>
-  <g transform="translate(45 35)"><rect width="35" height="35" rx="10" fill="url(#teal)"/><path d="M10 10h15v15H10z M15 10v15 M10 15h15" fill="none" stroke="#10263D" stroke-width="2"/><text x="47" y="26" fill="#E8F3FC" font-family="Inter,Arial,sans-serif" font-size="22" font-weight="700">Document Studio</text><text x="1085" y="24" text-anchor="end" fill="#A1C1D8" font-family="Inter,Arial,sans-serif" font-size="12" letter-spacing="1.5">OPEN SOURCE · ALPHA</text></g>
-  <text x="45" y="126" fill="#FFFFFF" font-family="Inter,Arial,sans-serif" font-weight="750" font-size="31">Your documents. Your rules. Your AI plugin.</text>
-  <text x="45" y="154" fill="#AFCAE0" font-family="Inter,Arial,sans-serif" font-size="15">Give it approved references, review what it learns, then make new documents in your style.</text>
-  <g filter="url(#shadow)">
-    <g transform="translate(45 196)"><rect width="235" height="150" rx="17" fill="#21334E" stroke="#5A7795" stroke-opacity="0.7"/><rect x="21" y="20" width="50" height="64" rx="5" fill="#F2F6FD"/><path d="M57 20v14h14" fill="#C7D5E9"/><path d="M30 44h30 M30 52h24 M30 60h26" stroke="#7F98B9" stroke-width="3" stroke-linecap="round"/><rect x="83" y="29" width="50" height="64" rx="5" fill="#E7EEF8"/><path d="M92 45h32 M92 53h25 M92 61h30" stroke="#809BB8" stroke-width="3" stroke-linecap="round"/><rect x="145" y="20" width="65" height="73" rx="6" fill="#E2F7F1"/><rect x="154" y="31" width="47" height="9" rx="2" fill="#4DBCA7"/><path d="M155 49h44 M155 57h36 M155 65h41" stroke="#93B9B8" stroke-width="3" stroke-linecap="round"/><text x="19" y="121" fill="#F4FAFF" font-family="Inter,Arial,sans-serif" font-size="16" font-weight="700">01  Your references</text><text x="19" y="139" fill="#B8CEDF" font-family="Inter,Arial,sans-serif" font-size="11.5">PDF · PPTX · brand guide</text></g>
-    <g transform="translate(335 196)"><rect width="235" height="150" rx="17" fill="#21334E" stroke="#5A7795" stroke-opacity="0.7"/><rect x="22" y="21" width="190" height="76" rx="9" fill="#16283E"/><rect x="36" y="33" width="65" height="10" rx="5" fill="#66F2D6"/><rect x="111" y="33" width="23" height="10" rx="5" fill="#7794CB"/><rect x="141" y="33" width="39" height="10" rx="5" fill="#F7B86B"/><path d="M37 57h145 M37 69h105" stroke="#62829E" stroke-width="3" stroke-linecap="round"/><path d="m174 75 7 6 13-15" stroke="#67ECD3" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><text x="19" y="121" fill="#F4FAFF" font-family="Inter,Arial,sans-serif" font-size="16" font-weight="700">02  Approved rules</text><text x="19" y="139" fill="#B8CEDF" font-family="Inter,Arial,sans-serif" font-size="11.5">Voice · layout · visual tokens</text></g>
-    <g transform="translate(625 196)"><rect width="235" height="150" rx="17" fill="#21334E" stroke="#5A7795" stroke-opacity="0.7"/><rect x="67" y="19" width="100" height="78" rx="13" fill="#2E5168" stroke="#75DACE" stroke-width="1.5"/><path d="M90 58h52" stroke="#77E6CE" stroke-width="6" stroke-linecap="round"/><path d="M102 41h28 M102 75h28" stroke="#C8F9F0" stroke-width="4" stroke-linecap="round"/><circle cx="77" cy="29" r="7" fill="#63D5C2"/><text x="19" y="121" fill="#F4FAFF" font-family="Inter,Arial,sans-serif" font-size="16" font-weight="700">03  Custom plugin</text><text x="19" y="139" fill="#B8CEDF" font-family="Inter,Arial,sans-serif" font-size="11.5">Exportable · human-reviewed</text></g>
-    <g transform="translate(915 196)"><rect width="240" height="150" rx="17" fill="#21334E" stroke="#5A7795" stroke-opacity="0.7"/><rect x="32" y="17" width="175" height="87" rx="5" fill="#F1F7FC"/><rect x="47" y="28" width="84" height="8" rx="2" fill="#184A69"/><rect x="47" y="45" width="62" height="28" rx="4" fill="#70CFC3"/><rect x="118" y="45" width="72" height="5" rx="2" fill="#A9BCD1"/><rect x="118" y="55" width="61" height="5" rx="2" fill="#A9BCD1"/><rect x="118" y="65" width="68" height="5" rx="2" fill="#A9BCD1"/><rect x="47" y="83" width="143" height="4" rx="2" fill="#C3D0DD"/><text x="19" y="121" fill="#F4FAFF" font-family="Inter,Arial,sans-serif" font-size="16" font-weight="700">04  New document</text><text x="19" y="139" fill="#B8CEDF" font-family="Inter,Arial,sans-serif" font-size="11.5">Authored for a new request</text></g>
+  <rect width="1280" height="560" rx="24" fill="url(#bg)"/>
+  <rect width="1280" height="560" rx="24" fill="url(#dots)"/>
+  <circle cx="1190" cy="-30" r="180" fill="#20e1d0" opacity=".14" filter="url(#glow)"/>
+  <circle cx="-30" cy="540" r="190" fill="#00cad7" opacity=".13" filter="url(#glow)"/>
+  <path d="M0 171C230 70 300 0 520-28M950 570C1135 490 1140 440 1280 460" fill="none" stroke="#40dedb" stroke-opacity=".3" stroke-width="1.5"/>
+  <rect x="78" y="52" width="46" height="46" rx="13" fill="url(#accent)"/>
+  <path d="M91 65h20v20H91zM98 65v20M91 73h20" stroke="#08384d" stroke-width="2.8" fill="none"/>
+  <text x="140" y="88" class="title" font-size="43" style="font-size:43px">Document <tspan fill="#4be4ca">Studio</tspan></text>
+  <text x="78" y="154" class="sub">AI models change. <tspan fill="#52f1d6" font-weight="700">Your company's standards stay.</tspan></text>
+  <text x="78" y="184" class="eyebrow">OPEN SOURCE  ·  REVIEW-FIRST  ·  BUILT FOR BUSINESS TEAMS</text>
+  <g transform="translate(30 228)" filter="url(#shadow)">
+    <rect x="0" y="0" width="220" height="283" rx="20" class="panel"/>
+    <circle cx="23" cy="-12" r="21" fill="#063a47" stroke="#55efd7" stroke-width="2"/>
+    <text x="16" y="-5" fill="#6ffde1" font-weight="800" font-size="21">1</text>
+    <text x="56" y="-7" class="step">Bring references</text>
+    <text x="18" y="30" class="desc">PDF · PPTX · brand guide</text>
+    <g transform="rotate(-8 75 140)">
+      <rect x="19" y="63" width="103" height="157" rx="9" fill="#f5fbfd"/>
+      <rect x="32" y="77" width="29" height="29" rx="5" fill="#f46b6b"/>
+      <text x="68" y="98" fill="#16364c" font-size="14" font-weight="800">PDF</text>
+      <path d="M34 120h73M34 132h62M34 144h68M34 156h53" class="line" stroke="#96b2c8"/>
+      <rect x="33" y="173" width="19" height="30" rx="2" fill="#fc9996"/>
+      <rect x="58" y="163" width="19" height="40" rx="2" fill="#f16b77"/>
+      <rect x="83" y="183" width="19" height="20" rx="2" fill="#fac4b7"/>
+    </g>
+    <g transform="rotate(8 171 145)">
+      <rect x="109" y="67" width="92" height="145" rx="9" fill="url(#page)"/>
+      <rect x="122" y="79" width="24" height="24" rx="4" fill="#f58342"/>
+      <text x="152" y="96" font-size="13" font-weight="800" fill="#153349">PPTX</text>
+      <rect x="122" y="116" width="65" height="51" rx="5" fill="#b6dbe5"/>
+      <path d="M122 180h67M122 189h52" class="line" stroke="#a5c4cc"/>
+    </g>
+    <rect x="36" y="220" width="149" height="43" rx="7" fill="#eaf9f6"/>
+    <text x="49" y="237" fill="#12374a" font-size="12" font-weight="800">Brand guide</text>
+    <rect x="49" y="243" width="27" height="12" rx="3" fill="#40e4cc"/>
+    <rect x="81" y="243" width="27" height="12" rx="3" fill="#a0e1db"/>
+    <rect x="113" y="243" width="27" height="12" rx="3" fill="#184667"/>
   </g>
-  <g stroke="#68EBD3" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M291 267h31l-9-9m9 9-9 9"/><path d="M581 267h31l-9-9m9 9-9 9"/><path d="M871 267h31l-9-9m9 9-9 9"/></g>
-  <text x="45" y="383" fill="#8FB6C8" font-family="Inter,Arial,sans-serif" font-size="11">ILLUSTRATIVE WORKFLOW · NOT A SCREENSHOT OR CLAIM OF ONE-CLICK AUTOMATION</text>
-  <text x="1155" y="383" text-anchor="end" fill="#7FACC1" font-family="Inter,Arial,sans-serif" font-size="11">MIT LICENSED TOOLKIT</text>
+  <g transform="translate(279 228)" filter="url(#shadow)">
+    <rect width="220" height="283" rx="20" class="panel"/>
+    <circle cx="22" cy="-12" r="21" fill="#063a47" stroke="#55efd7" stroke-width="2"/>
+    <text x="16" y="-5" fill="#6ffde1" font-weight="800" font-size="21">2</text>
+    <text x="55" y="-7" class="step">Analyze style</text>
+    <text x="18" y="30" class="desc">Writing · layout · colors</text>
+    <rect x="17" y="57" width="186" height="202" rx="10" fill="#0a2137" stroke="#356073"/>
+    <text x="32" y="79" class="small">AI Analysis</text>
+    <g transform="translate(30 91)">
+      <rect width="160" height="39" rx="7" fill="#23445e"/>
+      <text x="8" y="17" fill="#75f4dc" font-size="16" font-weight="800">Aa</text>
+      <text x="38" y="16" class="mini">Layout &amp; hierarchy</text>
+      <path d="M39 24h95M39 31h70" stroke="#82a7c1" stroke-width="3" opacity=".55"/>
+    </g>
+    <g transform="translate(30 141)">
+      <rect width="160" height="39" rx="7" fill="#23445e"/>
+      <text x="10" y="15" class="mini">Colors &amp; typography</text>
+      <circle cx="17" cy="29" r="7" fill="#44ead2"/><circle cx="36" cy="29" r="7" fill="#8dcedc"/><circle cx="55" cy="29" r="7" fill="#102b49"/><circle cx="74" cy="29" r="7" fill="#b9d1eb"/>
+    </g>
+    <g transform="translate(30 191)">
+      <rect width="160" height="39" rx="7" fill="#23445e"/>
+      <text x="10" y="15" class="mini">Writing voice &amp; terms</text>
+      <path d="M12 24h116M12 31h80" stroke="#82a7c1" stroke-width="3" opacity=".55"/>
+    </g>
+  </g>
+  <g transform="translate(529 228)" filter="url(#shadow)">
+    <rect width="220" height="283" rx="20" class="panel"/>
+    <circle cx="22" cy="-12" r="21" fill="#063a47" stroke="#55efd7" stroke-width="2"/>
+    <text x="16" y="-5" fill="#6ffde1" font-weight="800" font-size="21">3</text>
+    <text x="53" y="-7" class="step">Review &amp; approve</text>
+    <text x="18" y="30" class="desc">Human control over rules</text>
+    <rect x="16" y="57" width="188" height="202" rx="10" fill="#0a2137" stroke="#356073"/>
+    <text x="30" y="82" class="small">Company Pack review</text>
+    <g fill="#55efd7">
+      <circle cx="38" cy="115" r="12"/><circle cx="38" cy="153" r="12"/><circle cx="38" cy="191" r="12"/>
+    </g>
+    <g stroke="#073e48" stroke-width="2.8" fill="none" stroke-linejoin="round"><path d="M33 115l4 4 7-9M33 153l4 4 7-9M33 191l4 4 7-9"/></g>
+    <text x="62" y="118" class="small">Design DNA</text>
+    <text x="62" y="156" class="small">Writing rules</text>
+    <text x="62" y="194" class="small">Layout Grammar</text>
+    <rect x="29" y="215" width="161" height="33" rx="8" fill="url(#accent)"/>
+    <text x="70" y="237" fill="#0a2e3e" font-size="13" font-weight="800">Approve rules</text>
+  </g>
+  <g transform="translate(779 228)" filter="url(#shadow)">
+    <rect width="220" height="283" rx="20" class="panel"/>
+    <circle cx="22" cy="-12" r="21" fill="#063a47" stroke="#55efd7" stroke-width="2"/>
+    <text x="16" y="-5" fill="#6ffde1" font-weight="800" font-size="21">4</text>
+    <text x="57" y="-7" class="step">Build plugin</text>
+    <text x="18" y="30" class="desc">Reusable company workflow</text>
+    <rect x="16" y="57" width="188" height="202" rx="10" fill="#0a2137" stroke="#356073"/>
+    <g transform="translate(110 135)">
+      <path d="M-47-31L0-56L48-31L0-6Z" fill="#79f6e1"/>
+      <path d="M-47-31L0-6V49L-47 25Z" fill="#299cb1"/>
+      <path d="M48-31L0-6V49L48 25Z" fill="#1a738e"/>
+      <text x="-13" y="-23" fill="#05384d" font-size="24" font-weight="900">AI</text>
+    </g>
+    <g fill="#56edcf"><circle cx="29" cy="206" r="5"/><circle cx="29" cy="228" r="5"/></g>
+    <text x="43" y="209" class="mini">Approved conventions</text>
+    <text x="43" y="231" class="mini">Portable plugin ZIP</text>
+  </g>
+  <g transform="translate(1029 228)" filter="url(#shadow)">
+    <rect width="220" height="283" rx="20" class="panel"/>
+    <circle cx="22" cy="-12" r="21" fill="#063a47" stroke="#55efd7" stroke-width="2"/>
+    <text x="16" y="-5" fill="#6ffde1" font-weight="800" font-size="21">5</text>
+    <text x="53" y="-7" class="step">Create anew</text>
+    <text x="18" y="30" class="desc">New content · same standards</text>
+    <rect x="28" y="57" width="170" height="204" rx="11" fill="url(#page)" stroke="#75eadb" stroke-width="1.2"/>
+    <rect x="45" y="75" width="13" height="13" rx="3" fill="#31d6c3"/>
+    <text x="67" y="86" fill="#18374a" font-size="11" font-weight="700">Your Company</text>
+    <path d="M45 101h132" stroke="#48dbcf" stroke-width="5" stroke-linecap="round"/>
+    <text x="45" y="123" fill="#19354d" font-size="14" font-weight="800">Quarterly overview</text>
+    <path d="M45 139h130M45 148h116" stroke="#abc5d5" stroke-width="4" stroke-linecap="round"/>
+    <rect x="46" y="174" width="25" height="50" rx="3" fill="#38e0ca"/>
+    <rect x="77" y="158" width="25" height="66" rx="3" fill="#60cfd4"/>
+    <rect x="108" y="182" width="25" height="42" rx="3" fill="#91d7e4"/>
+    <circle cx="160" cy="191" r="25" fill="none" stroke="#abdce1" stroke-width="10"/>
+    <path d="M160 166a25 25 0 0 1 24 18" fill="none" stroke="#22b7b9" stroke-width="10"/>
+    <path d="M46 242h118M46 249h95" stroke="#abc5d5" stroke-width="3"/>
+  </g>
+  <g fill="none" stroke="#56f0d4" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M253 395h21m-8-7 8 7-8 7"/>
+    <path d="M503 395h21m-8-7 8 7-8 7"/>
+    <path d="M753 395h21m-8-7 8 7-8 7"/>
+    <path d="M1003 395h21m-8-7 8 7-8 7"/>
+  </g>
+  <text x="34" y="544" fill="#8fb3c6" font-size="11" letter-spacing=".5">ILLUSTRATIVE WORKFLOW · NOT A PRODUCT SCREENSHOT OR A GUARANTEE OF IDENTICAL OUTPUTS ACROSS AI MODELS</text>
 </svg>
