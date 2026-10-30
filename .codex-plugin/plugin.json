@@ -2,7 +2,7 @@
   "interface": {
     "displayName": "Document Studio · 문서 제작 · 資料作成",
     "shortDescription": "승인된 문서 규칙으로 만드는 맞춤형 제작 워크플로우",
-    "longDescription": "허가된 PDF/PPTX를 분석해 Company Pack과 Layout Grammar를 제안하고 담당자가 승인하는 문서 제작 툴킷입니다. 공개 배포 허가 팩의 ZIP 내보내기를 지원합니다. 사내 비공개 자료의 패키지 배포와 자동 설치는 아직 지원하지 않습니다.",
+    "longDescription": "기업의 허가된 PDF/PPTX에서 글쓰기·디자인 근거를 추출하고, 담당자의 Company Pack 검토·승인을 거쳐 문서 제작 스킬을 구성합니다. 공개 배포가 허가된 팩만 ZIP으로 내보낼 수 있습니다. 비공개 사내 자료의 직접 배포와 원클릭 설치는 아직 지원하지 않는 실험 버전입니다.",
     "category": "Productivity",
     "capabilities": [
       "Write"

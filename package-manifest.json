@@ -24,7 +24,7 @@
     "editorial-consulting": "1.0.0"
   },
   "files": {
-    ".codex-plugin/plugin.json": "0c64898f7d65b9daf2bd8bfd1593c9ef29fa00b2b977d5c9e2cea58db894726b",
+    ".codex-plugin/plugin.json": "15c688f3e231e7f2dbd36eb6444628e6bf89636795cd25b67f680fc81a421d3b",
     ".github/ISSUE_TEMPLATE/bug_report.md": "a02cdb4db729cdfe702ea981c8f402157df7ad52ea6ec523b19ad5fd8e9fc206",
     ".github/ISSUE_TEMPLATE/feature_request.md": "faa6a43b027527de7a6a43eb419d0a1fdc1a9868157730eca3409c9f952de1c8",
     ".github/workflows/tests.yml": "a3d4e8d2f2ab00ccb6df87291976f3ccce8c6e6cf04fd0443b865c0d66ced930",
@@ -36,7 +36,7 @@
     "LICENSE": "a9de7a31f8607a264bcaca627a47248f23bf0453d3547421ed8e6ba4c98e366f",
     "README.md": "7dfc4948b7cf1862d5443f0cd837da90814c9d92c3d79a4e350b547b8edda4ed",
     "SECURITY.md": "f93c2786d16897de1d3914486b583234c12a188183224f541166bad668cdbc82",
-    "START_HERE.md": "46bd104272ba63e64a2c6a30ecaaeeb77e2cc5249f462ca0e70d6c5bab6a7c61",
+    "START_HERE.md": "b77479f9ff8d101332bc18827ac8a482f826e2ced4aa5bf26faf609b2acaf667",
     "THIRD_PARTY_NOTICES.md": "f0729ffc8b89351665f8c80845d876c5a86a668cd07c493f8a08e5a8710490b0",
     "company-packs/demo-manufacturing/design/design-casebook.json": "12110059f483b014f3b1c09e96ec66ab3633af093fbf848daea37a636368ef75",
     "company-packs/demo-manufacturing/design/tokens.json": "d264c2fa3706525bb57a26d64ba00429c486b6f28ad7e9749bc2cb335b7c89fe",
@@ -160,7 +160,7 @@
     "skills/html-to-pptx/scripts/text_utils.py": "c1cabbc529fffbad6f7fb14c01c39f788ad6257415bbb3a4b0c6a44ace666f8a",
     "skills/html-to-pptx/scripts/visual_audit.py": "c8a43c15f69ea0cbfc1c81c2835f438bbd88399a002deda1924e2f1feb757cf7",
     "skills/html-to-pptx/text_fidelity.py": "1f5fe31aeab34e79008147b1febfc5cc4811e447c85c6f3e2f54ffe0681972b7",
-    "skills/report-html-pptx/SKILL.md": "e3d3d7a4b87f96fdf9cc256e7e01c70768a39368d407fa3f369a92f8c56e3b0e",
+    "skills/report-html-pptx/SKILL.md": "8066eedae438a99076e31d341f847ba2e8dedbcf290b919de2dcc097e0eb315f",
     "skills/report-html-pptx/agents/openai.yaml": "4eea5fe6557a86d847eea54941f0a170de50c7c5084bfc0edb835f128e8d4430",
     "skills/report-html-pptx/assets/accepted-staff-guide/README.md": "f0c4b752baf9459029e42e5b084cbe02fcebc219419ed4264b3d5557de3c11cc",
     "skills/report-html-pptx/assets/accepted-staff-guide/asset-provenance.json": "8e70d620ad83767d51a818eb6e734bd8966bccccb6f2ae96cf73f704a68aea64",
@@ -331,7 +331,7 @@
     "skills/report-html-pptx/references/external-editorial-references.json": "09fd40df86c132a91b1e80b33701a363980651600b60bb65037424ea5f0f1dba",
     "skills/report-html-pptx/references/font-setup.md": "cce2e355a139ee9d6a867bd973f37d9328d39c133b0df66d6653e3e5a6c8abef",
     "skills/report-html-pptx/references/generated-visuals.md": "4b84838a93bc40d29ade9f33f593747f8315d2b42be4a908cbca63c5a91c2780",
-    "skills/report-html-pptx/references/intake-and-collaboration.md": "68da032f4c1e1e272ed9f61e9ae0d621ea969d213a8646e20277f2406b01474a",
+    "skills/report-html-pptx/references/intake-and-collaboration.md": "baa2e9ecec96b49aa8dd08d6574eb9cf5cbe72ec38ea13bcff0d97ae2990edfb",
     "skills/report-html-pptx/references/intake-contract.json": "36c152ff6babc7fd3f36f807dad2f783c524eecaca9de401422a1f8eb4f8e75c",
     "skills/report-html-pptx/references/interactive-intake-ui.md": "e499bef424d595d144a935041cd59f45dced051d6014cd6eecc3090cd118928d",
     "skills/report-html-pptx/references/japanese-writing-sources.md": "eeac9845b4d863871420849b16526d5df0589dfd746c360de61024333f1e89f0",
@@ -386,13 +386,13 @@
     "skills/report-html-pptx/scripts/plan_layout_grammar.py": "c7263875c0b77a94724fc33a1afc13bfb01648b6a1594c9557f3150ae770f87e",
     "skills/report-html-pptx/scripts/production_contract.py": "0f4298fe2fece55b7aa23b96ce83368bae1ebaa9e554d66bcd72dbbb5a79b9b8",
     "skills/report-html-pptx/scripts/project_state.py": "e4a21a66e94994eb1ff0df950c0e4c5b91382681634521784d8b124651d8c585",
-    "skills/report-html-pptx/scripts/quality_floor.py": "e0640e7bf6898104f0ee29c109ff7fd8f46f1c9069b514b82fb5e91c684d4c21",
+    "skills/report-html-pptx/scripts/quality_floor.py": "97b86548dfc1d71323c233b7f01f0b52040ca3da371345392525670e6ac97ecb",
     "skills/report-html-pptx/scripts/refresh_report.py": "e5c421d82bf5a6b3fb758ade28bb880a1dcada80b37ddb4722d2544bf02cccf3",
     "skills/report-html-pptx/scripts/render_intake.py": "9eb7966d6593063631154ed7a8460e97ada9ccccb15eb7782567ba48a185e104",
     "skills/report-html-pptx/scripts/render_text_flow.mjs": "99a684362723d21d7001918afa46a9dbaa05e58aa883c8cd4ab8e3f8147f5f2b",
     "skills/report-html-pptx/scripts/render_text_flow.py": "f890d70eaf810d6b3365252f06b9ca5489ebea67113694fcba788f3fcff1f95e",
     "skills/report-html-pptx/scripts/run_report.ps1": "342b7d025417d37e87577fc6f2211f62aeaa92c66aeaf420642679c75c85a2b1",
-    "skills/report-html-pptx/scripts/scaffold_report.py": "10c12c9badb612c056f487696bb14ac2cb0a29800a4ce26911a508fe76986610",
+    "skills/report-html-pptx/scripts/scaffold_report.py": "765f4ecea8f91f1003f1d5dfa05c32c5754823bedb5d3ff1abb55d89f6ebb51f",
     "skills/report-html-pptx/scripts/select_creative_reference.py": "870ea6fe82da99c0663139de24502158f1cb15811fc26128aa4da9acfa9438a6",
     "skills/report-html-pptx/scripts/select_esg_reference.py": "386ca245208bd50748361f1f4aeb39eafa1fa1132af1743eac1ec4cb6e9463b6",
     "skills/report-html-pptx/scripts/select_layout_grammar.py": "8e2e9db5106d9f267047573815981d0bfa53e93c8f725b76b67322c097f2dd34",
@@ -458,6 +458,9 @@
     "tests/test_visual_review_board.py": "8f3b1d0c7d3c8bad989e233c0c9338816dddba7ff6f4ea39320371371a5bab0d",
     "docs/DOWNLOAD_AND_INSTALL.md": "2888e6404931dea36a3e029d0c7e2847ac0dc421aa6ae2f1220f4ca5488449be",
     "docs/RELEASE_NOTES_ALPHA5.md": "76ec82cd0187221baff712b1fae18d72ed1756e1101e20b9558ef2dc2e82cdba",
-    ".github/workflows/publish-alpha.yml": "9a3274d3edc74562b2f12f835e2faa361743b844e2446a06c01f37be81e2dc69"
+    ".github/workflows/publish-alpha.yml": "9a3274d3edc74562b2f12f835e2faa361743b844e2446a06c01f37be81e2dc69",
+    "scripts/audit_plugin_package.py": "4afd62d553249a236a43acf7351a49bbee7c9237c82512bd94f6983323c28942",
+    "tests/test_release_audit.py": "a25b946decb8f10683f3384be8a96d16c2c8e7d239086556541f8e8acd97587f",
+    "tests/test_scaffold_font_preflight.py": "ab06116191448737d79d0d6d18d52e9d552c2fbe3e61ef86d42d6c51395adc4b"
   }
 }

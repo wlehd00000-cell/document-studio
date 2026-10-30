@@ -247,6 +247,11 @@ def scaffold(destination, title, subtitle, language=None, report_date=None,
     source=source.replace('<body>', '<body class="'+body_class+'" data-type-profile="'+type_profile+'" data-output-profile="'+output_profile+'" data-document-genre="'+genre+'" data-heading-style="'+heading_style+'" data-pptx-text-flow="natural">')
     counter = iter(range(1, 10000))
     source = re.sub(r'<strong>\d+</strong>', lambda m: f'<strong>{next(counter):02}</strong>', source)
+    # Inspect any optional, authorized WOFF2 bundle before creating directories.
+    # Do not skip or downgrade actual font checks to work around missing readers.
+    if not pack and language.lower().split('-')[0] in {'ko', 'ja'}:
+        from quality_floor import preflight_bundled_font_inspection
+        preflight_bundled_font_inspection(root/'assets/brand', deliverable_languages)
     shutil.copytree(root/'assets/starter', destination, dirs_exist_ok=True)
     for folder in ['html/assets', 'content', 'qa', 'final']:
         (destination/folder).mkdir(parents=True, exist_ok=True)

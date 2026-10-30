@@ -73,6 +73,28 @@ def compatible_family(actual: str, required: str) -> bool:
     return a == b or bool(re.fullmatch(re.escape(b) + r'(?: variable| (?:[1-9]00|750)(?: (?:italic|bold))?)', a))
 
 
+def preflight_bundled_font_inspection(brand_assets: Path, languages) -> bool:
+    """Check supplied optional WOFF2 fonts before any project files are created.
+
+    The public source edition contains no redistributable font binaries. If a
+    complete, authorized bundle is absent, keep the existing UNVERIFIED path.
+    """
+    assets = Path(brand_assets)
+    selected = sorted({str(lang).lower().split('-')[0] for lang in languages} & set(FONT_FILES))
+    if not selected or not all((assets / filename).is_file() for filename in FONT_FILES.values()):
+        return False
+    for lang in selected:
+        try:
+            cmap, family = font_metadata(assets / FONT_FILES[lang])
+        except (ImportError, ModuleNotFoundError) as exc:
+            raise RuntimeError(
+                'WOFF2 font inspection requires fontTools and Brotli before document creation'
+            ) from exc
+        if not compatible_family(family, FONT_FAMILY[lang]):
+            raise ValueError(f'Bundled {lang} font family mismatch: {family!r}')
+    return True
+
+
 def resolve_contract(project: Path, brand_assets: Path, tokens_path: Path, *,
                      language: str = 'ja-JP', mode: str = 'NEW_DOCUMENT',
                      profile: str = 'executive_approval', additional_languages=()) -> dict:
