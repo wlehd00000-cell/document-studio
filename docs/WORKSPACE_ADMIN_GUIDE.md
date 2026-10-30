@@ -2,6 +2,12 @@
 
 This is a practical guide for administrators evaluating **Document Studio v0.1.0-alpha.5**. The project's core task is to turn approved document references into a reviewable Company Pack and an installable document plugin. **It does not yet offer a one-click workspace setup wizard.**
 
+## Why standardize documents separately from the AI model?
+
+AI models, prompt styles, employee teams and document topics evolve. A Company Pack records an approved baseline — writing conventions, brand tokens, allowed layout relationships and documented evidence — outside any one prompt. Managers can review and version this standard, and then use it as an input to their document-production workflow. **This does not guarantee that two models or model versions will behave identically.** After a model or plugin upgrade, recheck compatibility, output quality, font rendering, layout and source rights before broad rollout.
+
+The operating principle is **consistent organizational standards, not frozen templates or identical pixels**. New creative layouts are welcome when they meet the approved grammar and visual QA requirements.
+
 ## Important alpha limitation
 
 The present `export_company_plugin.py` is a **public-distribution exporter**. It works with the repository's independent fictional examples and with suitably reviewed **public** sources that explicitly allow distribution. It intentionally **rejects packs derived from private or restricted company files**. Private-source analysis does not imply permission to distribute a derived pack.

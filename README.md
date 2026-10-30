@@ -1,8 +1,12 @@
 # Document Studio
 
-**Turn your existing documents into a custom AI document plugin.**
+### AI models change. Your company's document standards shouldn't.
 
-Your company already has a document style. Document Studio helps you **extract the evidence, approve reusable rules, and package a company-aware document workflow** for ChatGPT. Built for workspace administrators; useful for individuals, too.
+**Turn existing documents into a custom AI document plugin — and give your team one consistent way to work.**
+
+AI tools evolve. Models get upgraded. Teams adopt new workflows. But your organization's approved **writing voice, brand identity, layout principles, and document quality rules** should not have to be reinvented with every change.
+
+**Document Studio** is an open-source, review-first toolkit for ChatGPT teams. It helps administrators extract evidence from authorized PDF/PPTX references, approve reusable **Company Packs**, and package company-aware document creation skills. Individuals can use the same workflow.
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-157A72)](LICENSE) ![Release: alpha](https://img.shields.io/badge/release-v0.1.0--alpha.5-5B63CE) ![Python: 3.12](https://img.shields.io/badge/Python-3.12-3776AB)
 
@@ -12,15 +16,30 @@ Your company already has a document style. Document Studio helps you **extract t
 
 > **Experimental alpha — `v0.1.0-alpha.5`.** This is a review-gated toolkit, **not yet a one-click document-to-plugin service**. Style analysis, Company Pack approval, and *public-authorized* ZIP export are implemented; installation and final HTML/PPTX authoring still involve manual steps. **Private/restricted company-source packs cannot currently be exported.** See the [admin guide and release limitations](docs/WORKSPACE_ADMIN_GUIDE.md). The illustration above is a workflow diagram, not a product screenshot.
 
+## The problem isn't just generating documents. It's keeping them consistent.
+
+Imagine three employees preparing the same executive update with different prompts or AI model versions. The content may be useful, but the tone, terminology, page structure, and brand treatment can drift. Rewriting a clever prompt every time is not a reliable organization-wide document standard.
+
+**Our approach is to separate the organization's approved rules from the changing AI workflow.** A Company Pack records reviewable writing and design conventions; document-production skills use those conventions during new work, and QA catches specific structural failures.
+
+| What may change | What the organization keeps under review and control |
+|---|---|
+| AI model or model version | Approved writing conventions, terminology, and layout relationships |
+| Employee or prompt wording | Reusable Company Pack and document workflow |
+| Document topic or audience | Shared quality gates, source provenance, and human approval |
+| Visual composition | Brand principles and allowed creative variation — **not** a single frozen slide template |
+
+**Important:** this is a *standards and governance approach*, not a guarantee of identical output across models. The current plugin is built for ChatGPT; cross-provider portability, deterministic visual equivalence, and automatic revalidation after model upgrades have **not** been certified.
+
 ## Why Document Studio?
 
-Most document automation starts with a blank prompt or a fixed template. In a company, the harder problem is capturing **how that organization writes and designs**—then making the result repeatable for more than one employee.
+Most AI writing tools begin with a blank prompt or a fixed template. Document Studio starts with **the documents your organization already trusts** and turns their observable conventions into reviewable, reusable rules. Human approval is part of the workflow so the company — not an accidental prompt — defines the standard.
 
 | Bring your materials | Keep control | Reuse the result |
 |---|---|---|
 | Analyze **authorized PDFs and PowerPoint decks** for writing and visual characteristics. | Review source evidence, font and asset rights, and proposed layout rules **before approval**. | Export an approved **public-authorized Company Pack + plugin bundle**; private distribution is on the roadmap. |
 
-**What makes it different:** source-aware analysis, explicit human approval, a portable company profile, language-selectable skills, and testable document-production contracts. These are the project's engineering priorities—not a promise of perfect visual cloning.
+**What makes it different:** organization-owned Company Packs, evidence-backed Layout Grammar, explicit human approval, Korean/Japanese optional language modules, and testable production contracts. The aim is **consistent standards with room for creative layouts**, not perfect visual cloning or the same pixels every time.
 
 ## Quick start — export a demo plugin
 
@@ -47,6 +66,8 @@ To make a **new company plugin from your own files**, follow the [five-scene ref
 3. **Package.** Export an approved public-authorized Company Pack as a customized plugin ZIP—not the original source documents. A private-source pack is currently blocked.
 4. **Deploy.** Install it personally or have a workspace administrator publish the plugin to their organization.
 5. **Create.** Ask the installed plugin for a **new** report or presentation; inspect the output and its applicable QA status.
+
+**For workspace administrators:** pilot the workflow once, review the rules as an organizational asset, and distribute the resulting custom plugin only through an approved installation path. When the AI environment changes, review compatibility and QA instead of silently treating previous approval as proof of equivalent new output.
 
 The two included fictional profiles—[`demo-retail`](company-packs/demo-retail) and [`demo-manufacturing`](company-packs/demo-manufacturing)—demonstrate that the same workflow can use different approved settings.
 
@@ -88,7 +109,7 @@ For a local skill installation rather than the demo plugin export, use `python s
 | Automatically install/publish into a ChatGPT Business workspace | **Not supported**; administrator performs deployment |
 | Automatically deliver a visually verified new HTML/PPTX from uploaded references | **Not supported end-to-end**; authoring and browser QA remain separate |
 
-The goal is organization-scale consistency with accountable approvals—not to promise a finished enterprise deployment system before it exists. See the [workshop-ready demo storyboard](docs/DEMO_FLOW.md) and [current release limits](docs/WORKSPACE_ADMIN_GUIDE.md).
+The goal is **organization-scale consistency across people and changing AI workflows**, backed by human review — not an assertion of provider-independent, model-proof output or a finished enterprise deployment system. See the [workshop-ready demo storyboard](docs/DEMO_FLOW.md) and [current release limits](docs/WORKSPACE_ADMIN_GUIDE.md).
 
 ## Curated Company Packs (Phase A)
 
@@ -209,7 +230,7 @@ See [START_HERE.md](START_HERE.md). To inspect independently authored examples, 
 - **Bring it to a workspace:** follow the [administrator pilot checklist](docs/WORKSPACE_ADMIN_GUIDE.md) and pin a reviewed version.
 - **Track the honest scope:** see the [changelog](CHANGELOG.md) and [security policy](SECURITY.md). Private-source internal-only export is a priority roadmap item, not a shipped feature.
 
-For maintainers introducing the project publicly, the [launch kit](docs/LAUNCH_CHECKLIST.md) contains the repository description, social-preview asset, a truthful 60-second video plan, and English/Japanese announcement drafts.
+For maintainers introducing the project publicly, the [launch kit](docs/LAUNCH_CHECKLIST.md) contains a model-change/brand-consistency positioning guide, the social-preview asset, and English/Korean/Japanese announcement drafts. **No promotional video is included in this release.**
 
 If this solves a real onboarding problem for your team, **star the repository** so others looking for reviewable document automation can find it. A short, reproducible example or an issue report is even more useful than a star.
 
