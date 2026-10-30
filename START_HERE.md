@@ -1,11 +1,24 @@
-# Document Studio — public source edition
+# Document Studio — start here
 
-A Korean/Japanese document-production plugin combining nine coordinated skills: intake/orchestration, research, architecture, writing, design, visual assets, translation and editable HTML-to-PowerPoint conversion.
+Version **0.1.0-alpha.5** · experimental public-source edition.
 
-## Try it
+**AI models change. Your company's standards shouldn't.** Document Studio turns measured evidence from authorized document references into reviewable Company Packs and reusable document skills. The same approved standards can guide new documents, but model-independent identical outputs are not promised.
 
-1. Clone the repository and inspect `skills/report-html-pptx/SKILL.md`.
-2. Run `python scripts/install_local.py --verify-only` to verify the source bundle. Install with `python scripts/install_local.py` after inspecting the destination.
-3. Ask for a **fictional** Korean or Japanese business proposal and choose a document audience, purpose and format.
+## Included
 
-The demos use invented companies and outcomes. Font binaries and private workplace assets are intentionally excluded. See `README.md` for limitations and `THIRD_PARTY_NOTICES.md` for licenses.
+- **Eight core skills:** company-profile-analyzer, report-html-pptx, document-research, document-architecture, document-writing, document-design, visual-assets, html-to-pptx.
+- **Two optional language skills:** business-korean-translation, business-japanese-translation.
+
+## First experience
+
+1. [Download the Starter or fictional Company Pack ZIP](docs/DOWNLOAD_AND_INSTALL.md). The GitHub source ZIP is not an installable ChatGPT plugin archive.
+2. Inspect the downloaded files, verify SHA256, and register through available Plugin Creator or workspace admin controls. Downloading does not itself install anything.
+3. Ask for a new *fictional* report; inspect evidence, font policy and actual rendered output.
+
+For local skills installation and source workflows, start with [README](README.md) and `python scripts/install_local.py --verify-only`.
+
+**Required decisions:** reuse explicit user choices. Conversation language does not automatically approve final document language; keep missing production fields pending rather than guessing. A short edit or research-only task does not require the full new-file questionnaire.
+
+**Boundaries:** the public exporter blocks private/restricted source-derived Company Packs; no licensed font binaries or employer materials are bundled; HTML/PPTX quality checks need their own runtime verification. Installation and workspace rollout require supported permissions.
+
+[Workspace administrator guide](docs/WORKSPACE_ADMIN_GUIDE.md) · [한국어](docs/QUICKSTART_ko.md) · [日本語](docs/QUICKSTART_ja.md)
