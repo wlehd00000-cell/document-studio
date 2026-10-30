@@ -1,6 +1,6 @@
 # Deploy Document Studio in a ChatGPT workspace
 
-This is a practical guide for administrators evaluating **Document Studio v0.1.0-alpha.5**. The project's core task is to turn approved document references into a reviewable Company Pack and an installable document plugin. **It does not yet offer a one-click workspace setup wizard.**
+This is a practical guide for administrators evaluating **Document Studio v0.1.0-alpha.6**. The project's core task is to turn approved document references into a reviewable Company Pack and an installable document plugin. **It does not yet offer a one-click workspace setup wizard.**
 
 ## Why standardize documents separately from the AI model?
 

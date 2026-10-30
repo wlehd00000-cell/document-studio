@@ -1,6 +1,6 @@
 # One workflow: reference documents → tailored plugin → new document
 
-This is the **v0.1.0-alpha.5 demo script**, not a claim of one-click automation. Use only fictional or otherwise authorized reference files. Keep originals, extracted text, and the source registry **outside this public repository**.
+This is the **v0.1.0-alpha.6 demo script**, not a claim of one-click automation. Use only fictional or otherwise authorized reference files. Keep originals, extracted text, and the source registry **outside this public repository**.
 
 The five scenes below are intended to appear consecutively in a recorded walkthrough. An actual screen recording and verified end-to-end rendered output are pending; do not substitute generated mockups for those results.
 

@@ -1,10 +1,10 @@
 # Document Studio — public source edition
 
-An independent company-adaptable document-production plugin (experimental v0.1.0-alpha.5), not a 2.0 release of another plugin. It combines eight core skills with optional Korean/Japanese translation modules, resilient PDF/PPTX visual analysis, approved layout relationships, traceable HTML composition plans, explicit profile approval and public-only plugin ZIP exporting. Native visual/font QA remains environment-dependent.
+An independent company-adaptable document-production plugin (experimental v0.1.0-alpha.6), not a 2.0 release of another plugin. It combines eight core skills with optional Korean/Japanese translation modules, resilient PDF/PPTX visual analysis, approved layout relationships, traceable HTML composition plans, explicit profile approval and public-only plugin ZIP exporting. Native visual/font QA remains environment-dependent.
 
 ## Download a packaged preview (no Git required)
 
-Choose the [Starter ZIP or fictional demo ZIP](docs/DOWNLOAD_AND_INSTALL.md) from the [alpha pre-release](https://github.com/wlehd00000-cell/document-studio/releases/tag/v0.1.0-alpha.5). Verify checksums and inspect it; installation into ChatGPT requires Plugin Creator or appropriate administrator permissions. The GitHub Code ZIP is source only.
+Choose the [Starter ZIP or fictional demo ZIP](docs/DOWNLOAD_AND_INSTALL.md) from the [alpha pre-release](https://github.com/wlehd00000-cell/document-studio/releases/tag/v0.1.0-alpha.6). Verify checksums and inspect it; installation into ChatGPT requires Plugin Creator or appropriate administrator permissions. The GitHub Code ZIP is source only.
 
 ## Try it
 

@@ -1,6 +1,6 @@
 # Document Studio — start here
 
-Version **0.1.0-alpha.5** · experimental public-source edition.
+Version **0.1.0-alpha.6** · experimental public-source edition.
 
 **AI models change. Your company's standards shouldn't.** Document Studio turns measured evidence from authorized document references into reviewable Company Packs and reusable document skills. The same approved standards can guide new documents, but model-independent identical outputs are not promised.
 

@@ -1,6 +1,6 @@
 # Document Studio — launch messaging & positioning
 
-**Release:** experimental `v0.1.0-alpha.5`. Do not label this as a stable v1 or a model-independent enterprise platform.
+**Release:** experimental `v0.1.0-alpha.6`. Do not label this as a stable v1 or a model-independent enterprise platform.
 
 ## The one-sentence story
 
