@@ -126,6 +126,15 @@ JSONの `installed` / `already_installed` と配置先を確認したあと、�
 
 導入で止まった場合は、環境、リリース、最後に完了した手順、エラーを[初回フィードバック](https://github.com/wlehd00000-cell/document-studio/issues/4)に記載してください。機密ファイルやアカウント情報は不要です。
 
+## Directory submission attempts (2026-10-31)
+
+| Directory | Published submission? | Observed result |
+|---|---|---|
+| alanhoff/awesome-agent-skills-open-agent-craft | No | The documented recommendation issue route returned HTTP 410: issues disabled. |
+| anbeime/skill | No | Its submit-skill form was reviewed; issue creation returned HTTP 403: resource not accessible by integration. |
+
+No external listing acceptance or external social publication is claimed. Large lists with minimum age/star requirements were not submitted to when this new repository did not meet the bar. The repository's star count remained **1** at the last check in this session.
+
 ## Measurement and next decisions
 
 Use voluntary issue reports only; no hidden tracking was added.
