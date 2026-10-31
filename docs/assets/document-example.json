@@ -1,0 +1,12 @@
+{
+  "source": "skills/report-html-pptx/assets/accepted-staff-guide/index.html",
+  "source_sha256": "1b3618f866d6b60bab258d38981741e7d4aa2fe6978e1010772db3748cd032ce",
+  "kind": "Screenshot of an included independently authored fictional example; not a new generation benchmark",
+  "content": "Fictional company and synthetic figures",
+  "viewport": {
+    "width": 1320,
+    "height": 1200
+  },
+  "renderer": "Playwright 1.56.1 / Chromium",
+  "fonts": "System sans-serif with open Noto CJK fonts installed"
+}
