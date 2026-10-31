@@ -138,7 +138,7 @@ No external listing acceptance or external social publication is claimed. Large 
 ## Follow-through after GitHub authorization
 
 - Reworked Korean and Japanese overview pages around a first document task and a clear Star/bookmark link; linked both from the top of the English README.
-- Added a narrowly triggered GitHub workflow to render the included fictional document as an inspectable example. Its first attempt exposed a renderer/Ubuntu version incompatibility; the runner was pinned to Ubuntu 24.04. A screenshot must be inspected before adding it to the README.
+- Added a narrowly triggered GitHub workflow to render the included fictional document as an inspectable example. Its first attempt exposed a renderer/Ubuntu version incompatibility; the runner was pinned to Ubuntu 24.04. The next run exposed deliberately clipped decorative artwork being counted as content overflow. Text geometry checks now distinguish the decoration from actual text. The final run passed, published the PNG and source-hash provenance, and the rendered image was inspected before being linked in all three overview pages.
 - AgentSkillsDir: completed the public resource form (public repository URL, name, description, Plugins category; no contact details). The response was **“Resource submissions are currently closed.”** No submission acceptance is claimed.
 - OpenAgentSkill: repository scan and a direct representative SKILL.md URL both returned **“Validation failed. Please try again.”** No submission acceptance is claimed.
 - agentskill.sh: the public import returned **“Too many submissions. Please try again in an hour.”** No retry loop or rate-limit bypass was attempted.

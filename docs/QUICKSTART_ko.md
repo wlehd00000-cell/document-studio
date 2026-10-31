@@ -6,6 +6,11 @@ Document Studio는 조사 → 구조 설계 → 작성 → 디자인 → 검수�
 
 [⭐ GitHub에서 Star로 저장하기](https://github.com/wlehd00000-cell/document-studio) · [English](../README.md) · [日本語](QUICKSTART_ja.md)
 
+
+<img src="assets/document-example.png" width="600" alt="Document Studio fictional document example">
+
+*포함된 가상 문서 예시입니다. 실존 기업이나 실측 성과를 나타내지 않습니다.*
+
 ## 먼저 문서 한 건을 만들어보세요
 
 회사 자료를 분석하거나 관리자 배포부터 시작할 필요가 없습니다. [첫 사용 안내](TRY_FIRST.md#한국어)에 설치 방법과 그대로 붙여 넣을 가상 제안서 요청문을 넣었습니다.

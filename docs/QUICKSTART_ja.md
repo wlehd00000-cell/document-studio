@@ -6,6 +6,11 @@ Document Studioは、調査 → 構成 → 執筆 → デザイン → 確認を
 
 [⭐ GitHubでStarして保存](https://github.com/wlehd00000-cell/document-studio) · [English](../README.md) · [한국어](QUICKSTART_ko.md)
 
+
+<img src="assets/document-example.png" width="600" alt="Document Studio fictional document example">
+
+*同梱の架空資料の例です。実在企業や測定済みの成果を示すものではありません。*
+
 ## まず資料を1件作ってみる
 
 会社資料の分析や管理者による配布から始める必要はありません。[初回利用ガイド](TRY_FIRST.md#日本語)には、導入手順とそのまま使える架空の提案書の依頼例があります。

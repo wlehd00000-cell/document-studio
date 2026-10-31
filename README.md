@@ -6,6 +6,10 @@
 
 **Document Studio adds a repeatable research → writing → design → review workflow to document work, with optional Korean/Japanese business-writing skills.** Teams can also review document references and package approved company conventions for reuse.
 
+<img src="docs/assets/document-example.png" width="600" alt="Included fictional Korean document example: navy typography and orange experiment plan, with synthetic figures">
+
+*An included fictional document, rendered from [this HTML](skills/report-html-pptx/assets/accepted-staff-guide/index.html). [Image provenance](docs/assets/document-example.json). This is an example you can inspect, not a new-generation quality benchmark.*
+
 It is an **MIT-licensed skills/plugin toolkit**, not a newly trained AI model. It runs inside a compatible AI agent; it is not a standalone website or a one-click PowerPoint generator.
 
 **If you want reusable AI document workflows, [⭐ star Document Studio](https://github.com/wlehd00000-cell/document-studio) to bookmark the project and help others discover it.**
