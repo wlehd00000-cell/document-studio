@@ -14,16 +14,25 @@ It is an **MIT-licensed skills/plugin toolkit**, not a newly trained AI model. I
 
 **If you want reusable AI document workflows, [⭐ star Document Studio](https://github.com/wlehd00000-cell/document-studio) to bookmark the project and help others discover it.**
 
-**[Start here: choose your installation route](docs/TRY_FIRST.md)** · [한국어 첫 사용](docs/TRY_FIRST.md#한국어) · [日本語ではじめる](docs/TRY_FIRST.md#日本語) · [Download alpha.6](https://github.com/wlehd00000-cell/document-studio/releases/tag/v0.1.0-alpha.6)
+**[Start here: choose your installation route](docs/TRY_FIRST.md)** · [⚡ Codex quick install](docs/TRY_FIRST.md#fast-agent-skill-install) · [한국어 첫 사용](docs/TRY_FIRST.md#한국어) · [日本語ではじめる](docs/TRY_FIRST.md#日本語) · [Download alpha.6](https://github.com/wlehd00000-cell/document-studio/releases/tag/v0.1.0-alpha.6)
 
 | You want to… | Start with… |
 |---|---|
 | Try it in ChatGPT, without a terminal | [Starter ZIP + Plugin Creator instructions](docs/TRY_FIRST.md#chatgpt). Requires an eligible account with Plugin Creator/create permission. |
-| Use the skills with a local Codex environment | [Local installation](docs/TRY_FIRST.md#local-codex). Python installs the skills; the AI environment handles authoring. |
+| **Try the skills in Codex with one command** | [skills CLI quick install](docs/TRY_FIRST.md#fast-agent-skill-install). No ChatGPT Plugin Creator permission required; installs agent skills only. |
+| Use the full local analyzer/exporter tooling | [Clone and local installation](docs/TRY_FIRST.md#local-codex). Python installs the skills; the AI environment handles authoring. |
 | Evaluate a company-specific setup | [Fictional retail demo](docs/TRY_FIRST.md#company-demo). Begin with the included approved fictional pack. |
 | Inspect implementation before installing | [Architecture and workflow](docs/DEMO_FLOW.md) · [Source](skills/) |
 
 **First task:** create a two-page proposal for a fictional employee onboarding pilot. [Copy a complete brief and see what to check](docs/TRY_FIRST.md#first-task). You do not need company files to start.
+
+**Codex quick install** (Node.js 22.20+ and Git; from your own project directory):
+
+```bash
+npx --yes skills add wlehd00000-cell/document-studio --skill '*' -a codex --copy -y
+```
+
+This command successfully installed all **10 discoverable skills** in a temporary Codex project during an independent setup check on 2026-10-31. It copies agent instructions, **not** the repository-level Company Pack analyzer/exporter, Python dependencies, or a ChatGPT plugin. Start a new Codex session to use the skills; full company-profile packaging still requires the source workflow below. [Install options, agent support and scope](docs/TRY_FIRST.md#fast-agent-skill-install).
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-157A72)](LICENSE) ![Release: alpha](https://img.shields.io/badge/release-v0.1.0--alpha.6-5B63CE) ![Python: 3.12](https://img.shields.io/badge/Python-3.12-3776AB)
 
