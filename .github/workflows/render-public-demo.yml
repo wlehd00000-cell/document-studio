@@ -1,15 +1,10 @@
-name: Render public document example
+name: Inspect fictional document rendering
 
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths:
-      - '.github/workflows/render-public-demo.yml'
-      - 'skills/report-html-pptx/assets/accepted-staff-guide/**'
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
   group: public-document-preview
@@ -68,8 +63,9 @@ jobs:
             console.log(JSON.stringify(geometry));
             // Decorative pseudo-elements deliberately extend beyond the sheet; check text instead.
             if (geometry.clippedText.length) throw new Error('Example text extends outside the sheet');
-            await sheet.screenshot({path: 'docs/assets/document-example.png', animations: 'disabled'});
-            fs.writeFileSync('docs/assets/document-example.json', JSON.stringify({
+            fs.mkdirSync('render-output', {recursive: true});
+            await sheet.screenshot({path: 'render-output/document-example.png', animations: 'disabled'});
+            fs.writeFileSync('render-output/document-example.json', JSON.stringify({
               source,
               source_sha256: crypto.createHash('sha256').update(fs.readFileSync(source)).digest('hex'),
               kind: 'Screenshot of an included independently authored fictional example; not a new generation benchmark',
@@ -81,17 +77,8 @@ jobs:
             await browser.close();
           })().catch(error => {console.error(error); process.exit(1)});
           JS
-      - name: Verify inventory and publish preview
-        run: |
-          python scripts/build_package_manifest.py
-          python scripts/build_package_manifest.py --check
-          python scripts/verify_public_release.py
-          git diff --check
-          git add docs/assets/document-example.png docs/assets/document-example.json package-manifest.json
-          if git diff --cached --quiet; then
-            exit 0
-          fi
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git commit -m 'Publish rendered fictional document example'
-          git push origin HEAD:main
+      - name: Upload screenshot for manual inspection
+        uses: actions/upload-artifact@v4
+        with:
+          name: fictional-document-render
+          path: render-output/
