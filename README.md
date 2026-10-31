@@ -1,24 +1,31 @@
 # Document Studio
 
-### AI models change. Your company's document standards shouldn't.
+### Reuse your document rules instead of rewriting the same AI prompt.
 
-**Turn existing documents into a custom AI document plugin — and give your team one consistent way to work.**
+**Document Studio adds a repeatable research → writing → design → review workflow to document work, with optional Korean/Japanese business-writing skills.** Teams can also review document references and package approved company conventions for reuse.
 
-AI tools evolve. Models get upgraded. Teams adopt new workflows. But your organization's approved **writing voice, brand identity, layout principles, and document quality rules** should not have to be reinvented with every change.
+It is an **MIT-licensed skills/plugin toolkit**, not a newly trained AI model. It runs inside a compatible AI agent; it is not a standalone website or a one-click PowerPoint generator.
 
-**Document Studio** is an open-source, review-first toolkit for ChatGPT teams. It helps administrators extract evidence from authorized PDF/PPTX references, approve reusable **Company Packs**, and package company-aware document creation skills. Individuals can use the same workflow.
+**If you want reusable AI document workflows, [⭐ star Document Studio](https://github.com/wlehd00000-cell/document-studio) to bookmark the project and help others discover it.**
 
-[![License: MIT](https://img.shields.io/badge/license-MIT-157A72)](LICENSE) ![Release: alpha](https://img.shields.io/badge/release-v0.1.0--alpha.5-5B63CE) ![Python: 3.12](https://img.shields.io/badge/Python-3.12-3776AB)
+**[Start here: choose your installation route](docs/TRY_FIRST.md)** · [한국어 첫 사용](docs/TRY_FIRST.md#한국어) · [日本語ではじめる](docs/TRY_FIRST.md#日本語) · [Download alpha.6](https://github.com/wlehd00000-cell/document-studio/releases/tag/v0.1.0-alpha.6)
 
-**⬇️ Get started — download plugin ZIPs:** [Starter plugin](https://github.com/wlehd00000-cell/document-studio/releases/download/v0.1.0-alpha.6/document-studio-starter-v0.1.0-alpha.6.zip) · [Fictional company demo](https://github.com/wlehd00000-cell/document-studio/releases/download/v0.1.0-alpha.6/demo-retail-documents-v0.1.0-alpha.6.zip) · [3-step installation guide](docs/DOWNLOAD_AND_INSTALL.md) · [All releases](https://github.com/wlehd00000-cell/document-studio/releases)
+| You want to… | Start with… |
+|---|---|
+| Try it in ChatGPT, without a terminal | [Starter ZIP + Plugin Creator instructions](docs/TRY_FIRST.md#chatgpt). Requires an eligible account with Plugin Creator/create permission. |
+| Use the skills with a local Codex environment | [Local installation](docs/TRY_FIRST.md#local-codex). Python installs the skills; the AI environment handles authoring. |
+| Evaluate a company-specific setup | [Fictional retail demo](docs/TRY_FIRST.md#company-demo). Begin with the included approved fictional pack. |
+| Inspect implementation before installing | [Architecture and workflow](docs/DEMO_FLOW.md) · [Source](skills/) |
 
-> **Download ≠ install:** account installation requires an eligible Plugin Creator/administrator workflow. Both ZIPs are **experimental**; no confidential company documents or licensed fonts are bundled.
+**First task:** create a two-page proposal for a fictional employee onboarding pilot. [Copy a complete brief and see what to check](docs/TRY_FIRST.md#first-task). You do not need company files to start.
 
-[**Try the fictional demo**](#quick-start--export-a-demo-plugin) · [**See the five-scene walkthrough**](docs/DEMO_FLOW.md) · [**Workspace admin guide**](docs/WORKSPACE_ADMIN_GUIDE.md) · [**한국어**](docs/QUICKSTART_ko.md) · [**日本語**](docs/QUICKSTART_ja.md)
+[![License: MIT](https://img.shields.io/badge/license-MIT-157A72)](LICENSE) ![Release: alpha](https://img.shields.io/badge/release-v0.1.0--alpha.6-5B63CE) ![Python: 3.12](https://img.shields.io/badge/Python-3.12-3776AB)
 
-![Document Studio: existing references to approved rules, a custom plugin, and a new document](docs/assets/workflow-hero.svg)
+> **Alpha scope:** downloading is not installing. Account eligibility varies. Private/restricted company-source packs cannot currently be exported; final document authoring and visual checks remain separate steps. [Full installation details and limits](docs/DOWNLOAD_AND_INSTALL.md).
 
-> **Experimental alpha — `v0.1.0-alpha.6`.** This is a review-gated toolkit, **not yet a one-click document-to-plugin service**. Style analysis, Company Pack approval, and *public-authorized* ZIP export are implemented; installation and final HTML/PPTX authoring still involve manual steps. **Private/restricted company-source packs cannot currently be exported.** See the [admin guide and release limitations](docs/WORKSPACE_ADMIN_GUIDE.md). The illustration above is a workflow diagram, not a product screenshot.
+![Document Studio workflow: references, reviewed rules, a custom plugin, and a new document](docs/assets/workflow-hero.svg)
+
+*Workflow illustration, not an output screenshot. [Star the repository](https://github.com/wlehd00000-cell/document-studio) to follow the project, or [report your first run](https://github.com/wlehd00000-cell/document-studio/issues/new?template=first_run.md).*
 
 ## The problem isn't just generating documents. It's keeping them consistent.
 
@@ -104,7 +111,7 @@ For a local skill installation rather than the demo plugin export, use `python s
 
 ## What works today — and what does not
 
-| Capability | Alpha.5 status |
+| Capability | Alpha.6 status |
 |---|---|
 | Extract PDF/PPTX design and writing evidence | <strong>Implemented</strong>, with human interpretation required |
 | Review and approve a Company Pack / Layout Grammar | <strong>Implemented</strong>, with explicit review steps |
@@ -236,7 +243,7 @@ See [START_HERE.md](START_HERE.md). To inspect independently authored examples, 
 
 For maintainers introducing the project publicly, the [launch kit](docs/LAUNCH_CHECKLIST.md) contains a model-change/brand-consistency positioning guide, the social-preview asset, and English/Korean/Japanese announcement drafts. **No promotional video is included in this release.**
 
-If this solves a real onboarding problem for your team, **star the repository** so others looking for reviewable document automation can find it. A short, reproducible example or an issue report is even more useful than a star.
+If this solves a real onboarding problem for your team, **star the repository** so others looking for reviewable document automation can find it. You can also share a short, reproducible example or an issue report.
 
 ## License
 
