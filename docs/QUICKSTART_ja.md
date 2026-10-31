@@ -1,36 +1,40 @@
-# Document Studio クイックスタート
+# Document Studio — AI資料作成の手順と基準を再利用
 
-**AIモデルが変わっても、自社の資料作成基準を一貫して管理する。**
+**報告書や提案書を作るたびに、同じ指示を説明し直していませんか。**
 
-既存資料から文体・デザイン・レイアウトの根拠を抽出し、承認済みルールを再利用できるChatGPT向け専用プラグインを構成するオープンソースツールキットです。
+Document Studioは、調査 → 構成 → 執筆 → デザイン → 確認を再利用する、MITライセンスのオープンソースツールキットです。ローカルCodex用のスキルと、作成権限のあるChatGPTアカウント向けのプラグインパッケージを提供します。韓国語・日本語のビジネス文章モジュールを選択できます。
 
-[English README](../README.md) · [ワークスペース管理者向けガイド](WORKSPACE_ADMIN_GUIDE.md) · [5シーンのデモ構成](DEMO_FLOW.md) · [한국어](QUICKSTART_ko.md)
+[⭐ GitHubでStarして保存](https://github.com/wlehd00000-cell/document-studio) · [English](../README.md) · [한국어](QUICKSTART_ko.md)
 
-## Document Studio とは
+## まず資料を1件作ってみる
 
-AIモデルやバージョン、担当者が変わっても、企業の企画書や報告書には共通の文章表現・色・構成・承認基準が必要です。本ツールキットは、**利用許可のある PDF / PowerPoint** から根拠となる特徴を抽出し、人が確認・承認した **Company Pack** を文書作成ワークフローで再利用するためのものです。
+会社資料の分析や管理者による配布から始める必要はありません。[初回利用ガイド](TRY_FIRST.md#日本語)には、導入手順とそのまま使える架空の提案書の依頼例があります。
 
-想定する一連の流れは **参考資料 → 分析 → 人によるレビュー・承認 → 専用プラグイン ZIP → 新規資料の作成**。現段階では手作業を伴い、完全なワンクリック自動化ではありません。**ルールの継続利用を目指すもので、モデル間で同一の生成結果を保証するものではありません。**
-
-## 架空企業のデモを試す
+| 利用環境 | 始め方 |
+|---|---|
+| ChatGPT | [Starter ZIP](https://github.com/wlehd00000-cell/document-studio/releases/download/v0.1.0-alpha.6/document-studio-starter-v0.1.0-alpha.6.zip)をPlugin Creatorで個人用プラグインとして登録。作成機能と権限のあるアカウントが必要です。 |
+| ローカルCodex | 下記コマンドで配置し、新しいセッションで `report-html-pptx` が認識されるか確認します。 |
+| 組織での評価 | まず一般的な資料を作成し、次に[架空企業デモ](TRY_FIRST.md#company-demo)で会社別ルールの適用を確認します。 |
 
 ```bash
-git clone https://github.com/wlehd00000-cell/document-studio.git
+git clone --branch v0.1.0-alpha.6 --depth 1 https://github.com/wlehd00000-cell/document-studio.git
 cd document-studio
 python scripts/install_local.py --verify-only
-python scripts/export_company_plugin.py \
-  --company-pack company-packs/demo-retail \
-  --language-skills ko,ja \
-  --output ./dist/demo-retail-documents.zip
+python scripts/install_local.py --language-skills ja
 ```
 
-出力されるのは、**独自に作成した架空企業の承認済みプロファイル**を含むプラグイン ZIP です。ChatGPT への登録や組織内への公開は別の操作です。[管理者向け手順](WORKSPACE_ADMIN_GUIDE.md)をご覧ください。
+Python 3.12と、スキルを検出できるローカルエージェント環境が必要です。実行前にインストーラーを確認してください。ファイルの配置成功と、エージェントによる認識は別々に確認します。
 
-## 現行バージョンの制約
+## 通常の資料作成依頼との違い
 
-- **`v0.1.0-alpha.6` の実験版**です。社内限定・非公開の原本に由来する Company Pack は、現在の公開用エクスポーターでは**出力できません**。社内専用の配布フローは今後の開発課題です。
-- 出典、フォント・画像の利用権、提案されたデザイン規則を担当者が確認・承認する必要があります。
-- HTML / PPTX の最終制作とブラウザーによる視覚検証は別工程です。
-- Business ワークスペースへの展開は管理者の権限とプラットフォーム側の提供機能によります。
+毎回長い指示文を書く代わりに、作成手順と確認基準をスキルに分けています。会社別に承認したルールはCompany Packとして管理する設計です。単一の固定テンプレートを複製するのではなく、確認済みの文章・構成の原則を新しい資料に適用します。
 
-まずは架空企業のデモで動作を確認してください。英語の[技術ドキュメントと MIT ライセンス](../README.md)も公開しています。
+品質向上率や所要時間の短縮率を測定した製品ではありません。同じモデル・同じ依頼を使い、スキルの有無による修正量や構成の違いを比較してください。
+
+## 現在の範囲
+
+実験的な **alpha.6** です。独自に学習したモデルや、ワンクリックで完成するPowerPointサービスではありません。非公開の社内資料を基にしたパックは、現在の公開エクスポーターでは配布できません。最終的なHTML/PPTX作成と表示確認は別工程です。モデル間で同じ結果は保証しません。
+
+[導入の詳細と制約](DOWNLOAD_AND_INSTALL.md) · [会社別ルールの分析手順](DEMO_FLOW.md) · [初回利用のフィードバック](https://github.com/wlehd00000-cell/document-studio/issues/4)
+
+役立ちそうだと感じたら、[GitHubで⭐ Star](https://github.com/wlehd00000-cell/document-studio)を付けていただけると励みになります。導入で止まった手順や具体的な修正点は、改善のための情報として歓迎します。

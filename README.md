@@ -1,5 +1,7 @@
 # Document Studio
 
+**English** · [한국어 소개](docs/QUICKSTART_ko.md) · [日本語紹介](docs/QUICKSTART_ja.md)
+
 ### Reuse your document rules instead of rewriting the same AI prompt.
 
 **Document Studio adds a repeatable research → writing → design → review workflow to document work, with optional Korean/Japanese business-writing skills.** Teams can also review document references and package approved company conventions for reuse.

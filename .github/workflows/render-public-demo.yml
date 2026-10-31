@@ -1,0 +1,79 @@
+name: Render public document example
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/render-public-demo.yml'
+      - 'skills/report-html-pptx/assets/accepted-staff-guide/**'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: public-document-preview
+  cancel-in-progress: false
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install isolated renderer and open CJK fonts
+        run: |
+          npm install --prefix "$RUNNER_TEMP/document-studio-render" --no-package-lock --no-save playwright@1.56.1
+          node "$RUNNER_TEMP/document-studio-render/node_modules/playwright/cli.js" install --with-deps chromium
+          sudo apt-get install -y fonts-noto-cjk
+      - name: Capture the included fictional example
+        run: |
+          node <<'JS'
+          const {chromium} = require(process.env.RUNNER_TEMP + '/document-studio-render/node_modules/playwright');
+          const fs = require('node:fs');
+          const crypto = require('node:crypto');
+          const path = require('node:path');
+          const {pathToFileURL} = require('node:url');
+          (async () => {
+            const source = 'skills/report-html-pptx/assets/accepted-staff-guide/index.html';
+            const browser = await chromium.launch({headless: true});
+            const page = await browser.newPage({viewport: {width: 1320, height: 1200}, deviceScaleFactor: 1});
+            await page.goto(pathToFileURL(path.resolve(source)).href);
+            await page.evaluate(() => document.fonts.ready);
+            const sheet = page.locator('.sheet');
+            if (await sheet.count() !== 1) throw new Error('Expected one fictional document sheet');
+            const overflow = await sheet.evaluate(el => el.scrollWidth > el.clientWidth + 1);
+            if (overflow) throw new Error('Example has horizontal overflow');
+            await sheet.screenshot({path: 'docs/assets/document-example.png', animations: 'disabled'});
+            fs.writeFileSync('docs/assets/document-example.json', JSON.stringify({
+              source,
+              source_sha256: crypto.createHash('sha256').update(fs.readFileSync(source)).digest('hex'),
+              kind: 'Screenshot of an included independently authored fictional example; not a new generation benchmark',
+              content: 'Fictional company and synthetic figures',
+              viewport: {width: 1320, height: 1200},
+              renderer: 'Playwright 1.56.1 / Chromium',
+              fonts: 'System sans-serif with open Noto CJK fonts installed'
+            }, null, 2) + '\n');
+            await browser.close();
+          })().catch(error => {console.error(error); process.exit(1)});
+          JS
+      - name: Verify inventory and publish preview
+        run: |
+          python scripts/build_package_manifest.py
+          python scripts/build_package_manifest.py --check
+          python scripts/verify_public_release.py
+          git diff --check
+          git add docs/assets/document-example.png docs/assets/document-example.json package-manifest.json
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'Publish rendered fictional document example'
+          git push origin HEAD:main
