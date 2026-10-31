@@ -2,7 +2,7 @@
 
 Version **0.1.0-alpha.6** · experimental public-source edition.
 
-**AI models change. Your company's standards shouldn't.** Document Studio turns measured evidence from authorized document references into reviewable Company Packs and reusable document skills. The same approved standards can guide new documents, but model-independent identical outputs are not promised.
+Document Studio keeps document-writing and review conventions in reusable agent skills and reviewed Company Packs. It can analyze authorized references, but the generated output still needs human review.
 
 ## Included
 
