@@ -48,8 +48,26 @@ jobs:
             await page.evaluate(() => document.fonts.ready);
             const sheet = page.locator('.sheet');
             if (await sheet.count() !== 1) throw new Error('Expected one fictional document sheet');
-            const overflow = await sheet.evaluate(el => el.scrollWidth > el.clientWidth + 1);
-            if (overflow) throw new Error('Example has horizontal overflow');
+            const geometry = await sheet.evaluate(el => {
+              const bounds = el.getBoundingClientRect();
+              const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+              const clippedText = [];
+              while (walker.nextNode()) {
+                if (!walker.currentNode.textContent.trim()) continue;
+                const range = document.createRange();
+                range.selectNodeContents(walker.currentNode);
+                for (const rect of range.getClientRects()) {
+                  if (rect.width && (rect.left < bounds.left - 1 || rect.right > bounds.right + 1)) {
+                    clippedText.push(walker.currentNode.textContent.trim().slice(0, 80));
+                    break;
+                  }
+                }
+              }
+              return {sheetWidth: bounds.width, scrollWidth: el.scrollWidth, clippedText};
+            });
+            console.log(JSON.stringify(geometry));
+            // Decorative pseudo-elements deliberately extend beyond the sheet; check text instead.
+            if (geometry.clippedText.length) throw new Error('Example text extends outside the sheet');
             await sheet.screenshot({path: 'docs/assets/document-example.png', animations: 'disabled'});
             fs.writeFileSync('docs/assets/document-example.json', JSON.stringify({
               source,

@@ -135,6 +135,15 @@ JSONの `installed` / `already_installed` と配置先を確認したあと、�
 
 No external listing acceptance or external social publication is claimed. Large lists with minimum age/star requirements were not submitted to when this new repository did not meet the bar. The repository's star count remained **1** at the last check in this session.
 
+## Follow-through after GitHub authorization
+
+- Reworked Korean and Japanese overview pages around a first document task and a clear Star/bookmark link; linked both from the top of the English README.
+- Added a narrowly triggered GitHub workflow to render the included fictional document as an inspectable example. Its first attempt exposed a renderer/Ubuntu version incompatibility; the runner was pinned to Ubuntu 24.04. A screenshot must be inspected before adding it to the README.
+- AgentSkillsDir: completed the public resource form (public repository URL, name, description, Plugins category; no contact details). The response was **“Resource submissions are currently closed.”** No submission acceptance is claimed.
+- OpenAgentSkill: repository scan and a direct representative SKILL.md URL both returned **“Validation failed. Please try again.”** No submission acceptance is claimed.
+- agentskill.sh: the public import returned **“Too many submissions. Please try again in an hour.”** No retry loop or rate-limit bypass was attempted.
+- GitHub browser sign-in: user approved GitHub access and selected Google in the secure method picker. Automatic review then blocked access to the Google authentication origin because that origin requires explicit approval. Repository settings and authenticated external GitHub submissions remain incomplete.
+
 ## Measurement and next decisions
 
 Use voluntary issue reports only; no hidden tracking was added.
