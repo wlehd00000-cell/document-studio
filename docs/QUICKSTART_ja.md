@@ -1,15 +1,10 @@
-# Document Studio — AI資料作成の手順と基準を再利用
+# Document Studio — 資料作成の手順を再利用するためのツール
 
-**報告書や提案書を作るたびに、同じ指示を説明し直していませんか。**
+報告書や提案書を作るたびに、文体や構成、確認項目を説明し直すのが面倒で作り始めたツールです。
 
 Document Studioは、調査 → 構成 → 執筆 → デザイン → 確認を再利用する、MITライセンスのオープンソースツールキットです。ローカルCodex用のスキルと、作成権限のあるChatGPTアカウント向けのプラグインパッケージを提供します。韓国語・日本語のビジネス文章モジュールを選択できます。
 
-[⭐ GitHubでStarして保存](https://github.com/wlehd00000-cell/document-studio) · [English](../README.md) · [한국어](QUICKSTART_ko.md)
-
-
-<img src="assets/document-example.png" width="600" alt="Document Studio fictional document example">
-
-*同梱の架空資料の例です。実在企業や測定済みの成果を示すものではありません。*
+[English](../README.md) · [한국어](QUICKSTART_ko.md)
 
 ## まず資料を1件作ってみる
 
@@ -22,13 +17,12 @@ Document Studioは、調査 → 構成 → 執筆 → デザイン → 確認を
 | 組織での評価 | まず一般的な資料を作成し、次に[架空企業デモ](TRY_FIRST.md#company-demo)で会社別ルールの適用を確認します。 |
 
 ```bash
-git clone --branch v0.1.0-alpha.6 --depth 1 https://github.com/wlehd00000-cell/document-studio.git
-cd document-studio
-python scripts/install_local.py --verify-only
-python scripts/install_local.py --language-skills ja
+npx --yes skills add wlehd00000-cell/document-studio --skill '*' -a codex --copy -y
 ```
 
-Python 3.12と、スキルを検出できるローカルエージェント環境が必要です。実行前にインストーラーを確認してください。ファイルの配置成功と、エージェントによる認識は別々に確認します。
+Node.js 22.20以降とGitが必要です。この方法ではエージェントのスキルのみをインストールし、会社別ZIPの書き出しツールは含みません。ソース全体を使う場合は[Pythonの導入手順](TRY_FIRST.md#local-codex)を参照してください。
+
+インストール後はCodexの新しいセッションでスキルが認識されることを確認してください。ファイルの配置だけで出力品質が検証されるわけではありません。
 
 ## 通常の資料作成依頼との違い
 
@@ -42,4 +36,4 @@ Python 3.12と、スキルを検出できるローカルエージェント環境
 
 [導入の詳細と制約](DOWNLOAD_AND_INSTALL.md) · [会社別ルールの分析手順](DEMO_FLOW.md) · [初回利用のフィードバック](https://github.com/wlehd00000-cell/document-studio/issues/4)
 
-役立ちそうだと感じたら、[GitHubで⭐ Star](https://github.com/wlehd00000-cell/document-studio)を付けていただけると励みになります。導入で止まった手順や具体的な修正点は、改善のための情報として歓迎します。
+試してみた結果や導入時のつまずきは、[初回利用のIssue](https://github.com/wlehd00000-cell/document-studio/issues/4)で教えてください。
