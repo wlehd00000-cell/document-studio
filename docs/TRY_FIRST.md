@@ -2,6 +2,22 @@
 
 Document Studio is an open-source document-workflow toolkit, not an AI model. Start with a small generic task before company-profile analysis. No paid service is sold by this repository; your AI account, usage and optional rendering tools may have their own costs or requirements.
 
+## Fast agent-skill install
+
+**Already use Codex and have Node.js 22.20+ and Git?** This is the shortest route to inspect and try Document Studio's agent workflow skills. Run the following command **from your own project directory** (not inside the Document Studio source checkout):
+
+```bash
+npx --yes skills add wlehd00000-cell/document-studio --skill '*' -a codex --copy -y
+```
+
+The [open-source skills CLI](https://github.com/vercel-labs/skills/blob/main/docs/commands.md) copies the ten `SKILL.md` skill folders into the current project's agent skills directory. The skills were discovered and a ten-skill copy install was verified in an isolated Codex project on **2026-10-31**. Start a fresh Codex session, check that `report-html-pptx` is available, then try the [fictional first task](#first-task). You can first inspect the list without installing:
+
+```bash
+npx --yes skills add wlehd00000-cell/document-studio --list
+```
+
+**Scope matters:** this is a local agent-skills install, not a ChatGPT Plugin Creator registration, not a new AI model, and not a full copy of the repository-level Company Pack analyzer/export scripts. The full company-specific export demonstration needs the source checkout and Python instructions below. Visual HTML/PPTX generation and quality checks still depend on your AI agent and runtime. Review skill instructions before allowing agent actions; the installer itself does not certify output or security. Other supported agents can use the CLI with their own `-a` option; only the Codex route above was tested here.
+
 ## ChatGPT
 
 **Check eligibility first:** can your account select Plugin Creator and create a plugin? If not, this ZIP route is unavailable on that account. Do not spend time downloading repeatedly; choose the local route below if you use a compatible local agent. A subscription name alone does not establish eligibility.
