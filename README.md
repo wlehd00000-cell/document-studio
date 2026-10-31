@@ -1,71 +1,50 @@
 # Document Studio
 
-**English** · [한국어 소개](docs/QUICKSTART_ko.md) · [日本語紹介](docs/QUICKSTART_ja.md)
+[한국어](docs/QUICKSTART_ko.md) · [日本語](docs/QUICKSTART_ja.md) · [Latest release](https://github.com/wlehd00000-cell/document-studio/releases/tag/v0.1.0-alpha.6)
 
-### Reuse your document rules instead of rewriting the same AI prompt.
+Document Studio is a set of open-source skills and scripts for people who use AI agents to prepare reports, proposals, and presentations.
 
-**Document Studio adds a repeatable research → writing → design → review workflow to document work, with optional Korean/Japanese business-writing skills.** Teams can also review document references and package approved company conventions for reuse.
+I started building it after repeatedly having to explain the same document structure, writing style, and review process in new conversations. The goal is simple: make those working conventions reusable, while leaving room to design each new document for its audience.
 
-<img src="docs/assets/document-example.png" width="600" alt="Included fictional Korean document example: navy typography and orange experiment plan, with synthetic figures">
+The repository includes:
 
-*An included fictional document, rendered from [this HTML](skills/report-html-pptx/assets/accepted-staff-guide/index.html). [Image provenance](docs/assets/document-example.json). This is an example you can inspect, not a new-generation quality benchmark.*
+- **Ten agent skills** for research, structure, writing, design, visual assets, Korean/Japanese editing, and HTML-to-PPTX work.
+- **Company Packs** that record reviewed writing and layout rules. Two fictional packs are included so you can inspect the format without company documents.
+- **Python tools** for extracting evidence from authorized PDF/PPTX references, reviewing proposed rules, and exporting a tailored plugin package.
 
-It is an **MIT-licensed skills/plugin toolkit**, not a newly trained AI model. It runs inside a compatible AI agent; it is not a standalone website or a one-click PowerPoint generator.
+This is an experimental toolkit, not a trained AI model or a hosted document editor. The local skills, ChatGPT plugin registration, and company-specific packaging are separate installation routes.
 
-**If you want reusable AI document workflows, [⭐ star Document Studio](https://github.com/wlehd00000-cell/document-studio) to bookmark the project and help others discover it.**
+## Start with a small task
 
-**[Start here: choose your installation route](docs/TRY_FIRST.md)** · [⚡ Codex quick install](docs/TRY_FIRST.md#fast-agent-skill-install) · [한국어 첫 사용](docs/TRY_FIRST.md#한국어) · [日本語ではじめる](docs/TRY_FIRST.md#日本語) · [Download alpha.6](https://github.com/wlehd00000-cell/document-studio/releases/tag/v0.1.0-alpha.6)
+### Codex: install the agent skills
 
-| You want to… | Start with… |
-|---|---|
-| Try it in ChatGPT, without a terminal | [Starter ZIP + Plugin Creator instructions](docs/TRY_FIRST.md#chatgpt). Requires an eligible account with Plugin Creator/create permission. |
-| **Try the skills in Codex with one command** | [skills CLI quick install](docs/TRY_FIRST.md#fast-agent-skill-install). No ChatGPT Plugin Creator permission required; installs agent skills only. |
-| Use the full local analyzer/exporter tooling | [Clone and local installation](docs/TRY_FIRST.md#local-codex). Python installs the skills; the AI environment handles authoring. |
-| Evaluate a company-specific setup | [Fictional retail demo](docs/TRY_FIRST.md#company-demo). Begin with the included approved fictional pack. |
-| Inspect implementation before installing | [Architecture and workflow](docs/DEMO_FLOW.md) · [Source](skills/) |
+With Node.js 22.20+ and Git, run this **inside your own project folder**:
 
-**First task:** create a two-page proposal for a fictional employee onboarding pilot. [Copy a complete brief and see what to check](docs/TRY_FIRST.md#first-task). You do not need company files to start.
-
-**Codex quick install** (Node.js 22.20+ and Git; from your own project directory):
-
-```bash
+~~~bash
 npx --yes skills add wlehd00000-cell/document-studio --skill '*' -a codex --copy -y
-```
+~~~
 
-This command successfully installed all **10 discoverable skills** in a temporary Codex project during an independent setup check on 2026-10-31. It copies agent instructions, **not** the repository-level Company Pack analyzer/exporter, Python dependencies, or a ChatGPT plugin. Start a new Codex session to use the skills; full company-profile packaging still requires the source workflow below. [Install options, agent support and scope](docs/TRY_FIRST.md#fast-agent-skill-install).
+The command above was tested in an isolated Codex project on 2026-10-31: all ten skills were discovered and copied. Restart Codex and check that `report-html-pptx` is available. This route installs the skills only; it does not include the repository-level Company Pack exporter or register a ChatGPT plugin. [Installation details](docs/TRY_FIRST.md#fast-agent-skill-install).
 
-[![License: MIT](https://img.shields.io/badge/license-MIT-157A72)](LICENSE) ![Release: alpha](https://img.shields.io/badge/release-v0.1.0--alpha.6-5B63CE) ![Python: 3.12](https://img.shields.io/badge/Python-3.12-3776AB)
+### ChatGPT: use the Starter ZIP
 
-> **Alpha scope:** downloading is not installing. Account eligibility varies. Private/restricted company-source packs cannot currently be exported; final document authoring and visual checks remain separate steps. [Full installation details and limits](docs/DOWNLOAD_AND_INSTALL.md).
+If your ChatGPT account has Plugin Creator and permission to save plugins, download the [Starter ZIP (alpha.6)](https://github.com/wlehd00000-cell/document-studio/releases/download/v0.1.0-alpha.6/document-studio-starter-v0.1.0-alpha.6.zip), upload it to Plugin Creator, and ask to create a private plugin. Confirm the returned plugin ID before using it. [Step-by-step guide](docs/TRY_FIRST.md#chatgpt).
 
-![Document Studio workflow: references, reviewed rules, a custom plugin, and a new document](docs/assets/workflow-hero.svg)
+### First prompt
 
-*Workflow illustration, not an output screenshot. [Star the repository](https://github.com/wlehd00000-cell/document-studio) to follow the project, or [report your first run](https://github.com/wlehd00000-cell/document-studio/issues/new?template=first_run.md).*
+After the skills or plugin are available, try a fictional task:
 
-## The problem isn't just generating documents. It's keeping them consistent.
+> Make a two-page HTML proposal for a four-week employee onboarding pilot. The reader is an operations manager deciding whether to approve a $2,400 budget for 12 people. Include the recommendation, schedule, budget, three measures of success, and risks. Treat all figures as fictional. Tell me which checks you actually performed.
 
-Imagine three employees preparing the same executive update with different prompts or AI model versions. The content may be useful, but the tone, terminology, page structure, and brand treatment can drift. Rewriting a clever prompt every time is not a reliable organization-wide document standard.
+Look for a clear decision, consistent figures, readable layout, and an honest QA report. [Full English, Korean, and Japanese prompts](docs/TRY_FIRST.md#first-task).
 
-**Our approach is to separate the organization's approved rules from the changing AI workflow.** A Company Pack records reviewable writing and design conventions; document-production skills use those conventions during new work, and QA catches specific structural failures.
+## What makes it useful
 
-| What may change | What the organization keeps under review and control |
-|---|---|
-| AI model or model version | Approved writing conventions, terminology, and layout relationships |
-| Employee or prompt wording | Reusable Company Pack and document workflow |
-| Document topic or audience | Shared quality gates, source provenance, and human approval |
-| Visual composition | Brand principles and allowed creative variation — **not** a single frozen slide template |
+The document workflow is kept in separate, inspectable `SKILL.md` files. A Company Pack can hold approved terminology, visual tokens, and layout relationships instead of burying them in one long prompt. A reviewer approves proposed rules; the tools do not automatically treat a reference document as an official brand standard.
 
-**Important:** this is a *standards and governance approach*, not a guarantee of identical output across models. The current plugin is built for ChatGPT; cross-provider portability, deterministic visual equivalence, and automatic revalidation after model upgrades have **not** been certified.
+The intended flow is **authorized references → extracted evidence → human review → Company Pack → new document**. The included examples are fictional. You can [walk through the full process](docs/DEMO_FLOW.md) or [inspect the source](skills/).
 
-## Why Document Studio?
-
-Most AI writing tools begin with a blank prompt or a fixed template. Document Studio starts with **the documents your organization already trusts** and turns their observable conventions into reviewable, reusable rules. Human approval is part of the workflow so the company — not an accidental prompt — defines the standard.
-
-| Bring your materials | Keep control | Reuse the result |
-|---|---|---|
-| Analyze **authorized PDFs and PowerPoint decks** for writing and visual characteristics. | Review source evidence, font and asset rights, and proposed layout rules **before approval**. | Export an approved **public-authorized Company Pack + plugin bundle**; private distribution is on the roadmap. |
-
-**What makes it different:** organization-owned Company Packs, evidence-backed Layout Grammar, explicit human approval, Korean/Japanese optional language modules, and testable production contracts. The aim is **consistent standards with room for creative layouts**, not perfect visual cloning or the same pixels every time.
+**Current limits:** private-source Company Packs cannot be exported by the public packager; account/workspace plugin installation requires supported permissions; and identical output across AI models is not guaranteed. HTML and editable PPTX production still require separate authoring and visual checks. [Detailed status](docs/WORKSPACE_ADMIN_GUIDE.md).
 
 ## Quick start — export a demo plugin
 
@@ -256,9 +235,9 @@ See [START_HERE.md](START_HERE.md). To inspect independently authored examples, 
 - **Bring it to a workspace:** follow the [administrator pilot checklist](docs/WORKSPACE_ADMIN_GUIDE.md) and pin a reviewed version.
 - **Track the honest scope:** see the [changelog](CHANGELOG.md) and [security policy](SECURITY.md). Private-source internal-only export is a priority roadmap item, not a shipped feature.
 
-For maintainers introducing the project publicly, the [launch kit](docs/LAUNCH_CHECKLIST.md) contains a model-change/brand-consistency positioning guide, the social-preview asset, and English/Korean/Japanese announcement drafts. **No promotional video is included in this release.**
+For an introduction and release notes, see [the launch notes](docs/LAUNCH_CHECKLIST.md).
 
-If this solves a real onboarding problem for your team, **star the repository** so others looking for reviewable document automation can find it. You can also share a short, reproducible example or an issue report.
+If you find it useful, a GitHub star helps other people discover the project. Reports from actual first runs are even more helpful.
 
 ## License
 
