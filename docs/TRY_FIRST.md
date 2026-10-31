@@ -66,6 +66,7 @@ Reference analysis, human approval and company-plugin export are a separate, mor
 
 **매번 보고서용 프롬프트를 새로 쓰는 대신, 조사·작성·디자인·검수 순서를 재사용하는 도구입니다.** 직접 학습시킨 모델이 아니라 ChatGPT 또는 로컬 에이전트에서 사용하는 스킬·플러그인입니다.
 
+- **Codex 빠른 설치:** Node.js 22.20 이상과 Git이 있다면 프로젝트 폴더에서 `npx --yes skills add wlehd00000-cell/document-studio --skill '*' -a codex --copy -y`를 실행하세요. 10개 스킬만 복사하며 ChatGPT 플러그인이나 회사 맞춤 ZIP 제작 도구는 설치하지 않습니다.
 - ChatGPT: 위의 Starter ZIP을 받고 Plugin Creator로 개인용 플러그인을 생성합니다. 계정에 생성 기능이 있어야 합니다. 반환된 플러그인 주소가 있어야 등록된 것입니다.
 - 로컬 Codex: 위의 설치 명령을 실행하고 새 세션에서 `report-html-pptx`가 인식되는지 확인합니다.
 - 첫 요청:
@@ -78,6 +79,7 @@ Reference analysis, human approval and company-plugin export are a separate, mor
 
 **毎回プロンプトを書き直す代わりに、調査・執筆・デザイン・確認の手順を再利用するツールです。** 独自に学習したAIモデルではなく、対応するAI環境で使うスキル／プラグインです。
 
+- **Codexの簡単インストール：** Node.js 22.20以降とGitを用意し、プロジェクトフォルダで `npx --yes skills add wlehd00000-cell/document-studio --skill '*' -a codex --copy -y` を実行します。10個のスキルのみをコピーする方法で、ChatGPTプラグインや会社別ZIP作成ツールはインストールされません。
 - ChatGPT：Starter ZIPを取得し、Plugin Creatorで個人用プラグインを作成します。対象アカウントに作成機能・権限が必要です。保存されたプラグインのURLを確認してください。
 - ローカルCodex：上記のコマンドでインストールし、新しいセッションで `report-html-pptx` が認識されるか確認してください。
 - 最初の依頼：
