@@ -235,7 +235,7 @@ See [START_HERE.md](START_HERE.md). To inspect independently authored examples, 
 - **Bring it to a workspace:** follow the [administrator pilot checklist](docs/WORKSPACE_ADMIN_GUIDE.md) and pin a reviewed version.
 - **Track the honest scope:** see the [changelog](CHANGELOG.md) and [security policy](SECURITY.md). Private-source internal-only export is a priority roadmap item, not a shipped feature.
 
-For an introduction and release notes, see [the launch notes](docs/LAUNCH_CHECKLIST.md).
+For changes and release status, see [CHANGELOG.md](CHANGELOG.md) and the [alpha.6 release notes](docs/RELEASE_NOTES_ALPHA6.md).
 
 If you find it useful, a GitHub star helps other people discover the project. Reports from actual first runs are even more helpful.
 
