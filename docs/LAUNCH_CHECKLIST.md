@@ -30,7 +30,7 @@ Suggested Topics:
 
 `chatgpt` · `document-automation` · `ai-agents` · `business-workflow` · `company-style` · `powerpoint` · `python` · `open-source`
 
-**Hero:** the repository README includes an illustrative workflow graphic. Use `docs/assets/social-preview.png` in **Settings → General → Social preview** until a verified replacement has been uploaded and configured. A file committed to the repository is not automatically the GitHub social-preview setting.
+**Visuals:** the generated infographic and mock-document screenshot were removed from the public introduction. If a social preview is added later, use a clear, genuinely tested product screenshot or restrained typography; do not imply an illustrative graphic is the product UI.
 
 **Do not upload the introductory video.** Prefer the static image, a reproducible fictional demo, and an honest explanation of the current capabilities. The five-stage product journey remains in [DEMO_FLOW.md](DEMO_FLOW.md).
 
@@ -81,8 +81,8 @@ Suggested Topics:
 ## Checklist before sharing
 
 - [ ] Review the actual GitHub first fold and all three language posts for scope accuracy.
-- [ ] Confirm the image is original or authorized; do not imply it is a product screenshot.
-- [ ] Set GitHub About, Topics and social preview via repository settings; committing images alone does not apply those settings.
+- [ ] Only use a visual that has been inspected and accurately represents the product.
+- [ ] Set GitHub About and Topics in repository settings. A social preview is optional and should use verified visual material.
 - [ ] Run the fictional ZIP exporter and public-release/manifest checks.
 - [ ] Verify access to the workspace installation instructions without claiming automatic rollout.
 - [ ] Invite DX and document-governance practitioners to test with **fictional** or appropriately authorized material.
