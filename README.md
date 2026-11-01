@@ -6,7 +6,7 @@
 
 Reusable agent skills for reports, proposals, and presentations: research → structure → writing → design → review. Includes reviewed company style profiles and optional Korean/Japanese editing. Open source under MIT; experimental alpha.
 
-[**See what is inside — no installation**](docs/SHOWCASE.md) · [**Try your first document**](docs/TRY_FIRST.md) · [**Download the Starter ZIP**](https://github.com/wlehd00000-cell/document-studio/releases/download/v0.1.0-alpha.6/document-studio-starter-v0.1.0-alpha.6.zip)
+[**Open the fictional demo — no installation**](https://document-studio-public-experiment.wlehd00000.chatgpt.site) · [**Try your first document**](docs/TRY_FIRST.md) · [**Download the Starter ZIP**](https://github.com/wlehd00000-cell/document-studio/releases/download/v0.1.0-alpha.6/document-studio-starter-v0.1.0-alpha.6.zip)
 
 ![Document Studio workflow: brief, research and structure, writing and design, then human review. Approved Company Packs supply reusable writing and layout rules.](docs/assets/document-studio-workflow.svg)
 

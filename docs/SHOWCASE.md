@@ -6,6 +6,8 @@
 
 ![Brief, evidence, composition and review, supported by approved Company Packs](assets/document-studio-workflow.svg)
 
+[**Open the fictional document in your browser**](https://document-studio-public-experiment.wlehd00000.chatgpt.site/example.html) — no account or installation required. [Read the approach and current limits](https://document-studio-public-experiment.wlehd00000.chatgpt.site).
+
 ## Inspect an actual included example
 
 The repository contains an independently authored **fictional Korean retail document**: a project brief, a synthetic target, and four work steps. This is an included composition example, not evidence of a new automatic generation or a real business result.
