@@ -2,6 +2,23 @@
 
 [한국어](docs/QUICKSTART_ko.md) · [日本語](docs/QUICKSTART_ja.md) · [Latest release](https://github.com/wlehd00000-cell/document-studio/releases/tag/v0.1.0-alpha.6)
 
+**Stop explaining your document workflow in every new AI conversation.**
+
+Reusable agent skills for reports, proposals, and presentations: research → structure → writing → design → review. Includes reviewed company style profiles and optional Korean/Japanese editing. Open source under MIT; experimental alpha.
+
+[**See what is inside — no installation**](docs/SHOWCASE.md) · [**Try your first document**](docs/TRY_FIRST.md) · [**Download the Starter ZIP**](https://github.com/wlehd00000-cell/document-studio/releases/download/v0.1.0-alpha.6/document-studio-starter-v0.1.0-alpha.6.zip)
+
+![Document Studio workflow: brief, research and structure, writing and design, then human review. Approved Company Packs supply reusable writing and layout rules.](docs/assets/document-studio-workflow.svg)
+
+| Your starting point | Start here |
+|---|---|
+| Curious, with nothing installed | [Inspect a fictional document and the workflow](docs/SHOWCASE.md) |
+| Already using Codex | [Install the ten skills](#codex-install-the-agent-skills) |
+| ChatGPT with Plugin Creator access | [Use the Starter ZIP](#chatgpt-use-the-starter-zip) |
+| Evaluating it for a team | [Review the administrator pilot guide](docs/WORKSPACE_ADMIN_GUIDE.md) |
+
+If these workflows are useful to you, **[star the repository](https://github.com/wlehd00000-cell/document-studio)** to help others find it. First-run feedback is welcome through the [short feedback form](https://github.com/wlehd00000-cell/document-studio/issues/new?template=first_run.md).
+
 Document Studio is a set of open-source skills and scripts for people who use AI agents to prepare reports, proposals, and presentations.
 
 I started building it after repeatedly having to explain the same document structure, writing style, and review process in new conversations. The goal is simple: make those working conventions reusable, while leaving room to design each new document for its audience.
