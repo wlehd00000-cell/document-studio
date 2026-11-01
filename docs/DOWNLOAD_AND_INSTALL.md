@@ -1,43 +1,37 @@
-# Download and install Document Studio (v0.1.0-alpha.6)
+# Release packages and installation
 
-> **Experimental alpha.** These archives are plugin packages, not a one-click ChatGPT installation or a guarantee of identical output across AI model versions. No private employer/customer documents or licensed font files are included.
+The current package release is **v0.1.0-alpha.6**. For the complete setup sequence and a first document request, use the [first-use guide](TRY_FIRST.md).
 
-## Choose one download
+## Choose a package
 
-| Package | Intended for | Download |
+| Package | Contents | Link |
 |---|---|---|
-| **Starter plugin** | Anyone who wants the 8 core document skills and optional Korean/Japanese modules | [Download Starter ZIP](https://github.com/wlehd00000-cell/document-studio/releases/download/v0.1.0-alpha.6/document-studio-starter-v0.1.0-alpha.6.zip) |
-| **Fictional retail demo** | Workspace admins and evaluators who want a ready-approved *fictional* Company Pack | [Download Demo ZIP](https://github.com/wlehd00000-cell/document-studio/releases/download/v0.1.0-alpha.6/demo-retail-documents-v0.1.0-alpha.6.zip) |
-| **Full source** | Developers who want to inspect or modify the analyzer and packaging tools | [Browse source](https://github.com/wlehd00000-cell/document-studio) |
+| Starter plugin | Generic document workflow with Korean/Japanese modules | [Download ZIP](https://github.com/wlehd00000-cell/document-studio/releases/download/v0.1.0-alpha.6/document-studio-starter-v0.1.0-alpha.6.zip) |
+| Fictional retail demo | Selected skills and an approved fictional Company Pack | [Download ZIP](https://github.com/wlehd00000-cell/document-studio/releases/download/v0.1.0-alpha.6/demo-retail-documents-v0.1.0-alpha.6.zip) |
+| Full source | Skills, analyzer, packaging tools, tests, and documentation | [Browse repository](https://github.com/wlehd00000-cell/document-studio) |
 
-These are **different from GitHub's Code → Download ZIP**, which downloads the entire source repository.
+GitHub's **Code → Download ZIP** retrieves the source repository. Use one of the packaged releases above for the ChatGPT ZIP route.
 
-## In three steps
+## Verify the download
 
-**1 — Download and verify.** Choose one archive from the [pre-release page](https://github.com/wlehd00000-cell/document-studio/releases/tag/v0.1.0-alpha.6), download `SHA256SUMS.txt`, and compare the archive's SHA-256. The archive contains a single plugin root with a `plugin.json` and `skills/*/SKILL.md`. Inspect the contents before installation.
+Download `SHA256SUMS.txt` from the [release page](https://github.com/wlehd00000-cell/document-studio/releases/tag/v0.1.0-alpha.6) and compare your archive's SHA-256.
 
-Windows PowerShell: `Get-FileHash .\document-studio-starter-v0.1.0-alpha.6.zip -Algorithm SHA256`
+Windows PowerShell:
 
-macOS/Linux: `shasum -a 256 document-studio-starter-v0.1.0-alpha.6.zip`
+```powershell
+Get-FileHash .\document-studio-starter-v0.1.0-alpha.6.zip -Algorithm SHA256
+```
 
-**2 — Register the plugin.** In an eligible ChatGPT account where **Plugin Creator** is available, upload the ZIP to a conversation using Plugin Creator and explicitly request creation of a **private** plugin from that ZIP. Confirm the returned plugin ID, scope and installed skill list. **Exporting/downloading a ZIP does not install anything.** If the account lacks Plugin Creator or permission to create plugins, follow the available account/workspace plugin setup process or use the source-only skill installation instead. Do not assume that every ChatGPT subscription supports ZIP installation.
+macOS/Linux:
 
-**3 — Test with harmless content.** In a new chat, select the installed plugin and try:
+```bash
+shasum -a 256 document-studio-starter-v0.1.0-alpha.6.zip
+```
 
-> Create a two-page proposal for a *fictional* employee onboarding pilot. Use the approved writing and layout conventions where available. Report anything that was not visually or factually verified.
+Inspect the archive. It should contain a plugin root with `plugin.json` and `skills/*/SKILL.md`. The Starter supplies the generic workflow; the retail demo also supplies the fictional profile. Original company files and font binaries are excluded.
 
-For the **fictional demo**, ask for the demo-retail Company's approved conventions, not a real employer's brand. Verify output, fonts, charts, and content manually. ChatGPT Business managers can publish the installed company-specific plugin to their workspace **only if the required administrative controls are available**; see the [admin guide](WORKSPACE_ADMIN_GUIDE.md).
+## Register and try it
 
-## If you prefer local source installation
+Follow the [ChatGPT registration steps](TRY_FIRST.md#chatgpt), confirm the saved plugin URL and ID, then use the [fictional first task](TRY_FIRST.md#first-task). Installation requires supported account permissions.
 
-Clone the repo, run `python scripts/install_local.py --verify-only`, then inspect and run `python scripts/install_local.py --language-skills ko,ja`. This is a *local agent skills* installation, not a ChatGPT account plugin registration.
-
-## Important scope and security boundaries
-
-- The Starter ZIP bundles the generic engine and language modules, **not a company-trained model or an approved employer profile**.
-- The retail example is independently fictional; it is **not evidence of fidelity to a real company's style**.
-- Private/restricted company-source packs are **rejected by the present public exporter**. Do not relabel confidential material as public. An organization-scoped, explicitly authorized private export path remains future work.
-- Output depends on the model and the local rendering environment. **Company Pack is a consistent *standard*, not a promise of identical outputs across models or upgrades.** Browser geometry and editable PowerPoint output require further verification.
-- The pre-release is not a security-audited enterprise deployment. Do not upload confidential company files to public issues or unapproved services.
-
-Found a problem? [Open an issue](https://github.com/wlehd00000-cell/document-studio/issues/new/choose) with a fictional/reproducible example.
+For local skills, use the [Codex route](TRY_FIRST.md#fast-agent-skill-install). For company-specific export, use the [technical guide](TECHNICAL_GUIDE.md). Current feature boundaries are summarized in the [project overview](../README.md#current-scope).

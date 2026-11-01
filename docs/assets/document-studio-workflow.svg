@@ -12,17 +12,17 @@
       <rect x="632" y="190" width="230" height="100" rx="10"/>
       <rect x="924" y="190" width="230" height="100" rx="10"/>
     </g>
-    <g fill="#102f51" font-size="19" font-weight="700">
-      <text x="68" y="227">01 / BRIEF</text>
-      <text x="360" y="227">02 / EVIDENCE</text>
-      <text x="652" y="227">03 / COMPOSE</text>
-      <text x="944" y="227">04 / REVIEW</text>
+    <g fill="#102f51" font-size="19" font-weight="700" text-anchor="middle">
+      <text x="163" y="227">01 / BRIEF</text>
+      <text x="455" y="227">02 / EVIDENCE</text>
+      <text x="747" y="227">03 / COMPOSE</text>
+      <text x="1039" y="227">04 / REVIEW</text>
     </g>
-    <g fill="#45627b" font-size="16">
-      <text x="68" y="260">Reader + decision</text>
-      <text x="360" y="260">Research + structure</text>
-      <text x="652" y="260">Writing + design</text>
-      <text x="944" y="260">Checks + human judgment</text>
+    <g fill="#45627b" font-size="16" text-anchor="middle">
+      <text x="163" y="260">Reader + decision</text>
+      <text x="455" y="260">Research + structure</text>
+      <text x="747" y="260">Writing + design</text>
+      <text x="1039" y="260">Checks + human judgment</text>
     </g>
     <g stroke="#f0aa83" stroke-width="3" fill="none">
       <path d="M290 240H326m-8-8 8 8-8 8M582 240H618m-8-8 8 8-8 8M874 240H910m-8-8 8 8-8 8"/>

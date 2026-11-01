@@ -31,6 +31,12 @@ python scripts/build_package_manifest.py --check
 
 Run a new plugin ZIP export against the fictional `company-packs/demo-retail` fixture when touching packaging, and inspect the produced archive. Browser layout checks require a working Chromium/Playwright environment; tests that skip without it are **not** evidence that browser rendering passed.
 
+## Keep the documentation easy to follow
+
+The README introduces the purpose, the reusable workflow, and the first action. Put installation details in `docs/TRY_FIRST.md`, advanced commands in `docs/TECHNICAL_GUIDE.md`, and new guide links in `docs/README.md`. Update Korean/Japanese guides and both plugin manifests together when the public description changes.
+
+Explain a concept once, then link to its full instructions. Keep experimental status next to the affected capability. Label fictional figures and illustrative assets where they appear. Add an image only when it explains something the text cannot show clearly; inspect its actual rendering, typography, source rights, and caption before publishing.
+
 ## Pull request checklist
 
 - [ ] The issue and user-facing behavior are clearly described.

@@ -1,19 +1,11 @@
-# Document Studio — public source edition
+# Install Document Studio
 
-An independent company-adaptable document-production plugin (experimental v0.1.0-alpha.6), not a 2.0 release of another plugin. It combines eight core skills with optional Korean/Japanese translation modules, resilient PDF/PPTX visual analysis, approved layout relationships, traceable HTML composition plans, explicit profile approval and public-only plugin ZIP exporting. Native visual/font QA remains environment-dependent.
+Use the [first-use guide](docs/TRY_FIRST.md) to choose the route for your environment:
 
-## Download a packaged preview (no Git required)
+- [Codex agent skills](docs/TRY_FIRST.md#fast-agent-skill-install): requires Node.js 22.20+ and Git.
+- [ChatGPT plugin registration](docs/TRY_FIRST.md#chatgpt): requires Plugin Creator and plugin creation permission.
+- [Full source setup](docs/TRY_FIRST.md#local-codex): for Python analysis and Company Pack packaging tools.
 
-Choose the [Starter ZIP or fictional demo ZIP](docs/DOWNLOAD_AND_INSTALL.md) from the [alpha pre-release](https://github.com/wlehd00000-cell/document-studio/releases/tag/v0.1.0-alpha.6). Verify checksums and inspect it; installation into ChatGPT requires Plugin Creator or appropriate administrator permissions. The GitHub Code ZIP is source only.
+For release ZIPs, checksums, and package contents, see [Download and install](docs/DOWNLOAD_AND_INSTALL.md). For team rollout, use the [workspace administrator guide](docs/WORKSPACE_ADMIN_GUIDE.md).
 
-## Try it
-
-1. Clone the repository and inspect `skills/report-html-pptx/SKILL.md`.
-2. Run `python scripts/install_local.py --verify-only` to verify the source bundle. Install with `python scripts/install_local.py --language-skills none` for core-only, or select `ko`, `ja`, `ko,ja` after inspecting the destination.
-3. Ask for a **fictional** Korean or Japanese business proposal and choose a document audience, purpose and format.
-
-The demos use invented companies and outcomes. Font binaries and private workplace assets are intentionally excluded. See `README.md` for limitations and `THIRD_PARTY_NOTICES.md` for licenses.
-
-## Requirements
-
-Python 3.10+, and optional Node.js plus an HTML/PPTX conversion environment. The README explains external rendering dependencies. Installing skills does not certify output tools or fonts.
+[Project overview](README.md) · [All documentation](docs/README.md)

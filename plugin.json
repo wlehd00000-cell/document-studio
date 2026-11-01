@@ -2,21 +2,21 @@
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "document-studio",
   "version": "0.1.0-alpha.6",
-  "description": "Review-first document-to-plugin toolkit for teams: analyze authorized references, approve evidence-backed Company Packs and Layout Grammar, export public-authorized plugin ZIPs, and guide new document production. Experimental alpha; private-source export not yet supported.",
+  "description": "Reusable agent skills for reports, proposals, and presentations. Plan, research, write, design, and review; add approved company conventions when needed. Experimental alpha.",
   "extensions": {
     "com.openai": {
       "interface": {
         "displayName": "Document Studio · 문서 제작 · 資料作成",
-        "shortDescription": "승인된 문서 규칙으로 만드는 맞춤형 제작 워크플로우",
-        "longDescription": "기업의 허가된 PDF/PPTX에서 글쓰기·디자인 근거를 추출하고, 담당자의 Company Pack 검토·승인을 거쳐 문서 제작 스킬을 구성합니다. 공개 배포가 허가된 팩만 ZIP으로 내보낼 수 있습니다. 비공개 사내 자료의 직접 배포와 원클릭 설치는 아직 지원하지 않는 실험 버전입니다.",
+        "shortDescription": "보고서·제안서의 기획부터 디자인·검수까지",
+        "longDescription": "보고서·제안서·발표자료를 위한 조사, 구조 설계, 작성, 디자인, 검수 절차를 재사용합니다. 검토한 회사별 문체·디자인 규칙은 Company Pack으로 관리하고 새 문서에 적용할 수 있습니다. 한국어·일본어 교정과 HTML·PPTX 제작 스킬을 포함합니다. 결과물 검수는 실제 사용 환경에서 수행해야 하며, 비공개 자료 기반 팩의 내보내기는 현재 지원하지 않는 실험 버전입니다.",
         "category": "Productivity",
         "capabilities": [
           "Write"
         ],
         "defaultPrompt": [
-          "가상 데모 Company Pack으로 어떤 문서를 만들 수 있는지 보여줘.",
-          "承認済みのデモCompany Packを使って、新しい提案資料の制作フローを案内してください。",
-          "우리 회사 문서를 참고해 맞춤형 플러그인을 만들고 싶어. 권한 확인부터 분석·검토·승인 절차와 현재 제약을 설명해줘."
+          "운영팀장에게 제안할 신입 온보딩 개선안을 한국어 HTML 2페이지로 만들어 줘. 12명 대상 4주 시범 운영, 가상 예산 300만 원으로 구성하고 숫자는 가정임을 표시해 줘.",
+          "架空の顧客対応改善プロジェクトについて、日本語の提案書を作成してください。読者・判断事項・必要な根拠を整理し、HTMLと実施した確認の結果を提示してください。",
+          "가상 데모 Company Pack의 문체와 디자인 규칙을 살펴보고, 새 제안서에 적용하는 과정을 안내해 줘."
         ],
         "developerName": "Document Studio open source"
       }
