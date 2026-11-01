@@ -16,7 +16,7 @@ Therefore, the full *private corporate references → internal-only plugin* rele
 
 ## Evaluate the working export using fictional materials
 
-1. Clone the [repository](../README.md#quick-start--export-a-demo-plugin) and use Python 3.12 with the relevant optional dependencies.
+1. Clone the repository using the [demo export setup](TECHNICAL_GUIDE.md#export-a-fictional-demo-plugin) and use Python 3.12 with the relevant optional dependencies.
 2. Run `python scripts/install_local.py --verify-only`.
 3. Export the included fictional retail pack:
 

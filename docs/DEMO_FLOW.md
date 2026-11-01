@@ -62,7 +62,7 @@ python skills/company-profile-analyzer/scripts/build_company_pack.py build \
   --default-language en-US --enabled-language en-US
 ```
 
-The result is deliberately **draft**, never auto-approved. Inspect the output and resolve any source-rights, font, visual-evidence, and proposed-rule decisions before running the documented `review` and `approve` stages. A real pack with private references may be refused by the public-only exporter unless distribution authorization and approvals are present. Do not modify checks or mark a source as publicly distributable merely to force export.
+The result is deliberately **draft**, never auto-approved. Inspect the output and resolve any source-rights, font, visual-evidence, and proposed-rule decisions before running the documented `review` and `approve` stages. The public-only exporter rejects packs derived from private/restricted references. Public-source packs also require distribution authorization and approval. Do not modify checks or mark a source as publicly distributable merely to force export.
 
 ### 4. Export the custom plugin
 
@@ -83,7 +83,7 @@ After installing the generated plugin in an eligible account, start a **new** ch
 
 > Using our approved company style, create a three-page proposal for a fictional customer-service pilot. Make the recommendation evidence-aware and preserve the approved writing and layout conventions. Show the HTML output and the QA result.
 
-Alternatively, use the HTML scaffold and [Layout Grammar planning/audit commands](../README.md#approved-layout-grammar--authored-html--browser-qa-experimental-alpha5) to test the accepted fictional pack locally. A new document still requires its own content planning and authoring. Browser layout acceptance depends on Chromium/Playwright and must say `UNVERIFIED` if unavailable; neither HTML validation nor successful ZIP export certifies a pixel-faithful PowerPoint.
+Alternatively, use the HTML scaffold and [Layout Grammar planning/audit commands](TECHNICAL_GUIDE.md#apply-layout-grammar-to-html) to test the accepted fictional pack locally. A new document still requires its own content planning and authoring. Browser layout acceptance depends on Chromium/Playwright and must say `UNVERIFIED` if unavailable; neither HTML validation nor successful ZIP export certifies a pixel-faithful PowerPoint.
 
 ## What to show in the GitHub launch video
 
