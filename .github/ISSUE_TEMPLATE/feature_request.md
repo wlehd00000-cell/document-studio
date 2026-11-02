@@ -1,21 +1,21 @@
 ---
-name: Feature request
-about: Propose an improvement to onboarding, approval, document quality, or deployment
+name: 改善案 / 개선 제안 / Feature request
+about: 実際の仕事で必要な改善 / 업무에 필요한 개선 / A useful workflow improvement
 title: "feat: "
 labels: []
 assignees: []
 ---
 
-### Who needs this?
+日本語・한국어・Englishで書けます。
 
-Workspace administrator, employee, individual creator, or contributor?
+### 誰の、どんな仕事か / 누구의 어떤 업무인가요 / Who and what task
 
-### Problem and current workaround
+管理者、社員、個人利用、開発など。
 
-### Proposed behavior and acceptance criteria
+### 現在困っていること / 현재 어려움 / Problem and workaround
 
-### Why this matters
+### 望む動作 / 원하는 동작 / Proposed behavior
 
-### Security, privacy, and source-rights considerations
+### 改善をどう確認するか / 개선 확인 방법 / How to verify the improvement
 
-If this request concerns **private company document export**, describe the required authorization and distribution boundaries. Do not propose disabling the public-export safety checks.
+<!-- Use publicly shareable examples. Private-source distribution requires a separately authorized organizational boundary; do not propose bypassing the public-export checks. -->

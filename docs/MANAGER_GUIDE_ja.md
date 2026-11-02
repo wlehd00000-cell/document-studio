@@ -2,7 +2,7 @@
 
 Document Studioは、**承認した会社ルールと文書制作スキルをまとめ、会社別プラグインのパッケージを作るためのオープンソース実験**です。管理者が準備するものと、社員の依頼後に動く制作工程を分けて評価してください。
 
-[日本語の全体像](https://document-studio-public-experiment.wlehd00000.chatgpt.site/) · [内部スキルの流れ](https://document-studio-public-experiment.wlehd00000.chatgpt.site/#plugin-flow) · [ソース](../README.md)
+[日本語の全体像](https://document-studio-public-experiment.wlehd00000.chatgpt.site/) · [内部スキルの流れ](https://document-studio-public-experiment.wlehd00000.chatgpt.site/#plugin-flow) · [文書ガイド一覧](README.md) · [ソース](../README.md)
 
 ## まず知っておく現在の範囲
 
@@ -56,7 +56,7 @@ Company Packは承認した規則と根拠のまとまりです。会社別依�
 - 不明な社内情報は作りません。必要な条件を確認し、未確認の範囲を報告します。
 - 任意のコンサルティング企画は明示的な選択時のみ使い、方向性と最終原稿の確認後に本制作へ戻ります。
 
-実際の工程と条件は [制作の窓口の仕様](../skills/report-html-pptx/SKILL.md)、収録内容は [スキル一覧](../README.en.md) を確認してください。
+実際の工程と条件は [制作の窓口の仕様](../skills/report-html-pptx/SKILL.md)、収録内容は [スキル一覧](TECHNICAL_GUIDE.md#whats-included-8-core-skills--2-optional-languages) を確認してください。
 
 ## 最初は同梱の架空Packで評価する
 

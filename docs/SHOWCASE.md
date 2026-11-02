@@ -1,5 +1,7 @@
 # 公開デモの見方
 
+[日本語トップ](../README.md) · [文書ガイド一覧](README.md) · [最初の1件を作る](QUICKSTART_ja.md) · [PowerPoint出力](PPTX_OUTPUT_ja.md)
+
 初めての場合は[日本語の紹介ページ](https://document-studio-public-experiment.wlehd00000.chatgpt.site/)から、**管理者の準備と社員の内部フロー → 出力と作例 → 現在の範囲とGitHubでの評価**の順で確認できます。[管理者の評価手順](MANAGER_GUIDE_ja.md) · [한국어](https://document-studio-public-experiment.wlehd00000.chatgpt.site/ko) · [English](../README.en.md)
 
 ## 確かめたいことから作例を選ぶ

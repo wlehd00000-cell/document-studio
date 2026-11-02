@@ -1,43 +1,59 @@
-# Document Studio — 資料作成の手順を再利用するためのツール
+# 日本語で、最初の資料を1件作る
 
-報告書や提案書を作るたびに、文体や構成、確認項目を説明し直すのが面倒で作り始めたツールです。
+[日本語トップ](../README.md) · [文書ガイド一覧](README.md) · [한국어](QUICKSTART_ko.md) · [English](TRY_FIRST.md)
 
-Document Studioは、調査 → 構成 → 執筆 → デザイン → 確認を再利用する、MITライセンスのオープンソースツールキットです。ローカルCodex用のスキルと、作成権限のあるChatGPTアカウント向けのプラグインパッケージを提供します。韓国語・日本語のビジネス文章モジュールを選択できます。
+まずは実在企業の資料を使わず、一般的な文書制作スキルで架空の1件を作ります。会社の資料分析や、社員全員への配布から始める必要はありません。見た目を先に確認したい場合は、[インストール不要の作例](SHOWCASE.md)を開いてください。
 
-[日本語トップ](../README.md) · [English](../README.en.md) · [한국어](QUICKSTART_ko.md)
+## 1. 使う環境を選ぶ
 
-## まず日本語の文書例を見る
+| 環境 | 必要なこと | 導入後の確認 |
+|---|---|---|
+| ローカルCodex | Node.js 22.20以降とGit。下のスキル配置コマンドを使う | 新しいセッションで `report-html-pptx` の認識を確認 |
+| ChatGPT | Plugin Creatorの作成機能と、対象アカウントの保存権限 | 保存したプラグインのURL/IDとスコープを確認し、新しいチャットで選択 |
+| 会社別パッケージの評価 | ソース全体、Python環境、Packの確認・承認と導入権限 | [管理者ガイド](MANAGER_GUIDE_ja.md)の架空Packで別途評価 |
 
-[公開デモ](https://document-studio-public-experiment.wlehd00000.chatgpt.site/)で、企画提案書4ページ・決裁サマリー・業務ガイドを確認できます。[文書専用ビュー](https://document-studio-public-experiment.wlehd00000.chatgpt.site/example?view=all&size=large)は全ページ・大きめの本文で表示します。表示は作成済みの架空文書であり、AIを実行するサービスではありません。
+ChatGPTに必要な作成機能がない場合、このZIP登録経路は利用できません。ファイルの保存や再ダウンロードで解決したことにはなりません。
 
-## まず資料を1件作ってみる
+## 2. スキルまたはプラグインを導入する
 
-会社資料の分析や管理者による配布から始める必要はありません。[初回利用ガイド](TRY_FIRST.md#日本語)には、導入手順とそのまま使える架空の提案書の依頼例があります。
+### ローカルCodex
 
-| 利用環境 | 始め方 |
-|---|---|
-| ChatGPT | [Starter ZIP](https://github.com/wlehd00000-cell/document-studio/releases/download/v0.1.0-alpha.6/document-studio-starter-v0.1.0-alpha.6.zip)をPlugin Creatorで個人用プラグインとして登録。作成機能と権限のあるアカウントが必要です。 |
-| ローカルCodex | 下記コマンドで配置し、新しいセッションで `report-html-pptx` が認識されるか確認します。 |
-| 組織での評価 | まず一般的な資料を作成し、次に[架空企業デモ](TRY_FIRST.md#company-demo)で会社別ルールの適用を確認します。 |
+自分の作業フォルダーで実行します。Document Studioのソースを置いたフォルダーで実行する必要はありません。
 
 ```bash
 npx --yes skills add wlehd00000-cell/document-studio --skill '*' -a codex --copy -y
 ```
 
-Node.js 22.20以降とGitが必要です。この方法ではエージェントのスキルのみをインストールし、会社別ZIPの書き出しツールは含みません。ソース全体を使う場合は[Pythonの導入手順](TRY_FIRST.md#local-codex)を参照してください。
+この経路は10個のスキルを配置します。ChatGPTへの登録や、会社別ZIPの生成ツールの導入は行いません。新しいCodexセッションで `report-html-pptx` が使えることを確認してください。[配置先とPythonを使う別経路 — English](TRY_FIRST.md#local-codex)
 
-インストール後はCodexの新しいセッションでスキルが認識されることを確認してください。ファイルの配置だけで出力品質が検証されるわけではありません。
+### ChatGPT
 
-## 通常の資料作成依頼との違い
+[Starter ZIP（alpha.6）](https://github.com/wlehd00000-cell/document-studio/releases/download/v0.1.0-alpha.6/document-studio-starter-v0.1.0-alpha.6.zip)とチェックサムを[配布ページ](https://github.com/wlehd00000-cell/document-studio/releases/tag/v0.1.0-alpha.6)で確認します。内容を確認してから、権限のある対象アカウントで[登録手順 — English](DOWNLOAD_AND_INSTALL.md#in-three-steps)に従います。
 
-毎回長い指示文を書く代わりに、作成手順と確認基準をスキルに分けています。会社別に承認したルールはCompany Packとして管理する設計です。単一の固定テンプレートを複製するのではなく、確認済みの文章・構成の原則を新しい資料に適用します。
+登録時には、添付ZIPから対象アカウントで非公開のDocument Studioプラグインを作成し、実際に保存したURL/IDと適用範囲を返すよう依頼します。アクティブなワークスペースがある場合はそのワークスペース、ない場合は個人アカウントへの保存となるため、保存先を確認してください。返されたプラグインを新しいチャットで選択します。ZIP生成・保存だけでは登録完了ではありません。[ZIPの違い](FAQ_ja.md#どのzipを選べばよいですか)
 
-品質向上率や所要時間の短縮率を測定した製品ではありません。同じモデル・同じ依頼を使い、スキルの有無による修正量や構成の違いを比較してください。
+## 3. 最初の依頼を送る
 
-## 現在の範囲
+導入済みのプラグイン、または認識済みの `report-html-pptx` に依頼します。
 
-実験的な **alpha.6** です。独自に学習したモデルや、ワンクリックで完成するPowerPointサービスではありません。非公開の社内資料を基にしたパックは、現在の公開エクスポーターでは配布できません。最終的なHTML/PPTX作成と表示確認は別工程です。モデル間で同じ結果は保証しません。
+> 架空の小売企業の運営責任者が検討する、4週間の試行導入の企画提案書を、日本語のHTMLで作成してください。1店舗・3品目・予算上限240万ウォン（KRW）を仮定として維持してください。
+>
+> 費用内訳、担当者、週別の計画、成功基準と中止条件を含めてください。一般的な制作工程を使い、実在企業のブランドや非公開資料は使わないでください。
+>
+> 原稿と実際のHTML表示を確認し、実施した確認と未確認の範囲を示してください。PPTXが必要な場合は、HTML確認後に編集可能なPPTXへ変換し、実際の出力・表示・編集性を確認してください。
 
-[導入の詳細と制約](DOWNLOAD_AND_INSTALL.md) · [会社別ルールの分析手順](DEMO_FLOW.md) · [初回利用のフィードバック](https://github.com/wlehd00000-cell/document-studio/issues/4)
+PPTXが不要ならHTMLまでで完了できます。変換環境・依存関係が使えない場合は、その範囲を未確認として報告させます。詳しくは[PowerPoint出力](PPTX_OUTPUT_ja.md)を参照してください。
 
-試してみた結果や導入時のつまずきは、[初回利用のIssue](https://github.com/wlehd00000-cell/document-studio/issues/4)で教えてください。
+## 4. 作成された結果を確認する
+
+- 原稿：目的、読み手、数値・単位・前提条件が維持され、仮定と確認済みの事実が分かれているか。
+- HTML：実際に開き、文字・書体・図表・画像の収まりを確認したか。
+- PPTX：必要な場合に変換し、実際の表示と編集性を確認したか。未実施の確認を完了扱いにしていないか。
+
+作例と同じ見た目や、モデル間の同一品質を保証するものではありません。スキルなしの依頼と比較するなら、同じモデル・同じ条件で実施し、修正が必要だった箇所を記録してください。
+
+## 会社の基準を使いたくなったら
+
+[管理者の評価ガイド](MANAGER_GUIDE_ja.md)で、承認Company Pack、基本スキル8個、選択言語モジュールと、導入後の新しい依頼の確認へ進みます。現在の公開エクスポーターは、非公開資料に由来するPackの内部配布を提供していません。
+
+[よくある質問](FAQ_ja.md) · [初回利用の結果を共有](https://github.com/wlehd00000-cell/document-studio/issues/new?template=first_run.md) · [技術ガイド — English](TECHNICAL_GUIDE.md)

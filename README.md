@@ -1,105 +1,69 @@
 # Document Studio
 
+[日本語](README.md) · [한국어](README.ko.md) · [English](README.en.md)
+
 **会社の資料づくりを、プラグインで再利用。**
 
-人が承認した会社ルールと文書制作スキルをまとめ、会社別プラグインのパッケージを作るためのオープンソース実験です。社員の依頼を、構成・執筆・デザイン・編集可能なPowerPoint出力へつなぐことを目指します。企業でAIをどう使うかを、文書業務から検証する個人の公開実験です。
+人が承認した会社ルールと文書制作スキルをまとめ、会社別プラグインのパッケージを作るオープンソース実験です。社員の依頼を、構成・執筆・デザイン・編集可能なPowerPoint出力へつなぎます。
 
-[**日本語の全体像**](https://document-studio-public-experiment.wlehd00000.chatgpt.site/) · [**管理者の評価手順**](docs/MANAGER_GUIDE_ja.md) · [**作例を選ぶ**](https://document-studio-public-experiment.wlehd00000.chatgpt.site/#examples)
+[紹介サイトを開く](https://document-studio-public-experiment.wlehd00000.chatgpt.site/) · [管理者の評価手順](docs/MANAGER_GUIDE_ja.md) · [文書ガイド一覧](docs/README.md)
 
-[한국어](README.ko.md) · [English / technical documentation](README.en.md)
+実験段階の **alpha.6** です。現在の公開エクスポーターは架空Pack・配布権限を確認した公開資料が対象で、非公開の社内資料からの内部配布は未対応です。
 
-[![同じ内容を白黒A4と整列レポートで比較した作例](docs/assets/showcase/comparison-ja.jpg)](https://document-studio-public-experiment.wlehd00000.chatgpt.site/compare)
+## まず、知りたいことを選ぶ
 
-## 管理者の準備と、社員の依頼後を分けて見る
-
-| 管理者が準備 | 社員の依頼後 |
+| 目的 | 次に見るもの |
 |---|---|
-| 権限を確認した参考資料を選び、提案された規則を確認・承認 | `report-html-pptx` が目的・読み手・言語・形式と、使用する承認済みCompany Packを選択・検証 |
-| Company Pack＋基本スキル8個＋選択した日本語/韓国語モジュールをパッケージ化 | 構成と必要な調査 → 執筆と言語確認 → デザインと必要な画像 → HTML確認 → 求めたPPTX出力と最終確認 |
-| 対応環境への導入、新規依頼によるPackのID・版と出力の確認を別途実施 | 導入先のAIが役割別の指示とスクリプトを適用。原稿・HTMLのみなら対応段階まで、部分修正は影響する工程へ戻る |
+| どんな資料が作れるか見たい | [インストール不要の作例](docs/SHOWCASE.md) |
+| チームで使えるか評価したい | [管理者ガイド：準備・現在の制約・架空Packの評価](docs/MANAGER_GUIDE_ja.md) |
+| 自分で資料を1件作りたい | [日本語の初回利用：環境選択から最初の依頼まで](docs/QUICKSTART_ja.md) |
+| 実装やコマンドを確認したい | [技術ガイド — English](docs/TECHNICAL_GUIDE.md) |
 
-現在の公開エクスポーターは、架空Packと配布権限を確認した公開資料のPackが対象です。**非公開の社内資料から内部だけに配布する経路と、ワンクリックの社内導入は未提供**です。パッケージ生成と、導入・会社ルールの適用・出力品質の確認は別工程です。
+## 管理者が基準を整え、社員が資料を依頼する
 
-[内部スキルの図解](https://document-studio-public-experiment.wlehd00000.chatgpt.site/#plugin-flow) · [架空Packで始める管理者の評価手順](docs/MANAGER_GUIDE_ja.md) · [環境と導入の詳細](docs/WORKSPACE_ADMIN_GUIDE.md)
+会社の用語・文体・デザイン・出典などを、確認した根拠とともに **Company Pack** で管理します。必要な会社基準を維持し、その範囲で構成や表現を目的に合わせる設計です。指定様式がある資料では、その配置規則も使います。
 
-## 作例で、3つの違いを確認
-
-| 確かめたいこと | 見る例 | 閲覧 |
-|---|---|---|
-| 決めたルールを保つ | 同じ2ページを白黒A4・整列レポート・横型提案で比較。ページ・言語が変わっても余白・文字・色・数値整列を維持 | [固定ルールの比較](https://document-studio-public-experiment.wlehd00000.chatgpt.site/compare) |
-| 読み手に合わせて構成する | 同じ案件を、企画提案書4ページ・決裁サマリー・業務ガイドへ | [目的別の文書](https://document-studio-public-experiment.wlehd00000.chatgpt.site/example?view=all&size=large) |
-| 表現を大胆に変える | 実験的・没入型の設定で、要点を1ページに再編集した別案 | [創造性を広げた例](https://document-studio-public-experiment.wlehd00000.chatgpt.site/creative) |
-
-日本語が標準で、韓国語へ切り替えられます。会社・目標・費用は仮定で、予算は**240万ウォン（KRW）**。画像は生成コンセプトです。作成済みの静的HTMLを表示しており、サイトではAIを実行しません。測定結果はこのHTML例に限り、生成の遵守率・実際の企業成果・印刷・PPTXを検証したものではありません。
-
-[作例の原稿・規則・確認条件](showcase/README.md) · [全作例のHTMLを保存](https://document-studio-public-experiment.wlehd00000.chatgpt.site/downloads/document-studio-demo.zip)
-
-## 参考資料から、次の文書まで
-
-**利用権限のあるPDF・PPTX → 文体・デザインの特徴と根拠を整理 → 人がルールを確認 → Company Packで管理 → 新しい資料の作成**という流れです。
-
-用語・文体、数値や出典、ブランドや指定様式の規則を保ちます。そのうえで章立てや説明方法を目的に合わせて決めます。固定レイアウトを指定した資料では、その配置ルールも守ります。作例の制作基準と、実在企業が承認したCompany Packは区別しています。
-
-| 依頼の状態 | 進め方 |
+| 担当 | 進め方 |
 |---|---|
-| 原稿や目的が決まっている | 通常の制作で、調査・執筆・言語確認・デザイン・出力へ。創造性や画像の存在感は別途指定できます |
-| 論点から相談したい | 任意の[深掘りコンサルティング企画](https://document-studio-public-experiment.wlehd00000.chatgpt.site/consulting)で、独立調査・反論・構成の代案を検討。方向性と最終原稿を確認してから本制作へ |
+| 管理者 | 権限のある参考資料を選ぶ → 提案された規則を確認・承認 → Packとスキルをパッケージ化 → 対応環境への導入と動作確認 |
+| 社員の依頼後 | 目的・読み手・言語・形式と使用Packを確認 → 構成と必要な調査 → 執筆と言語確認 → HTMLデザインと確認 → 必要なPPTX出力と最終確認 |
 
-コンサルティング企画は明示的に選んだ場合に使います。通常のお任せ制作にこの相談工程を追加しません。[機能仕様](skills/report-html-pptx/references/editorial-consulting-mode.md)
+基本スキル8個に、選択した日本語・韓国語の校閲モジュールを組み合わせます。導入先のAIが役割別の指示とスクリプトを適用します。社員が内部スキル名を順に指定する必要はありません。[内部フローの図解](https://document-studio-public-experiment.wlehd00000.chatgpt.site/#plugin-flow) · [実際のスキルと条件](docs/MANAGER_GUIDE_ja.md#社員の1件の依頼はどう進むか)
 
-## 編集できるPowerPointまで
+## 作例で確かめる、3つの違い
 
-HTMLは原稿とレイアウトを制作・確認する原本です。変換時はブラウザーの配置・寸法・文字の組版を測り、対応する本文・数値・表の文字・図形をPowerPointの編集可能な要素として組み直します。写真や図版は別の画像として配置します。会議前の数値修正や担当者名・文章の更新を、PowerPointで続けられる出力を目指す工程です。
-
-**HTMLで制作・確認 → 配置と文字を実測 → PPTXを組み立て → 実際の表示と編集性を検証**。
-
-複雑な装飾や一部SVGは画像として保持し、表の文字が編集可能でもPowerPointの表オブジェクトとは限りません。書体・実行環境に応じた出力確認が必要で、任意のHTMLの完全一致は保証しません。公開Web作例のPPTX変換・実機表示は未検証です。[仕組みの図解](https://document-studio-public-experiment.wlehd00000.chatgpt.site/#pptx-output) · [変換と確認の仕様](skills/html-to-pptx/SKILL.md)
-
-## 小さな仕事を1件試す
-
-### Codex
-
-Node.js 22.20以降とGitが必要です。自分の作業フォルダーで実行してください。
-
-```bash
-npx --yes skills add wlehd00000-cell/document-studio --skill '*' -a codex --copy -y
-```
-
-この方法はスキルを配置します。Codexの新しいセッションで `report-html-pptx` が認識されるか確認してください。会社別パッケージの書き出しツールは、別途ソース全体が必要です。
-
-### ChatGPT
-
-[Starter ZIP（alpha.6）](https://github.com/wlehd00000-cell/document-studio/releases/download/v0.1.0-alpha.6/document-studio-starter-v0.1.0-alpha.6.zip)と、[日本語の導入ガイド](docs/QUICKSTART_ja.md)を参照してください。Plugin Creatorの作成機能と保存権限のあるアカウントが必要です。ZIPの保存だけではプラグインの導入は完了しません。
-
-### 最初の依頼例
-
-> 架空の小売企業の運営責任者が検討する、4週間の試行導入の企画提案書を、日本語のHTMLで作成し、確認後に編集可能なPPTXへ変換してください。<br>
-> 1店舗・3品目・予算上限240万ウォン（KRW）という仮定を維持してください。<br>
-> 費用内訳、担当者、週別の計画、成功基準と中止条件を含めてください。<br>
-> 仮定と実際に確認した事実を区別し、原稿・HTML表示・PPTX出力で実施した確認と未確認の範囲を示してください。
-
-文書の見た目に加え、数値、担当者、条件、実施した確認の範囲を見てください。表示中のデモと同じ出力になる保証はありません。
-
-## 仕組みと現在の範囲
-
-基本の流れは、**利用権限のある参考資料 → 特徴と根拠の抽出 → 人による確認・承認 → Company Pack → 新しい資料の作成**です。8つの基本スキルと、日本語・韓国語の2つの任意言語スキルを収録しています。
-
-| 項目 | 現在の状態 |
+| 見るポイント | 作例 |
 |---|---|
-| PDF・PPTXからの文体・デザイン分析、ルールの確認・承認 | 実装済みの実験機能。人による解釈と確認が必要 |
-| 架空・公開配布の権限を確認したCompany Packの書き出し | 実装済み。登録・導入は別工程 |
-| 非公開の社内資料を基にしたパックの内部配布 | 公開エクスポーターでは未対応・ブロック対象 |
-| ワークスペースへの自動配布 | 未対応。権限のある管理者による導入が必要 |
-| HTML・編集可能なPPTXの最終品質 | 執筆・表示・変換・目視確認をそれぞれ実施する必要あり |
+| 決めたデザイン規則を維持 | [同じ2ページを、白黒A4・整列A4・横型提案で比較](https://document-studio-public-experiment.wlehd00000.chatgpt.site/compare) |
+| 読み手に合わせた情報の順序 | [企画提案書4ページ・決裁サマリー・業務ガイド](https://document-studio-public-experiment.wlehd00000.chatgpt.site/example?view=all&size=large) |
+| 表現を大胆に変える | [同じ案件の要点を再編集した、創造性の1ページ](https://document-studio-public-experiment.wlehd00000.chatgpt.site/creative) |
 
-実験段階のalpha版です。モデル間の同一品質、自動的なブランド再現、企業全体の生産性改善は保証していません。[技術説明とCLI](README.en.md) · [管理者向けの現在の制約](docs/WORKSPACE_ADMIN_GUIDE.md) · [変更履歴](CHANGELOG.md)
+[![同じ内容を白黒A4と整列A4の規則で表示した日本語の作例](docs/assets/showcase/comparison-ja.jpg)](https://document-studio-public-experiment.wlehd00000.chatgpt.site/compare)
 
-## 使った結果を共有
+日本語が標準で、韓国語へ切り替えられます。作例は架空の案件で、予算は240万ウォン（KRW）。静的HTMLを表示し、サイト内ではAIを実行しません。測定はこのHTML例の表示に限り、新規生成・企業成果・印刷・PPTXの検証結果ではありません。[原稿・規則・確認条件](showcase/README.md)
 
-この方向に関心があれば、**[GitHubのStarで保存](https://github.com/wlehd00000-cell/document-studio)**してください。初回利用で作れた資料、修正が必要だった箇所、繰り返し伝えていた基準などを、[初回利用のフィードバック](https://github.com/wlehd00000-cell/document-studio/issues/new?template=first_run.md)で共有いただけると、次の検証につながります。
+論点から検討したい場合は、任意の[深掘りコンサルティング企画](https://document-studio-public-experiment.wlehd00000.chatgpt.site/consulting)も紹介しています。創造性設定とは別で、明示的に選んだ場合に利用する進め方です。
 
-機密資料を含まない、公開可能な例を使用してください。[Contributing](CONTRIBUTING.md) · [Security](SECURITY.md)
+## HTMLから、編集できるPowerPointへ
 
-## ライセンス
+HTMLで原稿とレイアウトを確認した後、ブラウザーの位置・寸法・文字を測り、対応する本文・数値・図形をPowerPointの編集可能な要素として組み直します。会議前の数値修正、担当者名や文章の更新を続けるための工程です。
 
-独自の成果物は[MIT](LICENSE)です。公開文書ビューに同梱するPretendard / Pretendard JPは、それぞれのOFLライセンス表示に従います。[第三者の権利表示](THIRD_PARTY_NOTICES.md)を参照してください。個人のオープンソースプロジェクトであり、勤務先や商標権者による導入・推奨・保証を示しません。
+写真や複雑な装飾は画像として保持する場合があります。出力後の書体・表示・編集性の確認が必要で、任意のHTMLの完全一致は保証しません。公開作例のPPTX変換は未検証です。[業務での使い方と変換構造](docs/PPTX_OUTPUT_ja.md)
+
+## 最初は、小さな1件から
+
+個人で使う場合は[初回利用ガイド](docs/QUICKSTART_ja.md)から、会社別パッケージを評価する場合は[管理者ガイド](docs/MANAGER_GUIDE_ja.md)の架空Packから始められます。
+
+| 確認すること | 現在の状態 |
+|---|---|
+| 承認した架空Pack・配布権限のある公開資料のPackをZIPに出力 | 実装済みの評価経路 |
+| インストール、Packの選択、新しい依頼、HTML/PPTX品質 | 導入先で別途確認 |
+| 非公開資料の内部配布、ワンクリック社内導入 | 未対応 |
+
+[HTML閲覧ZIP・プラグインZIP・ソースの違い](docs/FAQ_ja.md#どのzipを選べばよいですか)も確認してください。ZIPの保存だけではプラグインは導入されません。
+
+企業でAIをどう使うかを、文書業務から検証する個人のプロジェクトです。関心があればStarで保存し、試した結果や必要だった修正を[初回利用のフィードバック](https://github.com/wlehd00000-cell/document-studio/issues/new?template=first_run.md)で教えてください。日本語・한국어・Englishで投稿できます。
+
+[よくある質問](docs/FAQ_ja.md) · [貢献する](CONTRIBUTING.md) · [変更履歴](CHANGELOG.md) · [セキュリティ](SECURITY.md)
+
+独自の成果物は[MIT](LICENSE)、同梱書体などは[第三者の権利表示](THIRD_PARTY_NOTICES.md)に従います。勤務先や商標権者による導入・推奨・保証を示しません。

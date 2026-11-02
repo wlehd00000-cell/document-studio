@@ -1,23 +1,30 @@
 ---
-name: First-run feedback / 첫 사용 / 初回利用
-about: Report where installation or the first fictional task worked or stopped
+name: 初回利用 / 첫 사용 / First-run feedback
+about: できたこと・止まった段階 / 사용 결과와 막힌 단계 / What worked or stopped
 title: ""
 ---
 
-<!-- No confidential files, credentials or personal information. Korean, Japanese and English welcome. -->
+日本語・한국어・Englishで書けます。分かる範囲だけで構いません。
+알고 있는 내용만 간단히 작성해 주세요. Complete only what you know.
 
-**Environment:** ChatGPT / local Codex / other (name and version if known)
+### 使った環境 / 사용 환경 / Environment
 
-**Release:**
+ChatGPT / local Codex / other（版が分かれば記載）
 
-**How did you find this project?** (optional: GeekNews / Threads / Qiita / GitHub / other)
+### 使用した版・経路 / 버전·사용 경로 / Version and route
 
-**Furthest step completed:** downloaded / saved plugin URL returned / local files installed / skills discovered / first HTML created / inspected output / reused for another task
+例：紹介サイトを見る、Starter ZIP、架空PackのZIP、スキル配置、ソースから実行。
+Example: Site only, Starter ZIP, fictional Pack ZIP, skills install, or source checkout.
 
-**Where did you stop, or what worked?**
+### どこまで進めたか / 진행한 단계 / Furthest step
 
-**Exact error or synthetic example:**
+例：閲覧、ダウンロード、プラグイン保存、スキル認識、HTML作成・確認、PPTX出力・確認。
+Example: viewed, downloaded, plugin saved, skills discovered, HTML created/reviewed, PPTX exported/reviewed.
 
-**Most useful improvement:**
+### できたこと・止まったこと / 결과·막힌 점 / What worked or stopped
 
-<!-- Do not post a private plugin URL if it reveals account/workspace details. A redacted confirmation is enough. -->
+### 最も必要な改善 / 가장 필요한 개선 / Most useful improvement
+
+### このプロジェクトを知った場所 / 알게 된 경로 / How you found it（任意 / optional）
+
+<!-- Use a fictional/public-authorized example. No confidential files, credentials, private plugin URLs or identifying logs. A redacted registration confirmation is enough. -->

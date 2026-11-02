@@ -1,5 +1,7 @@
 # Document Studio — public source edition
 
+[日本語の初回利用](docs/QUICKSTART_ja.md) · [한국어 첫 사용](docs/QUICKSTART_ko.md) · [Documentation map](docs/README.md). For company-specific evaluation, start with the [Japanese manager guide](docs/MANAGER_GUIDE_ja.md). This page covers source installation.
+
 An independent company-adaptable document-production plugin (experimental v0.1.0-alpha.6), not a 2.0 release of another plugin. It combines eight core skills with optional Korean/Japanese translation modules, resilient PDF/PPTX visual analysis, approved layout relationships, traceable HTML composition plans, explicit profile approval and public-only plugin ZIP exporting. Native visual/font QA remains environment-dependent.
 
 ## Download a packaged preview (no Git required)
