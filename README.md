@@ -1,58 +1,39 @@
 # Document Studio
 
-**AIが変わっても、会社の文書基準を次の仕事へ。**
+**会社の文書基準を、AIの資料作成へ。**
 
-企業でのAI活用を、文書業務から検証するオープンソースの実験です。人が確認した用語・文体・検討基準を、読み手と目的の異なる資料にも引き継ぐ方法を探っています。
+参考資料から文体やデザインの特徴を整理し、人が確認したルールを次の資料作成で使うための、オープンソースのスキル集です。企業でAIをどう使うかを、文書業務から検証する個人の公開実験です。
 
-[**日本語デモを開く**](https://document-studio-public-experiment.wlehd00000.chatgpt.site/) · [**同じ内容を3つの様式で比較**](https://document-studio-public-experiment.wlehd00000.chatgpt.site/compare) · [**導入ガイド**](docs/QUICKSTART_ja.md)
+[**日本語の紹介**](https://document-studio-public-experiment.wlehd00000.chatgpt.site/) · [**作例を選ぶ**](https://document-studio-public-experiment.wlehd00000.chatgpt.site/#examples) · [**導入ガイド**](docs/QUICKSTART_ja.md)
 
 [한국어](README.ko.md) · [English / technical documentation](README.en.md)
 
-[![同じ内容を白黒A4と整列レポートで並べ、事前定義した規則を確認する画面](docs/assets/showcase/comparison-ja.jpg)](https://document-studio-public-experiment.wlehd00000.chatgpt.site/compare)
+[![同じ内容を白黒A4と整列レポートで比較した作例](docs/assets/showcase/comparison-ja.jpg)](https://document-studio-public-experiment.wlehd00000.chatgpt.site/compare)
 
-## 最初に決めたデザイン規則を、次のページにも
+## 作例で、3つの違いを確認
 
-見た目を変えるだけでなく、**様式ごとに事前定義した規則を、別のページや訳文でも維持する**ための比較例です。同じ案件・本文・数値を共通データから表示します。日本語が標準で、韓国語へ切り替えても用紙・余白・文字サイズ・色・数値整列の規則は変えません。
-
-| 様式 | 先に決めた規則 | 2ページを確認 |
+| 確かめたいこと | 見る例 | 閲覧 |
 |---|---|---|
-| 完全な白黒A4 | 縦210×297mm、余白18mm、本文11pt/1.6、黒・白のみ、画像なし、数値右揃え | [白黒文書](https://document-studio-public-experiment.wlehd00000.chatgpt.site/compare?left=mono&mode=focus) |
-| 整列レポート | A4縦、余白18mm、本文11pt/1.65、2列・列間6mm、限定パレット、数値右揃え | [整列文書](https://document-studio-public-experiment.wlehd00000.chatgpt.site/compare?left=aligned&mode=focus) |
-| 横型ビジュアル提案 | A4横297×210mm、余白15mm、本文11pt/1.6、画像と本文・表の分離、限定パレット | [横型提案](https://document-studio-public-experiment.wlehd00000.chatgpt.site/compare?left=visual&mode=focus) |
+| 決めたルールを保つ | 同じ2ページを白黒A4・整列レポート・横型提案で比較。ページ・言語が変わっても余白・文字・色・数値整列を維持 | [固定ルールの比較](https://document-studio-public-experiment.wlehd00000.chatgpt.site/compare) |
+| 読み手に合わせて構成する | 同じ案件を、企画提案書4ページ・決裁サマリー・業務ガイドへ | [目的別の文書](https://document-studio-public-experiment.wlehd00000.chatgpt.site/example?view=all&size=large) |
+| 表現を大胆に変える | 実験的・没入型の設定で、要点を1ページに再編集した別案 | [創造性を広げた例](https://document-studio-public-experiment.wlehd00000.chatgpt.site/creative) |
 
-2つを並べる／1つを大きく表示、1・2ページ、日本語／韓国語、原寸表示、検査用ガイドを切り替えられます。画面下では事前定義と現在のHTML表示を照合します。ルールは [JSON](showcase/design-contracts.json)、本文は [共通データ](showcase/comparison-data.js)、測定処理は [JavaScript](showcase/comparison.js) で公開しています。
+日本語が標準で、韓国語へ切り替えられます。会社・目標・費用は仮定で、予算は**240万ウォン（KRW）**。画像は生成コンセプトです。作成済みの静的HTMLを表示しており、サイトではAIを実行しません。測定結果はこのHTML例に限り、生成の遵守率・実際の企業成果・印刷・PPTXを検証したものではありません。
 
-**測定は静的HTML例の表示に限ります。** AIによる新規生成の遵守率、Company Packの自動分析・適用、印刷・PPTXの品質を実証したものではありません。3つの規則はこの比較用の制作基準であり、実在企業が承認したCompany Packではありません。
+[作例の原稿・規則・確認条件](showcase/README.md) · [全作例のHTMLを保存](https://document-studio-public-experiment.wlehd00000.chatgpt.site/downloads/document-studio-demo.zip)
 
-## 創造性を広げた1ページと、企画の深掘り
+## 参考資料から、次の文書まで
 
-[**実験的・没入型の1ページを見る**](https://document-studio-public-experiment.wlehd00000.chatgpt.site/creative) · [**コンサルティング企画の進め方**](https://document-studio-public-experiment.wlehd00000.chatgpt.site/creative#consulting)
+**利用権限のあるPDF・PPTX → 文体・デザインの特徴と根拠を整理 → 人がルールを確認 → Company Packで管理 → 新しい資料の作成**という流れです。
 
-[![リフィル売場の限定運営を、次の判断へ続く紙の道として表現した1ページ](docs/assets/showcase/creative-ja.jpg)](https://document-studio-public-experiment.wlehd00000.chatgpt.site/creative)
+用語・文体、数値や出典、ブランドや指定様式の規則を保ちます。そのうえで章立てや説明方法を目的に合わせて決めます。固定レイアウトを指定した資料では、その配置ルールも守ります。作例の制作基準と、実在企業が承認したCompany Packは区別しています。
 
-創造性の設定は、比喩・視点・大小関係・読む順序を変え、視覚表現の設定は色・質感・画像の存在感を変えます。この例は `showcase`（`experimental / immersive`）を採用。用語・数値・条件を保ち、同じ架空案件の要点をA4横1ページに再編集しました。既存の2ページ比較と全文が同一の例ではありません。生成コンセプト画像と、編集可能なタイトル・本文・数値を組み合わせています。
+| 依頼の状態 | 進め方 |
+|---|---|
+| 原稿や目的が決まっている | 通常の制作で、調査・執筆・言語確認・デザイン・出力へ。創造性や画像の存在感は別途指定できます |
+| 論点から相談したい | 任意の[深掘りコンサルティング企画](https://document-studio-public-experiment.wlehd00000.chatgpt.site/consulting)で、独立調査・反論・構成の代案を検討。方向性と最終原稿を確認してから本制作へ |
 
-任意の**深掘りコンサルティング企画**では、AIが独立調査、反論と実際の文書事例の検討、論理構成の代案を示します。必要な場合は代表1〜2ページを早期試作し、執筆者が方向を選んだ後は調査と原稿を深めます。最終原稿を受け入れた後、通常のデザイン・出力・検証へ進みます。
-
-創造性設定とは別の選択で、利用者が明示的に選んだ場合に使います。通常のお任せ制作にこの相談工程を追加しません。[仕様](skills/report-html-pptx/references/editorial-consulting-mode.md)を参照してください。公開サイトは作成済みの例と機能紹介を表示するもので、実際の相談やAI生成を実行しません。
-
-## 読み手と目的を変えた文書例も見る
-
-| 文書 | 読み手が確認すること | 閲覧 |
-|---|---|---|
-| 企画提案書・4ページ | 範囲、仮説、予算、実行計画、終了後の判断 | [全ページを表示](https://document-studio-public-experiment.wlehd00000.chatgpt.site/example?doc=proposal&view=all&size=large) |
-| 決裁サマリー・1ページ | 承認する事項、先行条件、承認に含めない範囲 | [大きく表示](https://document-studio-public-experiment.wlehd00000.chatgpt.site/example?doc=approval&view=all&size=large) |
-| 業務ガイド・1ページ | 担当者、手順、例外発生時の対応、引継ぎ | [大きく表示](https://document-studio-public-experiment.wlehd00000.chatgpt.site/example?doc=guide&view=all&size=large) |
-
-会社、取引目標、費用は説明用の仮定です。予算は**240万ウォン（KRW）**で、円換算していません。画像は生成コンセプトであり、実際の店舗・設置実績ではありません。登録やインストールは不要で、閲覧中にAIモデルを実行しません。
-
-[HTML・JavaScript・確認条件](showcase/README.md) · [日本語・韓国語HTMLを保存](https://document-studio-public-experiment.wlehd00000.chatgpt.site/downloads/document-studio-demo.zip)
-
-## この実験で考えていること
-
-AIの性能が上がっても、組織で使うには、用語や文体、出典、確認責任をそろえる必要があります。一方で、構成や表現まで固定すると、新しい資料の目的に合わない場合があります。
-
-Document Studioでは、会社が維持する基準を人が確認し、その範囲で資料の構成を変えられるようにする方法を試しています。モデルの性能比較にも関心を持ちながら、その性能を実際の仕事でどう使うかを継続して検証します。組織全体の生産性改善を実証した製品ではありません。
+コンサルティング企画は明示的に選んだ場合に使います。通常のお任せ制作にこの相談工程を追加しません。[機能仕様](skills/report-html-pptx/references/editorial-consulting-mode.md)
 
 ## 小さな仕事を1件試す
 
