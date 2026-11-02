@@ -4,7 +4,11 @@
 
 Document Studioは、調査 → 構成 → 執筆 → デザイン → 確認を再利用する、MITライセンスのオープンソースツールキットです。ローカルCodex用のスキルと、作成権限のあるChatGPTアカウント向けのプラグインパッケージを提供します。韓国語・日本語のビジネス文章モジュールを選択できます。
 
-[English](../README.md) · [한국어](QUICKSTART_ko.md)
+[日本語トップ](../README.md) · [English](../README.en.md) · [한국어](QUICKSTART_ko.md)
+
+## まず日本語の文書例を見る
+
+[公開デモ](https://document-studio-public-experiment.wlehd00000.chatgpt.site/)で、企画提案書4ページ・決裁サマリー・業務ガイドを確認できます。[文書専用ビュー](https://document-studio-public-experiment.wlehd00000.chatgpt.site/example?view=all&size=large)は全ページ・大きめの本文で表示します。表示は作成済みの架空文書であり、AIを実行するサービスではありません。
 
 ## まず資料を1件作ってみる
 
