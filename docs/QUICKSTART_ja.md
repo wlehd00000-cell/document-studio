@@ -30,7 +30,7 @@ npx --yes skills add wlehd00000-cell/document-studio --skill '*' -a codex --copy
 
 [Starter ZIP（alpha.6）](https://github.com/wlehd00000-cell/document-studio/releases/download/v0.1.0-alpha.6/document-studio-starter-v0.1.0-alpha.6.zip)とチェックサムを[配布ページ](https://github.com/wlehd00000-cell/document-studio/releases/tag/v0.1.0-alpha.6)で確認します。内容を確認してから、権限のある対象アカウントで[登録手順 — English](DOWNLOAD_AND_INSTALL.md#in-three-steps)に従います。
 
-登録時には、添付ZIPから非公開の個人用Document Studioプラグインを作成し、保存したURL/IDと適用範囲を返すよう依頼します。返されたプラグインを新しいチャットで選択してください。ZIP生成・保存だけでは登録完了ではありません。[ZIPの違い](FAQ_ja.md#どのzipを選べばよいですか)
+登録時には、添付ZIPから対象アカウントで非公開のDocument Studioプラグインを作成し、実際に保存したURL/IDと適用範囲を返すよう依頼します。アクティブなワークスペースがある場合はそのワークスペース、ない場合は個人アカウントへの保存となるため、保存先を確認してください。返されたプラグインを新しいチャットで選択します。ZIP生成・保存だけでは登録完了ではありません。[ZIPの違い](FAQ_ja.md#どのzipを選べばよいですか)
 
 ## 3. 最初の依頼を送る
 
