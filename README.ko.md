@@ -41,3 +41,7 @@ npx --yes skills add wlehd00000-cell/document-studio --skill '*' -a codex --copy
 ## 창의력 예제와 컨설팅 기획
 
 [실험적·몰입형 한 페이지](https://document-studio-public-experiment.wlehd00000.chatgpt.site/creative?lang=ko)는 같은 가상 업무의 요점을 재구성한 별도 안입니다. [심층 컨설팅 기획](https://document-studio-public-experiment.wlehd00000.chatgpt.site/consulting?lang=ko)은 명시적 선택 시 독립 조사·반론·실제 문서 비교로 논지를 발전시키고, 방향 선택과 최종 원고 수락을 거쳐 본제작으로 진행하는 기능입니다. 사이트에서는 정적 예제와 설명만 표시합니다.
+
+## 편집 가능한 PowerPoint 출력
+
+HTML에서 원고와 레이아웃을 확인한 뒤, 실제 배치·치수·글자 조판을 측정해 대응하는 본문·수치·표의 글자·도형을 PowerPoint의 편집 가능한 요소로 재구성합니다. 사진과 복잡한 장식은 이미지로 유지할 수 있습니다. 출력 후 표시·글자 보존·서체·편집성을 확인하는 과정까지 포함합니다. 모든 HTML의 완전 일치를 보장하지 않으며, 공개 웹 예제의 PPTX 변환과 실제 표시는 아직 검증하지 않았습니다. [구조도](https://document-studio-public-experiment.wlehd00000.chatgpt.site/ko#pptx-output) · [변환 명세](skills/html-to-pptx/SKILL.md)

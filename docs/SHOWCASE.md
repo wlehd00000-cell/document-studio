@@ -23,3 +23,11 @@
 表示の測定と、Company Packの自動分析、新規生成の遵守率、実際の企業の採用・生産性向上は区別しています。印刷・PPTXは未検証です。[原稿・規則・確認条件](../showcase/README.md) · [全HTMLを保存](https://document-studio-public-experiment.wlehd00000.chatgpt.site/downloads/document-studio-demo.zip)
 
 既存の[小さな韓国語HTML例](../skills/report-html-pptx/assets/accepted-staff-guide/index.html)と[小売](../company-packs/demo-retail/pack.json)・[製造業](../company-packs/demo-manufacturing/pack.json)のCompany Packも引き続き参照できます。今回の画面例とは別の既存資料です。
+
+## 編集できるPowerPointまで
+
+HTMLは原稿とレイアウトを制作・確認する原本です。変換時はブラウザーの配置・寸法・文字の組版を測り、対応する本文・数値・表の文字・図形をPowerPointの編集可能な要素として組み直します。写真や図版は別の画像として配置します。会議前の数値修正や担当者名・文章の更新を、PowerPointで続けられる出力を目指す工程です。
+
+**HTMLで制作・確認 → 配置と文字を実測 → PPTXを組み立て → 実際の表示と編集性を検証**。
+
+複雑な装飾や一部SVGは画像として保持し、表の文字が編集可能でもPowerPointの表オブジェクトとは限りません。書体・実行環境に応じた出力確認が必要で、任意のHTMLの完全一致は保証しません。公開Web作例のPPTX変換・実機表示は未検証です。[仕組みの図解](https://document-studio-public-experiment.wlehd00000.chatgpt.site/#pptx-output) · [変換と確認の仕様](../skills/html-to-pptx/SKILL.md)
