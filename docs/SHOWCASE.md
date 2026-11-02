@@ -1,56 +1,33 @@
-# Document Studio: look around before installing
+# 日本語の公開文書デモ
 
-**Make your document workflow reusable.** Document Studio is an MIT-licensed collection of agent skills and Python tools for reports, proposals, and presentations. It packages working conventions in readable files rather than requiring you to repeat them in every AI conversation.
+**同じ案件でも、読み手が変われば構成が変わります。** 架空の小売企業を題材に、企画提案書、決裁サマリー、業務ガイドを制作しました。
 
-[Try a small task](TRY_FIRST.md) · [한국어](QUICKSTART_ko.md) · [日本語](QUICKSTART_ja.md) · [Source](../skills/)
+[日本語デモを開く](https://document-studio-public-experiment.wlehd00000.chatgpt.site/) · [日本語の導入](QUICKSTART_ja.md) · [한국어](https://document-studio-public-experiment.wlehd00000.chatgpt.site/ko) · [English](../README.en.md)
 
-![Brief, evidence, composition and review, supported by approved Company Packs](assets/document-studio-workflow.svg)
+[![日本語の公開サイト](assets/showcase/overview-ja.jpg)](https://document-studio-public-experiment.wlehd00000.chatgpt.site/)
 
-[**Open the fictional document in your browser**](https://document-studio-public-experiment.wlehd00000.chatgpt.site/example.html) — no account or installation required. [Read the approach and current limits](https://document-studio-public-experiment.wlehd00000.chatgpt.site).
+## 文書を大きく確認
 
-## Inspect an actual included example
+| 文書 | 内容 | リンク |
+|---|---|---|
+| 企画提案書・4ページ | 範囲、仮説と測定、運営と費用、計画と判断 | [全ページ・拡大本文](https://document-studio-public-experiment.wlehd00000.chatgpt.site/example?doc=proposal&view=all&size=large) |
+| 決裁サマリー・1ページ | 承認事項、先行条件、承認に含めない範囲 | [閲覧](https://document-studio-public-experiment.wlehd00000.chatgpt.site/example?doc=approval&view=all&size=large) |
+| 業務ガイド・1ページ | 担当者、手順、例外、引継ぎ | [閲覧](https://document-studio-public-experiment.wlehd00000.chatgpt.site/example?doc=guide&view=all&size=large) |
 
-The repository contains an independently authored **fictional Korean retail document**: a project brief, a synthetic target, and four work steps. This is an included composition example, not evidence of a new automatic generation or a real business result.
+文書専用ビューは、全ページ表示と1ページ表示、文字サイズ、共通基準表示を切り替えられます。登録やインストールは不要です。表示の切り替えでAIを実行するものではありません。
 
-1. [Read its self-contained HTML source](../skills/report-html-pptx/assets/accepted-staff-guide/index.html).
-2. To see it rendered, [download the HTML file](https://raw.githubusercontent.com/wlehd00000-cell/document-studio/main/skills/report-html-pptx/assets/accepted-staff-guide/index.html), save it as `document-studio-example.html`, and open it in a browser. It needs no JavaScript, AI account, plugin, or company upload. Fonts may differ on your computer.
-3. [Inspect the fictional retail Company Pack](../company-packs/demo-retail/pack.json): the reusable style profile is separate from the document's content.
+![仮の取引目標と検証項目](assets/showcase/analysis-ja.jpg)
 
-For a different starting point, inspect the [fictional manufacturing pack](../company-packs/demo-manufacturing/pack.json). These examples describe different visual and writing settings; they do not certify brand fidelity.
+## 例の前提とソース
 
-## What the workflow adds
+会社、目標、費用は仮定です。予算は240万ウォン（KRW）を維持し、円換算していません。画像は生成コンセプトで、実際の店舗・設置実績ではありません。
 
-| Repeated task | Reusable part |
-|---|---|
-| Explain who is reading and what decision they need | Intake and document architecture |
-| Gather evidence and distinguish assumptions | Research workflow and source notes |
-| Write, structure and design the document | Separate writing, design and visual-asset skills |
-| Keep reviewed terminology and layout conventions | A Company Pack with approval records |
-| Adapt business copy into Korean or Japanese | Two optional language skills |
-| Prepare editable PowerPoint output | A separate HTML-to-PPTX workflow and dependencies |
+この例は独立して制作した静的HTMLです。Company Packの自動分析・適用結果、モデル間の同一品質、企業全体の生産性向上を実証したものではありません。[文書例のソースと確認条件](../showcase/README.md)を公開しています。
 
-The collection has **8 core skills + 2 optional language skills**. Read the [entrypoint](../skills/report-html-pptx/SKILL.md) to see how it routes a task.
+既存の小さな[韓国語HTML例](../skills/report-html-pptx/assets/accepted-staff-guide/index.html)と、架空の[小売](../company-packs/demo-retail/pack.json)・[製造業](../company-packs/demo-manufacturing/pack.json)のCompany Packも引き続き参照できます。これらの既存パックと、今回の画面例の制作基準は別です。
 
-## Try one fictional brief
+## 自分の環境で試す
 
-Once the skills are installed, ask your agent:
+[日本語の導入ガイド](QUICKSTART_ja.md)と[初回利用ガイド](TRY_FIRST.md)を参照してください。デモの閲覧と、スキルの導入、実際の文書生成、PPTX変換の検証は別工程です。
 
-> Use report-html-pptx. Make a two-page HTML proposal for a four-week employee onboarding pilot. The reader is an operations manager deciding whether to approve a $2,400 budget for 12 people. Include the recommendation, schedule, budget, three measures of success, and risks. Treat all figures as fictional. Tell me which checks you actually performed.
-
-Check the decision, the arithmetic, the layout, and the agent's QA report. [Installation and prompts in three languages](TRY_FIRST.md).
-
-## Choose a route
-
-- **Codex:** from your own project folder, use the [documented skills CLI command](TRY_FIRST.md#fast-agent-skill-install). It installs skills; repository-level packaging tools are separate.
-- **ChatGPT:** if your account supports Plugin Creator and saving plugins, use the [Starter ZIP instructions](TRY_FIRST.md#chatgpt). Downloading is not installation.
-- **Team evaluation:** start with fictional materials and the [administrator guide](WORKSPACE_ADMIN_GUIDE.md).
-
-## Current boundaries
-
-This is an **experimental alpha toolkit**, not a hosted editor. Your agent and runtime do the authoring. Rendering, fonts, editable PPTX conversion and visual checks need their respective tools. Private-source Company Pack export and automatic workspace deployment are not supported. Output equivalence across AI models is not guaranteed. [Detailed status](WORKSPACE_ADMIN_GUIDE.md).
-
-## Help shape the next version
-
-Try the small fictional brief, then [share first-run feedback](https://github.com/wlehd00000-cell/document-studio/issues/new?template=first_run.md): your route, where you got stuck, and what you expected. Use public or synthetic examples.
-
-If the project is useful, **[give Document Studio a star](https://github.com/wlehd00000-cell/document-studio)** so other document makers can discover it.
+実際に作った資料や修正が必要だった点は、[初回利用のフィードバック](https://github.com/wlehd00000-cell/document-studio/issues/new?template=first_run.md)で共有できます。方向が役に立つと感じた場合は、GitHubのStarで保存してください。
