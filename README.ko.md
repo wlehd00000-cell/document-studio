@@ -33,3 +33,7 @@ npx --yes skills add wlehd00000-cell/document-studio --skill '*' -a codex --copy
 방향이 유용하다면 GitHub의 Star로 저장해 주세요. 직접 사용한 결과와 수정이 필요했던 부분은 [첫 사용 피드백](https://github.com/wlehd00000-cell/document-studio/issues/new?template=first_run.md)으로 알려 주세요.
 
 독자 제작물은 [MIT](LICENSE), 예제에 동봉한 글꼴은 각 OFL 고지를 따릅니다. [제3자 고지](THIRD_PARTY_NOTICES.md)를 확인하세요. 개인 프로젝트이며 소속 기업이나 상표권자의 도입·추천·보증을 의미하지 않습니다.
+
+## 고정 디자인 규칙 비교
+
+[흑백 A4·정렬 보고서·가로형 제안서 비교](https://document-studio-public-experiment.wlehd00000.chatgpt.site/compare?lang=ko)에서 같은 본문과 수치를 확인할 수 있습니다. 처음 정의한 여백·본문 크기·색·숫자 정렬을 두 페이지와 일본어·한국어에서 유지합니다. 화면의 측정은 정적 HTML 예제에 한정하며, AI의 새 문서 생성이나 준수율을 평가한 결과는 아닙니다.

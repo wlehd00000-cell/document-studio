@@ -4,15 +4,27 @@
 
 企業でのAI活用を、文書業務から検証するオープンソースの実験です。人が確認した用語・文体・検討基準を、読み手と目的の異なる資料にも引き継ぐ方法を探っています。
 
-[**日本語デモを開く**](https://document-studio-public-experiment.wlehd00000.chatgpt.site/) · [**文書を大きく・全ページで見る**](https://document-studio-public-experiment.wlehd00000.chatgpt.site/example?doc=proposal&view=all&size=large) · [**導入ガイド**](docs/QUICKSTART_ja.md)
+[**日本語デモを開く**](https://document-studio-public-experiment.wlehd00000.chatgpt.site/) · [**同じ内容を3つの様式で比較**](https://document-studio-public-experiment.wlehd00000.chatgpt.site/compare) · [**導入ガイド**](docs/QUICKSTART_ja.md)
 
 [한국어](README.ko.md) · [English / technical documentation](README.en.md)
 
-[![日本語の企画提案書。架空のリフィル売場の試行導入について、範囲・予算・検証条件を示す画面](docs/assets/showcase/proposal-ja.jpg)](https://document-studio-public-experiment.wlehd00000.chatgpt.site/example?doc=proposal&view=all&size=large)
+[![同じ内容を白黒A4と整列レポートで並べ、事前定義した規則を確認する画面](docs/assets/showcase/comparison-ja.jpg)](https://document-studio-public-experiment.wlehd00000.chatgpt.site/compare)
 
-## まず、3つの文書を比較
+## 最初に決めたデザイン規則を、次のページにも
 
-同じ案件を、承認を求める資料、実行計画、現場で参照するガイドとして構成しました。インストールやログインは不要です。
+見た目を変えるだけでなく、**様式ごとに事前定義した規則を、別のページや訳文でも維持する**ための比較例です。同じ案件・本文・数値を共通データから表示します。日本語が標準で、韓国語へ切り替えても用紙・余白・文字サイズ・色・数値整列の規則は変えません。
+
+| 様式 | 先に決めた規則 | 2ページを確認 |
+|---|---|---|
+| 完全な白黒A4 | 縦210×297mm、余白18mm、本文11pt/1.6、黒・白のみ、画像なし、数値右揃え | [白黒文書](https://document-studio-public-experiment.wlehd00000.chatgpt.site/compare?left=mono&mode=focus) |
+| 整列レポート | A4縦、余白18mm、本文11pt/1.65、2列・列間6mm、限定パレット、数値右揃え | [整列文書](https://document-studio-public-experiment.wlehd00000.chatgpt.site/compare?left=aligned&mode=focus) |
+| 横型ビジュアル提案 | A4横297×210mm、余白15mm、本文11pt/1.6、画像と本文・表の分離、限定パレット | [横型提案](https://document-studio-public-experiment.wlehd00000.chatgpt.site/compare?left=visual&mode=focus) |
+
+2つを並べる／1つを大きく表示、1・2ページ、日本語／韓国語、原寸表示、検査用ガイドを切り替えられます。画面下では事前定義と現在のHTML表示を照合します。ルールは [JSON](showcase/design-contracts.json)、本文は [共通データ](showcase/comparison-data.js)、測定処理は [JavaScript](showcase/comparison.js) で公開しています。
+
+**測定は静的HTML例の表示に限ります。** AIによる新規生成の遵守率、Company Packの自動分析・適用、印刷・PPTXの品質を実証したものではありません。3つの規則はこの比較用の制作基準であり、実在企業が承認したCompany Packではありません。
+
+## 読み手と目的を変えた文書例も見る
 
 | 文書 | 読み手が確認すること | 閲覧 |
 |---|---|---|
@@ -20,9 +32,7 @@
 | 決裁サマリー・1ページ | 承認する事項、先行条件、承認に含めない範囲 | [大きく表示](https://document-studio-public-experiment.wlehd00000.chatgpt.site/example?doc=approval&view=all&size=large) |
 | 業務ガイド・1ページ | 担当者、手順、例外発生時の対応、引継ぎ | [大きく表示](https://document-studio-public-experiment.wlehd00000.chatgpt.site/example?doc=guide&view=all&size=large) |
 
-文書専用ビューは大きめの本文で全ページを表示します。1ページ表示、文字サイズ、共通基準の表示を切り替えられます。文書・ページ・表示方法・文字サイズをURLで共有できます。
-
-会社、取引目標、費用は説明用の仮定です。予算は**240万ウォン（KRW）**で、円換算していません。画像は生成コンセプトであり、実際の店舗・設置実績ではありません。これは独立して制作した静的HTMLの例で、このページからAIを実行したり、Company Packの自動分析を再現したりするものではありません。
+会社、取引目標、費用は説明用の仮定です。予算は**240万ウォン（KRW）**で、円換算していません。画像は生成コンセプトであり、実際の店舗・設置実績ではありません。登録やインストールは不要で、閲覧中にAIモデルを実行しません。
 
 [HTML・JavaScript・確認条件](showcase/README.md) · [日本語・韓国語HTMLを保存](https://document-studio-public-experiment.wlehd00000.chatgpt.site/downloads/document-studio-demo.zip)
 

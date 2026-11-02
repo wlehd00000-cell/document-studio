@@ -1,0 +1,111 @@
+{
+  "schema": "document-demo-design-contract/1.0",
+  "version": "fixed-layout-demo/1.0",
+  "status": "predefined_demo_rules",
+  "scope": "Static HTML fixtures; not an approved real-company pack or an AI-generation benchmark",
+  "currency": "KRW",
+  "shared_business_data": {
+    "stores": 1,
+    "items": 3,
+    "weeks": 4,
+    "budget": [
+      1200000,
+      400000,
+      250000,
+      350000,
+      200000
+    ],
+    "total": 2400000,
+    "weekly_targets": [
+      20,
+      35,
+      45,
+      50
+    ],
+    "target_total": 150
+  },
+  "fonts": {
+    "ja": "Pretendard JP",
+    "ko": "Pretendard"
+  },
+  "profiles": [
+    {
+      "id": "mono",
+      "name": {
+        "ja": "A4 モノクロ",
+        "ko": "A4 흑백 문서"
+      },
+      "description": {
+        "ja": "黒・白だけの縦型文書",
+        "ko": "검정·흰색만 쓰는 세로 문서"
+      },
+      "width": 210,
+      "height": 297,
+      "margin": 18,
+      "bodyPt": 11,
+      "titlePt": 20,
+      "line": 1.6,
+      "gap": 6,
+      "palette": [
+        "#000000",
+        "#ffffff"
+      ],
+      "image": false
+    },
+    {
+      "id": "aligned",
+      "name": {
+        "ja": "A4 整列レポート",
+        "ko": "A4 정렬 보고서"
+      },
+      "description": {
+        "ja": "列・間隔・数値位置を固定",
+        "ko": "열·간격·숫자 위치를 고정"
+      },
+      "width": 210,
+      "height": 297,
+      "margin": 18,
+      "bodyPt": 11,
+      "titlePt": 22,
+      "line": 1.65,
+      "gap": 6,
+      "palette": [
+        "#172e3d",
+        "#617078",
+        "#768f79",
+        "#e8ede5",
+        "#cbd5ca",
+        "#ffffff"
+      ],
+      "image": false
+    },
+    {
+      "id": "visual",
+      "name": {
+        "ja": "横型ビジュアル提案",
+        "ko": "가로형 시각 제안서"
+      },
+      "description": {
+        "ja": "画像と情報の関係を固定",
+        "ko": "이미지와 정보의 관계를 고정"
+      },
+      "width": 297,
+      "height": 210,
+      "margin": 15,
+      "bodyPt": 11,
+      "titlePt": 26,
+      "line": 1.6,
+      "gap": 7,
+      "palette": [
+        "#172e3d",
+        "#617078",
+        "#768f79",
+        "#b97354",
+        "#e8ede5",
+        "#cbd5ca",
+        "#ffffff"
+      ],
+      "image": true
+    }
+  ]
+}

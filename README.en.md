@@ -263,3 +263,7 @@ Original contributions in this repository are released under the [MIT License](L
 ## Attribution
 
 Independent open-source techniques and their license notices are retained where applicable. This is a personal open-source project, **not affiliated with or endorsed by any employer or trademark owner**.
+
+## Fixed-rule document comparison
+
+[Compare the Japanese-first examples](https://document-studio-public-experiment.wlehd00000.chatgpt.site/compare): monochrome A4, aligned A4 report, and landscape visual proposal. The same two-page business copy and figures are rendered under three predefined demo contracts. Japanese/Korean switching retains each format's paper, margins, type sizes, palette and numeric alignment. Browser measurements apply to these static HTML examples, not to new AI generations, Company Pack acceptance, print or PPTX output. See [source and verification scope](showcase/README.md).

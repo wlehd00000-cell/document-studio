@@ -4,6 +4,22 @@
 
 [公開サイト](https://document-studio-public-experiment.wlehd00000.chatgpt.site/) · [日本語の文書を全ページで表示](https://document-studio-public-experiment.wlehd00000.chatgpt.site/example?view=all&size=large) · [韓国語版](https://document-studio-public-experiment.wlehd00000.chatgpt.site/ko)
 
+## 固定ルールを比較する
+
+比較ビュー [compare](https://document-studio-public-experiment.wlehd00000.chatgpt.site/compare) は、同一の本文・予算・条件を3つの事前定義した様式で表示します。様式ごとの用紙、余白、本文、色、数値右揃えを、2ページと日本語・韓国語で維持します。
+
+| 様式 | 固定する規則 |
+|---|---|
+| 白黒A4 | A4縦、余白18mm、本文11pt/1.6、黒・白のみ、画像なし |
+| 整列レポート | A4縦、余白18mm、本文11pt/1.65、2列・列間6mm、限定色 |
+| 横型提案 | A4横、余白15mm、本文11pt/1.6、本文・表と参考画像の分離 |
+
+![白黒A4と整列レポートの比較](../docs/assets/showcase/comparison-ja.jpg)
+
+ページ、言語、比較する様式、表示倍率、ガイドはURLに保存されます。倍率は用紙全体を拡大縮小するもので、本文サイズのルールを変更しません。表示測定は2ページのCSS寸法、余白、本文・見出し、書体、色、数値整列、収まり、ヘッダー・フッター、本文の共通性を確認します。
+
+これは作成済みの静的HTMLに対する表示確認です。新規生成の遵守率や実在企業のCompany Packの有効性を測定していません。3様式の規則はこの比較例のための事前定義です。
+
 ## 収録内容
 
 | 文書 | 目的 | ページ |
@@ -19,6 +35,8 @@
 ![業務ガイド](../docs/assets/showcase/guide-ja.jpg)
 
 ## 開き方と操作
+
+`compare.html` は固定ルールの比較ビューです。[design-contracts.json](design-contracts.json) が規則、[comparison-data.js](comparison-data.js) が共通の本文、[comparison.js](comparison.js) が表示と測定、[comparison.css](comparison.css) が組版です。
 
 このフォルダーの `index.html` は紹介ページ、`example.html` は文書専用ビューです。クローンしたファイルはブラウザーで開けます。公開版では次のURLを使用します。
 
@@ -48,3 +66,9 @@
 ## ライセンス
 
 独自のHTML・CSS・JavaScriptは[MIT](../LICENSE)。[Pretendard / Pretendard JPのOFL表示](assets/LICENSE-Pretendard.txt)を同梱しています。これらのフォントファイルは、この独立した公開ビューのために `showcase/assets/` に配置しており、スキル本体のフォント導入を代替するものではありません。
+
+## 公開例の確認記録
+
+この比較例では両ページの用紙・余白・本文／見出しサイズ・書体・ネイティブ色指定を測定します。表の数値は右揃えです。本文領域同士の矩形の重なりと、ヘッダー／タイトル／本文／フッターの順序も確認します。これはページの内容の正しさや、実際の生成処理を保証するものではありません。
+
+2026-11-02のブラウザー確認では、3様式×2ページ×日本語／韓国語の各様式について10項目が一致しました。390px幅でページ全体に横はみ出しがなく、100%表示の横スクロールが用紙内に限定されることも確認しました。印刷・PPTXは未検証です。
