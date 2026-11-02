@@ -2,6 +2,8 @@
 
 Version **0.1.0-alpha.6** · experimental public-source edition.
 
+[日本語の最初の1件](docs/QUICKSTART_ja.md) · [한국어 첫 사용](docs/QUICKSTART_ko.md) · [Documentation map](docs/README.md) · [Manager evaluation — 日本語](docs/MANAGER_GUIDE_ja.md)
+
 Document Studio keeps document-writing and review conventions in reusable agent skills and reviewed Company Packs. It can analyze authorized references, but the generated output still needs human review.
 
 ## Included

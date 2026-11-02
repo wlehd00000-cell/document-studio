@@ -1,5 +1,7 @@
 # Contributing to Document Studio
 
+日本語・한국어・Englishで参加できます。初回利用の結果は[短いフィードバック](https://github.com/wlehd00000-cell/document-studio/issues/new?template=first_run.md)、不具合・改善案は[Issueの入口](https://github.com/wlehd00000-cell/document-studio/issues/new/choose)へ。報告だけなら開発環境の準備は不要です。[文書ガイド一覧](docs/README.md)
+
 Thanks for helping build a practical, reviewable document workflow for teams. We welcome bug reports, reproducible examples, documentation fixes, and small, independently testable improvements.
 
 ## Before you contribute

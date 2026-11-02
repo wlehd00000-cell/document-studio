@@ -1,5 +1,7 @@
 # Download and install Document Studio (v0.1.0-alpha.6)
 
+[日本語の初回利用](QUICKSTART_ja.md) · [ZIPの違い — 日本語](FAQ_ja.md#どのzipを選べばよいですか) · [Documentation map](README.md). This page covers plugin packages; the public Site's HTML viewing ZIP is a separate static-example bundle.
+
 > **Experimental alpha.** These archives are plugin packages, not a one-click ChatGPT installation or a guarantee of identical output across AI model versions. No private employer/customer documents or licensed font files are included.
 
 ## Choose one download

@@ -2,7 +2,7 @@
 
 This is a practical guide for administrators evaluating **Document Studio v0.1.0-alpha.6**. The project's core task is to turn approved document references into a reviewable Company Pack and an installable document plugin. **It does not yet offer a one-click workspace setup wizard.**
 
-[Japanese manager overview and first evaluation](MANAGER_GUIDE_ja.md) · [Public operating-model diagram](https://document-studio-public-experiment.wlehd00000.chatgpt.site/#workflow)
+[Japanese manager overview and first evaluation](MANAGER_GUIDE_ja.md) · [Public operating-model diagram](https://document-studio-public-experiment.wlehd00000.chatgpt.site/#workflow) · [Documentation map](README.md)
 
 ## What the package contains and how a request proceeds
 
@@ -28,7 +28,7 @@ Therefore, the full *private corporate references → internal-only plugin* rele
 
 ## Evaluate the working export using fictional materials
 
-1. Clone the [repository](../README.en.md#quick-start--export-a-demo-plugin) and use Python 3.12 with the relevant optional dependencies.
+1. Clone the [repository](TECHNICAL_GUIDE.md#quick-start--export-a-demo-plugin) and use Python 3.12 with the relevant optional dependencies.
 2. Run `python scripts/install_local.py --verify-only`.
 3. Export the included fictional retail pack:
 

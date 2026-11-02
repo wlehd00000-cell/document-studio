@@ -1,0 +1,11 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 紹介と作例 / 소개·예제 / Introduction and examples
+    url: https://document-studio-public-experiment.wlehd00000.chatgpt.site/
+    about: インストールせずに固定ルール・目的別文書・創造性の例を見る。
+  - name: 使い方を選ぶ / 사용 안내 / Documentation map
+    url: https://github.com/wlehd00000-cell/document-studio/blob/main/docs/README.md
+    about: 初回利用、管理者評価、PPTX、技術情報への入口。
+  - name: ZIPと現在の範囲 / ZIP·지원 범위 / FAQ
+    url: https://github.com/wlehd00000-cell/document-studio/blob/main/docs/FAQ_ja.md
+    about: HTML閲覧ZIPとプラグインZIP、Company Pack、未対応範囲を確認。

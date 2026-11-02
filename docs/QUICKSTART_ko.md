@@ -4,7 +4,9 @@
 
 Document Studio는 조사 → 구조 설계 → 작성 → 디자인 → 검수를 재사용하는 MIT 오픈소스 툴킷입니다. 로컬 Codex 스킬과 설치 권한이 있는 ChatGPT 계정용 플러그인 패키지를 제공합니다. 한국어·일본어 비즈니스 문장 교정 모듈을 선택할 수 있습니다.
 
-[English](../README.en.md) · [日本語](QUICKSTART_ja.md)
+[한국어 소개](../README.ko.md) · [日本語](QUICKSTART_ja.md) · [English](../README.en.md) · [문서 안내](README.md)
+
+설치 전에 [한국어 예제](https://document-studio-public-experiment.wlehd00000.chatgpt.site/ko)를 볼 수 있습니다. 회사별 Pack과 직원 배포를 평가하려면 [관리자 평가 안내 — 일본어](MANAGER_GUIDE_ja.md)를 참고하세요. 공개 사이트의 HTML 묶음은 플러그인 설치 파일이 아닙니다.
 
 ## 먼저 문서 한 건을 만들어보세요
 
