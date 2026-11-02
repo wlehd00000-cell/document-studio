@@ -17,6 +17,8 @@ Reusable agent skills for reports, proposals, and presentations: research → st
 | ChatGPT with Plugin Creator access | [Use the Starter ZIP](#chatgpt-use-the-starter-zip) |
 | Evaluating it for a team | [Review the administrator pilot guide](docs/WORKSPACE_ADMIN_GUIDE.md) |
 
+For a manager-oriented overview, start with the [Japanese evaluation guide](docs/MANAGER_GUIDE_ja.md) and the [internal skill-flow diagram](https://document-studio-public-experiment.wlehd00000.chatgpt.site/#plugin-flow). The exporter packages an approved Company Pack with all eight core skills and selected language modules. Installation, explicit Pack selection, and a fresh document request must be verified separately. Private-source internal distribution is not shipped.
+
 If these workflows are useful to you, **[star the repository](https://github.com/wlehd00000-cell/document-studio)** to help others find it. First-run feedback is welcome through the [short feedback form](https://github.com/wlehd00000-cell/document-studio/issues/new?template=first_run.md).
 
 Document Studio is a set of open-source skills and scripts for people who use AI agents to prepare reports, proposals, and presentations.

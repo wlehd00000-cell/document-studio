@@ -2,6 +2,18 @@
 
 This is a practical guide for administrators evaluating **Document Studio v0.1.0-alpha.6**. The project's core task is to turn approved document references into a reviewable Company Pack and an installable document plugin. **It does not yet offer a one-click workspace setup wizard.**
 
+[Japanese manager overview and first evaluation](MANAGER_GUIDE_ja.md) · [Public operating-model diagram](https://document-studio-public-experiment.wlehd00000.chatgpt.site/#workflow)
+
+## What the package contains and how a request proceeds
+
+The exporter bundles an approved, distribution-eligible Company Pack, **all eight core skills**, selected Japanese/Korean language modules, and installation/manifest scripts. The original PDFs/PPTX files and font binaries are excluded. Creating the ZIP does not install or publish it, or certify that its Pack is active.
+
+For a company-specific request, `report-html-pptx` explicitly selects and validates the approved Pack, records its ID/version, and passes its context to the relevant production steps. The host AI applies the role instructions and scripts; these are not separately trained models or a certified unattended service.
+
+**Architecture and necessary research → writing and installed target-language review → HTML design and necessary visual assets → actual HTML QA → requested PPTX conversion and final QA.** Research and image production are conditional. Manuscript-only or HTML-only requests stop at their corresponding deliverable; partial revisions reopen affected roles and downstream QA. Optional editorial consulting requires explicit selection and acceptance of the direction and final manuscript.
+
+Inspect the [actual skill contract](../skills/report-html-pptx/SKILL.md), [package assembly](../scripts/export_company_plugin.py), or the [illustrated flow](https://document-studio-public-experiment.wlehd00000.chatgpt.site/#plugin-flow). Always test a fresh request after installation; do not infer successful rule application from package existence alone.
+
 ## Why standardize documents separately from the AI model?
 
 AI models, prompt styles, employee teams and document topics evolve. A Company Pack records an approved baseline — writing conventions, brand tokens, allowed layout relationships and documented evidence — outside any one prompt. Managers can review and version this standard, and then use it as an input to their document-production workflow. **This does not guarantee that two models or model versions will behave identically.** After a model or plugin upgrade, recheck compatibility, output quality, font rendering, layout and source rights before broad rollout.

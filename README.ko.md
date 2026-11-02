@@ -1,8 +1,8 @@
 # Document Studio
 
-**AI가 바뀌어도, 회사의 문서 기준은 다음 업무로 이어지도록.**
+**회사의 문서 제작을, 플러그인으로 재사용.**
 
-사람이 검토한 용어·문체·검수 기준을 AI 문서 작업에 연결하는 오픈소스 실험입니다. 이번 공개 데모는 일본어를 기본으로 제공하며, 한국어 예제도 살펴볼 수 있습니다.
+사람이 승인한 회사 규칙과 문서 제작 스킬을 묶어 회사별 플러그인 패키지를 만드는 오픈소스 실험입니다. 직원의 요청을 구성·집필·디자인·편집 가능한 PowerPoint 출력으로 연결하는 방향을 검증합니다. 일본어가 기본이며 한국어로도 살펴볼 수 있습니다.
 
 [일본어 데모](https://document-studio-public-experiment.wlehd00000.chatgpt.site/) · [한국어 데모](https://document-studio-public-experiment.wlehd00000.chatgpt.site/ko) · [한국어 문서](https://document-studio-public-experiment.wlehd00000.chatgpt.site/example-ko) · [한국어 시작 안내](docs/QUICKSTART_ko.md)
 
@@ -11,6 +11,16 @@
 ![같은 가상 업무를 일본어 제안서로 구성한 공개 예제](docs/assets/showcase/proposal-ja.jpg)
 
 공개 예제는 4쪽 제안서, 결재 요약, 운영 가이드로 구성했습니다. 회사·예산·목표는 가정이며 실제 기업 성과가 아닙니다. 예산은 240만 원(KRW)을 유지했고, 일본 엔으로 환산하지 않았습니다. 화면은 미리 제작한 문서를 보여 주며 AI를 실행하지 않습니다.
+
+## 관리자의 준비와 직원의 사용
+
+관리자는 사용 권한이 있는 참고 자료를 고르고, 추출한 규칙을 검토해 Company Pack으로 승인합니다. 이를 기본 스킬 8개와 선택한 일본어·한국어 교정 모듈에 묶어 패키지를 만듭니다. 설치와 새 요청의 동작 확인은 별도입니다.
+
+직원이 요청하면 `report-html-pptx`가 목적·독자·언어·형식과 사용할 승인 Pack을 확인합니다. **구성과 필요한 조사 → 집필과 언어 확인 → 디자인과 필요한 이미지 → HTML 표시 확인 → 요청한 PPTX 출력과 최종 확인**으로 이어집니다. 원고·HTML만 요청하면 해당 단계까지 진행하고, 부분 수정은 영향받는 단계로 돌아갑니다.
+
+현재 공개 exporter는 가상 Pack과 배포 권한을 확인한 공개 자료의 Pack을 대상으로 합니다. **비공개 사내 자료 기반 내부 배포와 원클릭 사내 도입은 아직 지원하지 않습니다.**
+
+[홈에서 내부 흐름 보기](https://document-studio-public-experiment.wlehd00000.chatgpt.site/ko#plugin-flow) · [관리자 평가 절차와 명령어 — 일본어](docs/MANAGER_GUIDE_ja.md) · [설치와 현재 제약 — 영어](docs/WORKSPACE_ADMIN_GUIDE.md)
 
 ## 직접 살펴볼 내용
 
