@@ -1,6 +1,8 @@
 # 公開文書例のソースと確認条件
 
-紹介ページは「作例 → 作り方 → 使い始める」の順に整理しています。`compare.html` は規則比較、`example.html` は目的別文書、`creative.html` は創造性の1ページ、`consulting.html` は任意の相談工程の説明です。全ページの移動と言語リンクは `shell.js` / `shell.css` で共通化しています。
+紹介ページは「管理者の準備と社員の内部フロー → 出力と作例 → 現在の範囲とGitHubでの評価」の順です。`#plugin-flow` は実装のスキル名と条件付き工程、`#pptx-output` は編集可能なPowerPoint出力、`#start` は現在の範囲と評価手順を案内します。[管理者ガイド](../docs/MANAGER_GUIDE_ja.md)で架空Packから評価できます。
+
+`compare.html` は規則比較、`example.html` は目的別文書、`creative.html` は創造性の1ページ、`consulting.html` は任意の相談工程の説明です。全ページの移動と言語リンクは `shell.js` / `shell.css`、ホームの構成は `manager.css` で管理しています。
 
 コンサルティングの説明は創造性の設定と別ページです。旧 `creative#consulting` は新しい `consulting` へ移動し、言語設定を保持します。原稿は `modes-copy.js` で共有し、創造性の実際の文書は引き続き `creative.js` / `creative.css` にあります。
 

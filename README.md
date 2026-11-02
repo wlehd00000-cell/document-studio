@@ -1,14 +1,26 @@
 # Document Studio
 
-**会社の文書基準を、AIの資料作成へ。**
+**会社の資料づくりを、プラグインで再利用。**
 
-参考資料から文体やデザインの特徴を整理し、人が確認したルールを次の資料作成で使うための、オープンソースのスキル集です。企業でAIをどう使うかを、文書業務から検証する個人の公開実験です。
+人が承認した会社ルールと文書制作スキルをまとめ、会社別プラグインのパッケージを作るためのオープンソース実験です。社員の依頼を、構成・執筆・デザイン・編集可能なPowerPoint出力へつなぐことを目指します。企業でAIをどう使うかを、文書業務から検証する個人の公開実験です。
 
-[**日本語の紹介**](https://document-studio-public-experiment.wlehd00000.chatgpt.site/) · [**作例を選ぶ**](https://document-studio-public-experiment.wlehd00000.chatgpt.site/#examples) · [**導入ガイド**](docs/QUICKSTART_ja.md)
+[**日本語の全体像**](https://document-studio-public-experiment.wlehd00000.chatgpt.site/) · [**管理者の評価手順**](docs/MANAGER_GUIDE_ja.md) · [**作例を選ぶ**](https://document-studio-public-experiment.wlehd00000.chatgpt.site/#examples)
 
 [한국어](README.ko.md) · [English / technical documentation](README.en.md)
 
 [![同じ内容を白黒A4と整列レポートで比較した作例](docs/assets/showcase/comparison-ja.jpg)](https://document-studio-public-experiment.wlehd00000.chatgpt.site/compare)
+
+## 管理者の準備と、社員の依頼後を分けて見る
+
+| 管理者が準備 | 社員の依頼後 |
+|---|---|
+| 権限を確認した参考資料を選び、提案された規則を確認・承認 | `report-html-pptx` が目的・読み手・言語・形式と、使用する承認済みCompany Packを選択・検証 |
+| Company Pack＋基本スキル8個＋選択した日本語/韓国語モジュールをパッケージ化 | 構成と必要な調査 → 執筆と言語確認 → デザインと必要な画像 → HTML確認 → 求めたPPTX出力と最終確認 |
+| 対応環境への導入、新規依頼によるPackのID・版と出力の確認を別途実施 | 導入先のAIが役割別の指示とスクリプトを適用。原稿・HTMLのみなら対応段階まで、部分修正は影響する工程へ戻る |
+
+現在の公開エクスポーターは、架空Packと配布権限を確認した公開資料のPackが対象です。**非公開の社内資料から内部だけに配布する経路と、ワンクリックの社内導入は未提供**です。パッケージ生成と、導入・会社ルールの適用・出力品質の確認は別工程です。
+
+[内部スキルの図解](https://document-studio-public-experiment.wlehd00000.chatgpt.site/#plugin-flow) · [架空Packで始める管理者の評価手順](docs/MANAGER_GUIDE_ja.md) · [環境と導入の詳細](docs/WORKSPACE_ADMIN_GUIDE.md)
 
 ## 作例で、3つの違いを確認
 

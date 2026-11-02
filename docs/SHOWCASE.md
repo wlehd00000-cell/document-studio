@@ -1,6 +1,6 @@
 # 公開デモの見方
 
-初めての場合は[日本語の紹介ページ](https://document-studio-public-experiment.wlehd00000.chatgpt.site/)から、**作例 → 作り方 → 使い始める**の順で確認できます。[한국어](https://document-studio-public-experiment.wlehd00000.chatgpt.site/ko) · [English](../README.en.md)
+初めての場合は[日本語の紹介ページ](https://document-studio-public-experiment.wlehd00000.chatgpt.site/)から、**管理者の準備と社員の内部フロー → 出力と作例 → 現在の範囲とGitHubでの評価**の順で確認できます。[管理者の評価手順](MANAGER_GUIDE_ja.md) · [한국어](https://document-studio-public-experiment.wlehd00000.chatgpt.site/ko) · [English](../README.en.md)
 
 ## 確かめたいことから作例を選ぶ
 
@@ -14,7 +14,7 @@
 
 ## 作り方と導入を確認する
 
-[仕組みと2つの進め方](https://document-studio-public-experiment.wlehd00000.chatgpt.site/#workflow)で、通常の制作と任意の[コンサルティング企画](https://document-studio-public-experiment.wlehd00000.chatgpt.site/consulting)を確認できます。創造性設定と相談の進め方は独立しています。導入する場合は[日本語の導入ガイド](QUICKSTART_ja.md)を参照してください。
+[仕組み](https://document-studio-public-experiment.wlehd00000.chatgpt.site/#workflow)では、承認したCompany Packと8つの基本スキルをパッケージ化する管理者の工程と、依頼後に必要な役割へつなぐ[内部フロー](https://document-studio-public-experiment.wlehd00000.chatgpt.site/#plugin-flow)を分けて説明します。任意の[コンサルティング企画](https://document-studio-public-experiment.wlehd00000.chatgpt.site/consulting)と創造性設定は独立しています。最初は[管理者ガイド](MANAGER_GUIDE_ja.md)の架空Packで評価し、対応環境への導入と新しい依頼の結果を別途確認してください。
 
 ## 前提と確認条件
 
