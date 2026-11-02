@@ -1,5 +1,9 @@
 # 公開文書例のソースと確認条件
 
+紹介ページは「作例 → 作り方 → 使い始める」の順に整理しています。`compare.html` は規則比較、`example.html` は目的別文書、`creative.html` は創造性の1ページ、`consulting.html` は任意の相談工程の説明です。全ページの移動と言語リンクは `shell.js` / `shell.css` で共通化しています。
+
+コンサルティングの説明は創造性の設定と別ページです。旧 `creative#consulting` は新しい `consulting` へ移動し、言語設定を保持します。原稿は `modes-copy.js` で共有し、創造性の実際の文書は引き続き `creative.js` / `creative.css` にあります。
+
 日本語を主言語とする、インストール不要のHTMLショーケースです。
 
 [公開サイト](https://document-studio-public-experiment.wlehd00000.chatgpt.site/) · [日本語の文書を全ページで表示](https://document-studio-public-experiment.wlehd00000.chatgpt.site/example?view=all&size=large) · [韓国語版](https://document-studio-public-experiment.wlehd00000.chatgpt.site/ko)
@@ -22,7 +26,7 @@
 
 ## 創造性を広げた1ページと、企画の深掘り
 
-[**実験的・没入型の1ページを見る**](https://document-studio-public-experiment.wlehd00000.chatgpt.site/creative) · [**コンサルティング企画の進め方**](https://document-studio-public-experiment.wlehd00000.chatgpt.site/creative#consulting)
+[**実験的・没入型の1ページを見る**](https://document-studio-public-experiment.wlehd00000.chatgpt.site/creative) · [**コンサルティング企画の進め方**](https://document-studio-public-experiment.wlehd00000.chatgpt.site/consulting)
 
 [![リフィル売場の限定運営を、次の判断へ続く紙の道として表現した1ページ](../docs/assets/showcase/creative-ja.jpg)](https://document-studio-public-experiment.wlehd00000.chatgpt.site/creative)
 

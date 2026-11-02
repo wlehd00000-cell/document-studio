@@ -1,1 +1,5 @@
 document.getElementById('copy-prompt')?.addEventListener('click',async()=>{const text=document.getElementById('first-prompt').innerText;const status=document.getElementById('copy-status');const ja=document.documentElement.lang==='ja';try{await navigator.clipboard.writeText(text);status.textContent=ja?'依頼文をコピーしました。導入済みのAIツールに貼り付けてください。':'요청문을 복사했습니다. 설치한 AI 도구에 붙여 넣으세요.';}catch{status.textContent=ja?'この環境ではコピーできません。上の依頼文を選択してコピーしてください。':'복사를 허용하지 않는 환경입니다. 위 요청문을 직접 선택해 복사해 주세요.';}});
+const sectionAliases={documents:'examples',comparison:'examples','creative-options':'examples',standards:'workflow',try:'start'};const alias=sectionAliases[location.hash.slice(1)];if(alias){const target=document.getElementById(alias);if(target){history.replaceState(null,'','#'+alias);target.scrollIntoView();}}
+document.querySelectorAll('a[href="#first-request"]').forEach(a=>a.addEventListener('click',()=>{document.getElementById('first-request').open=true;}));
+
+if(location.hash==='#first-request'){document.getElementById('first-request').open=true;}

@@ -40,4 +40,4 @@ npx --yes skills add wlehd00000-cell/document-studio --skill '*' -a codex --copy
 
 ## 창의력 예제와 컨설팅 기획
 
-[실험적·몰입형 한 페이지](https://document-studio-public-experiment.wlehd00000.chatgpt.site/creative?lang=ko)는 같은 가상 업무의 요점을 재구성한 별도 안입니다. [심층 컨설팅 기획](https://document-studio-public-experiment.wlehd00000.chatgpt.site/creative?lang=ko#consulting)은 명시적 선택 시 독립 조사·반론·실제 문서 비교로 논지를 발전시키고, 방향 선택과 최종 원고 수락을 거쳐 본제작으로 진행하는 기능입니다. 사이트에서는 정적 예제와 설명만 표시합니다.
+[실험적·몰입형 한 페이지](https://document-studio-public-experiment.wlehd00000.chatgpt.site/creative?lang=ko)는 같은 가상 업무의 요점을 재구성한 별도 안입니다. [심층 컨설팅 기획](https://document-studio-public-experiment.wlehd00000.chatgpt.site/consulting?lang=ko)은 명시적 선택 시 독립 조사·반론·실제 문서 비교로 논지를 발전시키고, 방향 선택과 최종 원고 수락을 거쳐 본제작으로 진행하는 기능입니다. 사이트에서는 정적 예제와 설명만 표시합니다.
