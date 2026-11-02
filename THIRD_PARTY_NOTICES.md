@@ -7,3 +7,5 @@
 - All public demo companies, documents, metrics and newly created SVG drawings are fictional. No employer logos, work-derived production records, corporate report text or real client files are distributed.
 
 - showcase/assets/refill-concept.png is an independently AI-generated fictional retail concept image. It is not a photograph of an actual store, installation, employer or client.
+
+- `showcase/assets/creative-pilot-world.png` is independently AI-generated concept art of a fictional refill pilot. It is a visual metaphor, not an actual facility, measured outcome or official corporate artwork. The accompanying JPEG is an actual browser capture of the independently authored HTML example.

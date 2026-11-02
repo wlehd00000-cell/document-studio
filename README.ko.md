@@ -37,3 +37,7 @@ npx --yes skills add wlehd00000-cell/document-studio --skill '*' -a codex --copy
 ## 고정 디자인 규칙 비교
 
 [흑백 A4·정렬 보고서·가로형 제안서 비교](https://document-studio-public-experiment.wlehd00000.chatgpt.site/compare?lang=ko)에서 같은 본문과 수치를 확인할 수 있습니다. 처음 정의한 여백·본문 크기·색·숫자 정렬을 두 페이지와 일본어·한국어에서 유지합니다. 화면의 측정은 정적 HTML 예제에 한정하며, AI의 새 문서 생성이나 준수율을 평가한 결과는 아닙니다.
+
+## 창의력 예제와 컨설팅 기획
+
+[실험적·몰입형 한 페이지](https://document-studio-public-experiment.wlehd00000.chatgpt.site/creative?lang=ko)는 같은 가상 업무의 요점을 재구성한 별도 안입니다. [심층 컨설팅 기획](https://document-studio-public-experiment.wlehd00000.chatgpt.site/creative?lang=ko#consulting)은 명시적 선택 시 독립 조사·반론·실제 문서 비교로 논지를 발전시키고, 방향 선택과 최종 원고 수락을 거쳐 본제작으로 진행하는 기능입니다. 사이트에서는 정적 예제와 설명만 표시합니다.

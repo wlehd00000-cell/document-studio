@@ -267,3 +267,7 @@ Independent open-source techniques and their license notices are retained where 
 ## Fixed-rule document comparison
 
 [Compare the Japanese-first examples](https://document-studio-public-experiment.wlehd00000.chatgpt.site/compare): monochrome A4, aligned A4 report, and landscape visual proposal. The same two-page business copy and figures are rendered under three predefined demo contracts. Japanese/Korean switching retains each format's paper, margins, type sizes, palette and numeric alignment. Browser measurements apply to these static HTML examples, not to new AI generations, Company Pack acceptance, print or PPTX output. See [source and verification scope](showcase/README.md).
+
+## Creative example and optional editorial consulting
+
+[Experimental/immersive one-page example](https://document-studio-public-experiment.wlehd00000.chatgpt.site/creative): a re-edited brief for the same fictional pilot, with generated concept art and native editable copy. It is not the complete two-page comparison text. [Optional editorial consulting](https://document-studio-public-experiment.wlehd00000.chatgpt.site/creative#consulting) uses independent research, countercases, actual document precedents and meaningful alternatives. Authors select a direction and accept the final manuscript before normal final design/export. It requires explicit opt-in, separate from creativity settings; the public Site only displays static examples and the workflow description.
