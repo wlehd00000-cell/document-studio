@@ -2,13 +2,29 @@
 
 [日本語](README.md) · [한국어](README.ko.md) · [English](README.en.md)
 
-**会社の資料づくりを、プラグインで再利用。**
+**報告書・提案書のつくり方を、毎回の長いプロンプトから再利用できるCodexスキルへ。**
 
-人が承認した会社ルールと文書制作スキルをまとめ、会社別プラグインのパッケージを作るオープンソース実験です。社員の依頼を、構成・執筆・デザイン・編集可能なPowerPoint出力へつなぎます。
+日本語・韓国語の業務文書を繰り返し作る方へ。構成・執筆・HTMLデザイン・確認の手順をまとめ、必要に応じて編集可能なPowerPointへつなげます。
+
+会社で評価する場合は、人が承認したルールを **Company Pack** としてまとめ、文書制作スキルとともにパッケージ化できます。
 
 [紹介サイトを開く](https://document-studio-public-experiment.wlehd00000.chatgpt.site/) · [管理者の評価手順](docs/MANAGER_GUIDE_ja.md) · [文書ガイド一覧](docs/README.md)
 
 実験段階の **alpha.6** です。現在の公開エクスポーターは架空Pack・配布権限を確認した公開資料が対象で、非公開の社内資料からの内部配布は未対応です。
+
+## まずは、会社資料なしで1件試す
+
+[作例を比較する（インストール不要）](https://document-studio-public-experiment.wlehd00000.chatgpt.site/compare) · [最初の依頼文](docs/TRY_FIRST.md#日本語) · [English quick start](docs/TRY_FIRST.md#fast-agent-skill-install)
+
+**ローカルCodexをお使いなら：** Node.js 22.20以降とGitを用意し、スキルの内容を確認したうえで、自分の作業用プロジェクトフォルダから実行します。
+
+```bash
+npx --yes skills add wlehd00000-cell/document-studio --skill '*' -a codex --copy -y
+```
+
+新しいCodexセッションで `report-html-pptx` が認識されることを確認し、[架空の2ページ提案書の依頼文](docs/TRY_FIRST.md#日本語)を送ってください。会社の資料やCompany Packの準備は不要です。この方法は10個のエージェントスキルをコピーします。AIモデル・変換環境・ChatGPTプラグインの登録は含みません。[導入の範囲と別の方法](docs/TRY_FIRST.md)
+
+役に立ちそうなら、ページ上部の **Star** で保存できます。使えたこと・止まったところは[初回利用のフィードバック](https://github.com/wlehd00000-cell/document-studio/issues/new?template=first_run.md)へ。
 
 ## まず、知りたいことを選ぶ
 

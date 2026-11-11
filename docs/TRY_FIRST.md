@@ -10,7 +10,7 @@ Document Studio is an open-source document-workflow toolkit, not an AI model. St
 npx --yes skills add wlehd00000-cell/document-studio --skill '*' -a codex --copy -y
 ```
 
-The [open-source skills CLI](https://github.com/vercel-labs/skills/blob/main/docs/commands.md) copies the ten `SKILL.md` skill folders into the current project's agent skills directory. The skills were discovered and a ten-skill copy install was verified in an isolated Codex project on **2026-10-31**. Start a fresh Codex session, check that `report-html-pptx` is available, then try the [fictional first task](#first-task). You can first inspect the list without installing:
+The [open-source skills CLI](https://github.com/vercel-labs/skills/blob/main/docs/commands.md) copies the ten `SKILL.md` skill folders into the current project's agent skills directory. Discovery and a ten-skill copy install were rechecked in an isolated Windows project with Node.js 24.14.0 on **2026-11-11**. This checks installation, not a fresh agent session or generated-document quality. Start a fresh Codex session, check that `report-html-pptx` is available, then try the [fictional first task](#first-task). You can first inspect the list without installing:
 
 ```bash
 npx --yes skills add wlehd00000-cell/document-studio --list
@@ -48,9 +48,9 @@ Use `python3` if that is your Python command. The installer reports the chosen s
 
 ## First task
 
-Use this with the installed plugin or discovered local `report-html-pptx` skill:
+Use this with the installed plugin or discovered local `report-html-pptx` skill. The brief specifies purpose, reader, language, format, canvas, and one-shot mode so the first task can start without a setup interview:
 
-> Use Document Studio to create a two-page HTML proposal in English for a fictional employee onboarding pilot. Audience: the operations manager. Decision: approve or decline a four-week pilot for 12 new starters. Fictional budget: $2,400. Page 1: recommendation, problem and proposed approach. Page 2: schedule, budget, three success measures and risks. Treat all numbers as fictional assumptions, not measured results. Use the generic workflow; no real company brand or source files. Provide the HTML artifact and state which factual and visual checks were actually completed. Ask only for information that is essential to proceed.
+> Use Document Studio in one-shot mode to create a two-page A4 portrait HTML proposal in English for a fictional employee onboarding pilot. This is a reading document, not a live presentation. Use the generic workflow with no Company Pack. Complete the writing, layout, and available QA without intermediate approval pauses; deliver HTML only, with no PPTX export for this first task. Audience: the operations manager. Decision: approve or decline a four-week pilot for 12 new starters. Fictional budget: $2,400. Page 1: recommendation, problem and proposed approach. Page 2: schedule, budget, three success measures and risks. Treat all numbers as fictional assumptions, not measured results. Use the generic workflow; no real company brand or source files. Provide the HTML artifact and state which factual and visual checks were actually completed. Ask only for information that is essential to proceed.
 
 Check the actual artifact: two readable pages, clear decision, consistent figures, no invented evidence, no clipped text, and an honest QA status. Output quality depends on the agent and rendering tools. A claimed PASS without the relevant check is a defect worth reporting.
 
@@ -71,7 +71,7 @@ Reference analysis, human approval and company-plugin export are a separate, mor
 - 로컬 Codex: 위의 설치 명령을 실행하고 새 세션에서 `report-html-pptx`가 인식되는지 확인합니다.
 - 첫 요청:
 
-> Document Studio로 가상 기업의 신입 온보딩 개선 제안서를 한국어 HTML 2페이지로 만들어줘. 독자는 운영팀장, 요청할 결정은 12명 대상 4주 시범운영 승인, 가상 예산은 300만 원이야. 1페이지는 문제·제안·기대효과, 2페이지는 일정·예산·성과지표 3개·위험요인으로 구성해줘. 숫자는 가정임을 표시하고 실제 기업 자료는 쓰지 마. HTML 파일과 실제로 수행한 검수 결과를 제공해줘.
+> Document Studio로 가상 기업의 신입 온보딩 개선 제안서를 한국어 HTML 2페이지로 만들어줘. 읽는 문서용 A4 세로이며 원샷 모드로 진행해. Company Pack 없이 일반 워크플로를 사용하고, 중간 승인 대기 없이 집필·디자인·가능한 검수를 끝내줘. 첫 체험은 HTML만 제공하고 PPTX는 만들지 마. 독자는 운영팀장, 요청할 결정은 12명 대상 4주 시범운영 승인, 가상 예산은 300만 원이야. 1페이지는 문제·제안·기대효과, 2페이지는 일정·예산·성과지표 3개·위험요인으로 구성해줘. 숫자는 가정임을 표시하고 실제 기업 자료는 쓰지 마. HTML 파일과 실제로 수행한 검수 결과를 제공해줘.
 
 사용 후 [첫 사용 피드백](https://github.com/wlehd00000-cell/document-studio/issues/new?template=first_run.md)에 설치 경로, 막힌 단계, 결과물 생성 여부를 알려주세요. 다운로드 수를 설치 수로 집계하지 않습니다.
 
@@ -84,6 +84,6 @@ Reference analysis, human approval and company-plugin export are a separate, mor
 - ローカルCodex：上記のコマンドでインストールし、新しいセッションで `report-html-pptx` が認識されるか確認してください。
 - 最初の依頼：
 
-> Document Studioを使い、架空企業の新入社員オンボーディング改善提案書を日本語のHTMLで2ページ作成してください。読者は業務責任者、求める判断は12名を対象とした4週間の試行の承認、仮の予算は30万円です。1ページ目に課題・提案・期待効果、2ページ目に日程・予算・評価指標3つ・リスクをまとめてください。数値は仮定と明記し、実在企業の資料は使わないでください。HTMLファイルと、実際に実施した確認の結果を提示してください。
+> Document Studioを使い、架空企業の新入社員オンボーディング改善提案書を日本語のHTMLで2ページ作成してください。読むための文書としてA4縦を使い、ワンショットで進めてください。Company Packなしの一般的な制作工程で、途中の承認待ちをせず、執筆・デザイン・実施可能な確認まで完了してください。初回はHTMLのみを納品し、PPTXは作成しないでください。読者は業務責任者、求める判断は12名を対象とした4週間の試行の承認、仮の予算は30万円です。1ページ目に課題・提案・期待効果、2ページ目に日程・予算・評価指標3つ・リスクをまとめてください。数値は仮定と明記し、実在企業の資料は使わないでください。HTMLファイルと、実際に実施した確認の結果を提示してください。
 
 [初回利用のフィードバック](https://github.com/wlehd00000-cell/document-studio/issues/new?template=first_run.md)では、利用環境・止まった手順・成果物の有無を教えてください。ダウンロード数をインストール数とは扱いません。

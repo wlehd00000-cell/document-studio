@@ -2,13 +2,29 @@
 
 [日本語](README.md) · [한국어](README.ko.md) · [English](README.en.md)
 
-**Package approved company conventions into a reusable document plugin.**
+**Turn your report-writing process into reusable Codex skills.**
 
-An open-source experiment combining reviewed company rules with document-production skills. It connects employee requests with structure, writing, HTML design, and editable PowerPoint output.
+For people who repeatedly create business reports and proposals, especially in Japanese or Korean. Reuse a workflow for structure, writing, HTML design, and review, with an editable PowerPoint export path when needed.
+
+For team evaluation, you can also record human-approved company conventions in a **Company Pack** and package it with the document-production skills.
 
 [Open the introduction and examples](https://document-studio-public-experiment.wlehd00000.chatgpt.site/) · [Administrator guide](docs/WORKSPACE_ADMIN_GUIDE.md) · [Documentation map](docs/README.md)
 
 Experimental **alpha.6**. The current public exporter accepts fictional packs and reviewed public sources authorized for distribution. Internal distribution based on private company sources is not supported.
+
+## Try one document before setting up company rules
+
+[Compare the examples — no install](https://document-studio-public-experiment.wlehd00000.chatgpt.site/compare) · [Copy the first task](docs/TRY_FIRST.md#first-task)
+
+**Already use local Codex?** With Node.js 22.20+ and Git available, review the skill instructions, then run this in your own project folder:
+
+```bash
+npx --yes skills add wlehd00000-cell/document-studio --skill '*' -a codex --copy -y
+```
+
+Start a fresh Codex session, confirm `report-html-pptx` is available, and send the [fictional two-page proposal brief](docs/TRY_FIRST.md#first-task). No company files or Company Pack setup needed. This copies ten agent skills; it does not install an AI model, rendering tools, or a ChatGPT plugin. [Installation scope and alternatives](docs/TRY_FIRST.md)
+
+If this is useful to you, use **Star** at the top of the repository to save it. [First-run feedback](https://github.com/wlehd00000-cell/document-studio/issues/new?template=first_run.md), including installation blockers, is welcome.
 
 ## Choose your next step
 
