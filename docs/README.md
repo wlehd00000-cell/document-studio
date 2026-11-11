@@ -14,6 +14,8 @@
 | HTMLから編集可能なPPTXになる構造 | [PowerPoint出力と業務利用](PPTX_OUTPUT_ja.md) | 日本語 |
 | ZIPの違い、Company Pack、現在の制約 | [よくある質問](FAQ_ja.md) | 日本語 |
 
+紹介する場合は、[3言語の紹介文と共有用リンク](LAUNCH_KIT.md)を使えます。
+
 ## 導入・実装を確認する
 
 | 目的 | 資料 | 言語 |

@@ -2,13 +2,29 @@
 
 [日本語](README.md) · [한국어](README.ko.md) · [English](README.en.md)
 
-**회사의 문서 제작을, 플러그인으로 재사용.**
+**보고서·제안서 작성법을 매번 긴 프롬프트로 설명하지 말고, Codex 스킬로 재사용하세요.**
 
-사람이 승인한 회사 규칙과 문서 제작 스킬을 묶어 회사별 플러그인 패키지를 만드는 오픈소스 실험입니다. 직원의 요청을 구성·집필·디자인·편집 가능한 PowerPoint 출력으로 연결합니다.
+한국어·일본어 업무 문서를 반복해서 만드는 분을 위한 도구입니다. 구성·집필·HTML 디자인·검수 절차를 묶고, 필요하면 편집 가능한 PowerPoint 출력으로 이어갑니다.
+
+기업용으로 평가할 때는 사람이 승인한 회사 규칙을 **Company Pack**으로 관리하고, 문서 제작 스킬과 함께 패키지로 묶을 수 있습니다.
 
 [한국어 소개 사이트](https://document-studio-public-experiment.wlehd00000.chatgpt.site/ko) · [관리자 평가 절차 — 일본어](docs/MANAGER_GUIDE_ja.md) · [문서 안내](docs/README.md)
 
 실험 단계의 **alpha.6**입니다. 현재 공개 내보내기 도구는 가상 Pack과 배포 권한을 확인한 공개 자료를 대상으로 하며, 비공개 사내 자료 기반 내부 배포는 미지원입니다.
+
+## 회사 자료 없이 문서 한 건부터
+
+[설치 없이 예제 비교](https://document-studio-public-experiment.wlehd00000.chatgpt.site/compare?lang=ko) · [바로 쓸 첫 요청문](docs/TRY_FIRST.md#한국어)
+
+**로컬 Codex 사용자라면:** Node.js 22.20 이상과 Git을 준비하고 스킬 내용을 확인한 뒤, 본인의 작업용 프로젝트 폴더에서 실행하세요.
+
+```bash
+npx --yes skills add wlehd00000-cell/document-studio --skill '*' -a codex --copy -y
+```
+
+새 Codex 세션에서 `report-html-pptx` 인식을 확인하고 [가상 2페이지 제안서 요청문](docs/TRY_FIRST.md#한국어)을 보내세요. 회사 자료나 Company Pack 준비는 필요하지 않습니다. 이 명령은 에이전트 스킬 10개를 복사합니다. AI 모델·변환 환경·ChatGPT 플러그인 등록은 포함하지 않습니다. [설치 범위와 다른 방법](docs/TRY_FIRST.md)
+
+쓸 만한 도구라고 느껴지면 페이지 위의 **Star**로 저장해 주세요. 사용 결과와 막힌 부분은 [첫 사용 피드백](https://github.com/wlehd00000-cell/document-studio/issues/new?template=first_run.md)으로 남길 수 있습니다.
 
 ## 궁금한 내용부터 확인하세요
 
