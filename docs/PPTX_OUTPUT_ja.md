@@ -1,6 +1,6 @@
 # HTMLから編集できるPowerPointへ
 
-[日本語トップ](../README.md) · [文書ガイド一覧](README.md) · [サイトの出力図解](https://document-studio-public-experiment.wlehd00000.chatgpt.site/#pptx-output)
+[日本語トップ](../README.ja.md) · [文書ガイド一覧](README.md) · [サイトの出力図解](https://document-studio-public-experiment.wlehd00000.chatgpt.site/#pptx-output)
 
 HTMLは、原稿とレイアウトを制作・確認する原本です。求められた場合は、その表示情報を使ってPowerPointのテキスト・図形・画像を組み立てます。会議前の数値修正や担当者名・文章の更新を、PPTX上で続けるための工程です。
 

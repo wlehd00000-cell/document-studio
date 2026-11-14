@@ -1,6 +1,18 @@
-# 公開デモの見方
+# 文書の作例
 
-[日本語トップ](../README.md) · [文書ガイド一覧](README.md) · [最初の1件を作る](QUICKSTART_ja.md) · [PowerPoint出力](PPTX_OUTPUT_ja.md)
+[日本語トップ](../README.ja.md) · [文書ガイド一覧](README.md) · [最初の1件を作る](QUICKSTART_ja.md) · [PowerPoint出力](PPTX_OUTPUT_ja.md)
+
+## 新しい文書コレクション
+
+[文書4点を見る](../examples/document-collection/README.md) · [全ページのPDF](../examples/document-collection/document-collection.pdf)
+
+リフィル販売の試行提案、オンラインストアの月次報告、新人受け入れ方式の比較、季節メニューの日本語提案です。各作例にPNG・PDF・編集用HTML・原稿を添えています。
+
+[![文書コレクション4点](assets/brand/document-studio-cover.jpg)](../examples/document-collection/README.md)
+
+制作者が別途管理する文書制作ワークフローで制作・推敲した架空の例です。公開パッケージの新規導入による性能試験ではありません。[制作・確認の範囲](../examples/document-collection/README.md#production-notes)
+
+## 既存のインタラクティブ作例
 
 初めての場合は[日本語の紹介ページ](https://document-studio-public-experiment.wlehd00000.chatgpt.site/)から、**管理者の準備と社員の内部フロー → 出力と作例 → 現在の範囲とGitHubでの評価**の順で確認できます。[管理者の評価手順](MANAGER_GUIDE_ja.md) · [한국어](https://document-studio-public-experiment.wlehd00000.chatgpt.site/ko) · [English](../README.en.md)
 

@@ -1,6 +1,6 @@
 # よくある質問
 
-[日本語トップ](../README.md) · [文書ガイド一覧](README.md) · [紹介サイト](https://document-studio-public-experiment.wlehd00000.chatgpt.site/)
+[日本語トップ](../README.ja.md) · [文書ガイド一覧](README.md) · [紹介サイト](https://document-studio-public-experiment.wlehd00000.chatgpt.site/)
 
 ## Document Studioは何をするものですか
 
