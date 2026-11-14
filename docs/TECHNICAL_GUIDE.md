@@ -1,6 +1,6 @@
 # Technical guide — Document Studio alpha.6
 
-[Overview](../README.en.md) · [日本語トップ](../README.md) · [Documentation map](README.md) · [Japanese manager evaluation](MANAGER_GUIDE_ja.md)
+[Overview](../README.en.md) · [日本語トップ](../README.ja.md) · [Documentation map](README.md) · [Japanese manager evaluation](MANAGER_GUIDE_ja.md)
 
 This is the detailed technical reference previously included in the English README. Examples, source rights and export/installation limits retain their stated scope. Run commands from the repository root unless stated otherwise.
 

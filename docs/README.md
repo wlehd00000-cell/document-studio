@@ -1,6 +1,6 @@
 # Document Studio ドキュメント
 
-[日本語トップ](../README.md) · [한국어](../README.ko.md) · [English](../README.en.md) · [紹介サイト](https://document-studio-public-experiment.wlehd00000.chatgpt.site/)
+[日本語トップ](../README.ja.md) · [한국어](../README.ko.md) · [English](../README.en.md) · [紹介サイト](https://document-studio-public-experiment.wlehd00000.chatgpt.site/)
 
 目的に合う入口から進んでください。日本語を中心に、詳細な実装・導入資料には英語の文書もあります。
 
@@ -8,6 +8,7 @@
 
 | 知りたいこと | 読む資料 | 言語 |
 |---|---|---|
+| PNG・PDF・編集用HTMLがそろった新しい文書4点 | [文書コレクション](../examples/document-collection/README.md) | English / 作例は韓国語・日本語 |
 | 文書の見た目、固定ルール、目的別構成、創造性 | [公開作例の見方](SHOWCASE.md) | 日本語 |
 | 自分で1件作るための環境選択と依頼文 | [日本語の初回利用](QUICKSTART_ja.md) / [한국어 첫 사용](QUICKSTART_ko.md) / [First use](TRY_FIRST.md) | 日本語 / 한국어 / English |
 | 管理者が何を用意し、何を評価するか | [会社別プラグインの評価](MANAGER_GUIDE_ja.md) | 日本語 |

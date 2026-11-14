@@ -1,85 +1,102 @@
-# Document Studio
+<h1 align="center">Document Studio</h1>
+<p align="center"><strong>요청에서 완성된 업무 문서까지.</strong></p>
+<p align="center">제안서·보고서·발표자료를 위한 Codex 스킬 모음.<br>구성, 집필, 시각 디자인, 검수와 한국어·일본어 교정을 하나의 흐름으로 연결합니다.</p>
 
-[日本語](README.md) · [한국어](README.ko.md) · [English](README.en.md)
+<p align="center"><a href="README.md">English</a> · <a href="README.ko.md">한국어</a> · <a href="README.ja.md">日本語</a></p>
 
-**보고서·제안서 작성법을 매번 긴 프롬프트로 설명하지 말고, Codex 스킬로 재사용하세요.**
+<p align="center">
+  <a href="https://github.com/wlehd00000-cell/document-studio/releases/tag/v0.1.0-alpha.6"><img src="https://img.shields.io/badge/status-alpha.6-9d6938?style=flat-square" alt="Experimental alpha.6"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-244c3d?style=flat-square" alt="MIT license"></a>
+  <a href="docs/TECHNICAL_GUIDE.md"><img src="https://img.shields.io/badge/Codex-10_skills-244c3d?style=flat-square" alt="10 Codex skills"></a>
+</p>
 
-한국어·일본어 업무 문서를 반복해서 만드는 분을 위한 도구입니다. 구성·집필·HTML 디자인·검수 절차를 묶고, 필요하면 편집 가능한 PowerPoint 출력으로 이어갑니다.
+<p align="center"><a href="#바로-시작하기">바로 시작하기</a> · <a href="examples/document-collection/README.md">문서 예시</a> · <a href="docs/README.md">사용 안내</a></p>
 
-기업용으로 평가할 때는 사람이 승인한 회사 규칙을 **Company Pack**으로 관리하고, 문서 제작 스킬과 함께 패키지로 묶을 수 있습니다.
+<p align="center">
+  <a href="examples/document-collection/README.md"><img src="docs/assets/brand/document-studio-cover.jpg" width="100%" alt="Document Studio collection: a retail proposal, an ecommerce report, an onboarding comparison, and a Japanese seasonal-menu proposal."></a>
+</p>
 
-[한국어 소개 사이트](https://document-studio-public-experiment.wlehd00000.chatgpt.site/ko) · [관리자 평가 절차 — 일본어](docs/MANAGER_GUIDE_ja.md) · [문서 안내](docs/README.md)
+## 먼저 결과물을 살펴보세요
 
-실험 단계의 **alpha.6**입니다. 현재 공개 내보내기 도구는 가상 Pack과 배포 권한을 확인한 공개 자료를 대상으로 하며, 비공개 사내 자료 기반 내부 배포는 미지원입니다.
+서로 다른 업무 상황을 담은 가상 문서 4종입니다. 원본 크기의 이미지와 PDF를 열거나, HTML과 원고를 내려받아 수정할 수 있습니다.
 
-## 회사 자료 없이 문서 한 건부터
+| 문서 | 확인할 내용 | 파일 |
+| :--- | :--- | :--- |
+| **리필 매장 제안서** · 한국어 / A4 | 승인 요청, 운영 조건, 예산과 일정 | [PNG](examples/document-collection/png/01-refill-proposal.png) · [PDF](examples/document-collection/pdf/01-refill-proposal.pdf) · [HTML](examples/document-collection/html/01-refill-proposal.html) |
+| **온라인몰 성과 보고서** · 한국어 / A4 | 매출 비교, 구매 단계별 이탈과 후속 과제 | [PNG](examples/document-collection/png/02-commerce-report.png) · [PDF](examples/document-collection/pdf/02-commerce-report.pdf) · [HTML](examples/document-collection/html/02-commerce-report.html) |
+| **온보딩 방식 비교** · 한국어 / 16:9 | 세 가지 방식, 선택 이유와 4주 계획 | [PNG](examples/document-collection/png/03-onboarding-comparison.png) · [PDF](examples/document-collection/pdf/03-onboarding-comparison.pdf) · [HTML](examples/document-collection/html/03-onboarding-comparison.html) |
+| **계절 메뉴 제안** · 일본어 / 16:9 | 제품 구상, 시험판매 조건, 가격과 요청 예산 | [PNG](examples/document-collection/png/04-seasonal-menu-ja.png) · [PDF](examples/document-collection/pdf/04-seasonal-menu-ja.pdf) · [HTML](examples/document-collection/html/04-seasonal-menu-ja.html) |
 
-[설치 없이 예제 비교](https://document-studio-public-experiment.wlehd00000.chatgpt.site/compare?lang=ko) · [바로 쓸 첫 요청문](docs/TRY_FIRST.md#한국어)
+이 예시는 제작자가 별도로 관리하는 문서 워크플로로 제작·교정한 문서입니다. 공개 패키지를 새로 설치해 측정한 성능시험 결과는 아닙니다. 수치는 모두 가상이며, 매장·음료 사진은 AI로 만든 콘셉트입니다. [제작·검수 범위](examples/document-collection/README.md#production-notes)
 
-**로컬 Codex 사용자라면:** Node.js 22.20 이상과 Git을 준비하고 스킬 내용을 확인한 뒤, 본인의 작업용 프로젝트 폴더에서 실행하세요.
+## 구성부터 검수까지
+
+- **판단에 필요한 구성.** 독자, 목적, 요청할 결정을 먼저 정하고 그에 맞게 내용을 배치합니다.
+- **의미를 지키는 문장.** 문구와 함께 수치·가정·출처·조건을 확인하고, 필요할 때 한국어·일본어 교정을 적용합니다.
+- **계속 수정할 수 있는 디자인.** 본문·숫자·레이아웃을 HTML로 관리하고 실제 화면을 검수합니다.
+- **팀에서 반복할 작성 기준.** 사람이 승인한 용어·문체·디자인·출처 규칙을 선택 사항인 Company Pack으로 관리합니다.
+
+10개 에이전트 스킬과 보조 스크립트로 구성되어 있으며, 사용하는 AI 에이전트가 각 작업을 수행합니다.
+
+## 바로 시작하기
+
+**로컬 Codex, Node.js 22.20 이상, Git**이 필요합니다. [스킬의 작업 지침](skills/report-html-pptx/SKILL.md)을 확인한 뒤 자신의 프로젝트 폴더에서 실행하세요.
 
 ```bash
 npx --yes skills add wlehd00000-cell/document-studio --skill '*' -a codex --copy -y
 ```
 
-새 Codex 세션에서 `report-html-pptx` 인식을 확인하고 [가상 2페이지 제안서 요청문](docs/TRY_FIRST.md#한국어)을 보내세요. 회사 자료나 Company Pack 준비는 필요하지 않습니다. 이 명령은 에이전트 스킬 10개를 복사합니다. AI 모델·변환 환경·ChatGPT 플러그인 등록은 포함하지 않습니다. [설치 범위와 다른 방법](docs/TRY_FIRST.md)
+새 Codex 세션에서 `report-html-pptx`가 인식되는지 확인하고, 다음 요청문을 보내세요.
 
-쓸 만한 도구라고 느껴지면 페이지 위의 **Star**로 저장해 주세요. 사용 결과와 막힌 부분은 [첫 사용 피드백](https://github.com/wlehd00000-cell/document-studio/issues/new?template=first_run.md)으로 남길 수 있습니다.
+```text
+Document Studio로 가상 기업의 신입 온보딩 개선 제안서를 만들어줘.
+한국어 HTML 2페이지, 읽는 문서용 A4 세로야.
 
-## 궁금한 내용부터 확인하세요
+독자: 운영팀장. 요청할 결정: 신입 12명 대상 4주 시범운영 승인.
+가상 예산: 300만 원.
+1페이지에는 문제·제안·운영 방식을,
+2페이지에는 일정·예산·성과지표 3개·위험요인을 담아줘.
 
-| 목적 | 다음 안내 |
-|---|---|
-| 만들 수 있는 자료 살펴보기 | [설치 없이 예제 보기 — 일본어 중심](docs/SHOWCASE.md) |
-| 팀에서 쓸 수 있는지 평가 | [관리자 준비·현재 제약·가상 Pack 평가 — 일본어](docs/MANAGER_GUIDE_ja.md) |
-| 직접 문서 한 건 만들기 | [한국어 첫 사용 안내](docs/QUICKSTART_ko.md) |
-| 구현과 명령어 확인 | [기술 가이드 — 영어](docs/TECHNICAL_GUIDE.md) |
+Company Pack 없이 일반 워크플로를 사용하고 실제 기업 자료는 쓰지 마.
+숫자는 가정임을 표시해. 원샷 모드로 중간 승인 대기 없이
+집필·디자인·가능한 검수를 끝내줘. 첫 체험은 HTML만 제공하고
+PPTX는 만들지 마. 실제로 수행한 내용·시각 검수를 함께 알려줘.
+```
 
-## 관리자는 기준을 준비하고, 직원은 자료를 요청합니다
+이 명령은 10개 스킬을 복사합니다. AI 모델, 출력에 필요한 도구, ChatGPT 플러그인은 별도로 준비해야 합니다. [설치 범위와 다른 설치 방법](docs/TRY_FIRST.md)
 
-회사의 용어·문체·디자인·출처 등을 확인한 근거와 함께 **Company Pack**으로 관리합니다. 필요한 회사 기준을 유지하면서 구성과 표현을 목적에 맞게 정하는 구조입니다. 지정 양식이 있는 자료에는 해당 배치 규칙도 적용합니다.
+## 문서 제작 과정
 
-| 담당 | 진행 방식 |
-|---|---|
-| 관리자 | 권한 있는 참고 자료 선택 → 제안된 규칙 확인·승인 → Pack과 스킬 패키지 생성 → 지원 환경에 도입하고 동작 확인 |
-| 직원 요청 이후 | 목적·독자·언어·형식과 사용할 Pack 확인 → 구성과 필요한 조사 → 집필과 언어 확인 → HTML 디자인·표시 확인 → 필요한 PPTX 출력과 최종 확인 |
+**요청 정리 → 구성·필요한 조사 → 집필·언어 교정 → HTML 디자인 → 화면 검수 → 요청한 형식으로 출력**
 
-기본 스킬 8개와 선택한 일본어·한국어 교정 모듈을 묶습니다. 도입한 환경의 AI가 역할별 지침과 스크립트를 적용하므로 직원이 내부 스킬 이름을 차례로 지정할 필요는 없습니다. [내부 흐름 보기](https://document-studio-public-experiment.wlehd00000.chatgpt.site/ko#plugin-flow)
+처음에는 HTML로 시작하세요. PowerPoint가 필요하면 지원되는 본문·수치·도형을 편집 가능한 요소로 변환할 수 있습니다. 사진과 복잡한 장식은 이미지로 남을 수 있으므로 사용 환경에서 결과를 확인해야 합니다. [PowerPoint 제작 과정](docs/PPTX_OUTPUT_ja.md) · [스킬 구성](docs/TECHNICAL_GUIDE.md)
 
-## 예제에서 확인할 세 가지
+## 목적에 맞게 시작하세요
 
-| 확인할 점 | 예제 |
-|---|---|
-| 처음 정한 디자인 규칙 유지 | [같은 두 페이지를 흑백 A4·정렬 A4·가로형 제안서로 비교](https://document-studio-public-experiment.wlehd00000.chatgpt.site/compare?lang=ko) |
-| 독자에 맞는 정보 순서 | [제안서·결재 요약·운영 가이드](https://document-studio-public-experiment.wlehd00000.chatgpt.site/example-ko) |
-| 표현을 과감하게 변경 | [같은 업무의 요점을 재구성한 창의력 확장 한 페이지](https://document-studio-public-experiment.wlehd00000.chatgpt.site/creative?lang=ko) |
+| 시작할 작업 | 안내 |
+| :--- | :--- |
+| 회사 설정 없이 문서 한 건 만들기 | [첫 사용과 설치](docs/TRY_FIRST.md) |
+| 한국어·일본어로 사용 방법 읽기 | [한국어 가이드](docs/QUICKSTART_ko.md) · [日本語ガイド](docs/QUICKSTART_ja.md) |
+| 팀의 승인된 작성 기준 적용하기 | [Company Pack 평가](docs/WORKSPACE_ADMIN_GUIDE.md) |
+| 다른 문서 배치 비교하기 | [기존 인터랙티브 작례](docs/SHOWCASE.md) |
+| 구현과 스크립트 확인하기 | [기술 안내](docs/TECHNICAL_GUIDE.md) |
 
-[![흑백 A4와 정렬 A4를 비교한 일본어 미리보기. 링크에서 한국어로 확인할 수 있습니다.](docs/assets/showcase/comparison-ja.jpg)](https://document-studio-public-experiment.wlehd00000.chatgpt.site/compare?lang=ko)
+<details>
+<summary><strong>현재 지원 범위 · alpha.6</strong></summary>
 
-예제는 가상 업무이며 예산은 240만 원(KRW)입니다. 화면은 미리 제작한 정적 HTML을 표시하고 AI를 실행하지 않습니다. 표시 측정은 이 예제에 한정하며 새 생성·기업 성과·인쇄·PPTX를 검증한 결과가 아닙니다. [원고·규칙·검토 조건 — 일본어](showcase/README.md)
+- 실험 단계의 문서 제작 도구입니다. 결과는 모델, 사용 가능한 도구, 검수에 따라 달라집니다.
+- 공개 Company Pack 출력 기능은 가상 Pack과 배포 권한이 확인된 공개 자료를 지원합니다. 비공개 자료를 바탕으로 한 내부 배포는 지원하지 않습니다.
+- 새 예시 4종은 HTML·PNG·PDF를 확인했습니다. 편집 가능한 PPTX로 변환·검증한 자료는 아닙니다.
+- 소개 사이트는 정적인 예시를 보여주며 AI를 실행하지 않습니다.
 
-논점부터 상의하고 싶다면 선택형 [심층 컨설팅 기획](https://document-studio-public-experiment.wlehd00000.chatgpt.site/consulting?lang=ko)도 살펴볼 수 있습니다. 창의력 설정과 별개이며 명시적으로 선택할 때 사용하는 진행 방식입니다.
+[릴리스 안내](docs/RELEASE_NOTES_ALPHA6.md) · [설치 범위](docs/TRY_FIRST.md) · [예시 제작 기록](examples/document-collection/README.md#production-notes)
 
-## HTML에서 편집 가능한 PowerPoint로
+</details>
 
-HTML로 원고와 레이아웃을 확인한 뒤 브라우저의 위치·크기·글자를 측정합니다. 지원하는 본문·수치·도형을 PowerPoint의 편집 가능한 요소로 다시 구성해 회의 전 수치 수정이나 담당자·문장 변경을 이어가도록 합니다.
+## 써본 결과를 들려주세요
 
-사진이나 복잡한 장식은 이미지로 유지할 수 있습니다. 실제 서체·표시·편집성 확인이 필요하며 모든 HTML의 완전한 일치를 보장하지 않습니다. 공개 예제의 PPTX 변환은 미검증입니다. [업무 활용과 변환 구조 — 일본어](docs/PPTX_OUTPUT_ja.md)
+문서 한 건을 만들어 보고 [잘 된 점이나 막힌 단계](https://github.com/wlehd00000-cell/document-studio/issues/new?template=first_run.md)를 알려주세요. 한국어·일본어·영어 모두 괜찮습니다. 유용했다면 Star로 다른 사람에게도 알려주세요.
 
-## 작은 업무 하나부터 시작하세요
+[기여 안내](CONTRIBUTING.md) · [변경 내역](CHANGELOG.md) · [보안](SECURITY.md) · [MIT 라이선스](LICENSE) · [제3자 권리 표시](THIRD_PARTY_NOTICES.md)
 
-개인 사용은 [한국어 첫 사용 안내](docs/QUICKSTART_ko.md), 회사별 패키지 평가는 [관리자 가이드의 가상 Pack — 일본어](docs/MANAGER_GUIDE_ja.md)으로 시작할 수 있습니다.
-
-| 확인 항목 | 현재 상태 |
-|---|---|
-| 승인한 가상 Pack·배포 권한 있는 공개 자료 Pack의 ZIP 생성 | 구현된 평가 경로 |
-| 설치·Pack 선택·새 요청·HTML/PPTX 품질 | 도입 환경에서 별도 확인 |
-| 비공개 자료의 내부 배포·원클릭 사내 도입 | 미지원 |
-
-[HTML 열람 ZIP·플러그인 ZIP·소스의 차이 — 일본어](docs/FAQ_ja.md#どのzipを選べばよいですか)를 확인하세요. ZIP 저장만으로 플러그인이 설치되지는 않습니다.
-
-기업에서 AI를 어떻게 활용할지 문서 업무를 통해 검증하는 개인 프로젝트입니다. 관심이 있다면 Star로 저장하고, 사용 결과와 필요했던 수정을 [첫 사용 피드백](https://github.com/wlehd00000-cell/document-studio/issues/new?template=first_run.md)으로 알려 주세요. 한국어·일본어·영어 모두 가능합니다.
-
-[자주 묻는 질문 — 일본어](docs/FAQ_ja.md) · [기여 — 영어](CONTRIBUTING.md) · [변경 이력 — 영어](CHANGELOG.md) · [보안 — 영어](SECURITY.md)
-
-독자 제작물은 [MIT](LICENSE), 동봉 서체 등은 [제3자 권리 고지](THIRD_PARTY_NOTICES.md)를 따릅니다. 소속 기업이나 상표권자의 도입·추천·보증을 의미하지 않습니다.
+개인이 운영하는 독립 프로젝트이며, 소속 회사나 상표권자의 도입·추천을 뜻하지 않습니다.

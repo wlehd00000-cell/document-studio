@@ -1,92 +1,110 @@
-# Document Studio
+<h1 align="center">Document Studio</h1>
+<p align="center"><strong>From brief to business document.</strong></p>
+<p align="center">Reusable Codex skills for proposals, reports, and presentations.<br>Structure, writing, visual design, and review — with Japanese and Korean language modules.</p>
 
-[日本語](README.md) · [한국어](README.ko.md) · [English](README.en.md)
+<p align="center"><a href="README.md">English</a> · <a href="README.ko.md">한국어</a> · <a href="README.ja.md">日本語</a></p>
 
-**Turn your report-writing process into reusable Codex skills.**
+<p align="center">
+  <a href="https://github.com/wlehd00000-cell/document-studio/releases/tag/v0.1.0-alpha.6"><img src="https://img.shields.io/badge/status-alpha.6-9d6938?style=flat-square" alt="Experimental alpha.6"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-244c3d?style=flat-square" alt="MIT license"></a>
+  <a href="docs/TECHNICAL_GUIDE.md"><img src="https://img.shields.io/badge/Codex-10_skills-244c3d?style=flat-square" alt="10 Codex skills"></a>
+</p>
 
-For people who repeatedly create business reports and proposals, especially in Japanese or Korean. Reuse a workflow for structure, writing, HTML design, and review, with an editable PowerPoint export path when needed.
+<p align="center"><a href="#quick-start">Quick start</a> · <a href="examples/document-collection/README.md">Explore the samples</a> · <a href="docs/README.md">Documentation</a></p>
 
-For team evaluation, you can also record human-approved company conventions in a **Company Pack** and package it with the document-production skills.
+<p align="center">
+  <a href="examples/document-collection/README.md"><img src="docs/assets/brand/document-studio-cover.jpg" width="100%" alt="Document Studio collection: a retail proposal, an ecommerce report, an onboarding comparison, and a Japanese seasonal-menu proposal."></a>
+</p>
 
-[Open the introduction and examples](https://document-studio-public-experiment.wlehd00000.chatgpt.site/) · [Administrator guide](docs/WORKSPACE_ADMIN_GUIDE.md) · [Documentation map](docs/README.md)
+## See the documents
 
-Experimental **alpha.6**. The current public exporter accepts fictional packs and reviewed public sources authorized for distribution. Internal distribution based on private company sources is not supported.
+Four finished, fictional examples. Open a full-size image, read the PDF, or inspect the editable HTML and copy.
 
-## Try one document before setting up company rules
+| Document | What to look for | Files |
+| :--- | :--- | :--- |
+| **Retail pilot proposal** · Korean / A4 | Approval request, operating conditions, budget, and schedule | [PNG](examples/document-collection/png/01-refill-proposal.png) · [PDF](examples/document-collection/pdf/01-refill-proposal.pdf) · [HTML](examples/document-collection/html/01-refill-proposal.html) |
+| **Monthly performance report** · Korean / A4 | Revenue comparison, purchase funnel, and follow-up actions | [PNG](examples/document-collection/png/02-commerce-report.png) · [PDF](examples/document-collection/pdf/02-commerce-report.pdf) · [HTML](examples/document-collection/html/02-commerce-report.html) |
+| **Onboarding comparison** · Korean / 16:9 | Three options, a recommendation, and a four-week plan | [PNG](examples/document-collection/png/03-onboarding-comparison.png) · [PDF](examples/document-collection/pdf/03-onboarding-comparison.pdf) · [HTML](examples/document-collection/html/03-onboarding-comparison.html) |
+| **Seasonal menu proposal** · Japanese / 16:9 | Product concept, trial conditions, pricing, and approval budget | [PNG](examples/document-collection/png/04-seasonal-menu-ja.png) · [PDF](examples/document-collection/pdf/04-seasonal-menu-ja.pdf) · [HTML](examples/document-collection/html/04-seasonal-menu-ja.html) |
 
-[Compare the examples — no install](https://document-studio-public-experiment.wlehd00000.chatgpt.site/compare) · [Copy the first task](docs/TRY_FIRST.md#first-task)
+Curated with a separate, author-maintained document workflow. All figures are fictional; store and product photos are AI-generated concepts. These are design examples, not a fresh-install benchmark of this package. [How the samples were made](examples/document-collection/README.md#production-notes)
 
-**Already use local Codex?** With Node.js 22.20+ and Git available, review the skill instructions, then run this in your own project folder:
+## What the workflow adds
+
+- **A structure for the decision.** Start with the reader, purpose, and requested action; build the page around them.
+- **Writing that keeps its meaning.** Review wording alongside figures, assumptions, sources, and conditions. Add Japanese or Korean language review when needed.
+- **Design you can revise.** Keep copy, numbers, and layout in HTML. Review the rendered pages before sharing or exporting.
+- **Reusable company conventions.** An optional, human-approved Company Pack records terminology, writing, design, and source rules for later work.
+
+The toolkit contains ten agent skills and supporting scripts. Your AI agent carries out the workflow in its own environment.
+
+## Quick start
+
+With **local Codex, Node.js 22.20+, and Git**, review the [skill instructions](skills/report-html-pptx/SKILL.md), then run this from your own project folder:
 
 ```bash
 npx --yes skills add wlehd00000-cell/document-studio --skill '*' -a codex --copy -y
 ```
 
-Start a fresh Codex session, confirm `report-html-pptx` is available, and send the [fictional two-page proposal brief](docs/TRY_FIRST.md#first-task). No company files or Company Pack setup needed. This copies ten agent skills; it does not install an AI model, rendering tools, or a ChatGPT plugin. [Installation scope and alternatives](docs/TRY_FIRST.md)
+Start a new Codex session, confirm that `report-html-pptx` is available, and send:
 
-If this is useful to you, use **Star** at the top of the repository to save it. [First-run feedback](https://github.com/wlehd00000-cell/document-studio/issues/new?template=first_run.md), including installation blockers, is welcome.
+```text
+Use Document Studio to create a two-page A4 portrait HTML proposal
+in English for a fictional employee onboarding pilot.
 
-## Choose your next step
+Reader: operations manager. Decision: approve a four-week pilot
+for 12 new starters. Assumed budget: $2,400.
+Page 1: problem, recommendation, and proposed approach.
+Page 2: schedule, budget, three success measures, and risks.
 
-| Your goal | Start here |
-|---|---|
-| See the document examples | [Static showcase, Japanese first with Korean switching](docs/SHOWCASE.md) |
-| Evaluate it for a team | [Administrator guide](docs/WORKSPACE_ADMIN_GUIDE.md), or the [Japanese evaluation walkthrough](docs/MANAGER_GUIDE_ja.md) |
-| Make your first document | [First-use guide](docs/TRY_FIRST.md) |
-| Inspect the implementation and commands | [Technical guide](docs/TECHNICAL_GUIDE.md) |
+Use the generic workflow, no Company Pack or real company files.
+Mark all figures as fictional assumptions. Work in one-shot mode
+without intermediate approval pauses. Deliver HTML only, with the
+factual and visual checks actually completed; no PPTX for this trial.
+```
 
-## Managers prepare conventions; employees request documents
+The command copies the ten skills. It does not install an AI model, rendering dependencies, or a ChatGPT plugin. [Installation details and other routes](docs/TRY_FIRST.md)
 
-A **Company Pack** records reviewed terminology, writing, design, source rules, and their evidence. The goal is to keep necessary organizational conventions while adapting structure and expression to the reader. A specified fixed layout can also be retained.
+## A workflow you can inspect
 
-| Role | Flow |
-|---|---|
-| Administrator | Select authorized references → review and approve rules → package the Pack and skills → install and verify in a supported environment |
-| After an employee request | Confirm purpose, audience, language, format, and Pack → structure and necessary research → writing and language review → HTML design and QA → requested PPTX and final QA |
+**Brief → structure & necessary research → writing & language review → HTML design → visual checks → requested export**
 
-Packages include all eight core skills and selected Japanese/Korean language modules. The host AI applies role instructions and scripts; employees need not name each internal skill. Research and visual production are conditional, and manuscript/HTML-only requests can stop earlier. [Illustrated internal flow](https://document-studio-public-experiment.wlehd00000.chatgpt.site/#plugin-flow) · [Skill inventory and contracts](docs/TECHNICAL_GUIDE.md#whats-included-8-core-skills--2-optional-languages)
+Start with HTML. If you need PowerPoint, the exporter reconstructs supported text, numbers, and shapes as editable elements. Photos and complex decoration may remain images; check the exported file in your target environment. [PowerPoint workflow](docs/PPTX_OUTPUT_ja.md) · [Skill architecture](docs/TECHNICAL_GUIDE.md)
 
-## Inspect three design choices
+## Use it your way
 
-| What to inspect | Example |
-|---|---|
-| Preserve predefined design rules | [Same two pages in monochrome A4, aligned A4, and landscape layouts](https://document-studio-public-experiment.wlehd00000.chatgpt.site/compare) |
-| Adapt information to the reader | [Four-page proposal, decision summary, and operations guide](https://document-studio-public-experiment.wlehd00000.chatgpt.site/example?view=all&size=large) |
-| Explore a different expression | [One-page creative reinterpretation of the same fictional pilot](https://document-studio-public-experiment.wlehd00000.chatgpt.site/creative) |
+| Start with… | Guide |
+| :--- | :--- |
+| One document, no company setup | [First task and installation](docs/TRY_FIRST.md) |
+| Japanese or Korean instructions | [日本語ガイド](docs/QUICKSTART_ja.md) · [한국어 가이드](docs/QUICKSTART_ko.md) |
+| Your team's approved conventions | [Company Pack evaluation](docs/WORKSPACE_ADMIN_GUIDE.md) |
+| More layout examples | [Earlier interactive showcase](docs/SHOWCASE.md) |
+| Implementation and scripts | [Technical guide](docs/TECHNICAL_GUIDE.md) |
 
-[![Japanese preview comparing the same copy under monochrome A4 and aligned A4 rules](docs/assets/showcase/comparison-ja.jpg)](https://document-studio-public-experiment.wlehd00000.chatgpt.site/compare)
+<details>
+<summary><strong>Current scope · alpha.6</strong></summary>
 
-The examples are fictional, use an assumed KRW 2.4 million budget, and display pre-authored static HTML. The Site does not run an AI model. Measurements cover these HTML examples, not new generation, business outcomes, print, or PPTX acceptance. [Source and review scope](showcase/README.md)
+- This is an experimental workflow toolkit. Output quality depends on the model, available tools, and review.
+- The public Company Pack exporter supports fictional packs and distribution-authorized public sources. Private-source internal distribution is not supported.
+- The four curated samples were checked as HTML, PNG, and PDF. They have not been exported or validated as editable PPTX.
+- The hosted showcase displays static examples; it does not run an AI model.
 
-[Optional editorial consulting](https://document-studio-public-experiment.wlehd00000.chatgpt.site/consulting) begins with research, countercases, and alternatives. It requires explicit selection and is separate from creativity settings.
+[Release notes](docs/RELEASE_NOTES_ALPHA6.md) · [Installation scope](docs/TRY_FIRST.md) · [Sample provenance](examples/document-collection/README.md#production-notes)
 
-## From reviewed HTML to editable PowerPoint
+</details>
 
-The export workflow measures browser geometry and typography, then reconstructs supported text, numbers, and shapes as editable PowerPoint elements. This supports later changes to meeting figures, ownership, or wording.
+## Help shape the next version
 
-Photos and complex decoration may remain images. Actual fonts, rendering, and editability must be checked; arbitrary HTML is not guaranteed to reproduce perfectly. The public examples have not been validated as exported PPTX files. [Illustrated output flow](https://document-studio-public-experiment.wlehd00000.chatgpt.site/#pptx-output) · [Exporter contract](skills/html-to-pptx/SKILL.md)
+Try one document and [share what worked or where you got stuck](https://github.com/wlehd00000-cell/document-studio/issues/new?template=first_run.md). Japanese, Korean, and English are welcome. If this workflow is useful to you, a star helps others find it.
 
-## Try one small task
+[Contributing](CONTRIBUTING.md) · [Changelog](CHANGELOG.md) · [Security](SECURITY.md) · [MIT license](LICENSE) · [Third-party notices](THIRD_PARTY_NOTICES.md)
 
-For individual use, follow the [first-use guide](docs/TRY_FIRST.md). For a company-specific package, use the [fictional administrator evaluation](docs/WORKSPACE_ADMIN_GUIDE.md#evaluate-the-working-export-using-fictional-materials).
+An independent project. No employer or trademark-owner endorsement is implied.
 
-| Check | Current status |
-|---|---|
-| Export approved fictional or distribution-authorized public packs | Implemented evaluation route |
-| Installation, Pack selection, a fresh request, HTML/PPTX quality | Verify separately on the target host |
-| Private-source internal distribution and one-click corporate setup | Not supported |
+<details>
+<summary>Earlier documentation links</summary>
 
-The [static HTML viewing ZIP](https://document-studio-public-experiment.wlehd00000.chatgpt.site/downloads/document-studio-demo.zip), [plugin ZIPs](docs/DOWNLOAD_AND_INSTALL.md), and GitHub source ZIP serve different purposes. Downloading an archive does not install a plugin.
-
-This is a personal experiment in applying AI to organizational work. Star the repository to save it, or share what worked and what required revision through [first-run feedback](https://github.com/wlehd00000-cell/document-studio/issues/new?template=first_run.md). Japanese, Korean, and English are welcome.
-
-[FAQ — Japanese](docs/FAQ_ja.md) · [Contributing](CONTRIBUTING.md) · [Changelog](CHANGELOG.md) · [Security](SECURITY.md)
-
-Original work is [MIT](LICENSE); bundled fonts and other third-party files retain their [notices](THIRD_PARTY_NOTICES.md). No employer or trademark-owner adoption or endorsement is implied.
-
-## Technical reference
-
-The former detailed README sections are preserved in the [technical guide](docs/TECHNICAL_GUIDE.md). The following legacy fragment targets lead here so older links remain useful.
+The detailed implementation reference is in the [technical guide](docs/TECHNICAL_GUIDE.md).
 
 <a id="start-with-a-small-task"></a>
 <a id="codex-install-the-agent-skills"></a>
@@ -111,3 +129,5 @@ The former detailed README sections are preserved in the [technical guide](docs/
 <a id="fixed-rule-document-comparison"></a>
 <a id="creative-example-and-optional-editorial-consulting"></a>
 <a id="from-reviewed-html-to-editable-powerpoint"></a>
+
+</details>
