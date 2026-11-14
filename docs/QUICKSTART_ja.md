@@ -1,6 +1,6 @@
 # 日本語で、最初の資料を1件作る
 
-[日本語トップ](../README.md) · [文書ガイド一覧](README.md) · [한국어](QUICKSTART_ko.md) · [English](TRY_FIRST.md)
+[日本語トップ](../README.ja.md) · [文書ガイド一覧](README.md) · [한국어](QUICKSTART_ko.md) · [English](TRY_FIRST.md)
 
 まずは実在企業の資料を使わず、一般的な文書制作スキルで架空の1件を作ります。会社の資料分析や、社員全員への配布から始める必要はありません。見た目を先に確認したい場合は、[インストール不要の作例](SHOWCASE.md)を開いてください。
 

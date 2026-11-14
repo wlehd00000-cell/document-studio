@@ -1,85 +1,133 @@
-# Document Studio
+<h1 align="center">Document Studio</h1>
+<p align="center"><strong>From brief to business document.</strong></p>
+<p align="center">Reusable Codex skills for proposals, reports, and presentations.<br>Structure, writing, visual design, and review — with Japanese and Korean language modules.</p>
 
-[日本語](README.md) · [한국어](README.ko.md) · [English](README.en.md)
+<p align="center"><a href="README.md">English</a> · <a href="README.ko.md">한국어</a> · <a href="README.ja.md">日本語</a></p>
 
-**報告書・提案書のつくり方を、毎回の長いプロンプトから再利用できるCodexスキルへ。**
+<p align="center">
+  <a href="https://github.com/wlehd00000-cell/document-studio/releases/tag/v0.1.0-alpha.6"><img src="https://img.shields.io/badge/status-alpha.6-9d6938?style=flat-square" alt="Experimental alpha.6"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-244c3d?style=flat-square" alt="MIT license"></a>
+  <a href="docs/TECHNICAL_GUIDE.md"><img src="https://img.shields.io/badge/Codex-10_skills-244c3d?style=flat-square" alt="10 Codex skills"></a>
+</p>
 
-日本語・韓国語の業務文書を繰り返し作る方へ。構成・執筆・HTMLデザイン・確認の手順をまとめ、必要に応じて編集可能なPowerPointへつなげます。
+<p align="center"><a href="#quick-start">Quick start</a> · <a href="examples/document-collection/README.md">Explore the samples</a> · <a href="docs/README.md">Documentation</a></p>
 
-会社で評価する場合は、人が承認したルールを **Company Pack** としてまとめ、文書制作スキルとともにパッケージ化できます。
+<p align="center">
+  <a href="examples/document-collection/README.md"><img src="docs/assets/brand/document-studio-cover.jpg" width="100%" alt="Document Studio collection: a retail proposal, an ecommerce report, an onboarding comparison, and a Japanese seasonal-menu proposal."></a>
+</p>
 
-[紹介サイトを開く](https://document-studio-public-experiment.wlehd00000.chatgpt.site/) · [管理者の評価手順](docs/MANAGER_GUIDE_ja.md) · [文書ガイド一覧](docs/README.md)
+## See the documents
 
-実験段階の **alpha.6** です。現在の公開エクスポーターは架空Pack・配布権限を確認した公開資料が対象で、非公開の社内資料からの内部配布は未対応です。
+Four finished, fictional examples. Open a full-size image, read the PDF, or inspect the editable HTML and copy.
 
-## まずは、会社資料なしで1件試す
+| Document | What to look for | Files |
+| :--- | :--- | :--- |
+| **Retail pilot proposal** · Korean / A4 | Approval request, operating conditions, budget, and schedule | [PNG](examples/document-collection/png/01-refill-proposal.png) · [PDF](examples/document-collection/pdf/01-refill-proposal.pdf) · [HTML](examples/document-collection/html/01-refill-proposal.html) |
+| **Monthly performance report** · Korean / A4 | Revenue comparison, purchase funnel, and follow-up actions | [PNG](examples/document-collection/png/02-commerce-report.png) · [PDF](examples/document-collection/pdf/02-commerce-report.pdf) · [HTML](examples/document-collection/html/02-commerce-report.html) |
+| **Onboarding comparison** · Korean / 16:9 | Three options, a recommendation, and a four-week plan | [PNG](examples/document-collection/png/03-onboarding-comparison.png) · [PDF](examples/document-collection/pdf/03-onboarding-comparison.pdf) · [HTML](examples/document-collection/html/03-onboarding-comparison.html) |
+| **Seasonal menu proposal** · Japanese / 16:9 | Product concept, trial conditions, pricing, and approval budget | [PNG](examples/document-collection/png/04-seasonal-menu-ja.png) · [PDF](examples/document-collection/pdf/04-seasonal-menu-ja.pdf) · [HTML](examples/document-collection/html/04-seasonal-menu-ja.html) |
 
-[作例を比較する（インストール不要）](https://document-studio-public-experiment.wlehd00000.chatgpt.site/compare) · [最初の依頼文](docs/TRY_FIRST.md#日本語) · [English quick start](docs/TRY_FIRST.md#fast-agent-skill-install)
+Curated with a separate, author-maintained document workflow. All figures are fictional; store and product photos are AI-generated concepts. These are design examples, not a fresh-install benchmark of this package. [How the samples were made](examples/document-collection/README.md#production-notes)
 
-**ローカルCodexをお使いなら：** Node.js 22.20以降とGitを用意し、スキルの内容を確認したうえで、自分の作業用プロジェクトフォルダから実行します。
+## What the workflow adds
+
+- **A structure for the decision.** Start with the reader, purpose, and requested action; build the page around them.
+- **Writing that keeps its meaning.** Review wording alongside figures, assumptions, sources, and conditions. Add Japanese or Korean language review when needed.
+- **Design you can revise.** Keep copy, numbers, and layout in HTML. Review the rendered pages before sharing or exporting.
+- **Reusable company conventions.** An optional, human-approved Company Pack records terminology, writing, design, and source rules for later work.
+
+The toolkit contains ten agent skills and supporting scripts. Your AI agent carries out the workflow in its own environment.
+
+## Quick start
+
+With **local Codex, Node.js 22.20+, and Git**, review the [skill instructions](skills/report-html-pptx/SKILL.md), then run this from your own project folder:
 
 ```bash
 npx --yes skills add wlehd00000-cell/document-studio --skill '*' -a codex --copy -y
 ```
 
-新しいCodexセッションで `report-html-pptx` が認識されることを確認し、[架空の2ページ提案書の依頼文](docs/TRY_FIRST.md#日本語)を送ってください。会社の資料やCompany Packの準備は不要です。この方法は10個のエージェントスキルをコピーします。AIモデル・変換環境・ChatGPTプラグインの登録は含みません。[導入の範囲と別の方法](docs/TRY_FIRST.md)
+Start a new Codex session, confirm that `report-html-pptx` is available, and send:
 
-役に立ちそうなら、ページ上部の **Star** で保存できます。使えたこと・止まったところは[初回利用のフィードバック](https://github.com/wlehd00000-cell/document-studio/issues/new?template=first_run.md)へ。
+```text
+Use Document Studio to create a two-page A4 portrait HTML proposal
+in English for a fictional employee onboarding pilot.
 
-## まず、知りたいことを選ぶ
+Reader: operations manager. Decision: approve a four-week pilot
+for 12 new starters. Assumed budget: $2,400.
+Page 1: problem, recommendation, and proposed approach.
+Page 2: schedule, budget, three success measures, and risks.
 
-| 目的 | 次に見るもの |
-|---|---|
-| どんな資料が作れるか見たい | [インストール不要の作例](docs/SHOWCASE.md) |
-| チームで使えるか評価したい | [管理者ガイド：準備・現在の制約・架空Packの評価](docs/MANAGER_GUIDE_ja.md) |
-| 自分で資料を1件作りたい | [日本語の初回利用：環境選択から最初の依頼まで](docs/QUICKSTART_ja.md) |
-| 実装やコマンドを確認したい | [技術ガイド — English](docs/TECHNICAL_GUIDE.md) |
+Use the generic workflow, no Company Pack or real company files.
+Mark all figures as fictional assumptions. Work in one-shot mode
+without intermediate approval pauses. Deliver HTML only, with the
+factual and visual checks actually completed; no PPTX for this trial.
+```
 
-## 管理者が基準を整え、社員が資料を依頼する
+The command copies the ten skills. It does not install an AI model, rendering dependencies, or a ChatGPT plugin. [Installation details and other routes](docs/TRY_FIRST.md)
 
-会社の用語・文体・デザイン・出典などを、確認した根拠とともに **Company Pack** で管理します。必要な会社基準を維持し、その範囲で構成や表現を目的に合わせる設計です。指定様式がある資料では、その配置規則も使います。
+## A workflow you can inspect
 
-| 担当 | 進め方 |
-|---|---|
-| 管理者 | 権限のある参考資料を選ぶ → 提案された規則を確認・承認 → Packとスキルをパッケージ化 → 対応環境への導入と動作確認 |
-| 社員の依頼後 | 目的・読み手・言語・形式と使用Packを確認 → 構成と必要な調査 → 執筆と言語確認 → HTMLデザインと確認 → 必要なPPTX出力と最終確認 |
+**Brief → structure & necessary research → writing & language review → HTML design → visual checks → requested export**
 
-基本スキル8個に、選択した日本語・韓国語の校閲モジュールを組み合わせます。導入先のAIが役割別の指示とスクリプトを適用します。社員が内部スキル名を順に指定する必要はありません。[内部フローの図解](https://document-studio-public-experiment.wlehd00000.chatgpt.site/#plugin-flow) · [実際のスキルと条件](docs/MANAGER_GUIDE_ja.md#社員の1件の依頼はどう進むか)
+Start with HTML. If you need PowerPoint, the exporter reconstructs supported text, numbers, and shapes as editable elements. Photos and complex decoration may remain images; check the exported file in your target environment. [PowerPoint workflow](docs/PPTX_OUTPUT_ja.md) · [Skill architecture](docs/TECHNICAL_GUIDE.md)
 
-## 作例で確かめる、3つの違い
+## Use it your way
 
-| 見るポイント | 作例 |
-|---|---|
-| 決めたデザイン規則を維持 | [同じ2ページを、白黒A4・整列A4・横型提案で比較](https://document-studio-public-experiment.wlehd00000.chatgpt.site/compare) |
-| 読み手に合わせた情報の順序 | [企画提案書4ページ・決裁サマリー・業務ガイド](https://document-studio-public-experiment.wlehd00000.chatgpt.site/example?view=all&size=large) |
-| 表現を大胆に変える | [同じ案件の要点を再編集した、創造性の1ページ](https://document-studio-public-experiment.wlehd00000.chatgpt.site/creative) |
+| Start with… | Guide |
+| :--- | :--- |
+| One document, no company setup | [First task and installation](docs/TRY_FIRST.md) |
+| Japanese or Korean instructions | [日本語ガイド](docs/QUICKSTART_ja.md) · [한국어 가이드](docs/QUICKSTART_ko.md) |
+| Your team's approved conventions | [Company Pack evaluation](docs/WORKSPACE_ADMIN_GUIDE.md) |
+| More layout examples | [Earlier interactive showcase](docs/SHOWCASE.md) |
+| Implementation and scripts | [Technical guide](docs/TECHNICAL_GUIDE.md) |
 
-[![同じ内容を白黒A4と整列A4の規則で表示した日本語の作例](docs/assets/showcase/comparison-ja.jpg)](https://document-studio-public-experiment.wlehd00000.chatgpt.site/compare)
+<details>
+<summary><strong>Current scope · alpha.6</strong></summary>
 
-日本語が標準で、韓国語へ切り替えられます。作例は架空の案件で、予算は240万ウォン（KRW）。静的HTMLを表示し、サイト内ではAIを実行しません。測定はこのHTML例の表示に限り、新規生成・企業成果・印刷・PPTXの検証結果ではありません。[原稿・規則・確認条件](showcase/README.md)
+- This is an experimental workflow toolkit. Output quality depends on the model, available tools, and review.
+- The public Company Pack exporter supports fictional packs and distribution-authorized public sources. Private-source internal distribution is not supported.
+- The four curated samples were checked as HTML, PNG, and PDF. They have not been exported or validated as editable PPTX.
+- The hosted showcase displays static examples; it does not run an AI model.
 
-論点から検討したい場合は、任意の[深掘りコンサルティング企画](https://document-studio-public-experiment.wlehd00000.chatgpt.site/consulting)も紹介しています。創造性設定とは別で、明示的に選んだ場合に利用する進め方です。
+[Release notes](docs/RELEASE_NOTES_ALPHA6.md) · [Installation scope](docs/TRY_FIRST.md) · [Sample provenance](examples/document-collection/README.md#production-notes)
 
-## HTMLから、編集できるPowerPointへ
+</details>
 
-HTMLで原稿とレイアウトを確認した後、ブラウザーの位置・寸法・文字を測り、対応する本文・数値・図形をPowerPointの編集可能な要素として組み直します。会議前の数値修正、担当者名や文章の更新を続けるための工程です。
+## Help shape the next version
 
-写真や複雑な装飾は画像として保持する場合があります。出力後の書体・表示・編集性の確認が必要で、任意のHTMLの完全一致は保証しません。公開作例のPPTX変換は未検証です。[業務での使い方と変換構造](docs/PPTX_OUTPUT_ja.md)
+Try one document and [share what worked or where you got stuck](https://github.com/wlehd00000-cell/document-studio/issues/new?template=first_run.md). Japanese, Korean, and English are welcome. If this workflow is useful to you, a star helps others find it.
 
-## 最初は、小さな1件から
+[Contributing](CONTRIBUTING.md) · [Changelog](CHANGELOG.md) · [Security](SECURITY.md) · [MIT license](LICENSE) · [Third-party notices](THIRD_PARTY_NOTICES.md)
 
-個人で使う場合は[初回利用ガイド](docs/QUICKSTART_ja.md)から、会社別パッケージを評価する場合は[管理者ガイド](docs/MANAGER_GUIDE_ja.md)の架空Packから始められます。
+An independent project. No employer or trademark-owner endorsement is implied.
 
-| 確認すること | 現在の状態 |
-|---|---|
-| 承認した架空Pack・配布権限のある公開資料のPackをZIPに出力 | 実装済みの評価経路 |
-| インストール、Packの選択、新しい依頼、HTML/PPTX品質 | 導入先で別途確認 |
-| 非公開資料の内部配布、ワンクリック社内導入 | 未対応 |
+<details>
+<summary>Earlier documentation links</summary>
 
-[HTML閲覧ZIP・プラグインZIP・ソースの違い](docs/FAQ_ja.md#どのzipを選べばよいですか)も確認してください。ZIPの保存だけではプラグインは導入されません。
+The detailed implementation reference is in the [technical guide](docs/TECHNICAL_GUIDE.md).
 
-企業でAIをどう使うかを、文書業務から検証する個人のプロジェクトです。関心があればStarで保存し、試した結果や必要だった修正を[初回利用のフィードバック](https://github.com/wlehd00000-cell/document-studio/issues/new?template=first_run.md)で教えてください。日本語・한국어・Englishで投稿できます。
+<a id="start-with-a-small-task"></a>
+<a id="codex-install-the-agent-skills"></a>
+<a id="chatgpt-use-the-starter-zip"></a>
+<a id="first-prompt"></a>
+<a id="what-makes-it-useful"></a>
+<a id="quick-start--export-a-demo-plugin"></a>
+<a id="how-it-works"></a>
+<a id="who-is-it-for"></a>
+<a id="whats-included-8-core-skills--2-optional-languages"></a>
+<a id="what-works-today--and-what-does-not"></a>
+<a id="curated-company-packs-phase-a"></a>
+<a id="independent-public-source-evaluation-2026-10-29"></a>
+<a id="analyze-and-distribute-an-organization-profile-experimental"></a>
+<a id="default-visual-grammar-architecture-experimental-implementation"></a>
+<a id="approved-layout-grammar--authored-html--browser-qa-experimental-alpha6"></a>
+<a id="save-a-private-plugin-in-your-chatgpt-account"></a>
+<a id="public-demo-safety"></a>
+<a id="get-involved"></a>
+<a id="license"></a>
+<a id="attribution"></a>
+<a id="fixed-rule-document-comparison"></a>
+<a id="creative-example-and-optional-editorial-consulting"></a>
+<a id="from-reviewed-html-to-editable-powerpoint"></a>
 
-[よくある質問](docs/FAQ_ja.md) · [貢献する](CONTRIBUTING.md) · [変更履歴](CHANGELOG.md) · [セキュリティ](SECURITY.md)
-
-独自の成果物は[MIT](LICENSE)、同梱書体などは[第三者の権利表示](THIRD_PARTY_NOTICES.md)に従います。勤務先や商標権者による導入・推奨・保証を示しません。
+</details>
